@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 from typing import Any
 
-from extractor.animations.decoder import decode_animation, expand_frames
+from extractor.animations.decoder import DecodeError, decode_animation, expand_frames
+from extractor.animations.prop_decoder import decode_prop_frames
 from extractor.unity_loader import content_root, iter_monobehaviours, load_bundle
 
 
@@ -83,18 +85,83 @@ def _part_payload(part: dict[str, Any], vertices: list[dict], triangles: list[in
     return {"name": str(part["name"]), "display_list": dle, "chunks": chunks}
 
 
-def export_bone(
-    client_root: Path,
-    bone_id: int,
+def _animation_wanted(name: str, names: set[str], default_idle_walk: bool) -> bool:
+    if "*" in names:
+        return True
+    if name in names:
+        return True
+    for pattern in names:
+        if pattern.endswith("*"):
+            prefix = pattern[:-1]
+            # ``AnimState*`` must not swallow character ``AnimStatique*``.
+            if prefix == "AnimState" and name.startswith("AnimStatique"):
+                continue
+            if name.startswith(prefix):
+                return True
+    return default_idle_walk and any(
+        name.startswith(prefix) for prefix in ("AnimStatique", "AnimMarche", "AnimCourse")
+    )
+
+
+def resolve_part_ref(graphic: Any, gfx_order: list[Any]) -> str | None:
+    """Map an animation ``graphic`` id to its SkinAsset part name.
+
+    Proven by exact official-bounds matches (e.g. bone 4924
+    ``AnimStatique_3`` over 60 frames: calc x-119.6 w197.1 y-32.6 h202.5 vs
+    recorded x-119.6 w197.1 y-32.6 h202.5, plus ~20 idle/walk clips on bones
+    556/4907/714/231/284/6399): the id is a **0-based index** into
+    ``AnimatedObjectDefinition.graphics``, not a part name. Out-of-range ids
+    fall back to the raw id as a name for backward compatibility.
+    """
+    try:
+        idx = int(str(graphic))
+    except (TypeError, ValueError):
+        return str(graphic) if graphic not in (None, "") else None
+    if 0 <= idx < len(gfx_order) and gfx_order[idx] not in (None, ""):
+        return str(gfx_order[idx])
+    return str(graphic)
+
+
+def _resolve_frame_nodes(
+    snap: list[Any], gfx_order: list[Any], exposed_names: list[str] | None = None
+) -> list[dict[str, Any]]:
+    out: list[dict[str, Any]] = []
+    for st in snap:
+        node = st.to_json()
+        if exposed_names is not None and st.customisation >= 0:
+            slot = exposed_names[st.customisation]
+            node.update(part_ref="@slot:" + slot, slot_name=slot, drawable=st.mask in (0, 2))
+            out.append(node)
+            continue
+        graphic = node.get("graphic")
+        if graphic is not None and graphic != "":
+            resolved = resolve_part_ref(graphic, gfx_order)
+            if resolved:
+                node["part_ref"] = resolved
+        out.append(node)
+    return out
+
+
+def export_animated_bundle(
+    bundle: Path,
     output_dir: Path,
+    object_id: int,
+    dest_name: str,
     scale: float = 1.05,
     animation_filter: set[str] | None = None,
+    default_idle_walk: bool = True,
+    extra_fields: dict[str, Any] | None = None,
+    native: bool = False,
+    customisable: bool = False,
 ) -> Path:
-    """Write ``output/entities/{bone_id}.json`` + texture PNG.
+    """Decode one AnimatedObjectDefinition bundle into an entity JSON + PNG.
 
-    ``animation_filter`` defaults to idle/walk for the POC. Pass ``None``
-    (the default here is idle/walk) or a set of names. Use ``{"*"}`` for all.
+    Shared by character bones and map props: callers pick the bundle path,
+    output filename, and which animation names to keep.
     """
+    if not bundle.is_file():
+        raise FileNotFoundError(bundle)
+
     if animation_filter is None:
         animation_filter = {
             "AnimStatique_1",
@@ -102,10 +169,6 @@ def export_bone(
             "AnimMarche_1",
             "AnimMarche_5",
         }
-
-    bundle = content_root(client_root) / "Characters" / "Bones" / f"bones_assets_bone_{bone_id}.bundle"
-    if not bundle.is_file():
-        raise FileNotFoundError(bundle)
 
     env = load_bundle(bundle)
     aod = None
@@ -154,25 +217,49 @@ def export_bone(
         parts[payload["name"]] = payload
 
     anims_out: dict[str, Any] = {}
-    for anim in aod["animations"]:
-        name = anim["name"]
-        if "*" not in animation_filter and name not in animation_filter:
-            continue
-        raw = _as_bytes(anim.get("dataBytes"))
-        decoded = decode_animation(raw, name)
-        states = expand_frames(decoded)
-        anims_out[name] = {
-            "frame_count": decoded.frame_count,
-            "record_count": decoded.record_count,
-            "format_flags": decoded.format_flags,
-            "events": [{"frame": e.frame, "text": e.text} for e in decoded.events],
-            "bounds": anim.get("bounds"),
-            "frames": [[st.to_json() for st in snap] for snap in states],
-        }
+    skipped: list[str] = []
+
+    # Animation graphic ids are 0-based indices into aod.graphics (proven by
+    # exact official-bounds matches). Resolve once per bundle.
+    gfx_order: list[Any] = [(g.get("part") or {}).get("name") for g in aod.get("graphics") or []]
+
+    def _decode_named(names: set[str]) -> None:
+        for anim in aod["animations"]:
+            name = anim["name"]
+            if not _animation_wanted(name, names, default_idle_walk) or name in anims_out:
+                continue
+            raw = _as_bytes(anim.get("dataBytes"))
+            try:
+                if native or dest_name.startswith('prop_'):
+                    metadata, states = decode_prop_frames(raw)
+                else:
+                    decoded = decode_animation(raw, name)
+                    states = expand_frames(decoded)
+                    metadata = {
+                        "frame_count": decoded.frame_count, "record_count": decoded.record_count,
+                        "format_flags": decoded.format_flags,
+                        "events": [{"frame": e.frame, "text": e.text} for e in decoded.events],
+                    }
+            except DecodeError:
+                skipped.append(name)
+                continue
+            anims_out[name] = {
+                **metadata,
+                "bounds": {key: value if not isinstance(value, float) or math.isfinite(value) else None for key, value in (anim.get("bounds") or {}).items()},
+                "frames": [_resolve_frame_nodes(snap, gfx_order, aod.get("exposedNodeNames") if customisable else None) for snap in states],
+            }
+
+    _decode_named(animation_filter)
+    # NPC bones often lack the four POC clips; keep whatever decoded rather
+    # than writing an empty animations object the web client rejects.
+    if not anims_out:
+        skipped.clear()
+        _decode_named({"*"})
 
     doc = {
-        "format": "giny.dofus3.entity.v1",
-        "bone_id": bone_id,
+        "format": "giny.dofus3.entity.v2",
+        "color_encoding": "signed-rgba-flags-v2" if native or dest_name.startswith('prop_') else "legacy",
+        "bone_id": object_id,
         "name": aod.get("m_Name"),
         "scale": scale,
         "frame_rate": int(aod.get("defaultFrameRate") or 25),
@@ -183,13 +270,47 @@ def export_bone(
         "texture": f"textures/{tex_name}",
         "parts": parts,
         "animations": anims_out,
+        "skipped_animations": skipped,
         "notes": {
             "coordinate_space": "unity_y_up_pixels",
             "index_space": "chunk_local",
             "root_node": 0,
             "parent_mapping": "unknown_assume_parent_is_root",
+            "graphic_mapping": "animation graphic id is a 0-based index into aod.graphics; resolved to part_ref",
         },
     }
-    dest = out_ent / f"{bone_id}.json"
+    if extra_fields:
+        doc.update(extra_fields)
+    dest = out_ent / dest_name
     dest.write_text(json.dumps(doc, indent=2))
     return dest
+
+
+def export_bone(
+    client_root: Path,
+    bone_id: int,
+    output_dir: Path,
+    scale: float = 1.05,
+    animation_filter: set[str] | None = None,
+) -> Path:
+    """Write ``output/entities/{bone_id}.json`` + texture PNG.
+
+    ``animation_filter`` defaults to idle/walk for the POC. Pass ``None``
+    (the default here is idle/walk) or a set of names. Use ``{"*"}`` for all.
+    """
+    default_idle_walk = animation_filter is None
+    bones = content_root(client_root) / "Characters" / "Bones"
+    bundle = bones / f"bones_assets_bone_{bone_id}.bundle"
+    if not bundle.is_file():
+        # Player bones are `bone_{id}-{variant}-static.bundle`.
+        matches = sorted(bones.glob(f"bones_assets_bone_{bone_id}-*-static.bundle"))
+        bundle = matches[0] if matches else bundle
+    return export_animated_bundle(
+        bundle,
+        output_dir,
+        bone_id,
+        dest_name=f"{bone_id}.json",
+        scale=scale,
+        animation_filter=animation_filter,
+        default_idle_walk=default_idle_walk,
+    )

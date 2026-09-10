@@ -1,0 +1,217 @@
+{
+ "official": "client/dofus3/output/ui_shots/official/hud_map.png",
+ "client": "client/dofus3/output/ui_shots/web/hud_map.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 1315615,
+ "mismatched_pixels": 1298072,
+ "mismatched_ratio": 0.98667,
+ "regions": 7,
+ "worst": [
+  {
+   "x": 0,
+   "y": 560,
+   "w": 624,
+   "h": 1096,
+   "pixels": 508685,
+   "element": {
+    "id": "CartographyMapUI-root-1356978952",
+    "binding": "ctr_filterPrivate",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-CartographyMapUI-37"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 5,
+    "box": [
+     8,
+     691,
+     244,
+     36
+    ]
+   }
+  },
+  {
+   "x": 744,
+   "y": 1312,
+   "w": 1440,
+   "h": 344,
+   "pixels": 306480,
+   "element": {
+    "id": "mapInfo-root-1961645449",
+    "binding": "MapInfoScreenContainer",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-mapInfo-1"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 4,
+    "box": [
+     0,
+     0,
+     1920,
+     1080
+    ]
+   }
+  },
+  {
+   "x": 2576,
+   "y": 600,
+   "w": 368,
+   "h": 560,
+   "pixels": 198810,
+   "element": {
+    "id": "CartographyMapUI-root--701028649",
+    "binding": "ctr_quantity",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "uitk-inline-CartographyMapUI-50"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 6,
+    "box": [
+     1713,
+     432,
+     191,
+     288
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 0,
+   "w": 1752,
+   "h": 104,
+   "pixels": 170977,
+   "element": {
+    "id": "mapInfo-root-881171057",
+    "binding": "ctr_mapCoordsLevel",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "uitk-inline-mapInfo-18"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 6,
+    "box": [
+     8,
+     32,
+     1125,
+     26
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 232,
+   "w": 472,
+   "h": 208,
+   "pixels": 73669,
+   "element": {
+    "id": "questList-root-background",
+    "binding": "background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__background"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(61, 64, 92)",
+    "image": "url(\"http://127.0.0.1:5173/uitk/assets/9f1c2aa1_8466790348161017816.png\")",
+    "depth": 5,
+    "box": [
+     1,
+     181,
+     300,
+     100
+    ]
+   }
+  },
+  {
+   "x": 2864,
+   "y": 120,
+   "w": 80,
+   "h": 440,
+   "pixels": 29798,
+   "element": {
+    "id": "bannerMenu-gd_btnUis_3-itemTile_icon_Vector",
+    "binding": "itemTile_icon_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/icons/map.png\")",
+    "depth": 13,
+    "box": [
+     1886,
+     222,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 2840,
+   "y": 1456,
+   "w": 80,
+   "h": 176,
+   "pixels": 9653,
+   "element": {
+    "id": "CartographyMapUI-root-button_iconRight_Vector",
+    "binding": "button_iconRight_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     1880,
+     997,
+     20,
+     20
+    ]
+   }
+  }
+ ]
+}

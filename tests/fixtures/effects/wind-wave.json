@@ -1,0 +1,50 @@
+{
+  "m_Name": "map_154644",
+  "mapData": {
+    "mapWindConfiguration": { "rid": 11 },
+    "mapWaveConfiguration": { "rid": 12 },
+    "mapNoiseModifierConfiguration": { "rid": -2 },
+    "mapPostProcessConfiguration": { "rid": 13 },
+    "refractionElements": [],
+    "particlesParameters": [{ "id": "p", "layer": 5 }],
+    "animatedElements": [],
+    "stagingSequences": [],
+    "backgroundMaterialData": { "shaderData": [{ "rid": 1 }] },
+    "sortableMaterialData": { "shaderData": [] },
+    "foregroundMaterialData": { "shaderData": [] }
+  },
+  "references": {
+    "RefIds": [
+      {
+        "rid": 1,
+        "type": { "class": "ShaderData" },
+        "data": { "gfxId": 10, "shaderParameters": [{ "rid": 2 }] }
+      },
+      {
+        "rid": 2,
+        "type": { "class": "ShaderWindParameters" },
+        "data": { "flexibility": 0.7, "shouldSwing": 1 }
+      },
+      {
+        "rid": 11,
+        "type": { "class": "MapWindConfiguration" },
+        "data": { "windParameters": { "windPower": 0.5, "mainWindAmplitudeMultiplier": 0.75, "mainWindNoiseTexID": 500 } }
+      },
+      {
+        "rid": 12,
+        "type": { "class": "MapWaveConfiguration" },
+        "data": { "waveParameters": { "waveFrequency": 0.16, "waveDistoPower": 0.06, "waveDistoTexID": 1 } }
+      },
+      {
+        "rid": 13,
+        "type": { "class": "MapPostProcessConfiguration" },
+        "data": { "postProcessParameters": [{ "rid": 14 }] }
+      },
+      {
+        "rid": 14,
+        "type": { "class": "PPBloomParameters" },
+        "data": { "threshold": 1.4, "intensity": 15, "scatter": 0.8 }
+      }
+    ]
+  }
+}

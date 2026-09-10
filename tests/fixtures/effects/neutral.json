@@ -1,0 +1,17 @@
+{
+  "m_Name": "map_1",
+  "mapData": {
+    "mapWindConfiguration": { "rid": -2 },
+    "mapWaveConfiguration": { "rid": -2 },
+    "mapNoiseModifierConfiguration": { "rid": -2 },
+    "mapPostProcessConfiguration": { "rid": -2 },
+    "refractionElements": [],
+    "particlesParameters": [],
+    "animatedElements": [],
+    "stagingSequences": [],
+    "backgroundMaterialData": { "shaderData": [] },
+    "sortableMaterialData": { "shaderData": [] },
+    "foregroundMaterialData": { "shaderData": [] }
+  },
+  "references": { "RefIds": [] }
+}

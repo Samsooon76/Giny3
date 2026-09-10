@@ -1,0 +1,27 @@
+{
+  "alliancerightgroups": {
+    "records": 4,
+    "nested_rids_in_raw_records": 18,
+    "rids_after_current_decoder": 0
+  },
+  "alterations": {
+    "records": 520,
+    "nested_rids_in_raw_records": 723,
+    "rids_after_current_decoder": 0
+  },
+  "guildrightgroups": {
+    "records": 8,
+    "nested_rids_in_raw_records": 28,
+    "rids_after_current_decoder": 0
+  },
+  "itemsets": {
+    "records": 929,
+    "nested_rids_in_raw_records": 8089,
+    "rids_after_current_decoder": 0
+  },
+  "mounts": {
+    "records": 266,
+    "nested_rids_in_raw_records": 731,
+    "rids_after_current_decoder": 0
+  }
+}

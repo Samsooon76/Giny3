@@ -39,3 +39,25 @@ def iter_typed(env: Environment, type_name: str):
     for obj in env.objects:
         if obj.type.name == type_name:
             yield obj
+
+
+PLAYER_DATA_RELATIVE = Path("Dofus.app") / "Contents" / "Resources" / "Data"
+
+
+def player_data_root(client_root: Path) -> Path:
+    return Path(client_root) / PLAYER_DATA_RELATIVE
+
+
+def client_version(client_root: Path = DEFAULT_CLIENT) -> str | None:
+    """`Version=` out of StreamingAssets/version, so a dump dates itself.
+
+    Every table read off the build is only true for one build: the name of an
+    obfuscated type is reshuffled by the next patch. Returns None rather than
+    raising, because a missing version file must not fail an extraction."""
+    path = player_data_root(client_root) / "StreamingAssets" / "version"
+    if not path.exists():
+        return None
+    for line in path.read_text(errors="replace").splitlines():
+        if line.startswith("Version="):
+            return line.split("=", 1)[1].strip()
+    return None

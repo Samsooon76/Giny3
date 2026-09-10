@@ -1,0 +1,452 @@
+{
+ "official": "output/ui_shots/official/hud_inventory.png",
+ "client": "output/ui_shots/web/hud_inventory.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 1036762,
+ "mismatched_pixels": 705941,
+ "mismatched_ratio": 0.68091,
+ "regions": 20,
+ "worst": [
+  {
+   "x": 750,
+   "y": 406,
+   "w": 1581,
+   "h": 1248,
+   "pixels": 327370,
+   "element": null
+  },
+  {
+   "x": 780,
+   "y": 151,
+   "w": 1551,
+   "h": 237,
+   "pixels": 197076,
+   "element": null
+  },
+  {
+   "x": 12,
+   "y": 6,
+   "w": 1723,
+   "h": 83,
+   "pixels": 72350,
+   "element": {
+    "id": "mapInfo-root-1689843842",
+    "binding": "ctr_infos",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     0,
+     0,
+     1747,
+     98
+    ]
+   }
+  },
+  {
+   "x": 1,
+   "y": 277,
+   "w": 460,
+   "h": 154,
+   "pixels": 34861,
+   "element": null
+  },
+  {
+   "x": 2875,
+   "y": 125,
+   "w": 65,
+   "h": 424,
+   "pixels": 27424,
+   "element": null
+  },
+  {
+   "x": 796,
+   "y": 1276,
+   "w": 670,
+   "h": 55,
+   "pixels": 19179,
+   "element": {
+    "id": "equipmentStorageUi-root-1764724794",
+    "binding": "visualChar",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     781,
+     345,
+     796,
+     1054
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 1280,
+   "w": 613,
+   "h": 140,
+   "pixels": 10548,
+   "element": null
+  },
+  {
+   "x": 1146,
+   "y": 319,
+   "w": 139,
+   "h": 53,
+   "pixels": 4194,
+   "element": {
+    "id": "equipmentStorageUi-root-1313966837",
+    "binding": "tx_breedSymbol",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     911,
+     237,
+     536,
+     662
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 1601,
+   "w": 613,
+   "h": 53,
+   "pixels": 3641,
+   "element": null
+  },
+  {
+   "x": 58,
+   "y": 330,
+   "w": 214,
+   "h": 42,
+   "pixels": 2252,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 1727,
+   "y": 1467,
+   "w": 170,
+   "h": 10,
+   "pixels": 1700,
+   "element": {
+    "id": "equipmentStorageUi-storage--653193202",
+    "binding": "parentWeight",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(1, 1, 1, 0)",
+    "image": null,
+    "box": [
+     1675,
+     1450,
+     227,
+     43
+    ]
+   }
+  },
+  {
+   "x": 836,
+   "y": 323,
+   "w": 43,
+   "h": 49,
+   "pixels": 1587,
+   "element": {
+    "id": "equipmentStorageUi-root-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     805,
+     289,
+     110,
+     110
+    ]
+   }
+  },
+  {
+   "x": 1370,
+   "y": 338,
+   "w": 94,
+   "h": 34,
+   "pixels": 1512,
+   "element": {
+    "id": "equipmentStorageUi-root-1496289205",
+    "binding": "ctr_top",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     805,
+     289,
+     747,
+     870
+    ]
+   }
+  },
+  {
+   "x": 1481,
+   "y": 320,
+   "w": 42,
+   "h": 50,
+   "pixels": 1197,
+   "element": {
+    "id": "equipmentStorageUi-root-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1442,
+     289,
+     110,
+     110
+    ]
+   }
+  },
+  {
+   "x": 30,
+   "y": 328,
+   "w": 16,
+   "h": 24,
+   "pixels": 280,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 1596,
+   "y": 1386,
+   "w": 17,
+   "h": 20,
+   "pixels": 242,
+   "element": {
+    "id": "equipmentStorageUi-storage--209163025",
+    "binding": "parentOptionalBoxes",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1596,
+     724,
+     61,
+     775
+    ]
+   }
+  },
+  {
+   "x": 20,
+   "y": 1622,
+   "w": 24,
+   "h": 18,
+   "pixels": 192,
+   "element": {
+    "id": "chatview-root-1674575934",
+    "binding": "btn_dialect",
+    "type": "DofusButtonCustom",
+    "classes": [
+     "official-node",
+     "official-DofusButtonCustom",
+     "button",
+     "tertiary",
+     "small",
+     "normal",
+     "text",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(49, 45, 36)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     14,
+     1610,
+     46,
+     37
+    ]
+   }
+  },
+  {
+   "x": 1692,
+   "y": 1463,
+   "w": 18,
+   "h": 17,
+   "pixels": 192,
+   "element": {
+    "id": "equipmentStorageUi-storage-1401444125",
+    "binding": "icon_weight",
+    "type": "DofusIcon",
+    "classes": [
+     "official-node",
+     "official-DofusIcon"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(1, 1, 1, 0)",
+    "image": "url(\"http://127.0.0.1:3001/ui-data/icons/weight.png\")",
+    "box": [
+     1687,
+     1458,
+     28,
+     28
+    ]
+   }
+  },
+  {
+   "x": 14,
+   "y": 1434,
+   "w": 16,
+   "h": 20,
+   "pixels": 104,
+   "element": {
+    "id": "chatview-root--293950300",
+    "binding": "sv_toggles",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     0,
+     1317,
+     49,
+     283
+    ]
+   }
+  },
+  {
+   "x": 844,
+   "y": 1113,
+   "w": 28,
+   "h": 5,
+   "pixels": 40,
+   "element": {
+    "id": "equipmentStorageUi-root-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     805,
+     1025,
+     110,
+     110
+    ]
+   }
+  }
+ ]
+}

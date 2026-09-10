@@ -1,0 +1,1592 @@
+{
+ "official": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/official/hud_jobs.png",
+ "client": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/web/hud_jobs.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 2052075,
+ "mismatched_pixels": 973519,
+ "mismatched_ratio": 0.47441,
+ "regions": 56,
+ "worst": [
+  {
+   "x": 0,
+   "y": 760,
+   "w": 2176,
+   "h": 896,
+   "pixels": 432151,
+   "element": {
+    "id": "jobUI-13--1691997465",
+    "binding": "ctr_freeCraft",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     1190,
+     910,
+     46
+    ]
+   }
+  },
+  {
+   "x": 8,
+   "y": 0,
+   "w": 2384,
+   "h": 480,
+   "pixels": 323525,
+   "element": {
+    "id": "jobUI-1--542237814",
+    "binding": "lbl_lvlUpXp",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_white_white65",
+     "textShort_largeBold",
+     "dofusLabel"
+    ],
+    "text": "/ 10 000",
+    "font": "Lexend-SemiBold 16px/20px",
+    "color": "rgba(255, 255, 255, 0.65)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1096,
+     225,
+     107,
+     34
+    ]
+   }
+  },
+  {
+   "x": 584,
+   "y": 488,
+   "w": 624,
+   "h": 264,
+   "pixels": 56694,
+   "element": {
+    "id": "jobUI-2-1361144",
+    "binding": "lbl_lvlMinObjectCraft",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_white_white80",
+     "textShort_largeRegular",
+     "dofusLabel"
+    ],
+    "text": "Niveau minimum des objets fabriqués",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     596,
+     450,
+     31
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 272,
+   "w": 464,
+   "h": 160,
+   "pixels": 34481,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 2872,
+   "y": 80,
+   "w": 72,
+   "h": 432,
+   "pixels": 27461,
+   "element": {
+    "id": "bannerMenu-gd_btnUis_3-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(80, 84, 126, 0.8)",
+    "image": null,
+    "box": [
+     2882,
+     293,
+     49,
+     49
+    ]
+   }
+  },
+  {
+   "x": 672,
+   "y": 648,
+   "w": 520,
+   "h": 80,
+   "pixels": 16377,
+   "element": {
+    "id": "jobUI-2--263708427",
+    "binding": "chb_rememberOnlyForSession",
+    "type": "CheckboxCustom",
+    "classes": [
+     "official-node",
+     "official-CheckboxCustom",
+     "checkboxLine",
+     "large",
+     "activeFalse",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     688,
+     822,
+     46
+    ]
+   }
+  },
+  {
+   "x": 672,
+   "y": 960,
+   "w": 520,
+   "h": 72,
+   "pixels": 15097,
+   "element": {
+    "id": "jobUI-11-checkboxLine_labelRight",
+    "binding": "checkboxLine_labelRight",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel"
+    ],
+    "text": "Être visible dans la liste des artisans ",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     674,
+     968,
+     761,
+     37
+    ]
+   }
+  },
+  {
+   "x": 696,
+   "y": 264,
+   "w": 504,
+   "h": 48,
+   "pixels": 13416,
+   "element": {
+    "id": "jobUI-1-extend-progress-bar__background",
+    "binding": "extend-progress-bar__background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "extend-progress-bar__background"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgb(0, 0, 0)",
+    "image": null,
+    "box": [
+     691,
+     266,
+     508,
+     29
+    ]
+   }
+  },
+  {
+   "x": 672,
+   "y": 1248,
+   "w": 848,
+   "h": 56,
+   "pixels": 9408,
+   "element": {
+    "id": "jobUI-13-checkboxLine_labelRight",
+    "binding": "checkboxLine_labelRight",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel"
+    ],
+    "text": "Être visible dans la liste des artisans ",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     674,
+     1244,
+     761,
+     37
+    ]
+   }
+  },
+  {
+   "x": 1392,
+   "y": 760,
+   "w": 160,
+   "h": 200,
+   "pixels": 4952,
+   "element": {
+    "id": "jobUI-11-1718284007",
+    "binding": "jobProgressItem",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_buttons_buttonSecondary",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     588,
+     764,
+     971,
+     263
+    ]
+   }
+  },
+  {
+   "x": 1440,
+   "y": 488,
+   "w": 120,
+   "h": 264,
+   "pixels": 4518,
+   "element": {
+    "id": "jobUI-2-97572419",
+    "binding": "ctr_options",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     587,
+     910,
+     49
+    ]
+   }
+  },
+  {
+   "x": 1200,
+   "y": 672,
+   "w": 248,
+   "h": 56,
+   "pixels": 3324,
+   "element": {
+    "id": "jobUI-2-checkboxLine_labelRight",
+    "binding": "checkboxLine_labelRight",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel"
+    ],
+    "text": "Être visible dans la liste des artisans ",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     674,
+     692,
+     761,
+     37
+    ]
+   }
+  },
+  {
+   "x": 1200,
+   "y": 968,
+   "w": 248,
+   "h": 48,
+   "pixels": 3041,
+   "element": {
+    "id": "jobUI-11-checkboxLine_labelRight",
+    "binding": "checkboxLine_labelRight",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel"
+    ],
+    "text": "Être visible dans la liste des artisans ",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     674,
+     968,
+     761,
+     37
+    ]
+   }
+  },
+  {
+   "x": 1392,
+   "y": 1072,
+   "w": 136,
+   "h": 48,
+   "pixels": 2917,
+   "element": {
+    "id": "jobUI-13-switch_background",
+    "binding": "switch_background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(240, 255, 79, 0.8)",
+    "image": null,
+    "box": [
+     1442,
+     1074,
+     55,
+     31
+    ]
+   }
+  },
+  {
+   "x": 1296,
+   "y": 160,
+   "w": 96,
+   "h": 40,
+   "pixels": 2592,
+   "element": {
+    "id": "jobUI-jobProgress-tableColumnHeader_label",
+    "binding": "tableColumnHeader_label",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel"
+    ],
+    "text": "Niveau",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1300,
+     167,
+     84,
+     31
+    ]
+   }
+  },
+  {
+   "x": 1400,
+   "y": 160,
+   "w": 96,
+   "h": 40,
+   "pixels": 2581,
+   "element": {
+    "id": "jobUI-jobProgress-switch_circle",
+    "binding": "switch_circle",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgb(255, 255, 255)",
+    "image": null,
+    "box": [
+     1433,
+     173,
+     18,
+     18
+    ]
+   }
+  },
+  {
+   "x": 608,
+   "y": 160,
+   "w": 88,
+   "h": 40,
+   "pixels": 2465,
+   "element": {
+    "id": "jobUI-jobProgress-tableColumnHeader_label",
+    "binding": "tableColumnHeader_label",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel"
+    ],
+    "text": "Métier",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     612,
+     167,
+     77,
+     31
+    ]
+   }
+  },
+  {
+   "x": 56,
+   "y": 328,
+   "w": 216,
+   "h": 48,
+   "pixels": 2252,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 1200,
+   "y": 1248,
+   "w": 240,
+   "h": 32,
+   "pixels": 2000,
+   "element": {
+    "id": "jobUI-13-checkboxLine_labelRight",
+    "binding": "checkboxLine_labelRight",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel"
+    ],
+    "text": "Être visible dans la liste des artisans ",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     674,
+     1244,
+     761,
+     37
+    ]
+   }
+  },
+  {
+   "x": 1440,
+   "y": 1344,
+   "w": 88,
+   "h": 40,
+   "pixels": 1722,
+   "element": {
+    "id": "jobUI-15-switch_circle",
+    "binding": "switch_circle",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgb(255, 255, 255)",
+    "image": null,
+    "box": [
+     1473,
+     1355,
+     18,
+     18
+    ]
+   }
+  },
+  {
+   "x": 1392,
+   "y": 1392,
+   "w": 56,
+   "h": 32,
+   "pixels": 1240,
+   "element": {
+    "id": "jobUI-15-1718284007",
+    "binding": "jobProgressItem",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_buttons_buttonSecondary",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     588,
+     1316,
+     971,
+     263
+    ]
+   }
+  },
+  {
+   "x": 1392,
+   "y": 1184,
+   "w": 56,
+   "h": 32,
+   "pixels": 1240,
+   "element": {
+    "id": "jobUI-13--1691997465",
+    "binding": "ctr_freeCraft",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     1190,
+     910,
+     46
+    ]
+   }
+  },
+  {
+   "x": 1392,
+   "y": 880,
+   "w": 56,
+   "h": 32,
+   "pixels": 1240,
+   "element": {
+    "id": "jobUI-11-97572419",
+    "binding": "ctr_options",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     862,
+     910,
+     49
+    ]
+   }
+  },
+  {
+   "x": 1392,
+   "y": 576,
+   "w": 56,
+   "h": 32,
+   "pixels": 1240,
+   "element": {
+    "id": "jobUI-2-97572419",
+    "binding": "ctr_options",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     587,
+     910,
+     49
+    ]
+   }
+  },
+  {
+   "x": 1392,
+   "y": 288,
+   "w": 56,
+   "h": 32,
+   "pixels": 1176,
+   "element": {
+    "id": "jobUI-1-1718284007",
+    "binding": "jobProgressItem",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_buttons_buttonSecondary",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     588,
+     213,
+     971,
+     263
+    ]
+   }
+  },
+  {
+   "x": 1392,
+   "y": 368,
+   "w": 56,
+   "h": 32,
+   "pixels": 1172,
+   "element": {
+    "id": "jobUI-1--1691997465",
+    "binding": "ctr_freeCraft",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     363,
+     910,
+     46
+    ]
+   }
+  },
+  {
+   "x": 768,
+   "y": 456,
+   "w": 88,
+   "h": 24,
+   "pixels": 832,
+   "element": {
+    "id": "jobUI-1-1718284007",
+    "binding": "jobProgressItem",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_buttons_buttonSecondary",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     588,
+     213,
+     971,
+     263
+    ]
+   }
+  },
+  {
+   "x": 1272,
+   "y": 288,
+   "w": 80,
+   "h": 24,
+   "pixels": 596,
+   "element": {
+    "id": "jobUI-1-1718284007",
+    "binding": "jobProgressItem",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_buttons_buttonSecondary",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     588,
+     213,
+     971,
+     263
+    ]
+   }
+  },
+  {
+   "x": 1392,
+   "y": 488,
+   "w": 56,
+   "h": 16,
+   "pixels": 536,
+   "element": {
+    "id": "jobUI-2-1718284007",
+    "binding": "jobProgressItem",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_buttons_buttonSecondary",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     588,
+     489,
+     971,
+     263
+    ]
+   }
+  },
+  {
+   "x": 1472,
+   "y": 288,
+   "w": 24,
+   "h": 32,
+   "pixels": 324,
+   "element": {
+    "id": "jobUI-1-1718284007",
+    "binding": "jobProgressItem",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_buttons_buttonSecondary",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     588,
+     213,
+     971,
+     263
+    ]
+   }
+  },
+  {
+   "x": 24,
+   "y": 328,
+   "w": 24,
+   "h": 24,
+   "pixels": 280,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 1288,
+   "y": 376,
+   "w": 32,
+   "h": 16,
+   "pixels": 276,
+   "element": {
+    "id": "jobUI-1--1691997465",
+    "binding": "ctr_freeCraft",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     363,
+     910,
+     46
+    ]
+   }
+  },
+  {
+   "x": 16,
+   "y": 1616,
+   "w": 32,
+   "h": 24,
+   "pixels": 192,
+   "element": {
+    "id": "chatview-root-button_iconLeft_Vector",
+    "binding": "button_iconLeft_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(49, 45, 36)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     6,
+     1613,
+     31,
+     31
+    ]
+   }
+  },
+  {
+   "x": 1304,
+   "y": 576,
+   "w": 16,
+   "h": 24,
+   "pixels": 148,
+   "element": {
+    "id": "jobUI-2-97572419",
+    "binding": "ctr_options",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     587,
+     910,
+     49
+    ]
+   }
+  },
+  {
+   "x": 1304,
+   "y": 784,
+   "w": 16,
+   "h": 24,
+   "pixels": 140,
+   "element": {
+    "id": "jobUI-11--1506306951",
+    "binding": "ctr_top",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     600,
+     776,
+     946,
+     74
+    ]
+   }
+  },
+  {
+   "x": 1344,
+   "y": 248,
+   "w": 16,
+   "h": 24,
+   "pixels": 130,
+   "element": {
+    "id": "jobUI-1--1509672969",
+    "binding": "lbl_jobLvl",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_white_white100",
+     "textShort_largeBold",
+     "dofusLabel"
+    ],
+    "text": "1",
+    "font": "Lexend-SemiBold 16px/20px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1326,
+     247,
+     31,
+     31
+    ]
+   }
+  },
+  {
+   "x": 1344,
+   "y": 1352,
+   "w": 16,
+   "h": 24,
+   "pixels": 129,
+   "element": {
+    "id": "jobUI-15--1509672969",
+    "binding": "lbl_jobLvl",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_white_white100",
+     "textShort_largeBold",
+     "dofusLabel"
+    ],
+    "text": "1",
+    "font": "Lexend-SemiBold 16px/20px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1326,
+     1349,
+     31,
+     31
+    ]
+   }
+  },
+  {
+   "x": 1344,
+   "y": 528,
+   "w": 16,
+   "h": 24,
+   "pixels": 128,
+   "element": {
+    "id": "jobUI-2--1509672969",
+    "binding": "lbl_jobLvl",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_white_white100",
+     "textShort_largeBold",
+     "dofusLabel"
+    ],
+    "text": "1",
+    "font": "Lexend-SemiBold 16px/20px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1326,
+     522,
+     31,
+     31
+    ]
+   }
+  },
+  {
+   "x": 1344,
+   "y": 1080,
+   "w": 16,
+   "h": 24,
+   "pixels": 127,
+   "element": {
+    "id": "jobUI-13--1509672969",
+    "binding": "lbl_jobLvl",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_white_white100",
+     "textShort_largeBold",
+     "dofusLabel"
+    ],
+    "text": "1",
+    "font": "Lexend-SemiBold 16px/20px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1326,
+     1074,
+     31,
+     31
+    ]
+   }
+  },
+  {
+   "x": 1344,
+   "y": 800,
+   "w": 16,
+   "h": 24,
+   "pixels": 127,
+   "element": {
+    "id": "jobUI-11--1509672969",
+    "binding": "lbl_jobLvl",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_white_white100",
+     "textShort_largeBold",
+     "dofusLabel"
+    ],
+    "text": "1",
+    "font": "Lexend-SemiBold 16px/20px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1326,
+     798,
+     31,
+     31
+    ]
+   }
+  },
+  {
+   "x": 1400,
+   "y": 1312,
+   "w": 48,
+   "h": 8,
+   "pixels": 110,
+   "element": {
+    "id": "jobUI-15-1718284007",
+    "binding": "jobProgressItem",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_buttons_buttonSecondary",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     588,
+     1316,
+     971,
+     263
+    ]
+   }
+  },
+  {
+   "x": 1400,
+   "y": 472,
+   "w": 48,
+   "h": 8,
+   "pixels": 110,
+   "element": {
+    "id": "jobUI-1-1718284007",
+    "binding": "jobProgressItem",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_buttons_buttonSecondary",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     588,
+     213,
+     971,
+     263
+    ]
+   }
+  },
+  {
+   "x": 8,
+   "y": 1432,
+   "w": 24,
+   "h": 24,
+   "pixels": 104,
+   "element": {
+    "id": "chatview-root--293950300",
+    "binding": "sv_toggles",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     0,
+     1317,
+     49,
+     283
+    ]
+   }
+  },
+  {
+   "x": 1304,
+   "y": 1392,
+   "w": 16,
+   "h": 24,
+   "pixels": 96,
+   "element": {
+    "id": "jobUI-15-1718284007",
+    "binding": "jobProgressItem",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_buttons_buttonSecondary",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     588,
+     1316,
+     971,
+     263
+    ]
+   }
+  },
+  {
+   "x": 1304,
+   "y": 1192,
+   "w": 16,
+   "h": 24,
+   "pixels": 96,
+   "element": {
+    "id": "jobUI-13--1691997465",
+    "binding": "ctr_freeCraft",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     1190,
+     910,
+     46
+    ]
+   }
+  },
+  {
+   "x": 1304,
+   "y": 1088,
+   "w": 16,
+   "h": 24,
+   "pixels": 96,
+   "element": {
+    "id": "jobUI-13--1506306951",
+    "binding": "ctr_top",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     600,
+     1052,
+     946,
+     74
+    ]
+   }
+  },
+  {
+   "x": 1304,
+   "y": 888,
+   "w": 16,
+   "h": 16,
+   "pixels": 96,
+   "element": {
+    "id": "jobUI-11-97572419",
+    "binding": "ctr_options",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     862,
+     910,
+     49
+    ]
+   }
+  },
+  {
+   "x": 1304,
+   "y": 488,
+   "w": 16,
+   "h": 8,
+   "pixels": 92,
+   "element": {
+    "id": "jobUI-2-1718284007",
+    "binding": "jobProgressItem",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_buttons_buttonSecondary",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     588,
+     489,
+     971,
+     263
+    ]
+   }
+  },
+  {
+   "x": 1472,
+   "y": 1400,
+   "w": 24,
+   "h": 16,
+   "pixels": 64,
+   "element": {
+    "id": "jobUI-15-1718284007",
+    "binding": "jobProgressItem",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_buttons_buttonSecondary",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     588,
+     1316,
+     971,
+     263
+    ]
+   }
+  },
+  {
+   "x": 1472,
+   "y": 1192,
+   "w": 24,
+   "h": 16,
+   "pixels": 64,
+   "element": {
+    "id": "jobUI-13--1691997465",
+    "binding": "ctr_freeCraft",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     1190,
+     910,
+     46
+    ]
+   }
+  },
+  {
+   "x": 1472,
+   "y": 992,
+   "w": 24,
+   "h": 16,
+   "pixels": 64,
+   "element": {
+    "id": "jobUI-11--439298759",
+    "binding": "ctr_rememberOnlyForSession",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     963,
+     910,
+     46
+    ]
+   }
+  },
+  {
+   "x": 1472,
+   "y": 888,
+   "w": 24,
+   "h": 16,
+   "pixels": 64,
+   "element": {
+    "id": "jobUI-11-97572419",
+    "binding": "ctr_options",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     862,
+     910,
+     49
+    ]
+   }
+  },
+  {
+   "x": 1472,
+   "y": 680,
+   "w": 24,
+   "h": 16,
+   "pixels": 64,
+   "element": {
+    "id": "jobUI-2--439298759",
+    "binding": "ctr_rememberOnlyForSession",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     688,
+     910,
+     46
+    ]
+   }
+  },
+  {
+   "x": 1472,
+   "y": 584,
+   "w": 24,
+   "h": 16,
+   "pixels": 64,
+   "element": {
+    "id": "jobUI-2-97572419",
+    "binding": "ctr_options",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     587,
+     910,
+     49
+    ]
+   }
+  },
+  {
+   "x": 1472,
+   "y": 376,
+   "w": 16,
+   "h": 16,
+   "pixels": 64,
+   "element": {
+    "id": "jobUI-1--1691997465",
+    "binding": "ctr_freeCraft",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     619,
+     363,
+     910,
+     46
+    ]
+   }
+  },
+  {
+   "x": 1472,
+   "y": 488,
+   "w": 16,
+   "h": 8,
+   "pixels": 24,
+   "element": {
+    "id": "jobUI-2-1718284007",
+    "binding": "jobProgressItem",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_buttons_buttonSecondary",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     588,
+     489,
+     971,
+     263
+    ]
+   }
+  }
+ ]
+}

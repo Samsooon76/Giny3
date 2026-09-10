@@ -1,0 +1,511 @@
+{
+  "animation": "AnimMarche_1",
+  "frame": 0,
+  "node_count": 16,
+  "nodes": [
+    {
+      "slot": 0,
+      "node": 0,
+      "tag": 23,
+      "opcode": "ROOT",
+      "extra": 127,
+      "drawable": false,
+      "visible": false,
+      "parent": null,
+      "transform": [
+        -2.3043975830078125,
+        -0.0,
+        0.699999988079071,
+        -0.0,
+        1.152191162109375,
+        0.44999998807907104
+      ],
+      "meta_u16": [
+        0,
+        65535
+      ],
+      "extra_floats": [
+        0.0,
+        3.992156744003296
+      ],
+      "payload_hex": "0000ffff000000007f7f7f40407b13c0000000803333333f00000080007b933f6666e63e",
+      "resolve": {
+        "status": "no_symbol",
+        "part": null,
+        "reason": "opcode ROOT does not carry a graphic/symbol id"
+      }
+    },
+    {
+      "slot": 1,
+      "node": 1,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": true,
+      "parent": null,
+      "transform": [
+        -0.8257598876953125,
+        0.2212677001953125,
+        25.5,
+        0.2212677001953125,
+        0.8257598876953125,
+        30.149999618530273
+      ],
+      "graphic": "1",
+      "meta_u16": [
+        1,
+        65535,
+        0,
+        0
+      ],
+      "payload_hex": "0100ffff00000000006553bf0094623e0000cc410094623e0065533f3333f141",
+      "resolve": {
+        "status": "ok",
+        "part": "1",
+        "reason": "symbol id == SkinAsset.m_keys entry == AOD.graphics[].part.name"
+      }
+    },
+    {
+      "slot": 2,
+      "node": 2,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": true,
+      "parent": null,
+      "transform": [
+        -1.01507568359375,
+        -0.272003173828125,
+        22.799999237060547,
+        -0.2719879150390625,
+        1.0150909423828125,
+        2.049999952316284
+      ],
+      "graphic": "3",
+      "meta_u16": [
+        3,
+        65535,
+        0,
+        0
+      ],
+      "payload_hex": "0300ffff0000000000ee81bf00448bbe6666b64100428bbe80ee813f33330340",
+      "resolve": {
+        "status": "ok",
+        "part": "3",
+        "reason": "symbol id == SkinAsset.m_keys entry == AOD.graphics[].part.name"
+      }
+    },
+    {
+      "slot": 3,
+      "node": 3,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": true,
+      "parent": null,
+      "transform": [
+        -0.5254364013671875,
+        0.8934173583984375,
+        -6.0,
+        0.910064697265625,
+        0.554229736328125,
+        16.850000381469727
+      ],
+      "graphic": "3",
+      "meta_u16": [
+        3,
+        65535,
+        0,
+        0
+      ],
+      "payload_hex": "0300ffff00000000008306bf00b7643f0000c0c000fa683f00e20d3fcdcc8641",
+      "resolve": {
+        "status": "ok",
+        "part": "3",
+        "reason": "symbol id == SkinAsset.m_keys entry == AOD.graphics[].part.name"
+      }
+    },
+    {
+      "slot": 4,
+      "node": 4,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": true,
+      "parent": null,
+      "transform": [
+        -0.853363037109375,
+        -0.6374359130859375,
+        -5.5,
+        -0.6104278564453125,
+        0.8340606689453125,
+        2.5
+      ],
+      "graphic": "3",
+      "meta_u16": [
+        3,
+        65535,
+        0,
+        0
+      ],
+      "payload_hex": "0300ffff0000000000765abf002f23bf0000b0c000451cbf0085553f00002040",
+      "resolve": {
+        "status": "ok",
+        "part": "3",
+        "reason": "symbol id == SkinAsset.m_keys entry == AOD.graphics[].part.name"
+      }
+    },
+    {
+      "slot": 5,
+      "node": 5,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": true,
+      "parent": null,
+      "transform": [
+        -0.74310302734375,
+        0.743072509765625,
+        2.6500000953674316,
+        0.7430572509765625,
+        0.7430877685546875,
+        -0.6499999761581421
+      ],
+      "graphic": "3",
+      "meta_u16": [
+        3,
+        65535,
+        0,
+        0
+      ],
+      "payload_hex": "0300ffff00000000003c3ebf003a3e3f9a99294000393e3f003b3e3f666626bf",
+      "resolve": {
+        "status": "ok",
+        "part": "3",
+        "reason": "symbol id == SkinAsset.m_keys entry == AOD.graphics[].part.name"
+      }
+    },
+    {
+      "slot": 6,
+      "node": 6,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": false,
+      "parent": null,
+      "transform": [
+        -1.078765869140625,
+        -0.314971923828125,
+        4.199999809265137,
+        -0.314971923828125,
+        1.078765869140625,
+        17.399999618530273
+      ],
+      "graphic": "4",
+      "meta_u16": [
+        4,
+        65535,
+        0,
+        0
+      ],
+      "payload_hex": "0400ffff0000000000158abf0044a1be666686400044a1be00158a3f33338b41",
+      "resolve": {
+        "status": "container_no_mesh",
+        "part": null,
+        "graphics_index_would_be": "9",
+        "reason": "symbol 4 is a grouping node: it is absent from SkinAsset.m_keys and AOD.graphics[].part.name (88 leaf parts). DisplayListEntry.symbolId is always -1 (no nested children in SkinAsset). AnimMarche_1 places the same leaf graphics without symbol 2, so this node is not a required parent. Transform is kept; no mesh is drawn; no substitution."
+      }
+    },
+    {
+      "slot": 7,
+      "node": 7,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": false,
+      "parent": null,
+      "transform": [
+        0.8257598876953125,
+        0.22125244140625,
+        -16.649999618530273,
+        -0.2212677001953125,
+        0.8257598876953125,
+        40.099998474121094
+      ],
+      "graphic": "6",
+      "meta_u16": [
+        6,
+        65535,
+        0,
+        0
+      ],
+      "payload_hex": "0600ffff000000000065533f0090623e333385c1009462be0065533f66662042",
+      "resolve": {
+        "status": "container_no_mesh",
+        "part": null,
+        "graphics_index_would_be": "13",
+        "reason": "symbol 6 is a grouping node: it is absent from SkinAsset.m_keys and AOD.graphics[].part.name (88 leaf parts). DisplayListEntry.symbolId is always -1 (no nested children in SkinAsset). AnimMarche_1 places the same leaf graphics without symbol 2, so this node is not a required parent. Transform is kept; no mesh is drawn; no substitution."
+      }
+    },
+    {
+      "slot": 8,
+      "node": 8,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": true,
+      "parent": null,
+      "transform": [
+        -1.1409454345703125,
+        -0.533294677734375,
+        2.450000047683716,
+        -0.533294677734375,
+        1.1409454345703125,
+        22.549999237060547
+      ],
+      "graphic": "7",
+      "meta_u16": [
+        7,
+        65535,
+        0,
+        0
+      ],
+      "payload_hex": "0700ffff00000000800a92bf008608bfcdcc1c40008608bf800a923f6666b441",
+      "resolve": {
+        "status": "ok",
+        "part": "7",
+        "reason": "symbol id == SkinAsset.m_keys entry == AOD.graphics[].part.name"
+      }
+    },
+    {
+      "slot": 9,
+      "node": 9,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": false,
+      "parent": null,
+      "transform": [
+        -0.8257598876953125,
+        0.2212677001953125,
+        -10.149999618530273,
+        0.2212677001953125,
+        0.8257598876953125,
+        19.649999618530273
+      ],
+      "graphic": "12",
+      "meta_u16": [
+        12,
+        65535,
+        0,
+        0
+      ],
+      "payload_hex": "0c00ffff00000000006553bf0094623e666622c10094623e0065533f33339d41",
+      "resolve": {
+        "status": "container_no_mesh",
+        "part": null,
+        "graphics_index_would_be": "26",
+        "reason": "symbol 12 is a grouping node: it is absent from SkinAsset.m_keys and AOD.graphics[].part.name (88 leaf parts). DisplayListEntry.symbolId is always -1 (no nested children in SkinAsset). AnimMarche_1 places the same leaf graphics without symbol 2, so this node is not a required parent. Transform is kept; no mesh is drawn; no substitution."
+      }
+    },
+    {
+      "slot": 10,
+      "node": 10,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": false,
+      "parent": null,
+      "transform": [
+        -1.2610321044921875,
+        -0.0,
+        2.44136118888855,
+        -0.0,
+        1.2610321044921875,
+        20.274084091186523
+      ],
+      "graphic": "8",
+      "meta_u16": [
+        8,
+        65535,
+        0,
+        0
+      ],
+      "payload_hex": "0800ffff000000008069a1bf00000080433f1c40000000808069a13f5331a241",
+      "resolve": {
+        "status": "container_no_mesh",
+        "part": null,
+        "graphics_index_would_be": "17",
+        "reason": "symbol 8 is a grouping node: it is absent from SkinAsset.m_keys and AOD.graphics[].part.name (88 leaf parts). DisplayListEntry.symbolId is always -1 (no nested children in SkinAsset). AnimMarche_1 places the same leaf graphics without symbol 2, so this node is not a required parent. Transform is kept; no mesh is drawn; no substitution."
+      }
+    },
+    {
+      "slot": 11,
+      "node": 11,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": true,
+      "parent": null,
+      "transform": [
+        -1.2610321044921875,
+        -0.0,
+        2.0,
+        -0.0,
+        1.2610321044921875,
+        16.427936553955078
+      ],
+      "graphic": "9",
+      "meta_u16": [
+        9,
+        65535,
+        0,
+        0
+      ],
+      "payload_hex": "0900ffff000000008069a1bf0000008000000040000000808069a13f6a6c8341",
+      "resolve": {
+        "status": "ok",
+        "part": "9",
+        "reason": "symbol id == SkinAsset.m_keys entry == AOD.graphics[].part.name"
+      }
+    },
+    {
+      "slot": 12,
+      "node": 12,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": false,
+      "parent": null,
+      "transform": [
+        -1.2610321044921875,
+        -0.0,
+        4.395960807800293,
+        -0.0,
+        1.2610321044921875,
+        16.364883422851562
+      ],
+      "graphic": "10",
+      "meta_u16": [
+        10,
+        65535,
+        0,
+        0
+      ],
+      "payload_hex": "0a00ffff000000008069a1bf00000080b6ab8c40000000808069a13f48eb8241",
+      "resolve": {
+        "status": "container_no_mesh",
+        "part": null,
+        "graphics_index_would_be": "21",
+        "reason": "symbol 10 is a grouping node: it is absent from SkinAsset.m_keys and AOD.graphics[].part.name (88 leaf parts). DisplayListEntry.symbolId is always -1 (no nested children in SkinAsset). AnimMarche_1 places the same leaf graphics without symbol 2, so this node is not a required parent. Transform is kept; no mesh is drawn; no substitution."
+      }
+    },
+    {
+      "slot": 13,
+      "node": 13,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": true,
+      "parent": null,
+      "transform": [
+        -1.2610321044921875,
+        -0.0,
+        2.504412889480591,
+        -0.0,
+        1.2610321044921875,
+        22.228683471679688
+      ],
+      "graphic": "11",
+      "meta_u16": [
+        11,
+        65535,
+        0,
+        0
+      ],
+      "payload_hex": "0b00ffff000000008069a1bf000000804d482040000000808069a13f58d4b141",
+      "resolve": {
+        "status": "ok",
+        "part": "11",
+        "reason": "symbol id == SkinAsset.m_keys entry == AOD.graphics[].part.name Interior fleece (dist=1.96px from grouping host); drawn under the reconstructed body disk.",
+        "under_fleece": true
+      }
+    },
+    {
+      "slot": 14,
+      "node": 14,
+      "tag": 49,
+      "opcode": "END",
+      "extra": 0,
+      "drawable": false,
+      "visible": false,
+      "parent": 7,
+      "transform": [
+        1.0,
+        -0.0,
+        0.0,
+        -0.0,
+        1.0,
+        -0.0
+      ],
+      "meta_u16": [
+        65506,
+        7,
+        0,
+        0
+      ],
+      "payload_hex": "e2ff0700000000000000803f0000008000000000000000800000803f00000080",
+      "resolve": {
+        "status": "no_symbol",
+        "part": null,
+        "reason": "opcode END does not carry a graphic/symbol id"
+      }
+    },
+    {
+      "slot": 1010,
+      "node": 10,
+      "tag": 17,
+      "opcode": "PLACE",
+      "extra": 0,
+      "drawable": true,
+      "visible": true,
+      "parent": 10,
+      "transform": [
+        -1.2610321044921875,
+        -0.0,
+        2.44136118888855,
+        -0.0,
+        1.2610321044921875,
+        20.274084091186523
+      ],
+      "graphic": "15",
+      "resolve": {
+        "status": "grouping_expanded",
+        "part": "15",
+        "from_group": "8",
+        "local_transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "reason": "Hypothesis D: grouping 8 has no SkinAsset mesh. Default child is unused origin-centered disk part 15 at local identity (WalkSymbol draws container children; Unity dropped grouping DLE)."
+      }
+    }
+  ]
+}

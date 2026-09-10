@@ -1,0 +1,649 @@
+{
+ "official": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/official/hud_friends.png",
+ "client": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/web/hud_friends.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 1797804,
+ "mismatched_pixels": 839117,
+ "mismatched_ratio": 0.46675,
+ "regions": 22,
+ "worst": [
+  {
+   "x": 8,
+   "y": 0,
+   "w": 2424,
+   "h": 208,
+   "pixels": 347241,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "div",
+    "classes": [
+     "official-window-titlebar-tint"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(182, 179, 229, 0.2)",
+    "image": null,
+    "box": [
+     513,
+     51,
+     1914,
+     64
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 1280,
+   "w": 2432,
+   "h": 376,
+   "pixels": 303554,
+   "element": {
+    "id": "friends-root-checkboxLine_labelRight",
+    "binding": "checkboxLine_labelRight",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel"
+    ],
+    "text": "Masquer mon statut de connexion aux cont",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     593,
+     1437,
+     643,
+     34
+    ]
+   }
+  },
+  {
+   "x": 544,
+   "y": 240,
+   "w": 1848,
+   "h": 120,
+   "pixels": 58661,
+   "element": {
+    "id": "friends-root--72451679",
+    "binding": "ctr_headerMutualFriends",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     550,
+     293,
+     1841,
+     49
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 272,
+   "w": 464,
+   "h": 160,
+   "pixels": 34883,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 2872,
+   "y": 80,
+   "w": 72,
+   "h": 432,
+   "pixels": 27441,
+   "element": {
+    "id": "bannerMenu-gd_btnUis_3-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(80, 84, 126, 0.8)",
+    "image": null,
+    "box": [
+     2882,
+     293,
+     49,
+     49
+    ]
+   }
+  },
+  {
+   "x": 544,
+   "y": 488,
+   "w": 160,
+   "h": 312,
+   "pixels": 19780,
+   "element": {
+    "id": "friends-root-646741867",
+    "binding": "lbl_noInGameContact",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "italicShort_medium",
+     "textColor_highlight_secondary80",
+     "dofusLabel"
+    ],
+    "text": "Aucun contact en jeu",
+    "font": "Roboto-MediumItalic 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     550,
+     489,
+     1841,
+     306
+    ]
+   }
+  },
+  {
+   "x": 2328,
+   "y": 488,
+   "w": 64,
+   "h": 312,
+   "pixels": 17365,
+   "element": {
+    "id": "friends-root-646741867",
+    "binding": "lbl_noInGameContact",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "italicShort_medium",
+     "textColor_highlight_secondary80",
+     "dofusLabel"
+    ],
+    "text": "Aucun contact en jeu",
+    "font": "Roboto-MediumItalic 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     550,
+     489,
+     1841,
+     306
+    ]
+   }
+  },
+  {
+   "x": 544,
+   "y": 248,
+   "w": 376,
+   "h": 32,
+   "pixels": 9853,
+   "element": {
+    "id": "friends-root-sectionHeader_titleLabel",
+    "binding": "sectionHeader_titleLabel",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel"
+    ],
+    "text": "contacts en jeu réciproques",
+    "font": "LexendDeca-Regular 14px/18px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     550,
+     251,
+     363,
+     28
+    ]
+   }
+  },
+  {
+   "x": 544,
+   "y": 416,
+   "w": 296,
+   "h": 40,
+   "pixels": 4238,
+   "element": {
+    "id": "friends-root-sectionHeader_titleLabel",
+    "binding": "sectionHeader_titleLabel",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel"
+    ],
+    "text": "Invitations en attente",
+    "font": "LexendDeca-Regular 14px/18px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     550,
+     423,
+     285,
+     28
+    ]
+   }
+  },
+  {
+   "x": 640,
+   "y": 664,
+   "w": 1664,
+   "h": 8,
+   "pixels": 3308,
+   "element": {
+    "id": "friends-root-646741867",
+    "binding": "lbl_noInGameContact",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "italicShort_medium",
+     "textColor_highlight_secondary80",
+     "dofusLabel"
+    ],
+    "text": "Aucun contact en jeu",
+    "font": "Roboto-MediumItalic 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     550,
+     489,
+     1841,
+     306
+    ]
+   }
+  },
+  {
+   "x": 712,
+   "y": 488,
+   "w": 224,
+   "h": 48,
+   "pixels": 2524,
+   "element": {
+    "id": "friends-root--161933046",
+    "binding": "head_inGameContactAccountName",
+    "type": "TableColumnHeader",
+    "classes": [
+     "official-node",
+     "official-TableColumnHeader",
+     "tableColumnHeader",
+     "text",
+     "inactive",
+     "tableColumnHeader"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     611,
+     501,
+     505,
+     37
+    ]
+   }
+  },
+  {
+   "x": 56,
+   "y": 328,
+   "w": 216,
+   "h": 48,
+   "pixels": 2252,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 1360,
+   "y": 632,
+   "w": 216,
+   "h": 24,
+   "pixels": 1713,
+   "element": {
+    "id": "friends-root-646741867",
+    "binding": "lbl_noInGameContact",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "italicShort_medium",
+     "textColor_highlight_secondary80",
+     "dofusLabel"
+    ],
+    "text": "Aucun contact en jeu",
+    "font": "Roboto-MediumItalic 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     550,
+     489,
+     1841,
+     306
+    ]
+   }
+  },
+  {
+   "x": 696,
+   "y": 760,
+   "w": 208,
+   "h": 32,
+   "pixels": 1684,
+   "element": {
+    "id": "friends-root-646741867",
+    "binding": "lbl_noInGameContact",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "italicShort_medium",
+     "textColor_highlight_secondary80",
+     "dofusLabel"
+    ],
+    "text": "Aucun contact en jeu",
+    "font": "Roboto-MediumItalic 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     550,
+     489,
+     1841,
+     306
+    ]
+   }
+  },
+  {
+   "x": 768,
+   "y": 584,
+   "w": 160,
+   "h": 32,
+   "pixels": 1648,
+   "element": {
+    "id": "friends-root-646741867",
+    "binding": "lbl_noInGameContact",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "italicShort_medium",
+     "textColor_highlight_secondary80",
+     "dofusLabel"
+    ],
+    "text": "Aucun contact en jeu",
+    "font": "Roboto-MediumItalic 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     550,
+     489,
+     1841,
+     306
+    ]
+   }
+  },
+  {
+   "x": 640,
+   "y": 712,
+   "w": 192,
+   "h": 24,
+   "pixels": 1588,
+   "element": {
+    "id": "friends-root-646741867",
+    "binding": "lbl_noInGameContact",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "italicShort_medium",
+     "textColor_highlight_secondary80",
+     "dofusLabel"
+    ],
+    "text": "Aucun contact en jeu",
+    "font": "Roboto-MediumItalic 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     550,
+     489,
+     1841,
+     306
+    ]
+   }
+  },
+  {
+   "x": 640,
+   "y": 1408,
+   "w": 24,
+   "h": 32,
+   "pixels": 600,
+   "element": {
+    "id": "friends-root-33864034",
+    "binding": "ctr_inGameFooter",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "backgroundColor_background_medium90"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(61, 64, 92, 0.898)",
+    "image": null,
+    "box": [
+     513,
+     1414,
+     1914,
+     126
+    ]
+   }
+  },
+  {
+   "x": 24,
+   "y": 328,
+   "w": 24,
+   "h": 24,
+   "pixels": 280,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 16,
+   "y": 1616,
+   "w": 32,
+   "h": 24,
+   "pixels": 192,
+   "element": {
+    "id": "chatview-root-button_iconLeft_Vector",
+    "binding": "button_iconLeft_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(49, 45, 36)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     6,
+     1613,
+     31,
+     31
+    ]
+   }
+  },
+  {
+   "x": 664,
+   "y": 592,
+   "w": 24,
+   "h": 16,
+   "pixels": 128,
+   "element": {
+    "id": "friends-root-646741867",
+    "binding": "lbl_noInGameContact",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "italicShort_medium",
+     "textColor_highlight_secondary80",
+     "dofusLabel"
+    ],
+    "text": "Aucun contact en jeu",
+    "font": "Roboto-MediumItalic 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     550,
+     489,
+     1841,
+     306
+    ]
+   }
+  },
+  {
+   "x": 8,
+   "y": 1432,
+   "w": 24,
+   "h": 24,
+   "pixels": 104,
+   "element": {
+    "id": "chatview-root--293950300",
+    "binding": "sv_toggles",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     0,
+     1317,
+     49,
+     283
+    ]
+   }
+  },
+  {
+   "x": 2256,
+   "y": 720,
+   "w": 32,
+   "h": 8,
+   "pixels": 80,
+   "element": {
+    "id": "friends-root-646741867",
+    "binding": "lbl_noInGameContact",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "italicShort_medium",
+     "textColor_highlight_secondary80",
+     "dofusLabel"
+    ],
+    "text": "Aucun contact en jeu",
+    "font": "Roboto-MediumItalic 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     550,
+     489,
+     1841,
+     306
+    ]
+   }
+  }
+ ]
+}

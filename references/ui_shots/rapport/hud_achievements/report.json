@@ -1,0 +1,628 @@
+{
+ "official": "client/dofus3/output/ui_shots/official/hud_achievements.png",
+ "client": "client/dofus3/output/ui_shots/web/hud_achievements.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 3477266,
+ "mismatched_pixels": 2224115,
+ "mismatched_ratio": 0.63962,
+ "regions": 45,
+ "worst": [
+  {
+   "x": 0,
+   "y": 0,
+   "w": 2496,
+   "h": 1656,
+   "pixels": 2162032,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "i",
+    "classes": [
+     "uitk-tint-layer"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": "url(\"http://127.0.0.1:5173/uitk/assets/5f99c5e0_7317872636042030380.png\")",
+    "depth": 18,
+    "box": [
+     719,
+     517,
+     431,
+     117
+    ]
+   }
+  },
+  {
+   "x": 2864,
+   "y": 80,
+   "w": 80,
+   "h": 392,
+   "pixels": 26868,
+   "element": {
+    "id": "bannerMenu-gd_btnUis_2-itemTile_icon_Vector",
+    "binding": "itemTile_icon_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/icons/spell.png\")",
+    "depth": 13,
+    "box": [
+     1886,
+     159,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 2768,
+   "y": 0,
+   "w": 176,
+   "h": 64,
+   "pixels": 8742,
+   "element": {
+    "id": "gameMenu-root-button_iconRight_Vector",
+    "binding": "button_iconRight_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     1864,
+     9,
+     20,
+     20
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 896,
+   "w": 272,
+   "h": 16,
+   "pixels": 2040,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 1096,
+   "w": 248,
+   "h": 24,
+   "pixels": 1740,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 1120,
+   "y": 1288,
+   "w": 128,
+   "h": 32,
+   "pixels": 1637,
+   "element": {
+    "id": "achievements-8-1105901397",
+    "binding": "lbl_name",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "title_large",
+     "textColor_white_white100",
+     "dofusLabel"
+    ],
+    "text": "Quêtes",
+    "font": "Lexend-Regular 22px/26px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"/ui-data/styles/images/GradientAchievement.png\")",
+    "depth": 19,
+    "box": [
+     735,
+     836,
+     399,
+     26
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 944,
+   "w": 176,
+   "h": 24,
+   "pixels": 1364,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 1048,
+   "w": 152,
+   "h": 24,
+   "pixels": 1228,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 784,
+   "w": 136,
+   "h": 24,
+   "pixels": 1128,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 480,
+   "w": 144,
+   "h": 24,
+   "pixels": 1092,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 1672,
+   "y": 512,
+   "w": 48,
+   "h": 32,
+   "pixels": 1058,
+   "element": {
+    "id": "achievements-15--1402862033",
+    "binding": "lbl_percent",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_hugeBold",
+     "textColor_highlight_primary100",
+     "dofusLabel",
+     "uitk-inline-achievementSummaryItem-8"
+    ],
+    "text": "0%",
+    "font": "Lexend-Regular 18px/22px",
+    "color": "rgb(240, 255, 79)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"/ui-data/styles/images/GradientAchievement.png\")",
+    "depth": 20,
+    "box": [
+     1082,
+     330,
+     52,
+     22
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 584,
+   "w": 112,
+   "h": 16,
+   "pixels": 908,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 840,
+   "w": 112,
+   "h": 24,
+   "pixels": 868,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 536,
+   "w": 104,
+   "h": 16,
+   "pixels": 812,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 424,
+   "w": 96,
+   "h": 24,
+   "pixels": 772,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 680,
+   "w": 88,
+   "h": 24,
+   "pixels": 732,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 736,
+   "w": 96,
+   "h": 24,
+   "pixels": 696,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 632,
+   "w": 80,
+   "h": 24,
+   "pixels": 644,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 872,
+   "y": 1096,
+   "w": 88,
+   "h": 24,
+   "pixels": 632,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "uitk-inline-achievements-10",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     295,
+     208,
+     400,
+     797
+    ]
+   }
+  },
+  {
+   "x": 1672,
+   "y": 1128,
+   "w": 48,
+   "h": 32,
+   "pixels": 569,
+   "element": {
+    "id": "achievements-25--1402862033",
+    "binding": "lbl_percent",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_hugeBold",
+     "textColor_highlight_primary100",
+     "dofusLabel",
+     "uitk-inline-achievementSummaryItem-8"
+    ],
+    "text": "0%",
+    "font": "Lexend-Regular 18px/22px",
+    "color": "rgb(240, 255, 79)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"/ui-data/styles/images/GradientAchievement.png\")",
+    "depth": 20,
+    "box": [
+     1082,
+     735,
+     52,
+     22
+    ]
+   }
+  }
+ ]
+}

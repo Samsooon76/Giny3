@@ -1,0 +1,900 @@
+{
+ "official": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/official/character_creation.png",
+ "client": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/web/character_creation.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 3365050,
+ "mismatched_pixels": 1997266,
+ "mismatched_ratio": 0.59353,
+ "regions": 34,
+ "worst": [
+  {
+   "x": 0,
+   "y": 0,
+   "w": 2944,
+   "h": 1656,
+   "pixels": 1406409,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     565,
+     -129,
+     1838,
+     1838
+    ]
+   }
+  },
+  {
+   "x": 848,
+   "y": 904,
+   "w": 1336,
+   "h": 752,
+   "pixels": 526710,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     565,
+     -129,
+     1838,
+     1838
+    ]
+   }
+  },
+  {
+   "x": 1272,
+   "y": 304,
+   "w": 384,
+   "h": 80,
+   "pixels": 17962,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     565,
+     -129,
+     1838,
+     1838
+    ]
+   }
+  },
+  {
+   "x": 2488,
+   "y": 496,
+   "w": 200,
+   "h": 104,
+   "pixels": 15895,
+   "element": {
+    "id": "characterCreation-root-820448499",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"/ui-data/styles/images/ColorPalette.png\")",
+    "box": [
+     2533,
+     504,
+     83,
+     83
+    ]
+   }
+  },
+  {
+   "x": 1280,
+   "y": 1272,
+   "w": 376,
+   "h": 48,
+   "pixels": 5555,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     565,
+     -129,
+     1838,
+     1838
+    ]
+   }
+  },
+  {
+   "x": 2376,
+   "y": 496,
+   "w": 88,
+   "h": 104,
+   "pixels": 5360,
+   "element": {
+    "id": "characterCreation-root--243191547",
+    "binding": "VisualElement",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2352,
+     496,
+     502,
+     110
+    ]
+   }
+  },
+  {
+   "x": 2352,
+   "y": 688,
+   "w": 152,
+   "h": 80,
+   "pixels": 4723,
+   "element": {
+    "id": "characterCreation-root--1051866460",
+    "binding": "lbl_colorHair",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "section_mediumExtended",
+     "textColor_white_white65",
+     "dofusLabel"
+    ],
+    "text": "Cheveux",
+    "font": "LexendGiga-Regular 14px/18px",
+    "color": "rgba(255, 255, 255, 0.65)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2352,
+     701,
+     127,
+     28
+    ]
+   }
+  },
+  {
+   "x": 2584,
+   "y": 688,
+   "w": 56,
+   "h": 56,
+   "pixels": 2438,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "input",
+    "classes": [
+     "official-native-input"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2585,
+     691,
+     49,
+     49
+    ]
+   }
+  },
+  {
+   "x": 2648,
+   "y": 1304,
+   "w": 48,
+   "h": 48,
+   "pixels": 1512,
+   "element": {
+    "id": "characterCreation-root--329306896",
+    "binding": "window_background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgb(27, 29, 50)",
+    "image": null,
+    "box": [
+     2328,
+     1100,
+     551,
+     340
+    ]
+   }
+  },
+  {
+   "x": 2496,
+   "y": 1304,
+   "w": 48,
+   "h": 48,
+   "pixels": 1512,
+   "element": {
+    "id": "characterCreation-root--329306896",
+    "binding": "window_background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgb(27, 29, 50)",
+    "image": null,
+    "box": [
+     2328,
+     1100,
+     551,
+     340
+    ]
+   }
+  },
+  {
+   "x": 2568,
+   "y": 1304,
+   "w": 48,
+   "h": 48,
+   "pixels": 1448,
+   "element": {
+    "id": "characterCreation-root--329306896",
+    "binding": "window_background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgb(27, 29, 50)",
+    "image": null,
+    "box": [
+     2328,
+     1100,
+     551,
+     340
+    ]
+   }
+  },
+  {
+   "x": 2352,
+   "y": 152,
+   "w": 104,
+   "h": 56,
+   "pixels": 1249,
+   "element": {
+    "id": "characterCreation-root--508258990",
+    "binding": "window_background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgb(27, 29, 50)",
+    "image": null,
+    "box": [
+     2328,
+     61,
+     551,
+     992
+    ]
+   }
+  },
+  {
+   "x": 2560,
+   "y": 1128,
+   "w": 96,
+   "h": 24,
+   "pixels": 752,
+   "element": {
+    "id": "characterCreation-root--1850441191",
+    "binding": "lbl_attitudes",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "section_mediumExtended",
+     "textColor_white_white65",
+     "dofusLabel"
+    ],
+    "text": "corps",
+    "font": "LexendGiga-Regular 14px/18px",
+    "color": "rgba(255, 255, 255, 0.65)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2352,
+     1124,
+     502,
+     28
+    ]
+   }
+  },
+  {
+   "x": 304,
+   "y": 984,
+   "w": 40,
+   "h": 32,
+   "pixels": 671,
+   "element": {
+    "id": "characterCreation-root--1943309856",
+    "binding": "icon_role_1",
+    "type": "DofusIcon",
+    "classes": [
+     "official-node",
+     "official-DofusIcon"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/icons/heart.png\")",
+    "box": [
+     300,
+     974,
+     49,
+     49
+    ]
+   }
+  },
+  {
+   "x": 368,
+   "y": 984,
+   "w": 40,
+   "h": 32,
+   "pixels": 668,
+   "element": {
+    "id": "characterCreation-root-830523145",
+    "binding": "icon_role_2",
+    "type": "DofusIcon",
+    "classes": [
+     "official-node",
+     "official-DofusIcon"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/icons/heart.png\")",
+    "box": [
+     361,
+     974,
+     49,
+     49
+    ]
+   }
+  },
+  {
+   "x": 2472,
+   "y": 160,
+   "w": 56,
+   "h": 32,
+   "pixels": 560,
+   "element": {
+    "id": "characterCreation-root--508258990",
+    "binding": "window_background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgb(27, 29, 50)",
+    "image": null,
+    "box": [
+     2328,
+     61,
+     551,
+     992
+    ]
+   }
+  },
+  {
+   "x": 2536,
+   "y": 152,
+   "w": 48,
+   "h": 48,
+   "pixels": 536,
+   "element": {
+    "id": "characterCreation-root--508258990",
+    "binding": "window_background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgb(27, 29, 50)",
+    "image": null,
+    "box": [
+     2328,
+     61,
+     551,
+     992
+    ]
+   }
+  },
+  {
+   "x": 1272,
+   "y": 1344,
+   "w": 64,
+   "h": 32,
+   "pixels": 440,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "input",
+    "classes": [
+     "official-native-input"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 14px/18px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1274,
+     1342,
+     289,
+     31
+    ]
+   }
+  },
+  {
+   "x": 2488,
+   "y": 608,
+   "w": 48,
+   "h": 24,
+   "pixels": 436,
+   "element": {
+    "id": "characterCreation-root-1456899098",
+    "binding": "ctr_colorable",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2352,
+     613,
+     502,
+     64
+    ]
+   }
+  },
+  {
+   "x": 592,
+   "y": 1024,
+   "w": 112,
+   "h": 24,
+   "pixels": 416,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     565,
+     -129,
+     1838,
+     1838
+    ]
+   }
+  },
+  {
+   "x": 288,
+   "y": 1024,
+   "w": 112,
+   "h": 24,
+   "pixels": 416,
+   "element": {
+    "id": "characterCreation-root--1492543387",
+    "binding": "window_background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgb(27, 29, 50)",
+    "image": null,
+    "box": [
+     61,
+     894,
+     674,
+     750
+    ]
+   }
+  },
+  {
+   "x": 960,
+   "y": 1384,
+   "w": 24,
+   "h": 40,
+   "pixels": 397,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     565,
+     -129,
+     1838,
+     1838
+    ]
+   }
+  },
+  {
+   "x": 2184,
+   "y": 1432,
+   "w": 40,
+   "h": 16,
+   "pixels": 310,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     565,
+     -129,
+     1838,
+     1838
+    ]
+   }
+  },
+  {
+   "x": 120,
+   "y": 96,
+   "w": 24,
+   "h": 24,
+   "pixels": 205,
+   "element": {
+    "id": "characterCreation-root-button_iconLeft_Vector",
+    "binding": "button_iconLeft_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "official-tinted-bg"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(255, 255, 255, 0.8)",
+    "image": "url(\"/ui-data/icons/arrowBigLeft.png\")",
+    "box": [
+     116,
+     93,
+     31,
+     31
+    ]
+   }
+  },
+  {
+   "x": 1840,
+   "y": 1568,
+   "w": 32,
+   "h": 48,
+   "pixels": 183,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     565,
+     -129,
+     1838,
+     1838
+    ]
+   }
+  },
+  {
+   "x": 1760,
+   "y": 1144,
+   "w": 32,
+   "h": 24,
+   "pixels": 112,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     565,
+     -129,
+     1838,
+     1838
+    ]
+   }
+  },
+  {
+   "x": 1688,
+   "y": 1584,
+   "w": 24,
+   "h": 40,
+   "pixels": 83,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     565,
+     -129,
+     1838,
+     1838
+    ]
+   }
+  },
+  {
+   "x": 2904,
+   "y": 976,
+   "w": 24,
+   "h": 24,
+   "pixels": 77,
+   "element": {
+    "id": "characterCreation-root-1012875305",
+    "binding": "window_shadow",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/styles/images/windowShadow_5101cd5a_n6028146235916264475.png\")",
+    "box": [
+     2283,
+     29,
+     640,
+     1081
+    ]
+   }
+  },
+  {
+   "x": 2912,
+   "y": 704,
+   "w": 16,
+   "h": 24,
+   "pixels": 64,
+   "element": {
+    "id": "characterCreation-root-1012875305",
+    "binding": "window_shadow",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/styles/images/windowShadow_5101cd5a_n6028146235916264475.png\")",
+    "box": [
+     2283,
+     29,
+     640,
+     1081
+    ]
+   }
+  },
+  {
+   "x": 16,
+   "y": 896,
+   "w": 16,
+   "h": 16,
+   "pixels": 50,
+   "element": {
+    "id": "characterCreation-root-28590908",
+    "binding": "window_shadow",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/styles/images/windowShadow_5101cd5a_n6028146235916264475.png\")",
+    "box": [
+     17,
+     862,
+     763,
+     839
+    ]
+   }
+  },
+  {
+   "x": 1552,
+   "y": 72,
+   "w": 8,
+   "h": 16,
+   "pixels": 33,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     565,
+     -129,
+     1838,
+     1838
+    ]
+   }
+  },
+  {
+   "x": 2896,
+   "y": 912,
+   "w": 24,
+   "h": 24,
+   "pixels": 28,
+   "element": {
+    "id": "characterCreation-root-1012875305",
+    "binding": "window_shadow",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/styles/images/windowShadow_5101cd5a_n6028146235916264475.png\")",
+    "box": [
+     2283,
+     29,
+     640,
+     1081
+    ]
+   }
+  },
+  {
+   "x": 1568,
+   "y": 168,
+   "w": 24,
+   "h": 16,
+   "pixels": 28,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     565,
+     -129,
+     1838,
+     1838
+    ]
+   }
+  },
+  {
+   "x": 1296,
+   "y": 144,
+   "w": 8,
+   "h": 16,
+   "pixels": 28,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     565,
+     -129,
+     1838,
+     1838
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,2027 @@
+{
+  "scope": "All local Picto bundles; sprite metadata, not image pixels. Index coverage excludes other caches such as client/spell-icons and worldmaps.",
+  "index_counts": {
+    "items": {
+      "bundle": "item_assets_1x.bundle",
+      "count": 12242
+    },
+    "spells": {
+      "bundle": "spell_assets_1x.bundle",
+      "count": 3098
+    },
+    "achievements": {
+      "bundle": "achievement_assets_all.bundle",
+      "count": 422
+    },
+    "achievementcategories": {
+      "bundle": "achievementcategory_assets_all.bundle",
+      "count": 11
+    },
+    "jobs": {
+      "bundle": "job_assets_1x.bundle",
+      "count": 21
+    },
+    "emotes": {
+      "bundle": "emote_assets_1x.bundle",
+      "count": 304
+    },
+    "smileys": {
+      "bundle": "smiley_assets_1x.bundle",
+      "count": 222
+    },
+    "guildranks": {
+      "bundle": "guildrank_assets_all.bundle",
+      "count": 114
+    },
+    "ornaments": {
+      "bundle": "ornament_assets_all.bundle",
+      "count": 38
+    },
+    "emblemsymbols": {
+      "bundle": "emblem_assets_1x.bundle",
+      "count": 488
+    }
+  },
+  "bundles": [
+    {
+      "bundle": "DofusContent/Content/Picto/Items/item_assets_1x.bundle",
+      "indexed_kind": "items",
+      "objects": {
+        "Texture2D": 12242,
+        "Sprite": 12242,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 12242,
+      "size_distribution": {
+        "(64.0, 64.0)": 12239,
+        "(60.0, 60.0)": 2,
+        "(62.0, 62.0)": 1
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 12242
+      },
+      "sample_names": [
+        "97254",
+        "4086",
+        "9375",
+        "16281",
+        "16857",
+        "17567",
+        "325011",
+        "17635",
+        "17101",
+        "1323",
+        "83015",
+        "6111"
+      ],
+      "source_names_not_indexed": [],
+      "indexed_names_absent_from_source": []
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/Items/item_assets_2x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 12240,
+        "Texture2D": 12240,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 12240,
+      "size_distribution": {
+        "(128.0, 128.0)": 12234,
+        "(124.0, 124.0)": 5,
+        "(148.0, 148.0)": 1
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 12240
+      },
+      "sample_names": [
+        "16626",
+        "18268",
+        "25169",
+        "10106",
+        "15756",
+        "9194",
+        "164036",
+        "24951",
+        "179008",
+        "53665",
+        "79005",
+        "16021"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/Monsters/monster_assets_1x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 2395,
+        "Texture2D": 2395,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 2395,
+      "size_distribution": {
+        "(64.0, 64.0)": 2395
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 2395
+      },
+      "sample_names": [
+        "1574",
+        "1311",
+        "1420",
+        "1974",
+        "668",
+        "1073",
+        "2607",
+        "1777",
+        "643",
+        "2612",
+        "2555",
+        "1742"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/Monsters/monster_assets_2x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 2395,
+        "Sprite": 2395,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 2395,
+      "size_distribution": {
+        "(128.0, 128.0)": 2395
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 2395
+      },
+      "sample_names": [
+        "762",
+        "2191",
+        "825",
+        "247",
+        "2070",
+        "2262",
+        "1765",
+        "48",
+        "1774",
+        "491",
+        "1517",
+        "2518"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/Spells/spell_assets_1x.bundle",
+      "indexed_kind": "spells",
+      "objects": {
+        "Texture2D": 3098,
+        "Sprite": 3098,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 3098,
+      "size_distribution": {
+        "(48.0, 48.0)": 3098
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 3098
+      },
+      "sample_names": [
+        "sort_14065",
+        "sort_10968",
+        "sort_4253",
+        "sort_12076",
+        "sort_14120",
+        "sort_13790",
+        "sort_13309",
+        "sort_12948",
+        "sort_13273",
+        "sort_14375",
+        "sort_3313",
+        "sort_14081"
+      ],
+      "source_names_not_indexed": [],
+      "indexed_names_absent_from_source": []
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/Spells/spell_assets_2x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 3098,
+        "Texture2D": 3098,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 3098,
+      "size_distribution": {
+        "(96.0, 96.0)": 3098
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 3098
+      },
+      "sample_names": [
+        "sort_13724",
+        "sort_12143",
+        "sort_15048",
+        "sort_12511",
+        "sort_13791",
+        "sort_14304",
+        "sort_424",
+        "sort_12392",
+        "sort_14535",
+        "sort_14055",
+        "sort_12731",
+        "sort_4140"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/Spells/spellstate_assets_all.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 393,
+        "Texture2D": 393,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 393,
+      "size_distribution": {
+        "(64.0, 64.0)": 375,
+        "(48.0, 64.0)": 16,
+        "(66.0, 66.0)": 2
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 393
+      },
+      "sample_names": [
+        "stateRedTen",
+        "stateGibbeuseMontante",
+        "stateBont3",
+        "stateKama10",
+        "stateSix",
+        "stateTromperieFeu4",
+        "stateSacrieurMutilation1",
+        "stateNeutralFour",
+        "stateRedEight",
+        "stateExplobomb2",
+        "stateBadOne",
+        "stateCrocoburSpirit"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/achievement_assets_all.bundle",
+      "indexed_kind": "achievements",
+      "objects": {
+        "Sprite": 422,
+        "Texture2D": 422,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 422,
+      "size_distribution": {
+        "(58.0, 58.0)": 400,
+        "(55.0, 55.0)": 6,
+        "(60.0, 60.0)": 10,
+        "(54.0, 54.0)": 6
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 422
+      },
+      "sample_names": [
+        "233",
+        "291",
+        "297",
+        "457",
+        "15",
+        "133",
+        "9",
+        "115",
+        "96",
+        "85",
+        "18",
+        "167"
+      ],
+      "source_names_not_indexed": [],
+      "indexed_names_absent_from_source": []
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/achievementcategory_assets_all.bundle",
+      "indexed_kind": "achievementcategories",
+      "objects": {
+        "Texture2D": 11,
+        "Sprite": 11,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 11,
+      "size_distribution": {
+        "(358.0, 108.0)": 11
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 11
+      },
+      "sample_names": [
+        "cat_11",
+        "cat_6",
+        "cat_5",
+        "cat_8",
+        "cat_2",
+        "cat_1",
+        "cat_12",
+        "cat_4",
+        "cat_3",
+        "cat_9",
+        "cat_7"
+      ],
+      "source_names_not_indexed": [],
+      "indexed_names_absent_from_source": []
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/alignment_assets_.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 14,
+        "Texture2D": 14,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 14,
+      "size_distribution": {
+        "(128.0, 128.0)": 4,
+        "(64.0, 64.0)": 10
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 14
+      },
+      "sample_names": [
+        "illus_bontarien",
+        "order_4",
+        "order_9",
+        "illus_mercenaire",
+        "order_6",
+        "order_0",
+        "order_3",
+        "illus_neutre",
+        "order_8",
+        "order_1",
+        "order_5",
+        "order_7"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/alignment_assets_1x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 47,
+        "Sprite": 47,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 47,
+      "size_distribution": {
+        "(300.0, 144.0)": 1,
+        "(96.0, 32.0)": 1,
+        "(128.0, 36.0)": 1,
+        "(176.0, 48.0)": 1,
+        "(248.0, 124.0)": 1,
+        "(292.0, 200.0)": 1,
+        "(276.0, 180.0)": 1,
+        "(280.0, 184.0)": 1,
+        "(276.0, 204.0)": 1,
+        "(240.0, 144.0)": 1,
+        "(228.0, 104.0)": 1,
+        "(304.0, 188.0)": 1,
+        "(240.0, 84.0)": 1,
+        "(288.0, 204.0)": 1,
+        "(196.0, 72.0)": 1,
+        "(244.0, 152.0)": 1,
+        "(256.0, 92.0)": 1,
+        "(240.0, 88.0)": 1,
+        "(204.0, 128.0)": 1,
+        "(276.0, 168.0)": 3,
+        "(192.0, 48.0)": 3,
+        "(180.0, 108.0)": 1,
+        "(300.0, 160.0)": 1,
+        "(224.0, 124.0)": 1,
+        "(220.0, 164.0)": 1,
+        "(180.0, 68.0)": 1,
+        "(276.0, 152.0)": 1,
+        "(236.0, 80.0)": 1,
+        "(188.0, 48.0)": 1,
+        "(312.0, 208.0)": 1,
+        "(148.0, 36.0)": 1,
+        "(272.0, 196.0)": 1,
+        "(240.0, 60.0)": 1,
+        "(168.0, 44.0)": 1,
+        "(232.0, 56.0)": 1,
+        "(172.0, 56.0)": 1,
+        "(156.0, 84.0)": 1,
+        "(376.0, 196.0)": 1,
+        "(220.0, 92.0)": 1,
+        "(268.0, 144.0)": 1,
+        "(156.0, 76.0)": 1,
+        "(188.0, 56.0)": 1,
+        "(192.0, 68.0)": 1
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 47
+      },
+      "sample_names": [
+        "wings-demonAngel_frame17",
+        "wings-demonAngel2_frame12",
+        "wings-demonAngel2_frame11",
+        "wings-demonAngel2_frame13",
+        "wings-demonAngel_frame23",
+        "wings-demonAngel_frame30",
+        "wings-demonAngel_frame27",
+        "wings-demonAngel_frame7",
+        "wings-demonAngel_frame28",
+        "wings-demonAngel_frame15",
+        "wings-demonAngel_frame13",
+        "wings-demonAngel_frame19"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/alignment_assets_2x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 47,
+        "Sprite": 47,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 47,
+      "size_distribution": {
+        "(208.0, 56.0)": 1,
+        "(256.0, 68.0)": 1,
+        "(396.0, 136.0)": 1,
+        "(284.0, 88.0)": 1,
+        "(300.0, 108.0)": 1,
+        "(416.0, 208.0)": 1,
+        "(308.0, 116.0)": 1,
+        "(300.0, 80.0)": 1,
+        "(432.0, 156.0)": 1,
+        "(624.0, 324.0)": 1,
+        "(456.0, 252.0)": 1,
+        "(480.0, 340.0)": 1,
+        "(484.0, 328.0)": 1,
+        "(400.0, 100.0)": 1,
+        "(500.0, 264.0)": 1,
+        "(388.0, 96.0)": 1,
+        "(472.0, 308.0)": 1,
+        "(400.0, 140.0)": 1,
+        "(376.0, 208.0)": 1,
+        "(260.0, 140.0)": 1,
+        "(364.0, 152.0)": 1,
+        "(232.0, 60.0)": 1,
+        "(320.0, 80.0)": 3,
+        "(464.0, 300.0)": 1,
+        "(464.0, 284.0)": 3,
+        "(400.0, 144.0)": 1,
+        "(520.0, 344.0)": 1,
+        "(324.0, 112.0)": 1,
+        "(444.0, 240.0)": 1,
+        "(288.0, 80.0)": 1,
+        "(464.0, 340.0)": 1,
+        "(508.0, 316.0)": 1,
+        "(256.0, 120.0)": 1,
+        "(376.0, 168.0)": 1,
+        "(500.0, 236.0)": 1,
+        "(408.0, 252.0)": 1,
+        "(456.0, 324.0)": 1,
+        "(340.0, 212.0)": 1,
+        "(308.0, 96.0)": 1,
+        "(300.0, 180.0)": 1,
+        "(168.0, 56.0)": 1,
+        "(364.0, 272.0)": 1,
+        "(400.0, 236.0)": 1
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 47
+      },
+      "sample_names": [
+        "wings-demonAngel2_frame11",
+        "wings-demonAngel2_frame5",
+        "wings-demonAngel2_frame8",
+        "wings-demonAngel_frame11",
+        "wings-demonAngel_frame2",
+        "wings-demonAngel_frame23",
+        "wings-demonAngel2_frame7",
+        "wings-demonAngel2_frame14",
+        "wings-demonAngel2_frame10",
+        "wings-demonAngel_frame10",
+        "wings-demonAngel_frame6",
+        "wings-demonAngel_frame8"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/arena_assets_all.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 25,
+        "Texture2D": 25,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 25,
+      "size_distribution": {
+        "(40.0, 40.0)": 7,
+        "(628.0, 248.0)": 7,
+        "(140.0, 88.0)": 7,
+        "(416.0, 315.0)": 4
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 25
+      },
+      "sample_names": [
+        "social_icon_kolizeum05",
+        "tx_illu_arena_03",
+        "tx_illu_arena_06",
+        "social_icon_kolizeum02",
+        "tx_illu_arena_05",
+        "tx_illu_arena_02",
+        "icon_kolizeum07",
+        "social_icon_kolizeum03",
+        "tx_illu_arena_07",
+        "social_icon_kolizeum06",
+        "icon_kolizeum05",
+        "social_icon_kolizeum07"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/calendar_assets_.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 463,
+        "Texture2D": 463,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 457,
+      "size_distribution": {
+        "(128.0, 128.0)": 397,
+        "(404.0, 226.0)": 20,
+        "(440.0, 226.0)": 2,
+        "(408.0, 408.0)": 38,
+        "(700.0, 394.0)": 5,
+        "(1400.0, 788.0)": 1
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 463
+      },
+      "sample_names": [
+        "1792",
+        "17",
+        "1950",
+        "16",
+        "1937",
+        "1633",
+        "1642",
+        "1743",
+        "1810",
+        "1844",
+        "1925",
+        "2099"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/challenge_assets_1x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 106,
+        "Texture2D": 106,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 106,
+      "size_distribution": {
+        "(32.0, 32.0)": 106
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 106
+      },
+      "sample_names": [
+        "489",
+        "2",
+        "17",
+        "39",
+        "490",
+        "509",
+        "0",
+        "507",
+        "964",
+        "1",
+        "58",
+        "74"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/challenge_assets_2x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 106,
+        "Sprite": 106,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 106,
+      "size_distribution": {
+        "(64.0, 64.0)": 106
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 106
+      },
+      "sample_names": [
+        "509",
+        "2",
+        "506",
+        "503",
+        "38",
+        "512",
+        "973",
+        "482",
+        "495",
+        "967",
+        "44",
+        "974"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/class_assets_.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 95,
+        "Texture2D": 95,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 95,
+      "size_distribution": {
+        "(1980.0, 1024.0)": 19,
+        "(128.0, 128.0)": 57,
+        "(360.0, 360.0)": 19
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 95
+      },
+      "sample_names": [
+        "LevelUp16",
+        "Head_50",
+        "logo_transparent_12",
+        "Head_31",
+        "logo_transparent_7",
+        "Head_111",
+        "logo_transparent_17",
+        "symbol_10",
+        "Head_11",
+        "LevelUp11",
+        "symbol_13",
+        "symbol_18"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/class_assets_1x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 38,
+        "Sprite": 38,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 38,
+      "size_distribution": {
+        "(32.0, 32.0)": 38
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 38
+      },
+      "sample_names": [
+        "Head_110",
+        "Head_20",
+        "Head_130",
+        "Head_60",
+        "Head_51",
+        "Head_120",
+        "Head_91",
+        "Head_161",
+        "Head_10",
+        "Head_90",
+        "Head_30",
+        "Head_71"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/class_assets_2x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 38,
+        "Sprite": 38,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 38,
+      "size_distribution": {
+        "(64.0, 64.0)": 38
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 38
+      },
+      "sample_names": [
+        "Head_91",
+        "Head_151",
+        "Head_50",
+        "Head_71",
+        "Head_10",
+        "Head_171",
+        "Head_101",
+        "Head_180",
+        "Head_200",
+        "Head_120",
+        "Head_111",
+        "Head_181"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/companion_assets_.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 52,
+        "Sprite": 52,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 52,
+      "size_distribution": {
+        "(300.0, 380.0)": 52
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 52
+      },
+      "sample_names": [
+        "big_9",
+        "big_12",
+        "big_5",
+        "big_58",
+        "big_71",
+        "big_64",
+        "big_68",
+        "big_70",
+        "big_56",
+        "big_92",
+        "big_73",
+        "big_11"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/companion_assets_1x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 104,
+        "Sprite": 104,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 104,
+      "size_distribution": {
+        "(84.0, 84.0)": 52,
+        "(32.0, 32.0)": 52
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 104
+      },
+      "sample_names": [
+        "square_10",
+        "square_5",
+        "square_74",
+        "square_small_4",
+        "square_small_66",
+        "square_small_1",
+        "square_small_71",
+        "square_90",
+        "square_small_68",
+        "square_small_94",
+        "square_86",
+        "square_1"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/companion_assets_2x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 104,
+        "Sprite": 104,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 104,
+      "size_distribution": {
+        "(168.0, 168.0)": 52,
+        "(64.0, 64.0)": 52
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 104
+      },
+      "sample_names": [
+        "square_68",
+        "square_small_81",
+        "square_small_3",
+        "square_small_11",
+        "square_49",
+        "square_small_93",
+        "square_94",
+        "square_63",
+        "square_small_61",
+        "square_65",
+        "square_small_79",
+        "square_61"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/cosmetic_assets_.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 114,
+        "Texture2D": 114,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 114,
+      "size_distribution": {
+        "(256.0, 256.0)": 114
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 114
+      },
+      "sample_names": [
+        "31_1",
+        "51_1",
+        "50_1",
+        "51_3",
+        "60_2",
+        "80_1",
+        "31_2",
+        "171_2",
+        "130_3",
+        "60_1",
+        "10_3",
+        "70_2"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/cosmetic_assets_1x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 751,
+        "Texture2D": 751,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 675,
+      "size_distribution": {
+        "(64.0, 64.0)": 751
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 751
+      },
+      "sample_names": [
+        "161_8",
+        "71_8",
+        "81_17",
+        "101_17",
+        "110_18",
+        "130_5",
+        "40_18",
+        "10_8",
+        "140_2",
+        "180_1",
+        "200_7",
+        "101_7"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/cosmetic_assets_2x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 751,
+        "Texture2D": 751,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 675,
+      "size_distribution": {
+        "(128.0, 128.0)": 637,
+        "(256.0, 256.0)": 114
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 751
+      },
+      "sample_names": [
+        "161_10",
+        "80_5",
+        "121_8",
+        "111_1",
+        "201_2",
+        "150_5",
+        "200_0",
+        "161_16",
+        "51_3",
+        "50_8",
+        "101_4",
+        "71_11"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/document_assets_all.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 233,
+        "Sprite": 233,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 232,
+      "size_distribution": {
+        "(544.0, 628.0)": 114,
+        "(408.0, 408.0)": 39,
+        "(464.0, 200.0)": 1,
+        "(152.0, 256.0)": 1,
+        "(1300.0, 928.0)": 4,
+        "(464.0, 600.0)": 2,
+        "(1980.0, 1024.0)": 10,
+        "(708.0, 540.0)": 11,
+        "(444.0, 436.0)": 1,
+        "(448.0, 640.0)": 12,
+        "(216.0, 184.0)": 6,
+        "(344.0, 264.0)": 1,
+        "(464.0, 648.0)": 5,
+        "(468.0, 664.0)": 1,
+        "(464.0, 660.0)": 2,
+        "(460.0, 340.0)": 2,
+        "(120.0, 120.0)": 1,
+        "(352.0, 540.0)": 5,
+        "(464.0, 400.0)": 1,
+        "(464.0, 368.0)": 1,
+        "(464.0, 608.0)": 1,
+        "(464.0, 628.0)": 1,
+        "(308.0, 336.0)": 1,
+        "(364.0, 452.0)": 1,
+        "(464.0, 620.0)": 1,
+        "(88.0, 52.0)": 1,
+        "(136.0, 136.0)": 1,
+        "(208.0, 156.0)": 1,
+        "(436.0, 668.0)": 1,
+        "(456.0, 668.0)": 1,
+        "(284.0, 344.0)": 1,
+        "(464.0, 644.0)": 1,
+        "(184.0, 156.0)": 1
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 233
+      },
+      "sample_names": [
+        "60",
+        "267",
+        "155",
+        "197",
+        "233",
+        "162",
+        "178",
+        "247",
+        "81",
+        "282",
+        "140",
+        "99"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/emblem_assets_.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 590,
+        "Sprite": 590,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 488,
+      "size_distribution": {
+        "(32.0, 32.0)": 590
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 590
+      },
+      "sample_names": [
+        "193",
+        "279",
+        "432",
+        "250",
+        "60",
+        "117",
+        "6",
+        "230",
+        "455",
+        "24",
+        "25",
+        "67"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/emblem_assets_1x.bundle",
+      "indexed_kind": "emblemsymbols",
+      "objects": {
+        "Texture2D": 590,
+        "Sprite": 590,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 488,
+      "size_distribution": {
+        "(64.0, 64.0)": 590
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 590
+      },
+      "sample_names": [
+        "222",
+        "161",
+        "378",
+        "403",
+        "475",
+        "110",
+        "171",
+        "400",
+        "440",
+        "265",
+        "493",
+        "424"
+      ],
+      "source_names_not_indexed": [],
+      "indexed_names_absent_from_source": []
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/emblem_assets_2x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 590,
+        "Sprite": 590,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 488,
+      "size_distribution": {
+        "(128.0, 128.0)": 590
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 590
+      },
+      "sample_names": [
+        "187",
+        "123",
+        "188",
+        "418",
+        "210",
+        "27",
+        "311",
+        "456",
+        "397",
+        "381",
+        "33",
+        "136"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/emote_assets_1x.bundle",
+      "indexed_kind": "emotes",
+      "objects": {
+        "Sprite": 304,
+        "Texture2D": 304,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 304,
+      "size_distribution": {
+        "(32.0, 32.0)": 304
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 304
+      },
+      "sample_names": [
+        "120",
+        "99",
+        "210",
+        "216",
+        "173",
+        "55",
+        "335",
+        "87",
+        "112",
+        "94",
+        "341",
+        "23"
+      ],
+      "source_names_not_indexed": [],
+      "indexed_names_absent_from_source": []
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/emote_assets_2x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 304,
+        "Texture2D": 304,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 304,
+      "size_distribution": {
+        "(64.0, 64.0)": 304
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 304
+      },
+      "sample_names": [
+        "184",
+        "327",
+        "319",
+        "53",
+        "65",
+        "42",
+        "239",
+        "75",
+        "270",
+        "160",
+        "95",
+        "334"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/flag_assets_all.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 16,
+        "Sprite": 16,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 16,
+      "size_distribution": {
+        "(44.0, 32.0)": 15,
+        "(50.0, 37.0)": 1
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 16
+      },
+      "sample_names": [
+        "ru",
+        "world",
+        "ja",
+        "pt",
+        "cm",
+        "de",
+        "beta",
+        "it",
+        "en",
+        "us",
+        "fr",
+        "xx"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/guidebook_assets_all.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 136,
+        "Sprite": 136,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 136,
+      "size_distribution": {
+        "(20.0, 20.0)": 40,
+        "(24.0, 24.0)": 51,
+        "(200.0, 700.0)": 1,
+        "(200.0, 549.0)": 1,
+        "(200.0, 200.0)": 25,
+        "(200.0, 400.0)": 3,
+        "(200.0, 600.0)": 1,
+        "(200.0, 317.0)": 1,
+        "(96.0, 200.0)": 1,
+        "(200.0, 312.0)": 1,
+        "(20.0, 19.0)": 2,
+        "(1458.0, 500.0)": 1,
+        "(628.0, 92.0)": 1,
+        "(200.0, 284.0)": 1,
+        "(880.0, 60.0)": 1,
+        "(872.0, 200.0)": 1,
+        "(132.0, 200.0)": 1,
+        "(200.0, 239.0)": 1,
+        "(200.0, 308.0)": 1,
+        "(200.0, 300.0)": 1
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 136
+      },
+      "sample_names": [
+        "areaPerpendicularDiagonalLine",
+        "feature_33",
+        "feature_121",
+        "anomalie_1-200x700",
+        "areaStar",
+        "dimensiondivine-200x549",
+        "feature_141",
+        "feature_106",
+        "feature_161",
+        "mortdupersonnage_phenix-200x200",
+        "areaLineFromCaster",
+        "feature_11"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/guildrank_assets_all.bundle",
+      "indexed_kind": "guildranks",
+      "objects": {
+        "Sprite": 114,
+        "Texture2D": 114,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 114,
+      "size_distribution": {
+        "(28.0, 28.0)": 114
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 114
+      },
+      "sample_names": [
+        "109",
+        "31",
+        "36",
+        "61",
+        "51",
+        "67",
+        "68",
+        "115",
+        "84",
+        "59",
+        "18",
+        "114"
+      ],
+      "source_names_not_indexed": [],
+      "indexed_names_absent_from_source": []
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/house_assets_all.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 58,
+        "Texture2D": 58,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 58,
+      "size_distribution": {
+        "(220.0, 220.0)": 58
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 58
+      },
+      "sample_names": [
+        "34",
+        "46",
+        "24",
+        "26",
+        "7",
+        "49",
+        "60",
+        "12",
+        "32",
+        "58",
+        "25",
+        "27"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/icon_assets_all.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 13,
+        "Texture2D": 13,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 13,
+      "size_distribution": {
+        "(72.0, 72.0)": 2,
+        "(56.0, 72.0)": 2,
+        "(60.0, 72.0)": 1,
+        "(56.0, 64.0)": 1,
+        "(52.0, 52.0)": 2,
+        "(84.0, 72.0)": 1,
+        "(52.0, 48.0)": 1,
+        "(56.0, 44.0)": 1,
+        "(58.0, 58.0)": 1,
+        "(100.0, 68.0)": 1
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 13
+      },
+      "sample_names": [
+        "conquestIcon-clock",
+        "conquestIcon-role8a",
+        "conquestIcon-archmonsters",
+        "conquestIcon-role8d",
+        "conquestIcon-role5",
+        "conquestIcon-role4",
+        "conquestIcon-wanted",
+        "conquestIcon-neutral",
+        "conquestIcon-role3",
+        "conquestIcon-role6",
+        "conquestIcon-role2",
+        "conquestIcon-role7"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/illus_assets_all.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 197,
+        "Sprite": 197,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 162,
+      "size_distribution": {
+        "(1920.0, 1080.0)": 4,
+        "(952.0, 532.0)": 2,
+        "(480.0, 772.0)": 14,
+        "(288.0, 340.0)": 1,
+        "(264.0, 316.0)": 3,
+        "(312.0, 381.0)": 44,
+        "(228.0, 44.0)": 5,
+        "(628.0, 352.0)": 46,
+        "(312.0, 380.0)": 9,
+        "(668.0, 400.0)": 27,
+        "(432.0, 200.0)": 1,
+        "(566.0, 216.0)": 1,
+        "(80.0, 80.0)": 1,
+        "(520.0, 732.0)": 8,
+        "(192.0, 236.0)": 6,
+        "(404.0, 328.0)": 2,
+        "(88.0, 60.0)": 1,
+        "(356.0, 356.0)": 1,
+        "(700.0, 300.0)": 1,
+        "(1000.0, 424.0)": 1,
+        "(1320.0, 960.0)": 1,
+        "(1300.0, 928.0)": 1,
+        "(1312.0, 972.0)": 1,
+        "(92.0, 100.0)": 1,
+        "(800.0, 448.0)": 1,
+        "(32.0, 56.0)": 1,
+        "(172.0, 260.0)": 1,
+        "(1112.0, 668.0)": 1,
+        "(200.0, 200.0)": 1,
+        "(136.0, 124.0)": 1,
+        "(948.0, 532.0)": 2,
+        "(1980.0, 1024.0)": 1,
+        "(44.0, 44.0)": 1,
+        "(632.0, 356.0)": 1,
+        "(524.0, 604.0)": 1,
+        "(964.0, 136.0)": 1,
+        "(836.0, 836.0)": 1,
+        "(76.0, 100.0)": 1
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 197
+      },
+      "sample_names": [
+        "NG_logo_sans-temporis_pt",
+        "fr_epic_death",
+        "imagiro",
+        "tax_collector",
+        "bg_quality1",
+        "17",
+        "tx_serverGameType0",
+        "tx_illu_serverFusion",
+        "14",
+        "26",
+        "13",
+        "tx_legendaryBg"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/infinitedreamtrial_assets_all.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 5,
+        "Sprite": 5,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 5,
+      "size_distribution": {
+        "(188.0, 188.0)": 5
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 5
+      },
+      "sample_names": [
+        "trialIcon1",
+        "trialIcon3",
+        "trialIcon2",
+        "trialIcon5",
+        "trialIcon4"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/job_assets_1x.bundle",
+      "indexed_kind": "jobs",
+      "objects": {
+        "Sprite": 21,
+        "Texture2D": 21,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 21,
+      "size_distribution": {
+        "(32.0, 32.0)": 21
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 21
+      },
+      "sample_names": [
+        "5",
+        "20",
+        "6",
+        "1",
+        "14",
+        "13",
+        "28",
+        "40",
+        "24",
+        "10",
+        "35",
+        "36"
+      ],
+      "source_names_not_indexed": [],
+      "indexed_names_absent_from_source": []
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/job_assets_2x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 21,
+        "Texture2D": 21,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 21,
+      "size_distribution": {
+        "(64.0, 64.0)": 21
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 21
+      },
+      "sample_names": [
+        "36",
+        "10",
+        "2",
+        "1",
+        "35",
+        "20",
+        "42",
+        "5",
+        "24",
+        "37",
+        "41",
+        "28"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/mount_assets_.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 642,
+        "Sprite": 642,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 321,
+      "size_distribution": {
+        "(64.0, 64.0)": 321,
+        "(256.0, 256.0)": 321
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 642
+      },
+      "sample_names": [
+        "152",
+        "119",
+        "248",
+        "18",
+        "168",
+        "202",
+        "68",
+        "108",
+        "170",
+        "345",
+        "177",
+        "72"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/npcdialogskin_assets_all.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 19,
+        "Texture2D": 19,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 5,
+      "size_distribution": {
+        "(80.0, 90.0)": 5,
+        "(145.0, 73.0)": 5,
+        "(601.0, 212.0)": 4,
+        "(574.0, 134.0)": 5
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 19
+      },
+      "sample_names": [
+        "4",
+        "5",
+        "5",
+        "3",
+        "5",
+        "3",
+        "2",
+        "2",
+        "3",
+        "4",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/ornament_assets_all.bundle",
+      "indexed_kind": "ornaments",
+      "objects": {
+        "Sprite": 65,
+        "Texture2D": 65,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 38,
+      "size_distribution": {
+        "(64.0, 64.0)": 27,
+        "(280.0, 100.0)": 1,
+        "(128.0, 128.0)": 27,
+        "(160.0, 160.0)": 10
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 65
+      },
+      "sample_names": [
+        "1",
+        "0",
+        "omega_bottom",
+        "15",
+        "20",
+        "8",
+        "12",
+        "9",
+        "3",
+        "kolizeum_rank_picto1",
+        "16",
+        "22"
+      ],
+      "source_names_not_indexed": [],
+      "indexed_names_absent_from_source": []
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/preset_assets_1x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 116,
+        "Texture2D": 116,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 116,
+      "size_distribution": {
+        "(48.0, 48.0)": 116
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 116
+      },
+      "sample_names": [
+        "22",
+        "6",
+        "78",
+        "33",
+        "102",
+        "111",
+        "64",
+        "52",
+        "106",
+        "93",
+        "67",
+        "0"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/preset_assets_2x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 116,
+        "Texture2D": 116,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 116,
+      "size_distribution": {
+        "(96.0, 96.0)": 116
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 116
+      },
+      "sample_names": [
+        "88",
+        "30",
+        "70",
+        "107",
+        "37",
+        "27",
+        "108",
+        "80",
+        "115",
+        "87",
+        "7",
+        "111"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/raid_assets_all.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 1,
+        "AssetBundle": 1,
+        "Sprite": 1
+      },
+      "unique_sprite_names": 1,
+      "size_distribution": {
+        "(64.0, 64.0)": 1
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 1
+      },
+      "sample_names": [
+        "1"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/smiley_assets_1x.bundle",
+      "indexed_kind": "smileys",
+      "objects": {
+        "Sprite": 222,
+        "Texture2D": 222,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 222,
+      "size_distribution": {
+        "(32.0, 32.0)": 222
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 222
+      },
+      "sample_names": [
+        "smiley_125",
+        "smiley_181",
+        "smiley_238",
+        "smiley_149",
+        "mount_smiley_maturity",
+        "smiley_17",
+        "smiley_223",
+        "smiley_171",
+        "smiley_151",
+        "smiley_164",
+        "smiley_184",
+        "smiley_31"
+      ],
+      "source_names_not_indexed": [],
+      "indexed_names_absent_from_source": []
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/smiley_assets_2x.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Sprite": 222,
+        "Texture2D": 222,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 222,
+      "size_distribution": {
+        "(64.0, 64.0)": 222
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 222
+      },
+      "sample_names": [
+        "smiley_218",
+        "smiley_67",
+        "smiley_228",
+        "smiley_47",
+        "smiley_61",
+        "smiley_232",
+        "smiley_18",
+        "smiley_23",
+        "smiley_4",
+        "smiley_124",
+        "smiley_169",
+        "smiley_72"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/UI/suggestion_assets_all.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 899,
+        "Sprite": 899,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 899,
+      "size_distribution": {
+        "(200.0, 200.0)": 897,
+        "(185.0, 190.0)": 1,
+        "(404.0, 226.0)": 1
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 899
+      },
+      "sample_names": [
+        "559",
+        "595",
+        "639",
+        "682",
+        "1064",
+        "784",
+        "913",
+        "795",
+        "995",
+        "1185",
+        "1062",
+        "16"
+      ]
+    },
+    {
+      "bundle": "DofusContent/Content/Picto/Worldmaps/worldmap_assets_.bundle",
+      "indexed_kind": null,
+      "objects": {
+        "Texture2D": 1216,
+        "Sprite": 1216,
+        "AssetBundle": 1
+      },
+      "unique_sprite_names": 80,
+      "size_distribution": {
+        "(1024.0, 832.0)": 17,
+        "(1024.0, 976.0)": 6,
+        "(1024.0, 1024.0)": 597,
+        "(1024.0, 600.0)": 12,
+        "(1024.0, 464.0)": 7,
+        "(1024.0, 928.0)": 11,
+        "(624.0, 1024.0)": 4,
+        "(668.0, 1024.0)": 4,
+        "(792.0, 1024.0)": 18,
+        "(1024.0, 676.0)": 2,
+        "(976.0, 1024.0)": 7,
+        "(832.0, 1024.0)": 6,
+        "(1024.0, 744.0)": 4,
+        "(1024.0, 756.0)": 7,
+        "(832.0, 256.0)": 1,
+        "(1024.0, 852.0)": 5,
+        "(1024.0, 216.0)": 3,
+        "(452.0, 1024.0)": 2,
+        "(792.0, 116.0)": 6,
+        "(1024.0, 876.0)": 2,
+        "(820.0, 564.0)": 1,
+        "(784.0, 1024.0)": 8,
+        "(860.0, 1024.0)": 1,
+        "(756.0, 380.0)": 2,
+        "(1024.0, 696.0)": 12,
+        "(928.0, 128.0)": 1,
+        "(928.0, 1024.0)": 5,
+        "(300.0, 1024.0)": 5,
+        "(1024.0, 256.0)": 7,
+        "(1016.0, 1024.0)": 4,
+        "(952.0, 128.0)": 1,
+        "(732.0, 1024.0)": 4,
+        "(448.0, 876.0)": 1,
+        "(800.0, 500.0)": 1,
+        "(1024.0, 504.0)": 4,
+        "(84.0, 600.0)": 6,
+        "(792.0, 124.0)": 2,
+        "(604.0, 276.0)": 1,
+        "(1024.0, 116.0)": 13,
+        "(1024.0, 880.0)": 6,
+        "(1024.0, 508.0)": 2,
+        "(616.0, 228.0)": 1,
+        "(396.0, 1024.0)": 9,
+        "(976.0, 576.0)": 1,
+        "(352.0, 1024.0)": 1,
+        "(880.0, 1024.0)": 4,
+        "(964.0, 1024.0)": 3,
+        "(232.0, 184.0)": 1,
+        "(76.0, 1024.0)": 3,
+        "(1024.0, 780.0)": 6,
+        "(448.0, 1024.0)": 1,
+        "(40.0, 764.0)": 1,
+        "(1024.0, 124.0)": 5,
+        "(1024.0, 952.0)": 1,
+        "(1024.0, 156.0)": 1,
+        "(128.0, 976.0)": 1,
+        "(1020.0, 920.0)": 1,
+        "(1024.0, 52.0)": 2,
+        "(492.0, 1024.0)": 4,
+        "(840.0, 116.0)": 1,
+        "(84.0, 1024.0)": 10,
+        "(504.0, 432.0)": 1,
+        "(1024.0, 112.0)": 2,
+        "(1024.0, 620.0)": 2,
+        "(568.0, 1024.0)": 1,
+        "(892.0, 700.0)": 1,
+        "(692.0, 216.0)": 1,
+        "(1024.0, 56.0)": 4,
+        "(396.0, 60.0)": 6,
+        "(1024.0, 64.0)": 2,
+        "(204.0, 1024.0)": 2,
+        "(56.0, 1024.0)": 2,
+        "(104.0, 904.0)": 1,
+        "(1024.0, 368.0)": 2,
+        "(1024.0, 312.0)": 3,
+        "(1024.0, 128.0)": 5,
+        "(1024.0, 276.0)": 2,
+        "(1024.0, 652.0)": 1,
+        "(20.0, 896.0)": 1,
+        "(328.0, 1024.0)": 4,
+        "(1024.0, 108.0)": 1,
+        "(920.0, 1024.0)": 4,
+        "(492.0, 880.0)": 2,
+        "(656.0, 1024.0)": 6,
+        "(1024.0, 92.0)": 3,
+        "(488.0, 744.0)": 1,
+        "(1024.0, 920.0)": 2,
+        "(776.0, 376.0)": 2,
+        "(668.0, 328.0)": 1,
+        "(1024.0, 896.0)": 1,
+        "(848.0, 404.0)": 1,
+        "(924.0, 792.0)": 1,
+        "(708.0, 1024.0)": 2,
+        "(1024.0, 476.0)": 2,
+        "(488.0, 268.0)": 1,
+        "(776.0, 676.0)": 1,
+        "(1024.0, 60.0)": 6,
+        "(60.0, 1024.0)": 4,
+        "(1024.0, 28.0)": 3,
+        "(1024.0, 488.0)": 2,
+        "(880.0, 704.0)": 1,
+        "(1024.0, 904.0)": 3,
+        "(664.0, 328.0)": 1,
+        "(128.0, 1024.0)": 1,
+        "(688.0, 1024.0)": 3,
+        "(528.0, 528.0)": 1,
+        "(1020.0, 1024.0)": 5,
+        "(1024.0, 860.0)": 2,
+        "(28.0, 28.0)": 1,
+        "(712.0, 544.0)": 2,
+        "(1024.0, 552.0)": 4,
+        "(644.0, 860.0)": 2,
+        "(932.0, 1024.0)": 3,
+        "(1024.0, 704.0)": 5,
+        "(460.0, 1024.0)": 4,
+        "(544.0, 464.0)": 1,
+        "(104.0, 1024.0)": 2,
+        "(36.0, 768.0)": 1,
+        "(1016.0, 100.0)": 1,
+        "(564.0, 452.0)": 1,
+        "(396.0, 416.0)": 1,
+        "(1024.0, 912.0)": 1,
+        "(756.0, 1024.0)": 2,
+        "(264.0, 696.0)": 2,
+        "(1024.0, 184.0)": 1,
+        "(408.0, 1024.0)": 1,
+        "(1024.0, 544.0)": 3,
+        "(732.0, 92.0)": 1,
+        "(836.0, 432.0)": 2,
+        "(712.0, 540.0)": 6,
+        "(656.0, 832.0)": 2,
+        "(932.0, 488.0)": 1,
+        "(600.0, 744.0)": 1,
+        "(868.0, 1024.0)": 1,
+        "(620.0, 380.0)": 1,
+        "(604.0, 1024.0)": 5,
+        "(1024.0, 452.0)": 4,
+        "(452.0, 268.0)": 2,
+        "(1020.0, 544.0)": 1,
+        "(52.0, 52.0)": 1,
+        "(488.0, 1024.0)": 7,
+        "(416.0, 1024.0)": 1,
+        "(1024.0, 492.0)": 2,
+        "(692.0, 1024.0)": 2,
+        "(392.0, 1024.0)": 4,
+        "(1024.0, 328.0)": 4,
+        "(1024.0, 836.0)": 2,
+        "(1024.0, 716.0)": 1,
+        "(264.0, 1024.0)": 2,
+        "(824.0, 1024.0)": 1,
+        "(452.0, 352.0)": 2,
+        "(548.0, 1024.0)": 3,
+        "(1024.0, 100.0)": 2,
+        "(740.0, 1024.0)": 1,
+        "(360.0, 164.0)": 1,
+        "(1024.0, 604.0)": 4,
+        "(328.0, 928.0)": 2,
+        "(740.0, 156.0)": 1,
+        "(748.0, 892.0)": 1,
+        "(164.0, 976.0)": 2,
+        "(824.0, 344.0)": 1,
+        "(964.0, 976.0)": 1,
+        "(1024.0, 816.0)": 3,
+        "(436.0, 1024.0)": 1,
+        "(1024.0, 564.0)": 1,
+        "(328.0, 28.0)": 2,
+        "(1024.0, 768.0)": 1,
+        "(1024.0, 268.0)": 5,
+        "(72.0, 508.0)": 1,
+        "(1024.0, 232.0)": 1,
+        "(460.0, 368.0)": 1,
+        "(84.0, 604.0)": 2,
+        "(396.0, 64.0)": 2,
+        "(784.0, 832.0)": 1,
+        "(1024.0, 736.0)": 4,
+        "(244.0, 372.0)": 1,
+        "(208.0, 780.0)": 1,
+        "(1024.0, 380.0)": 2,
+        "(416.0, 796.0)": 1,
+        "(848.0, 1024.0)": 1,
+        "(1008.0, 860.0)": 1,
+        "(300.0, 652.0)": 1,
+        "(776.0, 1024.0)": 3,
+        "(952.0, 1024.0)": 2,
+        "(208.0, 1024.0)": 5,
+        "(1024.0, 376.0)": 2,
+        "(532.0, 384.0)": 1,
+        "(188.0, 620.0)": 1,
+        "(544.0, 1024.0)": 2,
+        "(624.0, 56.0)": 2,
+        "(792.0, 836.0)": 1,
+        "(552.0, 552.0)": 1,
+        "(1024.0, 164.0)": 1,
+        "(1024.0, 796.0)": 2,
+        "(1016.0, 816.0)": 1,
+        "(928.0, 852.0)": 1,
+        "(600.0, 1024.0)": 1,
+        "(1024.0, 636.0)": 3,
+        "(220.0, 760.0)": 1,
+        "(1024.0, 404.0)": 1,
+        "(40.0, 1024.0)": 1,
+        "(60.0, 928.0)": 1,
+        "(1024.0, 764.0)": 2,
+        "(1020.0, 272.0)": 1,
+        "(564.0, 1024.0)": 1,
+        "(576.0, 1000.0)": 1,
+        "(892.0, 704.0)": 1,
+        "(712.0, 720.0)": 1,
+        "(436.0, 492.0)": 1,
+        "(300.0, 696.0)": 1,
+        "(1024.0, 344.0)": 1,
+        "(1024.0, 416.0)": 1,
+        "(552.0, 1024.0)": 1,
+        "(884.0, 592.0)": 1,
+        "(860.0, 108.0)": 1,
+        "(188.0, 1024.0)": 2,
+        "(1024.0, 1000.0)": 1,
+        "(72.0, 1024.0)": 1,
+        "(1024.0, 760.0)": 1,
+        "(840.0, 1024.0)": 1,
+        "(688.0, 552.0)": 1,
+        "(460.0, 312.0)": 1,
+        "(28.0, 1024.0)": 1,
+        "(1000.0, 728.0)": 1,
+        "(624.0, 476.0)": 1,
+        "(1024.0, 272.0)": 1,
+        "(224.0, 952.0)": 1,
+        "(408.0, 852.0)": 1,
+        "(820.0, 1024.0)": 1,
+        "(52.0, 1024.0)": 2,
+        "(1024.0, 228.0)": 1,
+        "(352.0, 476.0)": 1,
+        "(76.0, 504.0)": 1,
+        "(616.0, 1024.0)": 1,
+        "(920.0, 736.0)": 1,
+        "(1024.0, 372.0)": 1,
+        "(940.0, 568.0)": 1,
+        "(1024.0, 428.0)": 1,
+        "(208.0, 912.0)": 1,
+        "(488.0, 756.0)": 2,
+        "(664.0, 1024.0)": 1,
+        "(460.0, 396.0)": 1,
+        "(468.0, 756.0)": 1,
+        "(232.0, 1024.0)": 1,
+        "(360.0, 1024.0)": 1,
+        "(900.0, 700.0)": 2,
+        "(56.0, 636.0)": 1,
+        "(84.0, 112.0)": 1,
+        "(1024.0, 408.0)": 1,
+        "(784.0, 232.0)": 1,
+        "(976.0, 428.0)": 1,
+        "(616.0, 456.0)": 1,
+        "(568.0, 124.0)": 1,
+        "(1024.0, 648.0)": 1,
+        "(992.0, 696.0)": 1,
+        "(204.0, 452.0)": 1,
+        "(1024.0, 576.0)": 1,
+        "(976.0, 464.0)": 1,
+        "(1020.0, 408.0)": 1,
+        "(820.0, 624.0)": 1,
+        "(468.0, 1024.0)": 1,
+        "(992.0, 1024.0)": 1,
+        "(244.0, 1024.0)": 1
+      },
+      "texture_settings": {
+        "{'m_FilterMode': 1, 'm_Aniso': 1, 'm_MipBias': 0.0, 'm_WrapU': 1, 'm_WrapV': 1, 'm_WrapW': 1}": 1216
+      },
+      "sample_names": [
+        "17",
+        "6",
+        "3",
+        "5",
+        "28",
+        "4",
+        "1",
+        "3",
+        "3",
+        "47",
+        "20",
+        "6"
+      ]
+    }
+  ],
+  "client_version": "3.6.10.11",
+  "collected_at": "2026-09-03T08:02:43.959661+00:00",
+  "client_root": "/Applications/Ankama/Dofus-dofus3"
+}

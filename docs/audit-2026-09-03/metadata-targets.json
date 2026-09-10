@@ -1,0 +1,3124 @@
+[
+  {
+    "index": 911,
+    "name": "Core.Rendering.Ui.Effects.TitleScreenTweener",
+    "fields": [
+      "m_tweenType",
+      "dfzp",
+      "m_duration",
+      "m_ease",
+      "m_loopCount",
+      "m_loopType",
+      "m_randomOneSecondDelayBeforeStart",
+      "m_cachedImage",
+      "m_cachedRectTransform",
+      "m_opacityToReach",
+      "m_destination",
+      "m_scaleTarget",
+      "dfzq"
+    ],
+    "methods": [
+      "Awake",
+      "OnDestroy",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 5370,
+    "name": "Core.UILogic.Components.DofusTweenerVisualElement",
+    "fields": [
+      "<loopCount>k__BackingField",
+      "<isYPositionTween>k__BackingField",
+      "<yPositionUnit>k__BackingField",
+      "<yPositionTarget>k__BackingField",
+      "<isXPositionTween>k__BackingField",
+      "<xPositionUnit>k__BackingField",
+      "<xPositionTarget>k__BackingField",
+      "<isRotationTween>k__BackingField",
+      "<rotationTarget>k__BackingField",
+      "<isScaleTween>k__BackingField",
+      "<scaleTarget>k__BackingField",
+      "<isOpacityTween>k__BackingField",
+      "<opacityToReach>k__BackingField",
+      "<tweenDuration>k__BackingField",
+      "<tweenLoopType>k__BackingField",
+      "<tweenEase>k__BackingField",
+      "<useCustomEaseValue>k__BackingField",
+      "<tweenEaseOpacity>k__BackingField",
+      "<tweenEasePosition>k__BackingField",
+      "<tweenEaseScale>k__BackingField",
+      "<tweenEaseRotation>k__BackingField",
+      "m_dofusTweens",
+      "m_tempXPositionUnit",
+      "m_tempYPositionUnit",
+      "m_tempRotation",
+      "m_tempScale",
+      "m_tempOpacity",
+      "m_isFirstExecution"
+    ],
+    "methods": [
+      "get_loopCount",
+      "set_loopCount",
+      "get_isYPositionTween",
+      "set_isYPositionTween",
+      "get_yPositionUnit",
+      "set_yPositionUnit",
+      "get_yPositionTarget",
+      "set_yPositionTarget",
+      "get_isXPositionTween",
+      "set_isXPositionTween",
+      "get_xPositionUnit",
+      "set_xPositionUnit",
+      "get_xPositionTarget",
+      "set_xPositionTarget",
+      "get_isRotationTween",
+      "set_isRotationTween",
+      "get_rotationTarget",
+      "set_rotationTarget",
+      "get_isScaleTween",
+      "set_isScaleTween",
+      "get_scaleTarget",
+      "set_scaleTarget",
+      "get_isOpacityTween",
+      "set_isOpacityTween",
+      "get_opacityToReach",
+      "set_opacityToReach",
+      "get_tweenDuration",
+      "set_tweenDuration",
+      "get_tweenLoopType",
+      "set_tweenLoopType",
+      "get_tweenEase",
+      "set_tweenEase",
+      "get_useCustomEaseValue",
+      "set_useCustomEaseValue",
+      "get_tweenEaseOpacity",
+      "set_tweenEaseOpacity",
+      "get_tweenEasePosition",
+      "set_tweenEasePosition",
+      "get_tweenEaseScale",
+      "set_tweenEaseScale",
+      "get_tweenEaseRotation",
+      "set_tweenEaseRotation",
+      ".ctor",
+      "EnableTween",
+      "SetCustomEase",
+      "ResetTween",
+      "<EnableTween>b__92_0",
+      "<EnableTween>b__92_1",
+      "<EnableTween>b__92_2",
+      "<EnableTween>b__92_3",
+      "<EnableTween>b__92_4",
+      "<EnableTween>b__92_5",
+      "<EnableTween>b__92_6",
+      "<EnableTween>b__92_7",
+      "<EnableTween>b__92_8",
+      "<EnableTween>b__92_9",
+      "<EnableTween>b__92_10",
+      "<EnableTween>b__92_11",
+      "<EnableTween>b__92_12",
+      "<EnableTween>b__92_13",
+      "<EnableTween>b__92_14"
+    ]
+  },
+  {
+    "index": 5403,
+    "name": "Core.UILogic.Components.GravityTweener",
+    "fields": [
+      "<magnitudePixel>k__BackingField",
+      "m_tween"
+    ],
+    "methods": [
+      "get_magnitudePixel",
+      "set_magnitudePixel",
+      ".ctor",
+      "StartTweens",
+      "Stop",
+      "<StartTweens>b__6_0",
+      "<StartTweens>b__6_1",
+      "<StartTweens>b__6_2",
+      "<StartTweens>b__6_3"
+    ]
+  },
+  {
+    "index": 33526,
+    "name": "Metadata.Enums.SkinSlotRuleType",
+    "fields": [
+      "value__",
+      "Default",
+      "Breed",
+      "BreedAndSex",
+      "Face"
+    ],
+    "methods": [],
+    "enum": [
+      [
+        "Default",
+        0
+      ],
+      [
+        "Breed",
+        1
+      ],
+      [
+        "BreedAndSex",
+        2
+      ],
+      [
+        "Face",
+        3
+      ]
+    ]
+  },
+  {
+    "index": 35790,
+    "name": "Ankama.Animations.AnimatedObjectDefinition",
+    "fields": [
+      "defaultAnimationName",
+      "defaultAnimationLoops",
+      "defaultFrameRate",
+      "maxNodeCount",
+      "exposedNodeNames",
+      "maskableNodes",
+      "<maskableNodesLookup>k__BackingField",
+      "boneAsset",
+      "graphics",
+      "animations",
+      "blankAnimations",
+      "m_namedTransformRepository"
+    ],
+    "methods": [
+      "bnof",
+      "bnog",
+      "bnoh",
+      "bnoi",
+      "bnoj",
+      "bnok",
+      "bnol",
+      "bnom",
+      "bnon",
+      "bnoo",
+      "bnop",
+      "bnoq",
+      "bnor",
+      "bnos",
+      "bnot",
+      "bnou",
+      "OnBeforeSerialize",
+      "OnAfterDeserialize",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35795,
+    "name": "Ankama.Animations.Animation",
+    "fields": [
+      "name",
+      "boneId",
+      "data",
+      "dataBytes",
+      "bounds",
+      "instance",
+      "eavh"
+    ],
+    "methods": [
+      "bnov",
+      "bnow",
+      "bnox",
+      "bnoy",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35797,
+    "name": "Ankama.Animations.AnimationLabel",
+    "fields": [
+      "frame",
+      "label"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35800,
+    "name": "Ankama.Animations.Animator2D",
+    "fields": [
+      "definition",
+      "customisationSlots",
+      "renderingMethod",
+      "colorModifier",
+      "sortingLayerIdInternal",
+      "sortingOrderInternal",
+      "overriddenFrameRate",
+      "skin",
+      "eavv",
+      "eavw",
+      "eavx",
+      "eavy",
+      "eavz",
+      "eawa",
+      "eawb",
+      "eawc",
+      "eawd",
+      "eawe",
+      "eawf",
+      "eawg",
+      "eawh",
+      "eawi",
+      "eawj",
+      "eawk",
+      "eawl",
+      "eawm",
+      "eawn",
+      "eawo",
+      "eawp",
+      "eawq",
+      "eawr",
+      "eaws",
+      "eawt",
+      "eawu",
+      "eawv",
+      "eaww",
+      "eawx",
+      "eawy",
+      "eawz",
+      "eaxa",
+      "eaxb",
+      "eaxc",
+      "eaxd",
+      "eaxe",
+      "eaxf",
+      "eaxg",
+      "eaxh",
+      "eaxi",
+      "Initialised",
+      "AnimationLabelChanged",
+      "AnimationStarted",
+      "AnimationLooped",
+      "AnimationEnded",
+      "onInitialized",
+      "onCallOnAnimStart",
+      "onCallOnAnimLoop",
+      "UnloadSkin",
+      "UnloadAnimatedObjectDefinition",
+      "eaxj",
+      "eaxk",
+      "<eaxl>k__BackingField",
+      "eaxm",
+      "eaxn",
+      "<eaxo>k__BackingField",
+      "<eaxp>k__BackingField",
+      "<eaxq>k__BackingField",
+      "<eaxr>k__BackingField",
+      "eaxs",
+      "eaxt",
+      "eaxu",
+      "filtersQuality"
+    ],
+    "methods": [
+      "bnpa",
+      "bnpb",
+      "add_Initialised",
+      "remove_Initialised",
+      "add_AnimationLabelChanged",
+      "remove_AnimationLabelChanged",
+      "add_AnimationStarted",
+      "remove_AnimationStarted",
+      "add_AnimationLooped",
+      "remove_AnimationLooped",
+      "add_AnimationEnded",
+      "remove_AnimationEnded",
+      "bnpc",
+      "bnpd",
+      "bnpe",
+      "bnpf",
+      "bnpg",
+      "bnph",
+      "bnpi",
+      "bnpj",
+      "bnpk",
+      "bnpl",
+      "bnpm",
+      "bnpn",
+      "bnpo",
+      "bnpp",
+      "bnpq",
+      "bnpr",
+      "bnps",
+      "bnpt",
+      "bnpu",
+      "bnpv",
+      "bnpw",
+      "bnpx",
+      "bnpy",
+      "bnpz",
+      "bnqa",
+      "bnqb",
+      "bnqc",
+      "bnqd",
+      "bnqe",
+      "bnqf",
+      "bnqg",
+      "bnqh",
+      "bnqi",
+      "bnqj",
+      "bnqk",
+      "bnql",
+      "bnqm",
+      "bnqn",
+      "bnqo",
+      "bnqp",
+      "bnqq",
+      "bnqr",
+      "bnqs",
+      "bnqt",
+      "bnqu",
+      "bnqv",
+      "bnqw",
+      "bnqx",
+      "ApplyMaterialSortOrder",
+      "bnqy",
+      "bnqz",
+      "bnra",
+      "bnrb",
+      "bnrc",
+      "bnrd",
+      "bnre",
+      "bnrf",
+      "bnrg",
+      "bnrh",
+      "bnri",
+      "bnrj",
+      "bnrk",
+      "bnrl",
+      "bnrm",
+      "bnrn",
+      "bnro",
+      "bnrp",
+      "bnrq",
+      "bnrr",
+      "bnrs",
+      "bnrt",
+      "bnru",
+      "bnrv",
+      "bnrw",
+      "bnrx",
+      "bnry",
+      "bnrz",
+      "bnsa",
+      "bnsb",
+      "bnsc",
+      "bnsd",
+      "bnse",
+      "bnsf",
+      "bnsg",
+      "bnsh",
+      "bnsi",
+      "Awake",
+      "OnEnable",
+      "bnsj",
+      "Start",
+      "OnDisable",
+      "OnDestroy",
+      "bnsk",
+      "bnsl",
+      "Release",
+      "bnsm",
+      "bnsn",
+      "bnso",
+      "bnsp",
+      "bnsq",
+      "bnsr",
+      "bnss",
+      "bnst",
+      "bnsu",
+      "bnsv",
+      "bnsw",
+      "bnsx",
+      "bnsy",
+      "bnsz",
+      "bnta",
+      "bntb",
+      "bntc",
+      "bntd",
+      "bnte",
+      "bntf",
+      ".ctor",
+      ".cctor",
+      "bntg",
+      "bnth",
+      "bnti",
+      "bntj",
+      "bntk",
+      "dbfe"
+    ]
+  },
+  {
+    "index": 35804,
+    "name": "Ankama.Animations.BackgroundObject",
+    "fields": [
+      "id",
+      "gameObject",
+      "applyMaterialSortOrder",
+      "requiresAutoPosition"
+    ],
+    "methods": []
+  },
+  {
+    "index": 35805,
+    "name": "Ankama.Animations.CustomisationSlot",
+    "fields": [
+      "nodeName",
+      "asset",
+      "part"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35807,
+    "name": "Ankama.Animations.GraphicAsset",
+    "fields": [
+      "atlas",
+      "vertices",
+      "triangles"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35809,
+    "name": "Ankama.Animations.MaskableNode",
+    "fields": [
+      "name",
+      "graphicSymbolId"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35810,
+    "name": "Ankama.Animations.NamedTransform",
+    "fields": [
+      "materialCount",
+      "animator"
+    ],
+    "methods": []
+  },
+  {
+    "index": 35811,
+    "name": "Ankama.Animations.NamedTransformPositional",
+    "fields": [
+      "id",
+      "position",
+      "rotation"
+    ],
+    "methods": []
+  },
+  {
+    "index": 35815,
+    "name": "Ankama.Animations.SkinChunk",
+    "fields": [
+      "startVertexIndex",
+      "indexCount",
+      "startIndexIndex",
+      "vertexCount",
+      "textureIndex",
+      "maskState"
+    ],
+    "methods": []
+  },
+  {
+    "index": 35816,
+    "name": "Ankama.Animations.DisplayListEntry",
+    "fields": [
+      "symbolId",
+      "entries",
+      "transform"
+    ],
+    "methods": []
+  },
+  {
+    "index": 35817,
+    "name": "Ankama.Animations.SkinTransformData",
+    "fields": [
+      "x",
+      "y",
+      "scaleX",
+      "scaleY",
+      "rotation",
+      "originalClip",
+      "overrideClip"
+    ],
+    "methods": []
+  },
+  {
+    "index": 35818,
+    "name": "Ankama.Animations.SkinAssetPart",
+    "fields": [
+      "name",
+      "DisplayListEntry",
+      "skinChunks"
+    ],
+    "methods": [
+      "bnus",
+      "bnut",
+      "bnuu",
+      "bnuv",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "bnuw"
+    ]
+  },
+  {
+    "index": 35819,
+    "name": "Ankama.Animations.SkinAsset",
+    "fields": [
+      "m_values",
+      "m_keys",
+      "skinParts",
+      "triangles",
+      "vertices",
+      "referencedSymbols",
+      "emptyCustomisations",
+      "customEmptyCustomisations",
+      "textures"
+    ],
+    "methods": [
+      "OnBeforeSerialize",
+      "OnAfterDeserialize",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35820,
+    "name": "Ankama.Animations.SkinAssetPartPair",
+    "fields": [
+      "asset",
+      "part"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35821,
+    "name": "Ankama.Animations.Rendering.AnimTransform",
+    "fields": [
+      "rX",
+      "uX",
+      "rY",
+      "uY",
+      "tX",
+      "tY",
+      "Identity"
+    ],
+    "methods": [
+      "FromArray",
+      "FromSkinTransformData",
+      "FromRenderState",
+      "SetRenderStateTransform",
+      "ToArray",
+      "SetArray",
+      ".cctor"
+    ]
+  },
+  {
+    "index": 35822,
+    "name": "Ankama.Animations.Rendering.AnimationEvaluationHelper",
+    "fields": [
+      "s_effectiveSubMeshes"
+    ],
+    "methods": [
+      "InvertTransformYAxisInPlace",
+      "InvertTransformYAxis",
+      "ConcatenateTransform",
+      "ConcatenateTransform",
+      "ApplyTransformToRenderState",
+      "TransformVertex",
+      "TransformVerticesIntoListMinMax",
+      "TransformVerticesIntoList",
+      "OffsetIndicesIntoList",
+      "ConsumeBuffersIntoMesh"
+    ]
+  },
+  {
+    "index": 35823,
+    "name": "Ankama.Animations.Rendering.BlurFilter",
+    "fields": [
+      "blurX",
+      "blurY",
+      "numPasses"
+    ],
+    "methods": [
+      "Equals",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35824,
+    "name": "Ankama.Animations.Rendering.DropShadowFilter",
+    "fields": [
+      "dropShadowColor",
+      "blurX",
+      "blurY",
+      "angle",
+      "distance",
+      "strength",
+      "inner",
+      "knockout",
+      "compositeSource",
+      "numPasses"
+    ],
+    "methods": [
+      "Equals",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35825,
+    "name": "Ankama.Animations.Rendering.GlowFilter",
+    "fields": [
+      "glowColor",
+      "blurX",
+      "blurY",
+      "strength",
+      "inner",
+      "knockout",
+      "compositeSource",
+      "numPasses"
+    ],
+    "methods": [
+      "Equals",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35826,
+    "name": "Ankama.Animations.Rendering.ColorMatrixFilter",
+    "fields": [
+      "matrix"
+    ],
+    "methods": [
+      "Equals",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35827,
+    "name": "Ankama.Animations.Rendering.AnimationGeometryVertex",
+    "fields": [
+      "pos",
+      "uv",
+      "multiplicativeColor",
+      "additiveColor",
+      "s_layout"
+    ],
+    "methods": [
+      ".cctor"
+    ]
+  },
+  {
+    "index": 35828,
+    "name": "Ankama.Animations.Rendering.AnimationMaskType",
+    "fields": [
+      "value__",
+      "None",
+      "Bounds",
+      "Symbol"
+    ],
+    "methods": [],
+    "enum": [
+      [
+        "None",
+        0
+      ],
+      [
+        "Bounds",
+        1
+      ],
+      [
+        "Symbol",
+        2
+      ]
+    ]
+  },
+  {
+    "index": 35834,
+    "name": "Ankama.Animations.Rendering.Animator2DCustomisableRenderer",
+    "fields": [
+      "m_exposedNodeNames",
+      "m_customisations",
+      "m_intendedEmptyCustomisations",
+      "m_skinRuleEmptyCustomisations",
+      "m_skinTransforms",
+      "m_modifiedSkinIds",
+      "s_poolLockObject",
+      "m_customisationColors",
+      "m_customisationDirty",
+      "m_skinAssetPartPairsQueue",
+      "m_skinSpecificSlots"
+    ],
+    "methods": [
+      ".ctor",
+      "UpdateExposedNodeNames",
+      "SetModifiedSkinIds",
+      "SetCustomisation",
+      "AddSkinSpecificSlot",
+      "SetCustomisation",
+      "SetCustomisationTransforms",
+      "SetCustomisationColor",
+      "GetCustomisationColor",
+      "ApplyCustomisationColors",
+      "ApplyCustomisationColors",
+      "ResetSkinRules",
+      "ReapplyCustomisation",
+      "TryUpdateNamedTransform",
+      "TryGetRenderStateGraphic",
+      "ComputeUnbufferedFrame",
+      "Compute",
+      "Buffer",
+      "TryGetCustomisedGraphic",
+      "TryGetCustomisedGraphic",
+      "TryGetSpecificNamedCustomisedGraphic",
+      "GetSkinTransform",
+      "WalkDisplayList",
+      "AppendEvaluatedAnimation",
+      "ReApplyRenderStates",
+      "ApplyMaterialSortOrder",
+      "RenderBackgroundEntities",
+      "RenderForegroundEntities",
+      ".cctor",
+      "<WalkDisplayList>g__TryIncreaseMaterialOffsetIndex|35_0"
+    ]
+  },
+  {
+    "index": 35835,
+    "name": "Ankama.Animations.Rendering.EvaluatedAnimationFrame",
+    "fields": [
+      "vertexBuffer",
+      "triangleBuffer",
+      "materialDescriptors",
+      "materialOffsets",
+      "subMeshes",
+      "stencilSubMeshes",
+      "namedTransformIndicesToBaseMaterialOffsets",
+      "nodeBounds",
+      "collisionBounds",
+      "namedTransformPositions",
+      "bounds",
+      "stencilSubMeshIndex",
+      "stencilBounds"
+    ],
+    "methods": [
+      "Reset",
+      "SetNamedTransform",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35836,
+    "name": "Ankama.Animations.Rendering.Animator2DRenderer",
+    "fields": [
+      "m_bufferedRenderStates",
+      "m_materialConfigurationService",
+      "m_mesh",
+      "m_meshFilter",
+      "m_meshRenderer",
+      "m_renderStates",
+      "m_backgroundSpriteOrder",
+      "m_bufferState",
+      "m_currentMaterials",
+      "m_flashFilters",
+      "m_maskGraphicSymbolId",
+      "m_colorModifier",
+      "m_isMaterialColorOverwrittenByFlashFilter",
+      "m_displayedTransforms",
+      "m_displayedNodeBounds",
+      "bounds",
+      "m_maskType",
+      "m_material",
+      "m_spinLock",
+      "m_storedFrameIndex",
+      "m_triangleBufferCapacityHint",
+      "m_vertexBufferCapacityHint",
+      "m_isHighlighted",
+      "m_highlightCoef",
+      "m_highlightAdd",
+      "m_isInlined",
+      "m_isOverriddenInline",
+      "m_isOutlined",
+      "m_currentRenderQueue",
+      "s_vertexBuffer",
+      "s_triangleBuffer",
+      "s_materials",
+      "s_materialDescriptors",
+      "s_subMeshes",
+      "s_stencilSubMeshes",
+      "m_evaluatedAnimationFrame",
+      "m_asyncEvaluatedAnimationFrame",
+      "DefaultMaxNodeCount",
+      "<forbidColliderOptimisation>k__BackingField",
+      "m_lastMeshUpdateFrame",
+      "collidersGenerated"
+    ],
+    "methods": [
+      ".ctor",
+      "UpdateMaxNodeCount",
+      "SetMaskToBounds",
+      "SetMaskToSymbol",
+      "ClearMask",
+      "SetFilters",
+      "GetBounds",
+      "SetBackgroundSprites",
+      "SetRendererVisible",
+      "Start",
+      "Release",
+      "ClearMaterialPool",
+      "get_forbidColliderOptimisation",
+      "set_forbidColliderOptimisation",
+      "SetHighlight",
+      "SetOutline",
+      "SetColor",
+      "SetMaterial",
+      "EnableKeyword",
+      "DisableKeyword",
+      "IsKeywordEnabled",
+      "HitTest",
+      "GetCollidingPosition",
+      "GetNamedTransformPositionals",
+      "TryGetNodeBounds",
+      "GetAllNodeBounds",
+      "Compute",
+      "Buffer",
+      "ApplyMaterialSortOrder",
+      "UpdateMaterialsFromDescriptors",
+      "FlushPendingRenderMeshWrites",
+      "AddGraphicToRenderLists",
+      "ApplyCustomisationColors",
+      "ApplyBufferedFrame",
+      "UpdateMeshFromBuffers",
+      "UpdateMaterials",
+      "ApplySortingToBackgroundSprites",
+      "AdvanceToFrame",
+      "TryGetGraphic",
+      "AppendEvaluatedAnimation",
+      "GetNextRenderState",
+      "SkipRenderStateDataPosition",
+      ".cctor",
+      "Ankama.Animations.Rendering.IAnimator2DRenderer.SetFilters"
+    ]
+  },
+  {
+    "index": 35837,
+    "name": "Ankama.Animations.Rendering.Animator2DRendererUtility",
+    "fields": [
+      "m_cachedMaterials"
+    ],
+    "methods": [
+      "CreateMeshComponents",
+      "DestroyMeshComponents",
+      "DestroyMaterialsFromMeshRenderer",
+      "CreateMesh",
+      "DestroyMesh",
+      "AutoPositionBackgrounds",
+      ".cctor"
+    ]
+  },
+  {
+    "index": 35838,
+    "name": "Ankama.Animations.Rendering.Animator2DStateCache",
+    "fields": [
+      "m_animator2DInstanceId",
+      "m_definitionInstanceId",
+      "m_animationName",
+      "m_currentFrame",
+      "m_sortingOrder",
+      "m_color"
+    ],
+    "methods": [
+      "get_Animator2DInstanceId",
+      ".ctor",
+      "CacheIsValid"
+    ]
+  },
+  {
+    "index": 35839,
+    "name": "Ankama.Animations.Rendering.ArrayPool`1",
+    "fields": [
+      "m_sizesToArrays"
+    ],
+    "methods": [
+      "Get",
+      "GetFromList",
+      "Release",
+      ".ctor",
+      ".cctor"
+    ]
+  },
+  {
+    "index": 35840,
+    "name": "Ankama.Animations.Rendering.BufferRequest",
+    "fields": [
+      "target",
+      "animation",
+      "id"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35841,
+    "name": "Ankama.Animations.Rendering.BufferState",
+    "fields": [
+      "value__",
+      "Ready",
+      "Running",
+      "Pending"
+    ],
+    "methods": [],
+    "enum": [
+      [
+        "Ready",
+        0
+      ],
+      [
+        "Running",
+        1
+      ],
+      [
+        "Pending",
+        2
+      ]
+    ]
+  },
+  {
+    "index": 35842,
+    "name": "Ankama.Animations.Rendering.ColorHelpers",
+    "fields": [
+      "SWFColorOpaqueWhite",
+      "SWFColorTransparentBlack",
+      "MaxCustomisationColorCount"
+    ],
+    "methods": [
+      "FromRGB",
+      "FromARGB",
+      "ToRGB",
+      "ToARGB",
+      "ToRGB",
+      "ToARGB",
+      "ConvertSWFColor",
+      "ConvertSWFColor",
+      "ConvertFromEncodedColor",
+      ".cctor"
+    ]
+  },
+  {
+    "index": 35843,
+    "name": "Ankama.Animations.Rendering.Contains_00000184$PostfixBurstDelegate",
+    "fields": [],
+    "methods": [
+      ".ctor",
+      "Invoke",
+      "BeginInvoke",
+      "EndInvoke"
+    ]
+  },
+  {
+    "index": 35844,
+    "name": "Ankama.Animations.Rendering.Contains_00000184$BurstDirectCall",
+    "fields": [
+      "Pointer"
+    ],
+    "methods": [
+      "GetFunctionPointerDiscard",
+      "GetFunctionPointer",
+      "Invoke"
+    ]
+  },
+  {
+    "index": 35845,
+    "name": "Ankama.Animations.Rendering.Encapsulate_00000185$PostfixBurstDelegate",
+    "fields": [],
+    "methods": [
+      ".ctor",
+      "Invoke",
+      "BeginInvoke",
+      "EndInvoke"
+    ]
+  },
+  {
+    "index": 35846,
+    "name": "Ankama.Animations.Rendering.Encapsulate_00000185$BurstDirectCall",
+    "fields": [
+      "Pointer"
+    ],
+    "methods": [
+      "GetFunctionPointerDiscard",
+      "GetFunctionPointer",
+      "Invoke"
+    ]
+  },
+  {
+    "index": 35847,
+    "name": "Ankama.Animations.Rendering.CustomBoundsUtils",
+    "fields": [],
+    "methods": [
+      "Contains",
+      "Encapsulate",
+      "Contains$BurstManaged",
+      "Encapsulate$BurstManaged"
+    ]
+  },
+  {
+    "index": 35848,
+    "name": "Ankama.Animations.Rendering.CustomBounds",
+    "fields": [
+      "min",
+      "max",
+      "center",
+      "size"
+    ],
+    "methods": [
+      ".ctor",
+      "FromUnityBounds",
+      "SetMinMax",
+      "RefreshValues"
+    ]
+  },
+  {
+    "index": 35851,
+    "name": "Ankama.Animations.Rendering.FlashFilters",
+    "fields": [
+      "filterOrder",
+      "blurFilters",
+      "glowFilters",
+      "dropShadowFilters",
+      "colorMatrices",
+      "blurPool",
+      "glowPool",
+      "dropShadowPool",
+      "colorMatrixPool",
+      "defaultPoolSize",
+      "maxPoolSize"
+    ],
+    "methods": [
+      ".cctor",
+      "GetPooledBlurFilter",
+      "GetPooledGlowFilter",
+      "GetPooledDropShadowFilter",
+      "GetPooledColorMatrixFilter",
+      "AddFilterToOrder",
+      "RemoveFilterFromOrder",
+      "get_Count",
+      "CopyFrom",
+      "Clear",
+      "ReturnItemsToPool",
+      "ClearToPool",
+      "AddBlurFilter",
+      "AddBlurFilter",
+      "RemoveBlurFilter",
+      "AddGlowFilter",
+      "AddGlowFilter",
+      "RemoveGlowFilter",
+      "AddDropShadowFilter",
+      "AddColorMatrix",
+      "RemoveColorMatrix",
+      "Equals"
+    ]
+  },
+  {
+    "index": 35852,
+    "name": "Ankama.Animations.Rendering.FlashFiltersHelper",
+    "fields": [
+      "s_flashFiltersPool"
+    ],
+    "methods": [
+      "GetFlashFilters",
+      "CreateGlow",
+      ".cctor"
+    ]
+  },
+  {
+    "index": 35853,
+    "name": "Ankama.Animations.Rendering.GenericSlotNamesCache",
+    "fields": [
+      "s_genericNamesCache",
+      "s_mappingPool"
+    ],
+    "methods": [
+      "UnSetMapping",
+      "TryGetGenericSlotNameFromCache",
+      ".cctor"
+    ]
+  },
+  {
+    "index": 35854,
+    "name": "Ankama.Animations.Rendering.IAnimator2DRenderer",
+    "fields": [],
+    "methods": [
+      "Start",
+      "Release",
+      "Compute",
+      "Buffer",
+      "SetMaterial",
+      "SetColor",
+      "SetHighlight",
+      "SetOutline",
+      "SetMaskToBounds",
+      "SetMaskToSymbol",
+      "ClearMask",
+      "SetBackgroundSprites",
+      "EnableKeyword",
+      "DisableKeyword",
+      "IsKeywordEnabled",
+      "ApplyMaterialSortOrder",
+      "SetRendererVisible",
+      "SetFilters",
+      "HitTest",
+      "GetCollidingPosition",
+      "GetBounds",
+      "TryGetNodeBounds",
+      "GetAllNodeBounds",
+      "GetNamedTransformPositionals",
+      "AppendEvaluatedAnimation",
+      "AdvanceToFrame",
+      "UpdateMeshFromBuffers",
+      "ClearMaterialPool",
+      "get_forbidColliderOptimisation",
+      "set_forbidColliderOptimisation"
+    ]
+  },
+  {
+    "index": 35855,
+    "name": "Ankama.Animations.Rendering.IApplyMaterialSortOrder",
+    "fields": [],
+    "methods": [
+      "ApplyMaterialSortOrder"
+    ]
+  },
+  {
+    "index": 35856,
+    "name": "Ankama.Animations.Rendering.MaterialDescriptor",
+    "fields": [
+      "texture",
+      "textureRequestId",
+      "maskFlags",
+      "maskRef",
+      "blendMode",
+      "colorMatrix",
+      "renderQueue",
+      "customisationColors",
+      "rootColor"
+    ],
+    "methods": [
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "AreArraysEqual",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 35857,
+    "name": "Ankama.Animations.Rendering.FlashMaskState",
+    "fields": [
+      "value__",
+      "None",
+      "SetMask",
+      "ObeyMask",
+      "ClearMask"
+    ],
+    "methods": [],
+    "enum": [
+      [
+        "None",
+        0
+      ],
+      [
+        "SetMask",
+        1
+      ],
+      [
+        "ObeyMask",
+        2
+      ],
+      [
+        "ClearMask",
+        3
+      ]
+    ]
+  },
+  {
+    "index": 35858,
+    "name": "Ankama.Animations.Rendering.MaterialConfigurationService",
+    "fields": [
+      "m_rootMaterial",
+      "m_poolMaterials",
+      "m_allMaterials"
+    ],
+    "methods": [
+      "GetPoolOrNewMaterial",
+      ".ctor",
+      "GetMaterial",
+      "ReturnMaterialToPool",
+      "Clear",
+      "SetColor",
+      "SetKeyword",
+      "SetFloat",
+      "ConfigureMaterial",
+      "ConfigureState",
+      "ConfigureState",
+      "MaskFlagsToMaskState",
+      "ApplyColorMatrixState",
+      "ApplyColorMatrixState",
+      "ApplyMaskState",
+      "ApplyMaskState",
+      "SetBlendState",
+      "SetBlendState",
+      "ManageKeyWords",
+      "ManageKeyWords",
+      "GetCompatibleBlendMode",
+      "ApplyBlendMode",
+      "ApplyBlendMode"
+    ]
+  },
+  {
+    "index": 35859,
+    "name": "Ankama.Animations.Rendering.PrepassDescriptor",
+    "fields": [
+      "m_prepassTextureType",
+      "m_targetAnimators",
+      "m_lastFrameRendered"
+    ],
+    "methods": [
+      "get_prepassTextureType",
+      "get_targetAnimators",
+      "set_targetAnimators",
+      "get_lastFrameRendered",
+      ".ctor",
+      "MarkPrepassRendered"
+    ]
+  },
+  {
+    "index": 35860,
+    "name": "Ankama.Animations.Rendering.PrepassTextureInvalidator",
+    "fields": [],
+    "methods": [
+      "PreprassTextureIsInvalid"
+    ]
+  },
+  {
+    "index": 35861,
+    "name": "Ankama.Animations.Rendering.PrepassTextureType",
+    "fields": [
+      "value__",
+      "Collection",
+      "Individual"
+    ],
+    "methods": [],
+    "enum": [
+      [
+        "Collection",
+        0
+      ],
+      [
+        "Individual",
+        1
+      ]
+    ]
+  },
+  {
+    "index": 35862,
+    "name": "Ankama.Animations.Rendering.RenderState",
+    "fields": [
+      "m00",
+      "m01",
+      "m03",
+      "m10",
+      "m11",
+      "m13",
+      "multiplicativeColor",
+      "additiveColor",
+      "spriteIndex",
+      "customisationIndex",
+      "childrenRecursiveCount",
+      "alpha",
+      "maskFlags",
+      "blendMode",
+      "colorMatrix",
+      "flashFilters"
+    ],
+    "methods": [
+      "Compute",
+      "ComputeExtendedFilterAndBlendState",
+      "ComputeBlurFilterState",
+      "ComputeGlowFilterState",
+      "ComputeDropShadowFilterState",
+      "Reset",
+      "StepToAlignment"
+    ]
+  },
+  {
+    "index": 35865,
+    "name": "Ankama.Animations.Rendering.ShaderConstants",
+    "fields": [
+      "DofusMainShader",
+      "DofusSpriteShader",
+      "ConvolutionShader",
+      "AdjustmentsShader",
+      "GlobalRenderScaleShaderID",
+      "BaseLayerName",
+      "MainColorShaderID",
+      "MainTexShaderID",
+      "TimeOffset",
+      "SynchronisationTime",
+      "ColorMaskShaderID",
+      "HasGroupedFeaturesKeywordStr",
+      "HasGroupedFeaturesKeyword",
+      "Animator2DKeywordVariableShaderID",
+      "IsAnimator2DKeywordStr",
+      "IsAnimator2DKeyword",
+      "UseColorEffectKeywordVariableShaderID",
+      "UseCustomisationColorKeywordVariableShaderID",
+      "ApplyAlphaStencilKeyword",
+      "BlendSourceFactorRGBShaderID",
+      "BlendSourceFactorAlphaShaderID",
+      "BlendOperationShaderID",
+      "BlendDestinationFactorRGBShaderID",
+      "BlendDestinationFactorAlphaShaderID",
+      "DefaultAnimator2DBlendSourceFactorAlpha",
+      "DefaultAnimator2DBlendDestinationFactorAlpha",
+      "StencilRefShaderID",
+      "StencilCompShaderID",
+      "StencilOpShaderID",
+      "DefaultStencilRef",
+      "DefaultStencilComp",
+      "DefaultStencilOp",
+      "EnableCustomFramerateKeywordVariableShaderID",
+      "CustomFramerateFeatureKeywordStr",
+      "CustomFramerateFeatureKeyword",
+      "CustomFrameRateShaderID",
+      "EnableAlphaClippingKeywordVariableShaderID",
+      "AlphaClipKeywordStr",
+      "AlphaClipKeyword",
+      "AlphaClipShaderID",
+      "ZWriteShaderID",
+      "EnableColorAnimationKeywordVariableShaderID",
+      "ColorAnimationFeatureKeywordStr",
+      "ColorAnimationFeatureKeyword",
+      "ColorAnimationTypeShaderID",
+      "ColorAnimationFinalColorShaderID",
+      "ColorAnimationFinalColorModifierShaderID",
+      "IsColorAnimationFinalColorMapNoisedShaderID",
+      "ShouldSmoothColorAnimationShaderID",
+      "ShouldColorAnimationApplyNoiseShaderID",
+      "ColorAnimationNoiseTexShaderID",
+      "ColorAnimationFrequencyShaderID",
+      "ColorAnimationFrequencyLinkedToWindShaderID",
+      "ColorAnimationTimeOffsetShaderID",
+      "ColorAnimationTimeSyncOffsetShaderID",
+      "ColorAnimationNoiseStrengthShaderID",
+      "ColorAnimationNoiseLinkedToWindShaderID",
+      "ColorAnimationNoiseTimeSpeedShaderID",
+      "ColorAnimationNoiseTimeOffsetShaderID",
+      "ColorAnimationNoiseTimeSyncOffsetShaderID",
+      "EnableTextureOffsetKeywordVariableShaderID",
+      "TextureOffsetFeatureKeywordStr",
+      "TextureOffsetFeatureKeyword",
+      "TextureOffsetTypeShaderID",
+      "TextureOffsetDirectionShaderID",
+      "TextureOffsetUVModeShaderID",
+      "TextureOffsetFlowmapIDShaderID",
+      "TextureOffsetFlowmapSpeedShaderID",
+      "TextureOffsetFlowmapPowerShaderID",
+      "EnableTranslationKeywordVariableShaderID",
+      "TranslationFeatureKeywordStr",
+      "TranslationFeatureKeyword",
+      "TranslationTypeShaderID",
+      "TranslationDirectionShaderID",
+      "TranslationOffsetShaderID",
+      "ShouldSmoothTranslationShaderID",
+      "ShouldTranslationApplyNoiseShaderID",
+      "TranslationNoiseTexShaderID",
+      "TranslationAmplitudeShaderID",
+      "TranslationAnimLinkedToWindShaderID",
+      "TranslationFrequencyShaderID",
+      "TranslationTimeOffsetShaderID",
+      "TranslationTimeSyncOffsetShaderID",
+      "TranslationNoiseStrengthShaderID",
+      "TranslationNoiseLinkedToWindShaderID",
+      "TranslationNoiseTimeSpeedShaderID",
+      "TranslationNoiseTimeOffsetShaderID",
+      "TranslationNoiseTimeSyncOffsetShaderID",
+      "EnableRotationKeywordVariableShaderID",
+      "RotationFeatureKeywordStr",
+      "RotationFeatureKeyword",
+      "RotationTypeShaderID",
+      "RotationCenterShaderID",
+      "RotationOffsetShaderID",
+      "IsRotationOffsetMapNoisedShaderID",
+      "ShouldSmoothRotationShaderID",
+      "ShouldRotationApplyNoiseShaderID",
+      "RotationNoiseTexShaderID",
+      "RotationAmplitudeShaderID",
+      "RotationAnimLinkedToWindShaderID",
+      "RotationFrequencyShaderID",
+      "RotationTimeOffsetShaderID",
+      "RotationTimeSyncOffsetShaderID",
+      "RotationNoiseStrengthShaderID",
+      "RotationNoiseLinkedToWindShaderID",
+      "RotationNoiseTimeSpeedShaderID",
+      "RotationNoiseTimeOffsetShaderID",
+      "RotationNoiseTimeSyncOffsetShaderID",
+      "EnableScaleKeywordVariableShaderID",
+      "ScaleFeatureKeywordStr",
+      "ScaleFeatureKeyword",
+      "ScaleTypeShaderID",
+      "ScaleAxesShaderID",
+      "ScalePivotShaderID",
+      "ScaleOffsetShaderID",
+      "ShouldSmoothScaleShaderID",
+      "ShouldScaleApplyNoiseShaderID",
+      "ScaleNoiseTexShaderID",
+      "ScaleNoiseOffsetShaderID",
+      "ScaleAmplitudeShaderID",
+      "ScaleAnimLinkedToWindShaderID",
+      "ScaleFrequencyShaderID",
+      "ScaleTimeOffsetShaderID",
+      "ScaleTimeSyncOffsetShaderID",
+      "ScaleNoiseStrengthShaderID",
+      "ScaleNoiseLinkedToWindShaderID",
+      "ScaleNoiseTimeSpeedShaderID",
+      "ScaleNoiseTimeOffsetShaderID",
+      "ScaleNoiseTimeSyncOffsetShaderID",
+      "EnableDistortionKeywordVariableShaderID",
+      "DistortionFeatureKeywordStr",
+      "DistortionFeatureKeyword",
+      "DistortionUVModeShaderID",
+      "DistortionNoiseTexShaderID",
+      "DistortionVectorShaderID",
+      "DistortionDirectionShaderID",
+      "DistortionMaskShaderID",
+      "DistortionLinkedToWindShaderID",
+      "EnableRefractionKeywordVariableShaderID",
+      "RefractionFeatureKeywordStr",
+      "RefractionFeatureKeyword",
+      "RefractionUVModeShaderID",
+      "RefractionNoiseTexShaderID",
+      "RefractionMaskTexShaderID",
+      "RefractionVectorShaderID",
+      "RefractionColorShaderID",
+      "EnableDissolveKeywordVariableShaderID",
+      "DissolveFeatureKeywordStr",
+      "DissolveFeatureKeyword",
+      "DissolveAnimationTypeShaderID",
+      "DissolveTexShaderID",
+      "DissolveTexSpeedShaderID",
+      "DissolveMaskShaderID",
+      "DissolveAlphaClipShaderID",
+      "DissolveAlphaClipFadeWidthShaderID",
+      "DissolveBurnColorShaderID",
+      "DissolveBurnColorModifierShaderID",
+      "IsDissolveBurnColorMapNoisedShaderID",
+      "DissolveBurnColorPowerShaderID",
+      "IsDissolveBurnColorPowerMapNoisedShaderID",
+      "DissolveBurnWidthShaderID",
+      "IsDissolveBurnWidthMapNoisedShaderID",
+      "IsDissolveBurnFadedShaderID",
+      "IsDissolveAnimatedShaderID",
+      "DissolveOffsetShaderID",
+      "ShouldSmoothDissolveAnimationShaderID",
+      "ShouldDissolveAnimationApplyNoiseShaderID",
+      "DissolveAnimationNoiseTexShaderID",
+      "DissolveAnimationNoiseStrengthShaderID",
+      "DissolveAnimationNoiseSpeedShaderID",
+      "DissolveFrequencyShaderID",
+      "DissolveAmplitudeShaderID",
+      "DissolveTimeOffsetShaderID",
+      "DissolveTimeSyncOffsetShaderID",
+      "EnableEmissiveKeywordVariableShaderID",
+      "EmissiveFeatureKeywordStr",
+      "EmissiveFeatureKeyword",
+      "EmissiveTexShaderID",
+      "EmissiveColShaderID",
+      "EmissiveFactorShaderID",
+      "IsEmissiveFactorMapNoisedShaderID",
+      "IsEmissiveAnimatedShaderID",
+      "EmissiveVariationFrequencyShaderID",
+      "EmissiveTimeOffsetShaderID",
+      "EmissiveVariationMinShaderID",
+      "EmissiveVariationMaxShaderID",
+      "EmissiveVariationClampMinShaderID",
+      "EmissiveVariationClampMaxShaderID",
+      "IsEmissiveFrequencyNoisedShaderID",
+      "EmissiveFrequencyNoiseTexShaderID",
+      "EmissiveFrequencyNoiseStrengthShaderID",
+      "EmissiveFrequencyNoiseSpeedShaderID",
+      "AreEmissiveAreasDelayedShaderID",
+      "EmissiveDelaysTexShaderID",
+      "NbMaxWindShaderHierarchyLevels",
+      "WindIsEnabledFeatureKeywordStr",
+      "WindIsEnabledFeatureKeyword",
+      "IsWindSensitiveKeywordVariableShaderID",
+      "WindSensitiveTypeShaderID",
+      "WindSensitiveFeatureKeywordStr",
+      "WindSensitiveFeatureKeyword",
+      "WindGlobalPowerShaderID",
+      "WindNoiseTexShaderID",
+      "WindModelTexShaderID",
+      "WindGlobalNoiseTilingDirectionShaderID",
+      "WindMainAmplitudeMultiplierShaderID",
+      "WindMainAmplitudeCurvePowerShaderID",
+      "WindMainFrequencyCurvePowerShaderID",
+      "WindSwingNoiseTexShaderID",
+      "WindGlobalSwingNoiseTilingDirectionShaderID",
+      "WindGlobalSwingAmplitudeMultiplierShaderID",
+      "WindHierarchyDepthShaderID",
+      "WindWSBendCentersShaderID",
+      "WindWSBendStartsShaderID",
+      "WindBendAxesShaderID",
+      "WindFlexibilitiesShaderID",
+      "WindShouldSwingShaderID",
+      "WaveAreEnabledFeatureKeywordStr",
+      "WaveAreEnabledFeatureKeyword",
+      "IsWaveSensitiveKeywordVariableShaderID",
+      "WaveIsSensitiveFeatureKeywordStr",
+      "WaveIsSensitiveFeatureKeyword",
+      "WaveGlobalMasksTexShaderID",
+      "WaveGlobalMasksTexCamMatrixShaderID",
+      "WaveTexShaderID",
+      "WaveDynamicsTexShaderID",
+      "WaveWaterColor1ShaderID",
+      "WaveWaterColor2ShaderID",
+      "WaveWaterColor3ShaderID",
+      "WaveWaterColor4ShaderID",
+      "WaveWaterColor1DissolvedShaderID",
+      "WaveWaterColor2DissolvedShaderID",
+      "WaveWaterColor3DissolvedShaderID",
+      "WaveWaterColor4DissolvedShaderID",
+      "WaveFrequencyShaderID",
+      "WaveDirectionShaderID",
+      "WaveDistoTexShaderID",
+      "WaveDistoTexTilingOffsetShaderID",
+      "WaveDistoTexSpeedShaderID",
+      "WaveDistoPowerShaderID",
+      "WaveDistoSpeedStopMinimumsShaderID",
+      "WaveDistoSpeedStopMaximumsShaderID",
+      "WaveDissolveTex1ShaderID",
+      "WaveDissolveTexTilingOffset1ShaderID",
+      "WaveDissolveTexSpeed1ShaderID",
+      "WaveDissolveTex2ShaderID",
+      "WaveDissolveTexTilingOffset2ShaderID",
+      "WaveDissolveTexSpeed2ShaderID",
+      "WaveDissolveTex3ShaderID",
+      "WaveDissolveTexTilingOffset3ShaderID",
+      "WaveDissolveTexSpeed3ShaderID",
+      "WaveDissolveTex4ShaderID",
+      "WaveDissolveTexTilingOffset4ShaderID",
+      "WaveDissolveTexSpeed4ShaderID",
+      "WaveDissolveDynamicsTexShaderID",
+      "WaveDissolvePower1ShaderID",
+      "WaveDissolvePower2ShaderID",
+      "WaveDissolvePower3ShaderID",
+      "WaveDissolvePower4ShaderID",
+      "WaveDissolveShouldFadeShaderID",
+      "WaveDissolveFadeStartRatiosShaderID",
+      "WaveDissolveFadeDistanceRatiosShaderID",
+      "WaveDissolveFadeDistanceShaderID",
+      "WaveDefaultStencilRef",
+      "WaveDefaultStencilComp",
+      "WaveDefaultStencilOp",
+      "WaveAdvancementShaderID",
+      "EnableHighlightKeywordVariableShaderID",
+      "EnableHighlightKeywordStr",
+      "EnableHighlightKeyword",
+      "HighlightCoef",
+      "HighlightAdd",
+      "s_highlightCoef4Outline",
+      "s_highlightAdd4Outline",
+      "OutlineTypeShaderID",
+      "EnableOutlineKeywordStr",
+      "EnableOutlineKeyword",
+      "GlobalInlineAlphaClipShaderID",
+      "GlobalInlineColorShaderID",
+      "GlobalInlineWidthShaderID",
+      "GlobalInlineMethodNumShaderID",
+      "InlineOverrideAlphaClipShaderID",
+      "InlineOverrideWidthShaderID",
+      "InlineOverrideColorShaderID",
+      "InlineOverrideMethodNumShaderID",
+      "GlobalOutlineAlphaClipShaderID",
+      "GlobalOutlineColorShaderID",
+      "GlobalOutlineWidthShaderID",
+      "GlobalOutlineMethodNumShaderID",
+      "InlineObjectsTextureShaderIDStr",
+      "OutlineObjectsTextureShaderIDStr",
+      "InlineObjectsTextureShaderID",
+      "OutlineObjectsTextureShaderID",
+      "GlobalMapNoiseModifierTexShaderID",
+      "GlobalMapNoiseModifierTexTilingOffsetShaderID",
+      "GlobalMapNoiseModifierTexSpeedShaderID",
+      "UseMapNoiseModifierKeywordVariableShaderID",
+      "UseMapNoiseModifierKeywordStr",
+      "UseMapNoiseModifierKeyword",
+      "GrabPassShaderTextureName",
+      "GrabPassTextureShaderID",
+      "ConvolutionKernelSizeShaderID",
+      "ConvolutionDirectionShaderID",
+      "ConvolutionRemapInShaderID",
+      "EnableRemapInConvolutionKeyword",
+      "EnableConvolutionThresholdKeyword",
+      "ConvolutionThresholdInShaderID",
+      "GrayScaleMixTexShaderID",
+      "GrayScaleMixIsInlineShaderID",
+      "FlashBlendModeNoneStr",
+      "FlashBlendModeNoneKeyword",
+      "FlashBlendModeMultiplyStr",
+      "FlashBlendModeMultiplyKeyword",
+      "FlashBlendModeScreenStr",
+      "FlashBlendModeScreenKeyword",
+      "FlashBlendModeInvertStr",
+      "FlashBlendModeInvertKeyword",
+      "SpriteIsGrayShaderID",
+      "GlobalNbMaxOverdrawShaderID",
+      "GlobalOverdrawTexShaderID",
+      "ColorMatrixShaderID",
+      "FilterColorMatrixKeywordStr"
+    ],
+    "methods": [
+      "UpdateRenderingLayers",
+      "UpdateRenderingLayers",
+      ".cctor"
+    ]
+  },
+  {
+    "index": 35866,
+    "name": "Ankama.Animations.Rendering.SpriteRendererWithFilters",
+    "fields": [
+      "m_materialDescriptor",
+      "m_materialList",
+      "m_submeshDescriptors"
+    ],
+    "methods": [
+      "InitMaterialDescriptor",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35867,
+    "name": "Ankama.Animations.Playables.Animator2DPlayableAsset",
+    "fields": [
+      "animationName",
+      "loop"
+    ],
+    "methods": [
+      "CreatePlayable",
+      "get_clipCaps",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35868,
+    "name": "Ankama.Animations.Playables.Animator2DPlayableBehaviour",
+    "fields": [
+      "animationName",
+      "loop",
+      "eayn"
+    ],
+    "methods": [
+      "OnBehaviourPause",
+      "PrepareFrame",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35869,
+    "name": "Ankama.Animations.Playables.Animator2DTrackAsset",
+    "fields": [],
+    "methods": [
+      "CreatePlayable",
+      "GatherProperties",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35872,
+    "name": "Ankama.Animations.Management.Animator2DManagerCallbackSource",
+    "fields": [
+      "<eazc>k__BackingField"
+    ],
+    "methods": [
+      "bnvj",
+      "bnvk",
+      "Awake",
+      "LateUpdate",
+      "Update",
+      "OnApplicationQuit",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35874,
+    "name": "Ankama.Animations.Events.DelayedEvent",
+    "fields": [
+      "type",
+      "args"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35875,
+    "name": "Ankama.Animations.Events.Animator2DInitialisedEventArgs",
+    "fields": [],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35876,
+    "name": "Ankama.Animations.Events.Animator2DInitialisedEventHandler",
+    "fields": [],
+    "methods": [
+      ".ctor",
+      "Invoke",
+      "BeginInvoke",
+      "EndInvoke"
+    ]
+  },
+  {
+    "index": 35877,
+    "name": "Ankama.Animations.Events.AnimationLabelChangedEventArgs",
+    "fields": [
+      "<eazi>k__BackingField",
+      "<eazj>k__BackingField"
+    ],
+    "methods": [
+      "bnvl",
+      "bnvm",
+      "bnvn",
+      "bnvo",
+      "bnvp",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35878,
+    "name": "Ankama.Animations.Events.AnimationLabelChangedEventHandler",
+    "fields": [],
+    "methods": [
+      ".ctor",
+      "Invoke",
+      "BeginInvoke",
+      "EndInvoke"
+    ]
+  },
+  {
+    "index": 35879,
+    "name": "Ankama.Animations.Events.AnimationStartedEventArgs",
+    "fields": [
+      "<eazk>k__BackingField",
+      "<eazl>k__BackingField",
+      "<eazm>k__BackingField"
+    ],
+    "methods": [
+      "bnvq",
+      "bnvr",
+      "bnvs",
+      "bnvt",
+      "bnvu",
+      "bnvv",
+      "bnvw",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35880,
+    "name": "Ankama.Animations.Events.AnimationStartedEventHandler",
+    "fields": [],
+    "methods": [
+      ".ctor",
+      "Invoke",
+      "BeginInvoke",
+      "EndInvoke"
+    ]
+  },
+  {
+    "index": 35881,
+    "name": "Ankama.Animations.Events.AnimationLoopedEventArgs",
+    "fields": [
+      "<eazn>k__BackingField",
+      "<eazo>k__BackingField"
+    ],
+    "methods": [
+      "bnvx",
+      "bnvy",
+      "bnvz",
+      "bnwa",
+      "bnwb",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35882,
+    "name": "Ankama.Animations.Events.AnimationLoopedEventHandler",
+    "fields": [],
+    "methods": [
+      ".ctor",
+      "Invoke",
+      "BeginInvoke",
+      "EndInvoke"
+    ]
+  },
+  {
+    "index": 35883,
+    "name": "Ankama.Animations.Events.AnimationEndedEventArgs",
+    "fields": [
+      "<eazp>k__BackingField"
+    ],
+    "methods": [
+      "bnwc",
+      "bnwd",
+      "bnwe",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35884,
+    "name": "Ankama.Animations.Events.AnimationEndedEventHandler",
+    "fields": [],
+    "methods": [
+      ".ctor",
+      "Invoke",
+      "BeginInvoke",
+      "EndInvoke"
+    ]
+  },
+  {
+    "index": 35885,
+    "name": "Ankama.Animations.Sources.Rendering.CustomPasses.AdjustmentsPassSettings",
+    "fields": [
+      "adjustmentsMaterial",
+      "remapIn",
+      "shouldThreshold",
+      "threshold",
+      "sourceTex",
+      "destinationTex",
+      "swapTex1"
+    ],
+    "methods": [
+      "bnwf",
+      "bnwg",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35886,
+    "name": "Ankama.Animations.Sources.Rendering.CustomPasses.ConvolutionRenderPassSettings",
+    "fields": [
+      "convolutionMaterial",
+      "nbPasses",
+      "kernelSize",
+      "direction",
+      "secondPassMat",
+      "sourceTex",
+      "destinationTex",
+      "swapTex1",
+      "swapTex2"
+    ],
+    "methods": [
+      "bnwh",
+      "bnwi",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35887,
+    "name": "Ankama.Animations.Sources.Rendering.CustomPasses.BlurRenderPassSettings",
+    "fields": [
+      "shouldBlurOnce",
+      "firstBlurSettings",
+      "shouldBlurTwice",
+      "secondBlurSettings",
+      "remapIn"
+    ],
+    "methods": [
+      "bnwj",
+      "bnwk",
+      "bnwl",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35891,
+    "name": "Ankama.Animations.Sources.Rendering.CustomPasses.CustomRenderObjectsFeature",
+    "fields": [
+      "renderPassEvent",
+      "renderFeatureType",
+      "renderObjectPass",
+      "renderObjectsSettings"
+    ],
+    "methods": [
+      "Create",
+      "AddRenderPasses",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35892,
+    "name": "Ankama.Animations.Sources.Rendering.CustomPasses.CustomRenderObjectsPassSettings",
+    "fields": [
+      "shaderOverride",
+      "shaderPassIndex",
+      "sortingCriteria",
+      "renderQueueRange",
+      "layerMask",
+      "renderingLayerMask",
+      "shaderTagIds",
+      "isOverdrawPass",
+      "nbMaxOverdraw"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35896,
+    "name": "Ankama.Animations.Sources.Rendering.CustomPasses.CustomScreenPassFeature",
+    "fields": [
+      "renderPassEvent",
+      "renderFeatureType",
+      "customScreenPassSettings",
+      "m_customScreenPass"
+    ],
+    "methods": [
+      "Create",
+      "AddRenderPasses",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35897,
+    "name": "Ankama.Animations.Sources.Rendering.CustomPasses.CustomScreenPassSettings",
+    "fields": [
+      "screenPassMaterial",
+      "screenPassShaderIndex",
+      "tmpTex",
+      "camColorTex",
+      "textureScaleDownFactor"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35901,
+    "name": "Ankama.Animations.Sources.Rendering.CustomPasses.OutlinePrepassFeature",
+    "fields": [
+      "renderPassEvent",
+      "renderFeatureType",
+      "outlineInTexSettings",
+      "outlineInTexPass"
+    ],
+    "methods": [
+      "Create",
+      "AddRenderPasses",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35902,
+    "name": "Ankama.Animations.Sources.Rendering.CustomPasses.OutlinePrepassSettings",
+    "fields": [
+      "renderingLayerMask",
+      "shaderOverride",
+      "shaderOutlinedInWhitePassIndex",
+      "shaderTagId",
+      "filteringSettings",
+      "outlineColor",
+      "alphaClip",
+      "testDiff",
+      "width",
+      "shouldBlur",
+      "blurSettings",
+      "shouldAdjust",
+      "adjustmentsSettings",
+      "useBlendMat",
+      "blendMat",
+      "destinationTex",
+      "firstObjectsDrawnBackupTex",
+      "ebab",
+      "ebac",
+      "debugRenderTexture"
+    ],
+    "methods": [
+      "bnwv",
+      "bnww",
+      "bnwx",
+      "bnwy",
+      "bnwz",
+      "bnxa",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35905,
+    "name": "Ankama.Animations.Sources.Rendering.CustomPasses.OutlinePrepass",
+    "fields": [
+      "ebaf",
+      "ebag",
+      "ebah",
+      "ebai"
+    ],
+    "methods": [
+      ".ctor",
+      "bnxc",
+      "RecordRenderGraph",
+      "bnxd"
+    ]
+  },
+  {
+    "index": 35911,
+    "name": "Ankama.Animations.Sources.Rendering.CustomPasses.RefractionRendererFeature",
+    "fields": [
+      "_refractionPass",
+      "_refractionPassSettings"
+    ],
+    "methods": [
+      "Create",
+      "AddRenderPasses",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35914,
+    "name": "Ankama.Animations.Sources.Rendering.CustomPasses.SendGlobalParametersFeature",
+    "fields": [
+      "renderPassEvent",
+      "sendGlobalParametersPassSettings",
+      "m_sendGlobalParametersPass"
+    ],
+    "methods": [
+      "Create",
+      "AddRenderPasses",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 35915,
+    "name": "Ankama.Animations.Sources.Rendering.CustomPasses.SendGlobalParametersSettings",
+    "fields": [
+      "overdrawTex"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 36273,
+    "name": "AleCore.Utils.ObjectDisplayBehaviour",
+    "fields": [
+      "value__",
+      "ALWAYS_DISPLAY",
+      "HIDE_IF_IGNORE_EFFECTS",
+      "HIDE_IF_EFFECTS"
+    ],
+    "methods": [],
+    "enum": [
+      [
+        "ALWAYS_DISPLAY",
+        0
+      ],
+      [
+        "HIDE_IF_IGNORE_EFFECTS",
+        1
+      ],
+      [
+        "HIDE_IF_EFFECTS",
+        2
+      ]
+    ]
+  },
+  {
+    "index": 36301,
+    "name": "AleCore.Parameters.MapNoiseModifierConfiguration",
+    "fields": [
+      "noiseModifierParameters"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 36302,
+    "name": "AleCore.Parameters.MapPostProcessConfiguration",
+    "fields": [
+      "postProcessParameters"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 36303,
+    "name": "AleCore.Parameters.MapWaveConfiguration",
+    "fields": [
+      "waveParameters"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 36304,
+    "name": "AleCore.Parameters.MapWindConfiguration",
+    "fields": [
+      "windParameters"
+    ],
+    "methods": [
+      ".ctor"
+    ]
+  },
+  {
+    "index": 36305,
+    "name": "AleCore.Parameters.NoiseModifierParameters",
+    "fields": [
+      "mapNoiseModifierTexId",
+      "mapNoiseModifierTiling",
+      "mapNoiseModifierOffset",
+      "mapNoiseModifierSpeed"
+    ],
+    "methods": [
+      "GetDefault"
+    ]
+  },
+  {
+    "index": 36306,
+    "name": "AleCore.Parameters.TransformParameters",
+    "fields": [
+      "pos",
+      "rot",
+      "scale"
+    ],
+    "methods": []
+  },
+  {
+    "index": 36307,
+    "name": "AleCore.Parameters.WaveParameters",
+    "fields": [
+      "waveFrequency",
+      "waveDirection",
+      "waveDynamicsTexID",
+      "waveDissolveDynamicsTexID",
+      "waveDistoTexID",
+      "waveDistoTexTiling",
+      "waveDistoTexOffset",
+      "waveDistoTexSpeed",
+      "waveDistoPower",
+      "waveDistoSpeedStopMin1",
+      "waveDistoSpeedStopMax1",
+      "waveDistoSpeedStopMin2",
+      "waveDistoSpeedStopMax2",
+      "waveDistoSpeedStopMin3",
+      "waveDistoSpeedStopMax3",
+      "waveDistoSpeedStopMin4",
+      "waveDistoSpeedStopMax4",
+      "waveDissolveTexID1",
+      "waveDissolveTexTiling1",
+      "waveDissolveTexOffset1",
+      "waveDissolveTexSpeed1",
+      "waveDissolvePower1",
+      "waveDissolveFadeDistance",
+      "waveDissolveTexID2",
+      "waveDissolveTexTiling2",
+      "waveDissolveTexOffset2",
+      "waveDissolveTexSpeed2",
+      "waveDissolvePower2",
+      "waveDissolveShouldFade2",
+      "waveDissolveFadeStartRatio2",
+      "waveDissolveFadeDistanceRatio2",
+      "waveDissolveTexID3",
+      "waveDissolveTexTiling3",
+      "waveDissolveTexOffset3",
+      "waveDissolveTexSpeed3",
+      "waveDissolvePower3",
+      "waveDissolveShouldFade3",
+      "waveDissolveFadeStartRatio3",
+      "waveDissolveFadeDistanceRatio3",
+      "waveDissolveTexID4",
+      "waveDissolveTexTiling4",
+      "waveDissolveTexOffset4",
+      "waveDissolveTexSpeed4",
+      "waveDissolvePower4",
+      "waveDissolveShouldFade4",
+      "waveDissolveFadeStartRatio4",
+      "waveDissolveFadeDistanceRatio4",
+      "globalWaveMasksTexCamMatrix",
+      "waterColor1",
+      "waterColor1Dissolved",
+      "waterColor2",
+      "waterColor2Dissolved",
+      "waterColor3",
+      "waterColor3Dissolved",
+      "waterColor4",
+      "waterColor4Dissolved"
+    ],
+    "methods": [
+      "GetDefault"
+    ]
+  },
+  {
+    "index": 36308,
+    "name": "AleCore.Parameters.WindParameters",
+    "fields": [
+      "windPower",
+      "windModelTexID",
+      "mainWindNoiseTexID",
+      "mainWindNoiseTiling",
+      "mainWindNoiseTilingMultiplier",
+      "mainWindNoiseDirection",
+      "mainWindNoiseDirectionMultiplier",
+      "mainWindAmplitudeMultiplierCursor",
+      "mainWindAmplitudeCurvePower",
+      "mainWindFrequencyCurvePower",
+      "swingNoiseTexID",
+      "swingNoiseTiling",
+      "swingNoiseTilingMultiplier",
+      "swingNoiseDirection",
+      "swingNoiseDirectionMultiplier",
+      "swingAmplitudeMultiplierCursor",
+      "mainWindAmplitudeMultiplier",
+      "mainWindFrequencyMultiplier",
+      "swingFrequencyMultiplier",
+      "swingAmplitudeMultiplier"
+    ],
+    "methods": [
+      "GetDefault"
+    ]
+  },
+  {
+    "index": 36309,
+    "name": "AleCore.Parameters.Shader.IShaderParameters",
+    "fields": [],
+    "methods": [
+      "EqualsShaderParameters",
+      "EqualShaders",
+      "GetShaderParametersListCopy"
+    ]
+  },
+  {
+    "index": 36310,
+    "name": "AleCore.Parameters.Shader.ShaderBlendingParameters",
+    "fields": [
+      "TYPE",
+      "sourceFactor",
+      "blendOperation",
+      "destinationFactor"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36311,
+    "name": "AleCore.Parameters.Shader.ShaderColorAnimationParameters",
+    "fields": [
+      "TYPE",
+      "animationCurveType",
+      "finalColor",
+      "isFinalColorLinkedToMapNoiseModifier",
+      "finalColorModifier",
+      "frequency",
+      "linkFrequencyToWind",
+      "timeOffset",
+      "isTimeOffsetRandom",
+      "shouldSmooth",
+      "shouldApplyNoise",
+      "noiseTexID",
+      "noiseOffset",
+      "isNoiseOffsetRandom",
+      "noiseStrength",
+      "linkNoiseStrengthToWind",
+      "noiseSpeed",
+      "linkNoiseSpeedToWind"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36312,
+    "name": "AleCore.Parameters.Shader.ShaderCustomFramerateParameters",
+    "fields": [
+      "TYPE",
+      "framerate"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36313,
+    "name": "AleCore.Parameters.Shader.ShaderDepthAlphaClipParameters",
+    "fields": [
+      "TYPE",
+      "alphaClip"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36314,
+    "name": "AleCore.Parameters.Shader.ShaderDissolveParameters",
+    "fields": [
+      "TYPE",
+      "dissolveTexID",
+      "dissolveTexTiling",
+      "dissolveTexOffset",
+      "isDissolveTexOffsetRandom",
+      "dissolveTexSpeed",
+      "texSpeedMultiplier",
+      "isTexSpeedMultiplierRandom",
+      "texSpeedMultiplierRandomRatio",
+      "dissolveMaskID",
+      "alphaClip",
+      "alphaClipFadeWidth",
+      "burnWidth",
+      "isBurnWidthLinkedToMapNoiseModifier",
+      "burnColor",
+      "isBurnColorLinkedToMapNoiseModifier",
+      "burnColorModifier",
+      "burnColorPower",
+      "isBurnColorPowerLinkedToMapNoiseModifier",
+      "isBurnFaded",
+      "displayUseDissolvePerParticle",
+      "useDissolvePerParticle",
+      "alphaClipPerParticle",
+      "isAnimated",
+      "animationCurveType",
+      "frequency",
+      "curveMin",
+      "curveMax",
+      "shouldSmooth",
+      "shouldApplyNoise",
+      "noiseTexID",
+      "noiseStrength",
+      "noiseSpeed"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36315,
+    "name": "AleCore.Parameters.Shader.ShaderDistortionParameters",
+    "fields": [
+      "TYPE",
+      "noiseTexID",
+      "noiseTexUVMode",
+      "noiseTexTiling",
+      "tile",
+      "noiseTexOffset",
+      "isDistortionNoiseTexOffsetRandom",
+      "direction",
+      "directionSpeedMultiplier",
+      "isDirectionSpeedMultiplierRandom",
+      "directionSpeedMultiplierRandomRatio",
+      "strength",
+      "distortionDirection",
+      "linkToWind",
+      "maskTexID"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36316,
+    "name": "AleCore.Parameters.Shader.ShaderEmissiveParameters",
+    "fields": [
+      "TYPE",
+      "emissiveTexID",
+      "color",
+      "factor",
+      "isFactorLinkedToMapNoiseModifier",
+      "isAnimated",
+      "displayUseEmissiveAnimationPerParticle",
+      "useEmissiveAnimationPerParticle",
+      "animationOffsetPerParticle",
+      "frequency",
+      "timeOffset",
+      "isTimeOffsetRandom",
+      "curveMin",
+      "curveMax",
+      "curveClampMin",
+      "curveClampMax",
+      "isFrequencyNoised",
+      "frequencyNoiseTexID",
+      "noiseStrength",
+      "noiseSpeed",
+      "areAreasDelayed"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36317,
+    "name": "AleCore.Parameters.Shader.ShaderOutlineParameters",
+    "fields": [
+      "type",
+      "testDiff",
+      "alphaClip",
+      "color"
+    ],
+    "methods": [
+      ".ctor",
+      ".ctor"
+    ]
+  },
+  {
+    "index": 36318,
+    "name": "AleCore.Parameters.Shader.ShaderRefractionAlphaParameters",
+    "fields": [
+      "TYPE",
+      "noiseTexID",
+      "noiseTexUVMode",
+      "noiseTexTiling",
+      "tile",
+      "noiseTexOffset",
+      "direction",
+      "directionSpeedMultiplier",
+      "isDirectionSpeedMultiplierRandom",
+      "directionSpeedMultiplierRandomRatio",
+      "strength",
+      "maskTexID",
+      "color",
+      "alphaMultiplier"
+    ],
+    "methods": [
+      "GetDefault",
+      "op_Implicit",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36319,
+    "name": "AleCore.Parameters.Shader.ShaderRefractionParameters",
+    "fields": [
+      "TYPE",
+      "noiseTexID",
+      "noiseTexUVMode",
+      "noiseTexTiling",
+      "tile",
+      "noiseTexOffset",
+      "direction",
+      "directionSpeedMultiplier",
+      "isDirectionSpeedMultiplierRandom",
+      "directionSpeedMultiplierRandomRatio",
+      "strength",
+      "maskTexID",
+      "color"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36320,
+    "name": "AleCore.Parameters.Shader.ShaderRotationParameters",
+    "fields": [
+      "TYPE",
+      "animationCurveType",
+      "rotationCenter",
+      "frequency",
+      "linkFrequencyToWind",
+      "amplitude",
+      "linkAmplitudeToWind",
+      "offset",
+      "isOffsetLinkedToMapNoiseModifier",
+      "timeOffset",
+      "isTimeOffsetRandom",
+      "shouldSmooth",
+      "shouldApplyNoise",
+      "noiseTexID",
+      "noiseStrength",
+      "linkNoiseStrengthToWind",
+      "noiseSpeed",
+      "linkNoiseSpeedToWind",
+      "noiseOffset",
+      "isNoiseOffsetRandom"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36321,
+    "name": "AleCore.Parameters.Shader.ShaderScaleParameters",
+    "fields": [
+      "TYPE",
+      "animationCurveType",
+      "axes",
+      "pivot",
+      "frequency",
+      "linkFrequencyToWind",
+      "amplitude",
+      "linkAmplitudeToWind",
+      "offset",
+      "timeOffset",
+      "isTimeOffsetRandom",
+      "shouldSmooth",
+      "shouldApplyNoise",
+      "noiseTexID",
+      "noiseStrength",
+      "noiseStrengthMultiplier",
+      "linkNoiseStrengthToWind",
+      "noiseOffset",
+      "noiseSpeed",
+      "linkNoiseSpeedToWind"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36322,
+    "name": "AleCore.Parameters.Shader.ShaderTextureOffsetParameters",
+    "fields": [
+      "TYPE",
+      "textureOffsetType",
+      "texUVMode",
+      "texTiling",
+      "tile",
+      "texOffset",
+      "direction",
+      "directionSpeed",
+      "flowmapID",
+      "flowmapSpeed",
+      "flowmapPower"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36323,
+    "name": "AleCore.Parameters.Shader.ShaderTranslationParameters",
+    "fields": [
+      "TYPE",
+      "animationCurveType",
+      "direction",
+      "frequency",
+      "linkFrequencyToWind",
+      "amplitude",
+      "linkAmplitudeToWind",
+      "offset",
+      "timeOffset",
+      "isTimeOffsetRandom",
+      "shouldSmooth",
+      "shouldApplyNoise",
+      "noiseTexID",
+      "noiseStrength",
+      "noiseStrengthMultiplier",
+      "linkNoiseStrengthToWind",
+      "noiseSpeed",
+      "linkNoiseSpeedToWind",
+      "noiseOffset",
+      "isNoiseOffsetRandom"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36324,
+    "name": "AleCore.Parameters.Shader.ShaderWaveParameters",
+    "fields": [
+      "TYPE",
+      "waveTexID"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36325,
+    "name": "AleCore.Parameters.Shader.ShaderWindParameters",
+    "fields": [
+      "TYPE",
+      "bendCenter",
+      "worldSpaceBendCenter",
+      "bendStart",
+      "worldSpaceBendStart",
+      "bendAxe",
+      "bendAxeMultiplier",
+      "flexibility",
+      "shouldSwing",
+      "parentParameters"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36326,
+    "name": "AleCore.Parameters.Shader.ShaderWindParentParameters",
+    "fields": [
+      "bendCenter",
+      "bendStart",
+      "bendAxe",
+      "bendAxeMultiplier",
+      "flexibility",
+      "shouldSwing",
+      "windSwingNoiseSpeedCoef",
+      "windSwingNoiseAmplitude"
+    ],
+    "methods": [
+      "GetDefault",
+      "Equals",
+      "Equals",
+      "GetHashCode",
+      "op_Equality",
+      "op_Inequality"
+    ]
+  },
+  {
+    "index": 36327,
+    "name": "AleCore.Parameters.PostProcess.IPostProcessParameters",
+    "fields": [],
+    "methods": []
+  },
+  {
+    "index": 36328,
+    "name": "AleCore.Parameters.PostProcess.PPBloomParameters",
+    "fields": [
+      "TYPE",
+      "threshold",
+      "intensity",
+      "scatter",
+      "color"
+    ],
+    "methods": [
+      "GetDefault"
+    ]
+  },
+  {
+    "index": 36329,
+    "name": "AleCore.Parameters.PostProcess.PPChromaticAberrationParameters",
+    "fields": [
+      "TYPE",
+      "intensity"
+    ],
+    "methods": [
+      "GetDefault"
+    ]
+  },
+  {
+    "index": 36330,
+    "name": "AleCore.Parameters.PostProcess.PPFilmGrainParameters",
+    "fields": [
+      "TYPE",
+      "type",
+      "intensity",
+      "response"
+    ],
+    "methods": [
+      "GetDefault"
+    ]
+  },
+  {
+    "index": 36331,
+    "name": "AleCore.Parameters.Particle.ParticleSpritesheetParameters",
+    "fields": [
+      "tiles",
+      "frameOverTime",
+      "startFrame",
+      "cycles"
+    ],
+    "methods": []
+  },
+  {
+    "index": 36332,
+    "name": "AleCore.Parameters.Particle.ParticlesColorOverLifetimeParameters",
+    "fields": [
+      "colorOverLifetimeColor"
+    ],
+    "methods": []
+  },
+  {
+    "index": 36334,
+    "name": "AleCore.Parameters.Particle.ParticlesEmissionParameters",
+    "fields": [
+      "rateOverTime",
+      "bursts",
+      "OnBurstListChanged"
+    ],
+    "methods": [
+      "RemoveBurst",
+      "AddBurst",
+      "add_OnBurstListChanged",
+      "remove_OnBurstListChanged"
+    ]
+  },
+  {
+    "index": 36335,
+    "name": "AleCore.Parameters.Particle.ParticlesMainParameters",
+    "fields": [
+      "duration",
+      "looping",
+      "prewarm",
+      "startDelay",
+      "startLifetime",
+      "startSpeed",
+      "is3DStartSize",
+      "startSize3DMode",
+      "startSize",
+      "startSizeX",
+      "startSizeY",
+      "startSizeZ",
+      "is3DStartRotation",
+      "startRotation3DMode",
+      "startRotation",
+      "startRotationX",
+      "startRotationY",
+      "startRotationZ",
+      "flipRotation",
+      "startColor",
+      "gravityModifier",
+      "simulationSpace",
+      "simulationSpeed",
+      "useAutoRandomSeed",
+      "randomSeed",
+      "stopped"
+    ],
+    "methods": [
+      "OnLoopingChanged",
+      "Change3DStartSizeMode",
+      "Change3DStartRotationMode"
+    ]
+  },
+  {
+    "index": 36336,
+    "name": "AleCore.Parameters.Particle.ParticlesModulesParameters",
+    "fields": [
+      "isEmissionModuleActivated",
+      "isShapeModuleActivated",
+      "isVelocityOverLifetimeModuleActivated",
+      "isColorOverLifetimeModuleActivated",
+      "isSizeOverLifetimeModuleActivated",
+      "isRotationOverLifetimeModuleActivated",
+      "isNoiseModuleActivated",
+      "isSpritesheetModuleActivated",
+      "isTrailsModuleActivated",
+      "isRendererModuleActivated",
+      "isSubemitterModuleActivated",
+      "isSoundModuleActivated"
+    ],
+    "methods": []
+  },
+  {
+    "index": 36337,
+    "name": "AleCore.Parameters.Particle.ParticlesNoiseParameters",
+    "fields": [
+      "isNoiseStrengthSeparateAxes",
+      "noiseStrength3DMode",
+      "noiseStrength",
+      "noiseStrengthX",
+      "noiseStrengthY",
+      "noiseStrengthZ",
+      "noiseFrequency",
+      "noiseScrollSpeed",
+      "noiseDamping",
+      "noiseQuality",
+      "noiseRemapEnabled",
+      "noiseRemap3DMode",
+      "noiseRemapCurve",
+      "noiseRemapCurveX",
+      "noiseRemapCurveY",
+      "noiseRemapCurveZ",
+      "noisePositionAmount",
+      "noiseRotationAmount",
+      "noiseSizeAmount"
+    ],
+    "methods": [
+      "ChangeNoiseStrengthMode",
+      "ChangeNoiseRemapMode"
+    ]
+  },
+  {
+    "index": 36338,
+    "name": "AleCore.Parameters.Particle.ParticlesRendererParameters",
+    "fields": [
+      "renderMode",
+      "cameraVelocityScale",
+      "velocityScale",
+      "lengthScale",
+      "freeformStretching",
+      "rotateWithStretchDirection",
+      "sortMode",
+      "sortingFudge",
+      "minParticleSize",
+      "maxParticleSize",
+      "renderAlignment",
+      "flip",
+      "allowRoll",
+      "pivot"
+    ],
+    "methods": []
+  },
+  {
+    "index": 36339,
+    "name": "AleCore.Parameters.Particle.ParticlesRotationOverLifetimeParameters",
+    "fields": [
+      "isRotationOverLifetimeSeparateAxes",
+      "rotationOverLifetime3DMode",
+      "angularVelocity",
+      "angularVelocityX",
+      "angularVelocityY",
+      "angularVelocityZ"
+    ],
+    "methods": [
+      "ChangeROLMode"
+    ]
+  },
+  {
+    "index": 36340,
+    "name": "AleCore.Parameters.Particle.ParticlesShaderParameters",
+    "fields": [
+      "textureId",
+      "shaderParameters",
+      "isStagingTarget",
+      "stagingId"
+    ],
+    "methods": []
+  },
+  {
+    "index": 36341,
+    "name": "AleCore.Parameters.Particle.ParticlesShapeParameters",
+    "fields": [
+      "particleSystemShape",
+      "angle",
+      "radius",
+      "donutRadius",
+      "radiusThickness",
+      "arc",
+      "arcMode",
+      "arcSpread",
+      "arcSpeed",
+      "length",
+      "emitFromCone",
+      "emitFromBox",
+      "boxThickness",
+      "shapePosition",
+      "shapeRotation",
+      "shapeScale",
+      "alignToDirection",
+      "randomDirectionAmount",
+      "sphericalDirectionAmount",
+      "randomPositionAmount"
+    ],
+    "methods": []
+  },
+  {
+    "index": 36342,
+    "name": "AleCore.Parameters.Particle.ParticlesSizeOverLifetimeParameters",
+    "fields": [
+      "isSizeOverLifetimeSeparateAxes",
+      "sizeOverLifetime3DMode",
+      "sizeOverLifetimeSize",
+      "sizeOverLifetimeSizeX",
+      "sizeOverLifetimeSizeY",
+      "sizeOverLifetimeSizeZ"
+    ],
+    "methods": [
+      "ChangeSOLMode"
+    ]
+  },
+  {
+    "index": 36343,
+    "name": "AleCore.Parameters.Particle.ParticlesSoundParameters",
+    "fields": [
+      "maxParticles",
+      "spawnFmodEvent",
+      "deathFmodEvent"
+    ],
+    "methods": []
+  },
+  {
+    "index": 36344,
+    "name": "AleCore.Parameters.Particle.ParticlesSubEmittersParameters",
+    "fields": [
+      "parentId",
+      "type",
+      "properties",
+      "emitProbability"
+    ],
+    "methods": []
+  },
+  {
+    "index": 36345,
+    "name": "AleCore.Parameters.Particle.ParticlesTrailsParameters",
+    "fields": [
+      "trailsRatio",
+      "trailsLifetime",
+      "trailsMinVertexDistance",
+      "trailsWorldSpace",
+      "trailsDieWithParticles",
+      "trailsTextureMode",
+      "trailsSizeAffectsWidth",
+      "trailsSizeAffectsLifetime",
+      "trailsInheritParticleColor",
+      "trailsColorOverLifetime",
+      "trailsWidthOverTrail",
+      "trailsColorOverTrail"
+    ],
+    "methods": []
+  },
+  {
+    "index": 36346,
+    "name": "AleCore.Parameters.Particle.ParticlesVelocityOverLifetimeParameters",
+    "fields": [
+      "linearVelocityMode",
+      "linearX",
+      "linearY",
+      "linearZ",
+      "systemSimulationSimulationSpaceRestricted",
+      "orbitalVelocityMode",
+      "orbitalX",
+      "orbitalY",
+      "orbitalZ",
+      "offsetVelocityMode",
+      "orbitalOffsetX",
+      "orbitalOffsetY",
+      "orbitalOffsetZ",
+      "radial",
+      "speedModifier"
+    ],
+    "methods": [
+      "ChangeVOLLinearMode",
+      "ChangeVOLOrbitalMode",
+      "ChangeVOLOffsetMode"
+    ]
+  },
+  {
+    "index": 36347,
+    "name": "AleCore.Parameters.Particle.ScreenAreaEffectParameters",
+    "fields": [
+      "screenWidePosition",
+      "screenWideRotation",
+      "screenWideScale",
+      "transform",
+      "shape",
+      "mask",
+      "layer",
+      "renderOrder",
+      "placeEffectOnCell",
+      "cellID",
+      "mapID",
+      "weight",
+      "isRenderedAfterTransparents"
+    ],
+    "methods": [
+      ".cctor"
+    ]
+  }
+]

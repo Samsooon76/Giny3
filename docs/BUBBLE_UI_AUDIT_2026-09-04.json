@@ -1,0 +1,70 @@
+{
+  "date": "2026-09-04",
+  "method": "Local static analysis only. No Bubble login, external requests, runtime profiling or screenshot comparison. ASAR read with its JSON header; UI carrier payloads verified against manifest size and SHA-256.",
+  "bubble_release": "0.1.328",
+  "asar": {
+    "path": "resources/app.asar",
+    "sha256": "9d2bd53656e91c52b20db881225617625222d74b41f965dd961bfd35d7301a8f",
+    "matches_updater_manifest": true,
+    "application_sources_or_sourcemaps": [],
+    "entry_sizes": {
+      "dist/assets/game-entry-D5YuSIvZ.js": 5387879,
+      "dist/assets/game-entry-BYX3ak61.css": 1022418,
+      "dist/assets/globals-YtF8dp2z.css": 619892,
+      "dist/assets/base-Bq0vdgr4.css": 18578
+    }
+  },
+  "css": [
+    {
+      "client": "client/web/src/ui/dofus3-globals.css",
+      "bubble_archive_entry": "dist/assets/globals-YtF8dp2z.css",
+      "equal_ignoring_url_values": true
+    },
+    {
+      "client": "client/web/src/ui/themes.css",
+      "bubble_archive_entry": "dist/assets/themes-DzPays1k.css",
+      "equal_ignoring_url_values": true
+    }
+  ],
+  "client_public_assets": {
+    "count": 4767,
+    "identical": 4767,
+    "differences": []
+  },
+  "bubble_ui_assets": {
+    "count": 13319,
+    "verification": {
+      "counts": {
+        "verified_pack": 13234,
+        "verified_blob": 85
+      },
+      "issues": []
+    }
+  },
+  "client_cache_files": {
+    "ui/trees": 685,
+    "ui/styles": 526,
+    "uitk/trees": 72
+  },
+  "bubble_inventory_symbols": {
+    "zt": "Window frame, move and close behavior",
+    "ln": "Item tile, item state and interaction callbacks",
+    "Vk": "Storage presentation props and layout",
+    "IIt": "PlayerInventory composition, equipmentSlot and storageSlot",
+    "Qlt": "Equipment layout and cosmetic/equipment callbacks",
+    "$It": "Inventory controller bound to Bubble state and IsoEngine",
+    "sy": "Grid windowing with overscan=2"
+  },
+  "source_fingerprints": {
+    "client/web/src/ui/official/OfficialScreen.tsx": "745f2615c037d34aeb6396afa868e6644acdf9cdbf1cdff20135d4bf020ba428",
+    "client/web/src/ui/official/treeLoader.ts": "e5e5bafa2cf26bd38275993e1e61f9959eba7baf9ff1b9c196d993d98d89e7a4",
+    "client/web/src/ui/official/uitk.ts": "897f56c1ab6a971c0e2afe230a53db57f9a32e4fc184dbeedc5c6935b4895b1c",
+    "client/web/src/ui/game/GameHud.tsx": "4b2799d088f74321900c21fb57c7e7e444a1773089307306840fc02d173fd7fa",
+    "client/web/src/ui/game/hudWidgets.ts": "df1990dddd4a0edc3e291ee42079eeacf1d2a6dd41eb88b15bdb36561cf84c65",
+    "client/web/src/ui/game/hudRepeaters.ts": "e6214795932cd2208b323295f5657ad6b1484f73371913d2bbe4d21d2cd5a43f",
+    "client/web/src/giny/GinyClient.ts": "93135c8c9e298310adfea4b0c6ac890577d90d091574c0e0bdc37fc95a2fc142",
+    "client/web/src/giny/messages.ts": "1f5b26c11b616fabd57698f63d1023f15b6711030d05c4179b0f166e82b11606",
+    "server/Servers/Giny.World/Handlers/Roleplay/Items/InventoryHandler.cs": "b4b4d35a64fcf6f88af9cd16df051d624e81b53dbc6fcf17261771699d0a6666",
+    "server/Servers/Giny.World/Handlers/Roleplay/Shortcuts/ShortcutsHandler.cs": "de0ebb89cdbb7aa2e83f1d5d7bb23ceb82e7a6efb1d0efa7594537f7a2f30525"
+  }
+}

@@ -33,12 +33,12 @@ Non confirmé :
 | --- | --- | --- |
 | `formatFlags` | 0x0017 idle/walk, 0x001f sur quelques attaques/tacles | brut |
 | `extra` (u8) | 0x7F sur le record racine 0x17, 0 sinon | brut |
-| 0x11 `meta_u16[0]` | correspond aux noms de parts SkinAsset (`"1"`, `"3"`, …). Plusieurs nodes peuvent partager le même id (instances, ex. pattes) | **hypothèse de travail** |
+| 0x11 `meta_u16[0]` | **prouvé : index 0-based dans `AnimatedObjectDefinition.graphics`** (pas un nom de part). Bone 4924 `AnimStatique_3` (60 frames) : bounds calculées x-119.6 w197.1 y-32.6 h202.5 vs officielles x-119.6 w197.1 y-32.6 h202.5, à 0.05 près ; ~20 clips idle/walk (bones 556, 4907, 714, 231, 284, 6399, 1) exacts aussi. L'exporteur résout vers `part_ref` (format doc `v2`). Les ids hors-plage retombent sur le nom brut | **validé** |
 | 0x11 `meta_u16[1]` | toujours 0xFFFF sur le Bouftou idle/walk | brut, probablement « pas de parent / pas de couleur » |
-| parent node | pas de champ parent identifié. Les nodes 2,4,6,8,10,12 n’ont **pas** de part SkinAsset (conteneurs). Composer `T0 * T_node` **dégrade** les bounds officielles | **hypothèse : transforms des nodes drawables déjà dans l’espace animation** |
+| parent node | pas de champ parent identifié. Les nodes sans part résolue (ex. evens 2,4,6… en mapping direct) sont des conteneurs : avec la résolution par index, ils mappent vers des parts existantes. Les transforms restent non composés (`T0 * T_node` dégrade les bounds) : ils sont déjà en espace animation | **validé (bornes exactes)** |
 | 0x17 extra_floats (2) | `0.0` et `~3.992` (bits `7f7f7f40`) devant les 6 floats d’affine | brut, **pas** utilisés pour le mesh |
 | 0x17 transform | les 6 derniers floats matchent le 0x10 du même node aux frames suivantes. **Non composés** dans le rendu : les bounds officielles de `AnimStatique_1` (y -16.75..42.3) matchent les transforms locaux, pas `T0*T_node` | **hypothèse de travail** |
-| 0x31 | dernier record, identité, `meta[0]=65506`. Traité comme non drawable | **hypothèse** |
+| 0x31 | dernier record, souvent identité, `meta[0]` invalide (>60000). Non drawable dans ce cas ; drawable si l'id résout vers une part (résolution par index). Un record à meta invalide ne doit **pas** hériter du visuel précédent (fantômes) | **validé** |
 | 0x00 | no-op / conserve l’état précédent du **même index de record** | validé par AnimMarche frame 1 |
 
 ## SkinAsset
@@ -60,8 +60,6 @@ Non confirmé :
 ## Coordonnées
 
 - Espace Unity Y-up, 1 unité ≈ 1 pixel (`pixelsPerUnit = 1` sur les sprites map).
-- Godot 2D est Y-down : conversion ` (x, y) → (x, -y) ` et
-  `Transform2D(Vector2(a,-c), Vector2(-b,d), Vector2(tx,-ty))`.
 - Grille map 14×40, 560 cellules, projection :
 
 ```

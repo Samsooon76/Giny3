@@ -79,6 +79,23 @@ def rec_17(node: int, extra_floats: list[float], transform: list[float]) -> byte
     )
 
 
+def rec_97(node: int, graphic: int, transform: list[float], color: int = 0x597F7F7F) -> bytes:
+    return struct.pack(
+        "<HBBHHHH" + "I" + "f" * 6 + "f" * 2,
+        node,
+        0x97,
+        0xB2,
+        graphic,
+        0xFFFF,
+        0,
+        0,
+        color,
+        *transform,
+        3.0,
+        0.0,
+    )
+
+
 def rec_31(node: int) -> bytes:
     identity = [1.0, 0.0, 0.0, 0.0, 1.0, 0.0]
     return struct.pack("<HBBHHHH" + "f" * 6, node, 0x31, 0, 65506, 7, 0, 0, *identity)
@@ -122,10 +139,37 @@ def test_synthetic_noop_keeps_previous_transform():
     assert states[1][0].drawable is True
 
 
+def test_tag_97_is_drawable_graphic():
+    ident = [1.0, 0.0, 0.0, 0.0, 1.0, 0.0]
+    raw = pack_animation([[rec_97(6, 5, ident)]])
+    anim = decode_animation(raw, "npc-idle")
+    assert anim.frames[0].end_offset == len(raw)
+    rec = anim.frames[0].records[0]
+    assert rec.tag == 0x97
+    assert rec.graphic_id == 5
+    assert rec.transform == pytest.approx(ident)
+    state = expand_frames(anim)[0][0]
+    assert state.drawable is True
+    assert state.graphic == "5"
+
+
+def test_tag_31_is_not_forced_not_drawable():
+    ident = [1.0, 0.0, 0.0, 0.0, 1.0, 0.0]
+    # rec_31 with graphic 42 (<= 60000)
+    raw_rec = struct.pack("<HBBHHHH" + "f" * 6, 2, 0x31, 0, 42, 7, 0, 0, *ident)
+    raw = pack_animation([[raw_rec]])
+    anim = decode_animation(raw, "tag-31-test")
+    assert anim.frames[0].records[0].graphic_id == 42
+    state = expand_frames(anim)[0][0]
+    assert state.drawable is True
+    assert state.graphic == "42"
+
+
 def test_unknown_tag_raises():
     header = struct.pack("<HHHH", 1, 1, 0, 0)
-    # offset table at 8, pad none, offset = 12, then bogus tag 0x99
-    raw = header + struct.pack("<I", 12) + struct.pack("<HBB", 0, 0x99, 0)
+    # offset table at 8, pad none, offset = 12, then bogus tag 0xFF
+    # (0x99 is now a known NPC tag, size 48).
+    raw = header + struct.pack("<I", 12) + struct.pack("<HBB", 0, 0xFF, 0)
     with pytest.raises(DecodeError, match="unknown tag"):
         decode_animation(raw, "bad")
 

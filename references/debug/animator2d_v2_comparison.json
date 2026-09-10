@@ -1,0 +1,52 @@
+{
+  "model": "giny.dofus3.entity.v2",
+  "record_reference": {
+    "direct": "meta_u16[0] -> AOD.graphics[index] -> asset + embedded part",
+    "generic": "meta_u16[1] -> AOD.exposedNodeNames[index] -> ordered skin stack"
+  },
+  "cases": [
+    {
+      "bone": 563,
+      "label": "Bouftou",
+      "look": "{563|||105}",
+      "animation": "AnimStatique_1",
+      "frame0_graphics_to_parts": [[0, "1"], [1, "3"], [2, "5"], [3, "7"], [7, "15"]],
+      "official_bounds_l1_max_idle_walk_1_5": 0.000011
+    },
+    {
+      "bone": 565,
+      "label": "Larve Verte",
+      "look": "{565|||140}",
+      "animation": "AnimStatique_1",
+      "frame0_first_graphics_to_parts": [[72, "133"], [0, "1"], [1, "3"], [2, "5"]],
+      "official_bounds_l1_max_idle_walk_1_5": 0.000004
+    },
+    {
+      "bone": 1,
+      "label": "Joueur de base masculin, skin 10",
+      "look": "{1|10|1=#ffd27c,2=#6c4f2d,3=#f3ba30,4=#53705e,5=#6c4f2d|135}",
+      "animation": "AnimMarche_1",
+      "generic_examples": [[222, "Torse_1"], [145, "MainD00_1"], [210, "Tete_1"]],
+      "torse_display_entries": 9,
+      "torse_leaves": 4,
+      "torse_chunks": 4,
+      "official_bounds": null
+    },
+    {
+      "bone": 1,
+      "label": "Joueur skin 10 + équipement skin 495",
+      "look": "{1|10,495|1=#ffd27c,2=#6c4f2d,3=#f3ba30,4=#53705e,5=#6c4f2d|135}",
+      "animation": "AnimArme2_1",
+      "fragment": "combat-armes",
+      "slot": "Arme_1",
+      "resolved_part": "skins_assets_skin_495/Arme_1",
+      "visible_frames": 31
+    }
+  ],
+  "selected_skin_mask_state_counts": {
+    "bone563_four_assets": {"0": 352},
+    "bone565_four_assets": {"0": 428},
+    "skin10": {"0": 875},
+    "skin495": {"0": 2}
+  }
+}

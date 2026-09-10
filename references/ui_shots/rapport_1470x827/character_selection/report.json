@@ -1,0 +1,431 @@
+{
+ "official": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/official/character_selection.png",
+ "client": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/web/character_selection.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 1695386,
+ "mismatched_pixels": 792016,
+ "mismatched_ratio": 0.46716,
+ "regions": 15,
+ "worst": [
+  {
+   "x": 0,
+   "y": 280,
+   "w": 1032,
+   "h": 1160,
+   "pixels": 416002,
+   "element": {
+    "id": "characterSelection-root-331710445",
+    "binding": "gd_character",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarPadding",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     0,
+     507,
+     980,
+     741
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 0,
+   "w": 2944,
+   "h": 128,
+   "pixels": 217852,
+   "element": {
+    "id": "characterSelection-root--1722931138",
+    "binding": "VisualElement",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     980,
+     8,
+     1960,
+     1654
+    ]
+   }
+  },
+  {
+   "x": 1688,
+   "y": 168,
+   "w": 544,
+   "h": 272,
+   "pixels": 75655,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1407,
+     274,
+     1110,
+     1110
+    ]
+   }
+  },
+  {
+   "x": 1744,
+   "y": 1304,
+   "w": 432,
+   "h": 208,
+   "pixels": 73972,
+   "element": {
+    "id": "characterSelection-root-playButton_background",
+    "binding": "playButton_background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "official-tinted-bg"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(61, 64, 92, 0.898)",
+    "image": "url(\"/ui-data/styles/images/defaultBackgoundButton_28369203_6441872113072935610.png\")",
+    "box": [
+     1746,
+     1306,
+     429,
+     202
+    ]
+   }
+  },
+  {
+   "x": 792,
+   "y": 576,
+   "w": 56,
+   "h": 40,
+   "pixels": 1540,
+   "element": {
+    "id": "characterSelection-1--759624439",
+    "binding": "ctr_backgroundColor",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     44,
+     515,
+     928,
+     129
+    ]
+   }
+  },
+  {
+   "x": 240,
+   "y": 496,
+   "w": 160,
+   "h": 24,
+   "pixels": 1400,
+   "element": {
+    "id": "characterSelection-1--308866482",
+    "binding": "ctr_background",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "is-clickable",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     37,
+     507,
+     943,
+     144
+    ]
+   }
+  },
+  {
+   "x": 592,
+   "y": 568,
+   "w": 136,
+   "h": 40,
+   "pixels": 1306,
+   "element": {
+    "id": "characterSelection-1--759624439",
+    "binding": "ctr_backgroundColor",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     44,
+     515,
+     928,
+     129
+    ]
+   }
+  },
+  {
+   "x": 312,
+   "y": 584,
+   "w": 112,
+   "h": 24,
+   "pixels": 1156,
+   "element": {
+    "id": "characterSelection-1--759624439",
+    "binding": "ctr_backgroundColor",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(45, 48, 83, 0.8)",
+    "image": null,
+    "box": [
+     44,
+     515,
+     928,
+     129
+    ]
+   }
+  },
+  {
+   "x": 592,
+   "y": 496,
+   "w": 72,
+   "h": 24,
+   "pixels": 628,
+   "element": {
+    "id": "characterSelection-1--308866482",
+    "binding": "ctr_background",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "is-clickable",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     37,
+     507,
+     943,
+     144
+    ]
+   }
+  },
+  {
+   "x": 800,
+   "y": 360,
+   "w": 64,
+   "h": 24,
+   "pixels": 576,
+   "element": {
+    "id": "characterSelection-root--1633449771",
+    "binding": "ctr_button",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     0,
+     371,
+     980,
+     74
+    ]
+   }
+  },
+  {
+   "x": 2032,
+   "y": 336,
+   "w": 48,
+   "h": 32,
+   "pixels": 534,
+   "element": {
+    "id": "characterSelection-root--1030672120",
+    "binding": "lbl_infoMain",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "section_large",
+     "textColor_white_white100",
+     "labelShadow_dropShadows_medium",
+     "dofusLabel"
+    ],
+    "text": "Féca · Niveau 200",
+    "font": "LexendDeca-Regular 16px/20px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"/ui-data/styles/images/charactHeader.png\")",
+    "box": [
+     1845,
+     337,
+     231,
+     31
+    ]
+   }
+  },
+  {
+   "x": 736,
+   "y": 360,
+   "w": 56,
+   "h": 24,
+   "pixels": 484,
+   "element": {
+    "id": "characterSelection-root--1633449771",
+    "binding": "ctr_button",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     0,
+     371,
+     980,
+     74
+    ]
+   }
+  },
+  {
+   "x": 184,
+   "y": 496,
+   "w": 48,
+   "h": 24,
+   "pixels": 452,
+   "element": {
+    "id": "characterSelection-1--308866482",
+    "binding": "ctr_background",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "is-clickable",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     37,
+     507,
+     943,
+     144
+    ]
+   }
+  },
+  {
+   "x": 896,
+   "y": 568,
+   "w": 48,
+   "h": 24,
+   "pixels": 435,
+   "element": {
+    "id": "characterSelection-1-214540624",
+    "binding": "lbl_level",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "200",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     890,
+     564,
+     58,
+     31
+    ]
+   }
+  },
+  {
+   "x": 2048,
+   "y": 304,
+   "w": 16,
+   "h": 8,
+   "pixels": 24,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1407,
+     274,
+     1110,
+     1110
+    ]
+   }
+  }
+ ]
+}

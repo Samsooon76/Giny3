@@ -1,0 +1,568 @@
+{
+ "official": "client/dofus3/output/ui_shots/official/hud_inventory.png",
+ "client": "client/dofus3/output/ui_shots/web/hud_inventory.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 3372780,
+ "mismatched_pixels": 2288935,
+ "mismatched_ratio": 0.67865,
+ "regions": 21,
+ "worst": [
+  {
+   "x": 0,
+   "y": 0,
+   "w": 2296,
+   "h": 1656,
+   "pixels": 2232259,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 16,
+    "box": [
+     489,
+     262,
+     450,
+     475
+    ]
+   }
+  },
+  {
+   "x": 2864,
+   "y": 80,
+   "w": 80,
+   "h": 392,
+   "pixels": 26872,
+   "element": {
+    "id": "bannerMenu-gd_btnUis_2-itemTile_icon_Vector",
+    "binding": "itemTile_icon_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/icons/spell.png\")",
+    "depth": 13,
+    "box": [
+     1886,
+     159,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 2768,
+   "y": 0,
+   "w": 176,
+   "h": 64,
+   "pixels": 9369,
+   "element": {
+    "id": "gameMenu-root-button_iconRight_Vector",
+    "binding": "button_iconRight_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     1864,
+     9,
+     20,
+     20
+    ]
+   }
+  },
+  {
+   "x": 1504,
+   "y": 296,
+   "w": 64,
+   "h": 128,
+   "pixels": 5067,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "i",
+    "classes": [
+     "uitk-tint-layer"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(114, 117, 217)",
+    "image": "url(\"http://127.0.0.1:5173/uitk/assets/5f99c5e0_5570417495665542232.png\")",
+    "depth": 10,
+    "box": [
+     249,
+     -45,
+     950,
+     950
+    ]
+   }
+  },
+  {
+   "x": 1504,
+   "y": 872,
+   "w": 64,
+   "h": 56,
+   "pixels": 2896,
+   "element": {
+    "id": "equipmentStorageUi-storage--209163025",
+    "binding": "parentOptionalBoxes",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-storage-15"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 11,
+    "box": [
+     986,
+     474,
+     40,
+     506
+    ]
+   }
+  },
+  {
+   "x": 1512,
+   "y": 568,
+   "w": 56,
+   "h": 56,
+   "pixels": 2360,
+   "element": {
+    "id": "equipmentStorageUi-storage-toggle_icon_Vector",
+    "binding": "toggle_icon_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/themes/darkStone/sprites/inventory_cosmetics.png\")",
+    "depth": 14,
+    "box": [
+     991,
+     375,
+     20,
+     30
+    ]
+   }
+  },
+  {
+   "x": 56,
+   "y": 328,
+   "w": 216,
+   "h": 48,
+   "pixels": 2252,
+   "element": {
+    "id": "questList-root-background",
+    "binding": "background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__background"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(61, 64, 92)",
+    "image": "url(\"http://127.0.0.1:5173/uitk/assets/9f1c2aa1_8466790348161017816.png\")",
+    "depth": 5,
+    "box": [
+     1,
+     181,
+     300,
+     100
+    ]
+   }
+  },
+  {
+   "x": 1504,
+   "y": 496,
+   "w": 64,
+   "h": 64,
+   "pixels": 1984,
+   "element": {
+    "id": "equipmentStorageUi-storage-toggle_icon_Vector",
+    "binding": "toggle_icon_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/themes/darkStone/sprites/inventory_quest.png\")",
+    "depth": 14,
+    "box": [
+     991,
+     331,
+     20,
+     30
+    ]
+   }
+  },
+  {
+   "x": 1512,
+   "y": 432,
+   "w": 56,
+   "h": 56,
+   "pixels": 1887,
+   "element": {
+    "id": "equipmentStorageUi-storage-toggle_icon_Vector",
+    "binding": "toggle_icon_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/themes/darkStone/sprites/inventory_resources.png\")",
+    "depth": 14,
+    "box": [
+     991,
+     287,
+     20,
+     30
+    ]
+   }
+  },
+  {
+   "x": 1392,
+   "y": 1024,
+   "w": 48,
+   "h": 80,
+   "pixels": 1336,
+   "element": {
+    "id": "equipmentStorageUi-root-itemTile_icon_Vector",
+    "binding": "itemTile_icon_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/icons/flask.png\")",
+    "depth": 19,
+    "box": [
+     906,
+     690,
+     32,
+     32
+    ]
+   }
+  },
+  {
+   "x": 1216,
+   "y": 536,
+   "w": 64,
+   "h": 160,
+   "pixels": 958,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 16,
+    "box": [
+     489,
+     262,
+     450,
+     475
+    ]
+   }
+  },
+  {
+   "x": 1520,
+   "y": 808,
+   "w": 32,
+   "h": 40,
+   "pixels": 504,
+   "element": {
+    "id": "equipmentStorageUi-storage--209163025",
+    "binding": "parentOptionalBoxes",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-storage-15"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 11,
+    "box": [
+     986,
+     474,
+     40,
+     506
+    ]
+   }
+  },
+  {
+   "x": 1232,
+   "y": 480,
+   "w": 48,
+   "h": 72,
+   "pixels": 442,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 16,
+    "box": [
+     489,
+     262,
+     450,
+     475
+    ]
+   }
+  },
+  {
+   "x": 24,
+   "y": 328,
+   "w": 24,
+   "h": 24,
+   "pixels": 324,
+   "element": {
+    "id": "questList-root-background",
+    "binding": "background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__background"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(61, 64, 92)",
+    "image": "url(\"http://127.0.0.1:5173/uitk/assets/9f1c2aa1_8466790348161017816.png\")",
+    "depth": 5,
+    "box": [
+     1,
+     181,
+     300,
+     100
+    ]
+   }
+  },
+  {
+   "x": 16,
+   "y": 1616,
+   "w": 32,
+   "h": 24,
+   "pixels": 192,
+   "element": {
+    "id": "chatview-root-button_iconLeft_Vector",
+    "binding": "button_iconLeft_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     4,
+     1052,
+     20,
+     20
+    ]
+   }
+  },
+  {
+   "x": 8,
+   "y": 1432,
+   "w": 24,
+   "h": 24,
+   "pixels": 112,
+   "element": {
+    "id": "chatview-root--293950300",
+    "binding": "sv_toggles",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 7,
+    "box": [
+     0,
+     860,
+     32,
+     185
+    ]
+   }
+  },
+  {
+   "x": 1240,
+   "y": 696,
+   "w": 16,
+   "h": 16,
+   "pixels": 64,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 16,
+    "box": [
+     489,
+     262,
+     450,
+     475
+    ]
+   }
+  },
+  {
+   "x": 1296,
+   "y": 792,
+   "w": 8,
+   "h": 16,
+   "pixels": 43,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "canvas",
+    "classes": [],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 16,
+    "box": [
+     489,
+     262,
+     450,
+     475
+    ]
+   }
+  },
+  {
+   "x": 1168,
+   "y": 1312,
+   "w": 8,
+   "h": 8,
+   "pixels": 8,
+   "element": {
+    "id": "equipmentStorageUi-root-1764724794",
+    "binding": "visualChar",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-EquipmentComponent-1"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 13,
+    "box": [
+     454,
+     226,
+     520,
+     688
+    ]
+   }
+  },
+  {
+   "x": 1888,
+   "y": 1464,
+   "w": 8,
+   "h": 8,
+   "pixels": 4,
+   "element": {
+    "id": "equipmentStorageUi-storage--116322024",
+    "binding": "parentKamas",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-storage-48"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(1, 1, 1, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     1038,
+     946,
+     427,
+     28
+    ]
+   }
+  }
+ ]
+}

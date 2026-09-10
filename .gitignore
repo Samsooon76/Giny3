@@ -2,13 +2,8 @@
 __pycache__/
 *.pyc
 .pytest_cache/
-.godot/
 vendor/
 .DS_Store
-*.import
-output/_raw/
-output/gfx/
-output/entities/_walk_*.png
-godot/.godot/
-godot/data/
+output/
+.cache/
 *.tmp

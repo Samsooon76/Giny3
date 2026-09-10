@@ -1,0 +1,562 @@
+{
+  "format": "giny.dofus3.class-gallery.v1",
+  "gender": "male",
+  "class_count": 19,
+  "frame": 0,
+  "contact_sheet": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/all_classes.png",
+  "all_resolved": true,
+  "all_drawn": true,
+  "classes": [
+    {
+      "breed_id": 1,
+      "label": "Féca",
+      "slug": "feca",
+      "gender": "male",
+      "look": "{1|10,2012|1=#e59b68,2=#773f29,3=#d8742e,4=#496352,5=#512a15,6=#5b5243|53}",
+      "head_id": 1,
+      "animation": "AnimStatiqueExploNewAge1_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_01_feca.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/01_feca.png",
+      "draw_count": 54,
+      "frame_aabb": {
+        "x": -67.65509606963315,
+        "y": -14.578572943806648,
+        "width": 109.97057978299199,
+        "height": 193.80843203791392
+      },
+      "scaled_frame_aabb": {
+        "x": -35.85720091690557,
+        "y": -7.726643660217524,
+        "width": 58.28440728498576,
+        "height": 102.71846898009439
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 49
+    },
+    {
+      "breed_id": 2,
+      "label": "Osamodas",
+      "slug": "osamodas",
+      "gender": "male",
+      "look": "{1|20,2028|1=#da9566,2=#e0ce9f,3=#368180,4=#494136,5=#ffac2d,6=#bea977|50}",
+      "head_id": 17,
+      "animation": "AnimStatiqueExploNewAge2_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_02_osamodas.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/02_osamodas.png",
+      "draw_count": 81,
+      "frame_aabb": {
+        "x": -89.28355803067097,
+        "y": -26.14848740414891,
+        "width": 137.6193509310251,
+        "height": 200.69983163903817
+      },
+      "scaled_frame_aabb": {
+        "x": -44.64177901533549,
+        "y": -13.074243702074455,
+        "width": 68.80967546551256,
+        "height": 100.34991581951908
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 80
+    },
+    {
+      "breed_id": 3,
+      "label": "Enutrof",
+      "slug": "enutrof",
+      "gender": "male",
+      "look": "{1|30,2044|1=#d18c5e,2=#f1e0ae,3=#2f352e,4=#da983c,5=#773f29,6=#988665|43}",
+      "head_id": 33,
+      "animation": "AnimStatiqueExploNewAge3_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_03_enutrof.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/03_enutrof.png",
+      "draw_count": 55,
+      "frame_aabb": {
+        "x": -40.50981312824297,
+        "y": -20.132143020629883,
+        "width": 86.410808544053,
+        "height": 198.12939778141663
+      },
+      "scaled_frame_aabb": {
+        "x": -17.419219645144477,
+        "y": -8.65682149887085,
+        "width": 37.156647673942786,
+        "height": 85.19564104600914
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 62
+    },
+    {
+      "breed_id": 4,
+      "label": "Sram",
+      "slug": "sram",
+      "gender": "male",
+      "look": "{1|40,2060|1=#d8c789,2=#eadec0,3=#346d8e,4=#5e4320,5=#a38051,6=#e5e4c2|55}",
+      "head_id": 49,
+      "animation": "AnimStatiqueExploNewAge4_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_04_sram.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/04_sram.png",
+      "draw_count": 50,
+      "frame_aabb": {
+        "x": -66.79013449959166,
+        "y": -23.511558322046767,
+        "width": 108.43143946937926,
+        "height": 200.72502097259328
+      },
+      "scaled_frame_aabb": {
+        "x": -36.734573974775415,
+        "y": -12.931357077125723,
+        "width": 59.63729170815859,
+        "height": 110.39876153492632
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 90
+    },
+    {
+      "breed_id": 5,
+      "label": "Xélor",
+      "slug": "xelor",
+      "gender": "male",
+      "look": "{1|50,2076|1=#82795d,2=#f0d2b1,3=#1d5a86,4=#663c20,5=#e58900,6=#e58900|43}",
+      "head_id": 65,
+      "animation": "AnimStatiqueExploNewAge5_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_05_xelor.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/05_xelor.png",
+      "draw_count": 52,
+      "frame_aabb": {
+        "x": -51.4173295108605,
+        "y": -22.600078539835522,
+        "width": 93.0586344806481,
+        "height": 249.3179968790342
+      },
+      "scaled_frame_aabb": {
+        "x": -22.109451689670014,
+        "y": -9.718033772129274,
+        "width": 40.01521282667868,
+        "height": 107.20673865798472
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 62
+    },
+    {
+      "breed_id": 6,
+      "label": "Écaflip",
+      "slug": "ecaflip",
+      "gender": "male",
+      "look": "{1|60,2092|1=#e0ce9f,2=#e78638,3=#ef6b24,4=#539997,5=#754e32,6=#df8500|58}",
+      "head_id": 81,
+      "animation": "AnimStatiqueExploNewAge6_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_06_ecaflip.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/06_ecaflip.png",
+      "draw_count": 47,
+      "frame_aabb": {
+        "x": -43.1413049697876,
+        "y": -22.600078539835522,
+        "width": 92.55335363141057,
+        "height": 128.29214239969406
+      },
+      "scaled_frame_aabb": {
+        "x": -25.021956882476804,
+        "y": -13.108045553104601,
+        "width": 53.680945106218125,
+        "height": 74.40944259182255
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 62
+    },
+    {
+      "breed_id": 7,
+      "label": "Eniripsa",
+      "slug": "eniripsa",
+      "gender": "male",
+      "look": "{1|70,2108|1=#da9566,2=#773f29,3=#d5962c,4=#485247,5=#684711,6=#a6711e|43}",
+      "head_id": 97,
+      "animation": "AnimStatiqueExploNewAge7_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_07_eniripsa.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/07_eniripsa.png",
+      "draw_count": 99,
+      "frame_aabb": {
+        "x": -93.02811200651922,
+        "y": -16.694683818510384,
+        "width": 137.5220456669922,
+        "height": 272.85593952842464
+      },
+      "scaled_frame_aabb": {
+        "x": -40.00208816280327,
+        "y": -7.1787140419594655,
+        "width": 59.134479636806645,
+        "height": 117.3280539972226
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 96
+    },
+    {
+      "breed_id": 8,
+      "label": "Iop",
+      "slug": "iop",
+      "gender": "male",
+      "look": "{1|80,2124|1=#efa06c,2=#e97a21,3=#e0dac1,4=#ba2b3c,5=#076381,6=#bda976|55}",
+      "head_id": 113,
+      "animation": "AnimStatiqueExploNewAge8_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_08_iop.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/08_iop.png",
+      "draw_count": 67,
+      "frame_aabb": {
+        "x": -27.601338826541905,
+        "y": -33.699287261100835,
+        "width": 89.2122574718378,
+        "height": 219.4414525696302
+      },
+      "scaled_frame_aabb": {
+        "x": -15.180736354598048,
+        "y": -18.534607993605462,
+        "width": 49.06674160951079,
+        "height": 120.69279891329661
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 80
+    },
+    {
+      "breed_id": 9,
+      "label": "Crâ",
+      "slug": "cra",
+      "gender": "male",
+      "look": "{1|90,2140|1=#e59b68,2=#db7933,3=#756f2b,4=#845f18,5=#8f5203,6=#fa950f|53}",
+      "head_id": 129,
+      "animation": "AnimStatiqueExploNewAge9_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_09_cra.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/09_cra.png",
+      "draw_count": 81,
+      "frame_aabb": {
+        "x": -49.77945239613473,
+        "y": -18.284795303166902,
+        "width": 127.11075271222217,
+        "height": 191.30210860449733
+      },
+      "scaled_frame_aabb": {
+        "x": -26.383109769951407,
+        "y": -9.690941510678458,
+        "width": 67.36869893747775,
+        "height": 101.39011756038359
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 59
+    },
+    {
+      "breed_id": 10,
+      "label": "Sadida",
+      "slug": "sadida",
+      "gender": "male",
+      "look": "{1|100,2156|1=#8e5b21,2=#799114,3=#f2d6a1,4=#775429,5=#f2d6a1,6=#f2d6a1|58}",
+      "head_id": 145,
+      "animation": "AnimStatiqueExploNewAge10_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_10_sadida.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/10_sadida.png",
+      "draw_count": 81,
+      "frame_aabb": {
+        "x": -62.4284894678276,
+        "y": -22.847333568148315,
+        "width": 143.2148724175786,
+        "height": 190.02651907672407
+      },
+      "scaled_frame_aabb": {
+        "x": -36.20852389134001,
+        "y": -13.251453469526021,
+        "width": 83.06462600219558,
+        "height": 110.21538106449995
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 90
+    },
+    {
+      "breed_id": 11,
+      "label": "Sacrieur",
+      "slug": "sacrieur",
+      "gender": "male",
+      "look": "{1|110,2172|1=#e59b68,2=#f28f39,3=#7e752a,4=#852a34,5=#fa950f,6=#76422c|55}",
+      "head_id": 161,
+      "animation": "AnimStatiqueExploNewAge11_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_11_sacrieur.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/11_sacrieur.png",
+      "draw_count": 58,
+      "frame_aabb": {
+        "x": -70.74619593608656,
+        "y": -22.600078539835522,
+        "width": 141.20170288344377,
+        "height": 224.53180651227592
+      },
+      "scaled_frame_aabb": {
+        "x": -38.91040776484761,
+        "y": -12.430043196909539,
+        "width": 77.66093658589408,
+        "height": 123.49249358175177
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 100
+    },
+    {
+      "breed_id": 12,
+      "label": "Pandawa",
+      "slug": "pandawa",
+      "gender": "male",
+      "look": "{1|120,2188|1=#ccc1a6,2=#515430,3=#972133,4=#343d23,5=#ddc494,6=#972133|57}",
+      "head_id": 177,
+      "animation": "AnimStatiqueExploNewAge12_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_12_pandawa.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/12_pandawa.png",
+      "draw_count": 54,
+      "frame_aabb": {
+        "x": -43.1413049697876,
+        "y": -22.600078539835522,
+        "width": 84.7826099395752,
+        "height": 182.78723390511277
+      },
+      "scaled_frame_aabb": {
+        "x": -24.590543832778927,
+        "y": -12.882044767706246,
+        "width": 48.32608766555786,
+        "height": 104.18872332591427
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 62
+    },
+    {
+      "breed_id": 13,
+      "label": "Roublard",
+      "slug": "roublard",
+      "gender": "male",
+      "look": "{1|1405,2204|1=#e59b68,2=#147672,3=#3b4339,4=#ef9c00,5=#6c522c,6=#beb9a9|58}",
+      "head_id": 193,
+      "animation": "AnimStatiqueExploNewAge13_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_13_roublard.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/13_roublard.png",
+      "draw_count": 66,
+      "frame_aabb": {
+        "x": -47.53541856684751,
+        "y": -22.600078539835522,
+        "width": 91.65531473925512,
+        "height": 220.71510917911667
+      },
+      "scaled_frame_aabb": {
+        "x": -27.570542768771556,
+        "y": -13.108045553104601,
+        "width": 53.16008254876797,
+        "height": 128.01476332388765
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 49
+    },
+    {
+      "breed_id": 14,
+      "label": "Zobal",
+      "slug": "zobal",
+      "gender": "male",
+      "look": "{1|1437,2220|1=#ed9f6a,2=#961629,3=#4a3623,4=#1c5150,5=#b4a76f,6=#d6cdaf|53}",
+      "head_id": 209,
+      "animation": "AnimStatiqueExploNewAge14_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_14_zobal.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/14_zobal.png",
+      "draw_count": 77,
+      "frame_aabb": {
+        "x": -102.66852091741748,
+        "y": -22.600078539835522,
+        "width": 144.30982588720508,
+        "height": 188.6653488449374
+      },
+      "scaled_frame_aabb": {
+        "x": -54.41431608623127,
+        "y": -11.978041626112827,
+        "width": 76.48420772021869,
+        "height": 99.99263488781682
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 90
+    },
+    {
+      "breed_id": 15,
+      "label": "Steamer",
+      "slug": "steamer",
+      "gender": "male",
+      "look": "{1|1663,2236|1=#e19b6c,2=#e5cdb9,3=#3b3e33,4=#ae6c25,5=#a79b6d,6=#7b9a96|53}",
+      "head_id": 225,
+      "animation": "AnimStatiqueExploNewAge15_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_15_steamer.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/15_steamer.png",
+      "draw_count": 69,
+      "frame_aabb": {
+        "x": -32.592899494513404,
+        "y": -27.645383713184856,
+        "width": 97.01277261192445,
+        "height": 184.97293759384047
+      },
+      "scaled_frame_aabb": {
+        "x": -17.274236732092106,
+        "y": -14.652053367987975,
+        "width": 51.41676948431996,
+        "height": 98.03565692473545
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 80
+    },
+    {
+      "breed_id": 16,
+      "label": "Eliotrope",
+      "slug": "eliotrope",
+      "gender": "male",
+      "look": "{1|3179,3183|1=#f5dcc9,2=#99b2bd,3=#7d4a38,4=#ffd3aa,5=#2473c1,6=#c5b78e|53}",
+      "head_id": 241,
+      "animation": "AnimStatiqueExploNewAge16_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_16_eliotrope.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/16_eliotrope.png",
+      "draw_count": 88,
+      "frame_aabb": {
+        "x": -93.08979759714566,
+        "y": -26.84063189305016,
+        "width": 134.73110256693326,
+        "height": 225.3011475119272
+      },
+      "scaled_frame_aabb": {
+        "x": -49.3375927264872,
+        "y": -14.225534903316584,
+        "width": 71.40748436047463,
+        "height": 119.40960818132143
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 121
+    },
+    {
+      "breed_id": 17,
+      "label": "Huppermage",
+      "slug": "huppermage",
+      "gender": "male",
+      "look": "{1|3285,3289|1=#f5bc86,2=#fad79e,3=#28a5aa,4=#e5f8d1,5=#fdf6ec,6=#ffac2d|53}",
+      "head_id": 257,
+      "animation": "AnimStatiqueExploNewAge17_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_17_huppermage.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/17_huppermage.png",
+      "draw_count": 63,
+      "frame_aabb": {
+        "x": -46.1413049697876,
+        "y": -21.100078539835522,
+        "width": 111.46617829528986,
+        "height": 210.33943662820093
+      },
+      "scaled_frame_aabb": {
+        "x": -24.45489163398743,
+        "y": -11.183041626112827,
+        "width": 59.077074496503634,
+        "height": 111.4799014129465
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 80
+    },
+    {
+      "breed_id": 18,
+      "label": "Ouginak",
+      "slug": "ouginak",
+      "gender": "male",
+      "look": "{1|3498,3502|1=#95784a,2=#986e15,3=#7b3f1f,4=#3e4939,5=#c45c0b,6=#f4a20b|58}",
+      "head_id": 273,
+      "animation": "AnimStatiqueExploNewAge18_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_18_ouginak.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/18_ouginak.png",
+      "draw_count": 69,
+      "frame_aabb": {
+        "x": -58.814978294722096,
+        "y": -31.301515264392947,
+        "width": 97.73336423636647,
+        "height": 196.05480415850616
+      },
+      "scaled_frame_aabb": {
+        "x": -34.11268741093881,
+        "y": -18.154878853347906,
+        "width": 56.68535125709255,
+        "height": 113.71178641193356
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 59
+    },
+    {
+      "breed_id": 20,
+      "label": "Forgelance",
+      "slug": "forgelance",
+      "gender": "male",
+      "look": "{1|3221,3090|1=#e59b68,2=#773f29,3=#414141,4=#e9d7aa,5=#879595,6=#403d3f|55}",
+      "head_id": 294,
+      "animation": "AnimStatiqueExploNewAge20_1",
+      "frame": 0,
+      "document": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/entities/class_20_forgelance.json",
+      "preview": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/class_gallery/male/screenshots/20_forgelance.png",
+      "draw_count": 62,
+      "frame_aabb": {
+        "x": -67.48707102765366,
+        "y": -25.136071544868173,
+        "width": 164.61897739714573,
+        "height": 247.01348655138463
+      },
+      "scaled_frame_aabb": {
+        "x": -37.11788906520951,
+        "y": -13.824839349677497,
+        "width": 90.54043756843016,
+        "height": 135.85741760326155
+      },
+      "outliers": [],
+      "part_outliers": [],
+      "unresolved": 0,
+      "frame_count": 50
+    }
+  ]
+}

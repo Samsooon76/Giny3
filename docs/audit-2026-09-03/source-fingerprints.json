@@ -1,0 +1,46 @@
+{
+  "client/dofus3/extractor/maps/export_map.py": {
+    "sha256": "a842d2d9862a2473fe4ad380844038dc4e861b804b7e141cf9d93b0918a5c0b5",
+    "mtime_ns": 1788422277902239772
+  },
+  "client/dofus3/extractor/extract_all.py": {
+    "sha256": "3820eb3aafc9b269fb1268ad904f7cb73a93fe31c05852a81bbe6f6ae4304a4b",
+    "mtime_ns": 1788383798085628930
+  },
+  "client/dofus3/extractor/animations/decoder.py": {
+    "sha256": "15e5ae6b20f271e098b22480a0f9840f829990e02bb7559ea30fbed8a8a2f298",
+    "mtime_ns": 1788416240949422301
+  },
+  "client/dofus3/extractor/entities/export_bone.py": {
+    "sha256": "41f0fd02b021aef81add1a2f361e946b87f6d73bc5c9789ae79c590b5957809b",
+    "mtime_ns": 1788383816687065758
+  },
+  "client/dofus3/extractor/entities/export_look.py": {
+    "sha256": "d7f7b174fec6ee6dc93ff6da9edc846b4ae14d185b87896af75ca98a4585e3fb",
+    "mtime_ns": 1788416497835390110
+  },
+  "client/web/src/game/entities/EntityRenderer.ts": {
+    "sha256": "2ccbc01a6262e813d2b2fe02c6edb0a50a6f65cc030c88b4494e79d05e43d4c8",
+    "mtime_ns": 1788417158713553567
+  },
+  "client/web/src/game/entities/adapter.ts": {
+    "sha256": "4a14cf66f2005da75f0d813f4bb619871db1b245cf7c70c1930bd8a50efc8e96",
+    "mtime_ns": 1788297974030831470
+  },
+  "client/web/src/game/renderer/mapScene.ts": {
+    "sha256": "4beb815c9cb457341f1ed64628967c442a8be2255f3d79762a3ba02a11f6a31f",
+    "mtime_ns": 1788364204937641061
+  },
+  "client/web/src/game/renderer/spriteFactory.ts": {
+    "sha256": "ce17cdcc2d159db7986ca70b2e8e4d1adfefe920814f895906866a14fc7c550e",
+    "mtime_ns": 1788417349968110301
+  },
+  "client/web/src/ui/official/uss.ts": {
+    "sha256": "3f1e00a9b0abfa063196c91fa3d05d69b32f29d96dc34731f94afd1a1b17adb9",
+    "mtime_ns": 1788365618356130789
+  },
+  "client/web/src/ui/official/tooltipStore.ts": {
+    "sha256": "dd8208122c97acf0ba1ad06a37e4c685caeac6bfb9999b125dcf00af83252cb4",
+    "mtime_ns": 1788373831856402392
+  }
+}

@@ -1,0 +1,74 @@
+- generic [ref=e3]:
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: Pâturages
+                    - generic: "[2, -4]"
+          - generic [ref=e5] [cursor=pointer]:
+            - generic: quêtes suivies (0)
+            - button "Options de quêtes suivies (4)" [ref=e7]
+          - generic [ref=e17]:
+            - generic [ref=e18] [cursor=pointer]:
+              - generic: CHAT
+              - button "Options de CHAT" [ref=e20]
+            - generic:
+              - generic:
+                - button [ref=e23] [cursor=pointer]
+                - generic [ref=e24] [cursor=pointer]
+              - generic:
+                - button "/s" [ref=e25] [cursor=pointer]
+                - generic [ref=e26] [cursor=pointer]
+          - generic [ref=e35]:
+            - button "Options du module" [ref=e38] [cursor=pointer]
+            - generic:
+              - generic:
+                - generic:
+                  - generic: 2 487
+                  - generic:
+                    - generic: "6"
+                    - generic: 1 240
+                    - generic: "3"
+          - generic [ref=e53] [cursor=pointer]:
+            - generic: MINI-MAP
+            - button "Options de MINI-MAP" [ref=e55]
+          - generic [ref=e65]:
+            - generic [ref=e66] [cursor=pointer]:
+              - generic: "Sorts : ligne 1"
+              - 'button "Options de Sorts : ligne 1" [ref=e68]'
+            - generic:
+              - generic:
+                - generic:
+                  - button [ref=e72] [cursor=pointer]
+                  - button [ref=e75] [cursor=pointer]
+                  - button [ref=e78] [cursor=pointer]
+                  - button [ref=e81] [cursor=pointer]
+                  - button [ref=e84] [cursor=pointer]
+                  - button [ref=e87] [cursor=pointer]
+                  - button [ref=e90] [cursor=pointer]
+                  - button [ref=e93] [cursor=pointer]
+                  - button [ref=e96] [cursor=pointer]
+                  - button [ref=e99] [cursor=pointer]
+                  - button [ref=e102] [cursor=pointer]
+                  - button [ref=e105] [cursor=pointer]
+                - button [ref=e107] [cursor=pointer]
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - button "Options de Menu" [ref=e110] [cursor=pointer]
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button [ref=e114] [cursor=pointer]
+                        - button [ref=e117] [cursor=pointer]
+                        - button [ref=e120] [cursor=pointer]
+                        - button [ref=e123] [cursor=pointer]
+                        - button [ref=e126] [cursor=pointer]
+                        - button [ref=e129] [cursor=pointer]
+                        - button [ref=e132] [cursor=pointer]

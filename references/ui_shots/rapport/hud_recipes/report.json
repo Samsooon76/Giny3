@@ -1,0 +1,335 @@
+{
+ "official": "client/dofus3/output/ui_shots/official/hud_recipes.png",
+ "client": "client/dofus3/output/ui_shots/web/hud_recipes.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 1931071,
+ "mismatched_pixels": 1345888,
+ "mismatched_ratio": 0.69696,
+ "regions": 11,
+ "worst": [
+  {
+   "x": 736,
+   "y": 304,
+   "w": 1448,
+   "h": 1352,
+   "pixels": 1033456,
+   "element": {
+    "id": "recipesUI-tile5-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     920,
+     602,
+     72,
+     72
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 0,
+   "w": 1752,
+   "h": 104,
+   "pixels": 170948,
+   "element": {
+    "id": "mapInfo-root-881171057",
+    "binding": "ctr_mapCoordsLevel",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "uitk-inline-mapInfo-18"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 6,
+    "box": [
+     8,
+     32,
+     1125,
+     26
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 1272,
+   "w": 624,
+   "h": 384,
+   "pixels": 66995,
+   "element": {
+    "id": "chatview-root--562385889",
+    "binding": "listChat",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "backgroundColor_black_black25",
+     "uitk-inline-chatview-4",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0.25)",
+    "image": null,
+    "depth": 7,
+    "box": [
+     32,
+     860,
+     368,
+     185
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 272,
+   "w": 472,
+   "h": 168,
+   "pixels": 40553,
+   "element": {
+    "id": "questList-root-background",
+    "binding": "background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__background"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(61, 64, 92)",
+    "image": "url(\"http://127.0.0.1:5173/uitk/assets/9f1c2aa1_8466790348161017816.png\")",
+    "depth": 5,
+    "box": [
+     1,
+     181,
+     300,
+     100
+    ]
+   }
+  },
+  {
+   "x": 2864,
+   "y": 120,
+   "w": 80,
+   "h": 440,
+   "pixels": 29808,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "i",
+    "classes": [
+     "uitk-tint-layer"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(182, 179, 230)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/icons/map.png\")",
+    "depth": 14,
+    "box": [
+     1886,
+     222,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 56,
+   "y": 328,
+   "w": 216,
+   "h": 48,
+   "pixels": 2252,
+   "element": {
+    "id": "questList-root-background",
+    "binding": "background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__background"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(61, 64, 92)",
+    "image": "url(\"http://127.0.0.1:5173/uitk/assets/9f1c2aa1_8466790348161017816.png\")",
+    "depth": 5,
+    "box": [
+     1,
+     181,
+     300,
+     100
+    ]
+   }
+  },
+  {
+   "x": 1192,
+   "y": 968,
+   "w": 104,
+   "h": 24,
+   "pixels": 1080,
+   "element": {
+    "id": "recipesUI-tile3-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     768,
+     602,
+     72,
+     72
+    ]
+   }
+  },
+  {
+   "x": 24,
+   "y": 328,
+   "w": 24,
+   "h": 24,
+   "pixels": 324,
+   "element": {
+    "id": "questList-root-background",
+    "binding": "background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__background"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(61, 64, 92)",
+    "image": "url(\"http://127.0.0.1:5173/uitk/assets/9f1c2aa1_8466790348161017816.png\")",
+    "depth": 5,
+    "box": [
+     1,
+     181,
+     300,
+     100
+    ]
+   }
+  },
+  {
+   "x": 16,
+   "y": 1616,
+   "w": 32,
+   "h": 24,
+   "pixels": 192,
+   "element": {
+    "id": "chatview-root-button_iconLeft_Vector",
+    "binding": "button_iconLeft_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     4,
+     1052,
+     20,
+     20
+    ]
+   }
+  },
+  {
+   "x": 1464,
+   "y": 648,
+   "w": 24,
+   "h": 24,
+   "pixels": 168,
+   "element": {
+    "id": "recipesUI-root--921739890",
+    "binding": "lbl_lvlTo",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "à",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     958,
+     421,
+     10,
+     20
+    ]
+   }
+  },
+  {
+   "x": 8,
+   "y": 1432,
+   "w": 24,
+   "h": 24,
+   "pixels": 112,
+   "element": {
+    "id": "chatview-root--293950300",
+    "binding": "sv_toggles",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 7,
+    "box": [
+     0,
+     860,
+     32,
+     185
+    ]
+   }
+  }
+ ]
+}

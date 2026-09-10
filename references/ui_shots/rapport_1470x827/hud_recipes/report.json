@@ -1,0 +1,573 @@
+{
+ "official": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/official/hud_recipes.png",
+ "client": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/web/hud_recipes.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 1782804,
+ "mismatched_pixels": 928985,
+ "mismatched_ratio": 0.52108,
+ "regions": 20,
+ "worst": [
+  {
+   "x": 736,
+   "y": 240,
+   "w": 1440,
+   "h": 1416,
+   "pixels": 718431,
+   "element": {
+    "id": "recipesUI-tile5-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1409,
+     858,
+     110,
+     110
+    ]
+   }
+  },
+  {
+   "x": 8,
+   "y": 0,
+   "w": 1728,
+   "h": 96,
+   "pixels": 72351,
+   "element": {
+    "id": "mapInfo-root-1689843842",
+    "binding": "ctr_infos",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     0,
+     0,
+     1747,
+     98
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 1280,
+   "w": 616,
+   "h": 376,
+   "pixels": 54462,
+   "element": {
+    "id": "chatview-root--562385889",
+    "binding": "listChat",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "backgroundColor_black_black25",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0.25)",
+    "image": null,
+    "box": [
+     49,
+     1317,
+     564,
+     283
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 272,
+   "w": 464,
+   "h": 160,
+   "pixels": 34881,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 2872,
+   "y": 80,
+   "w": 72,
+   "h": 432,
+   "pixels": 27452,
+   "element": {
+    "id": "bannerMenu-gd_btnUis_3-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(80, 84, 126, 0.8)",
+    "image": null,
+    "box": [
+     2882,
+     293,
+     49,
+     49
+    ]
+   }
+  },
+  {
+   "x": 1064,
+   "y": 840,
+   "w": 288,
+   "h": 112,
+   "pixels": 6162,
+   "element": {
+    "id": "recipesUI-tile3-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1176,
+     858,
+     110,
+     110
+    ]
+   }
+  },
+  {
+   "x": 1064,
+   "y": 1080,
+   "w": 96,
+   "h": 96,
+   "pixels": 3810,
+   "element": {
+    "id": "recipesUI-tile2-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/game-data/pictos/items/15049.png\")",
+    "box": [
+     1060,
+     1072,
+     110,
+     110
+    ]
+   }
+  },
+  {
+   "x": 1096,
+   "y": 512,
+   "w": 256,
+   "h": 32,
+   "pixels": 2480,
+   "element": {
+    "id": "recipesUI-root--915007854",
+    "binding": "ctr_filtersHeader",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     805,
+     527,
+     787,
+     28
+    ]
+   }
+  },
+  {
+   "x": 1184,
+   "y": 584,
+   "w": 176,
+   "h": 24,
+   "pixels": 2328,
+   "element": {
+    "id": "recipesUI-root-2120528700",
+    "binding": "lbl_lvlFrom",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Niveau",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1254,
+     582,
+     84,
+     31
+    ]
+   }
+  },
+  {
+   "x": 56,
+   "y": 328,
+   "w": 216,
+   "h": 48,
+   "pixels": 2252,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 952,
+   "y": 1088,
+   "w": 88,
+   "h": 72,
+   "pixels": 1312,
+   "element": {
+    "id": "recipesUI-tile1-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/game-data/pictos/items/103392.png\")",
+    "box": [
+     943,
+     1072,
+     110,
+     110
+    ]
+   }
+  },
+  {
+   "x": 1448,
+   "y": 584,
+   "w": 56,
+   "h": 24,
+   "pixels": 656,
+   "element": {
+    "id": "recipesUI-root--921739890",
+    "binding": "lbl_lvlTo",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "à",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1467,
+     582,
+     15,
+     31
+    ]
+   }
+  },
+  {
+   "x": 1496,
+   "y": 1344,
+   "w": 96,
+   "h": 24,
+   "pixels": 649,
+   "element": {
+    "id": "recipesUI-tile6-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1525,
+     1286,
+     110,
+     110
+    ]
+   }
+  },
+  {
+   "x": 1096,
+   "y": 392,
+   "w": 48,
+   "h": 24,
+   "pixels": 436,
+   "element": {
+    "id": "recipesUI-tile2-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1044,
+     368,
+     110,
+     110
+    ]
+   }
+  },
+  {
+   "x": 1560,
+   "y": 808,
+   "w": 24,
+   "h": 24,
+   "pixels": 317,
+   "element": {
+    "id": "recipesUI-44-1253332812",
+    "binding": "ic_xp",
+    "type": "DofusIcon",
+    "classes": [
+     "official-node",
+     "official-DofusIcon",
+     "tintColor_white_white65",
+     "official-tinted-bg"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(255, 255, 255, 0.65)",
+    "image": "url(\"/ui-data/icons/experienceShadowOutline.png\")",
+    "box": [
+     1556,
+     802,
+     31,
+     31
+    ]
+   }
+  },
+  {
+   "x": 1560,
+   "y": 1016,
+   "w": 24,
+   "h": 32,
+   "pixels": 314,
+   "element": {
+    "id": "recipesUI-49-1253332812",
+    "binding": "ic_xp",
+    "type": "DofusIcon",
+    "classes": [
+     "official-node",
+     "official-DofusIcon",
+     "tintColor_white_white65",
+     "official-tinted-bg"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(255, 255, 255, 0.65)",
+    "image": "url(\"/ui-data/icons/experienceShadowOutline.png\")",
+    "box": [
+     1556,
+     1017,
+     31,
+     31
+    ]
+   }
+  },
+  {
+   "x": 24,
+   "y": 328,
+   "w": 24,
+   "h": 24,
+   "pixels": 280,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 16,
+   "y": 1616,
+   "w": 32,
+   "h": 24,
+   "pixels": 192,
+   "element": {
+    "id": "chatview-root-button_iconLeft_Vector",
+    "binding": "button_iconLeft_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(49, 45, 36)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     6,
+     1613,
+     31,
+     31
+    ]
+   }
+  },
+  {
+   "x": 1152,
+   "y": 392,
+   "w": 24,
+   "h": 16,
+   "pixels": 116,
+   "element": {
+    "id": "recipesUI-tile3-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1161,
+     368,
+     110,
+     110
+    ]
+   }
+  },
+  {
+   "x": 8,
+   "y": 1432,
+   "w": 24,
+   "h": 24,
+   "pixels": 104,
+   "element": {
+    "id": "chatview-root--293950300",
+    "binding": "sv_toggles",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     0,
+     1317,
+     49,
+     283
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,615 @@
+{
+ "official": "client/dofus3/output/ui_shots/official/hud_jobs.png",
+ "client": "client/dofus3/output/ui_shots/web/hud_jobs.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 3317252,
+ "mismatched_pixels": 2261420,
+ "mismatched_ratio": 0.68171,
+ "regions": 23,
+ "worst": [
+  {
+   "x": 0,
+   "y": 0,
+   "w": 2432,
+   "h": 1656,
+   "pixels": 1884377,
+   "element": {
+    "id": "jobUI-jobProgress-901835382",
+    "binding": "lv_jobProgress",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "scrollbarPadding",
+     "uitk-inline-jobProgressTab-6",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 9,
+    "box": [
+     360,
+     173,
+     658,
+     832
+    ]
+   }
+  },
+  {
+   "x": 672,
+   "y": 544,
+   "w": 848,
+   "h": 192,
+   "pixels": 143769,
+   "element": {
+    "id": "jobUI-jobProgress-901835382",
+    "binding": "lv_jobProgress",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "scrollbarPadding",
+     "uitk-inline-jobProgressTab-6",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 9,
+    "box": [
+     360,
+     173,
+     658,
+     832
+    ]
+   }
+  },
+  {
+   "x": 672,
+   "y": 440,
+   "w": 848,
+   "h": 96,
+   "pixels": 71588,
+   "element": {
+    "id": "jobUI-jobProgress-901835382",
+    "binding": "lv_jobProgress",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "scrollbarPadding",
+     "uitk-inline-jobProgressTab-6",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 9,
+    "box": [
+     360,
+     173,
+     658,
+     832
+    ]
+   }
+  },
+  {
+   "x": 672,
+   "y": 1256,
+   "w": 848,
+   "h": 96,
+   "pixels": 69224,
+   "element": {
+    "id": "jobUI-jobProgress-901835382",
+    "binding": "lv_jobProgress",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "scrollbarPadding",
+     "uitk-inline-jobProgressTab-6",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 9,
+    "box": [
+     360,
+     173,
+     658,
+     832
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 272,
+   "w": 472,
+   "h": 176,
+   "pixels": 49927,
+   "element": {
+    "id": "questList-18--1651377927",
+    "binding": "lbl_titleQuest",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "quest-title",
+     "dofusLabel",
+     "uitk-inline-questList_quest-3",
+     "title_medium"
+    ],
+    "text": "Wogew l'hewmite",
+    "font": "Lexend-Regular 18px/22px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 9,
+    "box": [
+     17,
+     214,
+     282,
+     22
+    ]
+   }
+  },
+  {
+   "x": 2864,
+   "y": 80,
+   "w": 80,
+   "h": 392,
+   "pixels": 26910,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "i",
+    "classes": [
+     "uitk-tint-layer"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(182, 179, 230)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/icons/spell.png\")",
+    "depth": 14,
+    "box": [
+     1886,
+     159,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 2768,
+   "y": 0,
+   "w": 176,
+   "h": 64,
+   "pixels": 9991,
+   "element": {
+    "id": "gameMenu-root-button_iconRight_Vector",
+    "binding": "button_iconRight_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     1864,
+     9,
+     20,
+     20
+    ]
+   }
+  },
+  {
+   "x": 1888,
+   "y": 552,
+   "w": 144,
+   "h": 32,
+   "pixels": 1142,
+   "element": {
+    "id": "jobUI-10041--983629011",
+    "binding": "lbl_name",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "title_small",
+     "textColor_white_white100",
+     "dofusLabel",
+     "uitk-inline-jobRecipeItem-7"
+    ],
+    "text": "Réceptacle de la Corruptite",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 21,
+    "box": [
+     1124,
+     363,
+     411,
+     18
+    ]
+   }
+  },
+  {
+   "x": 2152,
+   "y": 712,
+   "w": 48,
+   "h": 24,
+   "pixels": 488,
+   "element": {
+    "id": "jobUI-tile4-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/game-data/pictos/items/63391.png\")",
+    "depth": 21,
+    "box": [
+     1352,
+     407,
+     72,
+     72
+    ]
+   }
+  },
+  {
+   "x": 2152,
+   "y": 872,
+   "w": 48,
+   "h": 24,
+   "pixels": 488,
+   "element": {
+    "id": "jobUI-16489-186322492",
+    "binding": "ctr_slots",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "uitk-inline-jobRecipeItem-11"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 19,
+    "box": [
+     1124,
+     547,
+     427,
+     72
+    ]
+   }
+  },
+  {
+   "x": 2152,
+   "y": 1040,
+   "w": 48,
+   "h": 24,
+   "pixels": 488,
+   "element": {
+    "id": "jobUI-2539-186322492",
+    "binding": "ctr_slots",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "uitk-inline-jobRecipeItem-11"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 19,
+    "box": [
+     1124,
+     687,
+     427,
+     72
+    ]
+   }
+  },
+  {
+   "x": 2152,
+   "y": 1200,
+   "w": 48,
+   "h": 24,
+   "pixels": 488,
+   "element": {
+    "id": "jobUI-16490--983629011",
+    "binding": "lbl_name",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "title_small",
+     "textColor_white_white100",
+     "dofusLabel",
+     "uitk-inline-jobRecipeItem-7"
+    ],
+    "text": "Planche Contreplaquée",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 21,
+    "box": [
+     1124,
+     783,
+     411,
+     18
+    ]
+   }
+  },
+  {
+   "x": 2208,
+   "y": 712,
+   "w": 32,
+   "h": 24,
+   "pixels": 332,
+   "element": {
+    "id": "jobUI-10041-186322492",
+    "binding": "ctr_slots",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "uitk-inline-jobRecipeItem-11"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 19,
+    "box": [
+     1124,
+     407,
+     427,
+     72
+    ]
+   }
+  },
+  {
+   "x": 2208,
+   "y": 872,
+   "w": 32,
+   "h": 32,
+   "pixels": 332,
+   "element": {
+    "id": "jobUI-16489-186322492",
+    "binding": "ctr_slots",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "uitk-inline-jobRecipeItem-11"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 19,
+    "box": [
+     1124,
+     547,
+     427,
+     72
+    ]
+   }
+  },
+  {
+   "x": 2208,
+   "y": 1040,
+   "w": 32,
+   "h": 24,
+   "pixels": 332,
+   "element": {
+    "id": "jobUI-2539-186322492",
+    "binding": "ctr_slots",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "uitk-inline-jobRecipeItem-11"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 19,
+    "box": [
+     1124,
+     687,
+     427,
+     72
+    ]
+   }
+  },
+  {
+   "x": 2208,
+   "y": 1200,
+   "w": 32,
+   "h": 32,
+   "pixels": 332,
+   "element": {
+    "id": "jobUI-16490--983629011",
+    "binding": "lbl_name",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "title_small",
+     "textColor_white_white100",
+     "dofusLabel",
+     "uitk-inline-jobRecipeItem-7"
+    ],
+    "text": "Planche Contreplaquée",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 21,
+    "box": [
+     1124,
+     783,
+     411,
+     18
+    ]
+   }
+  },
+  {
+   "x": 2208,
+   "y": 552,
+   "w": 32,
+   "h": 24,
+   "pixels": 320,
+   "element": {
+    "id": "jobUI-10041--983629011",
+    "binding": "lbl_name",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "title_small",
+     "textColor_white_white100",
+     "dofusLabel",
+     "uitk-inline-jobRecipeItem-7"
+    ],
+    "text": "Réceptacle de la Corruptite",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 21,
+    "box": [
+     1124,
+     363,
+     411,
+     18
+    ]
+   }
+  },
+  {
+   "x": 2256,
+   "y": 192,
+   "w": 24,
+   "h": 32,
+   "pixels": 312,
+   "element": {
+    "id": "jobUI-jobCraftAndSkills-450063861",
+    "binding": "ctr_tabs",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "backgroundColor_background_medium90",
+     "uitk-inline-JobRecipesAndSkills-1"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(61, 64, 92, 0.9)",
+    "image": null,
+    "depth": 9,
+    "box": [
+     1018,
+     117,
+     541,
+     57
+    ]
+   }
+  },
+  {
+   "x": 16,
+   "y": 1616,
+   "w": 32,
+   "h": 24,
+   "pixels": 192,
+   "element": {
+    "id": "chatview-root-button_iconLeft_Vector",
+    "binding": "button_iconLeft_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     4,
+     1052,
+     20,
+     20
+    ]
+   }
+  },
+  {
+   "x": 1624,
+   "y": 1128,
+   "w": 32,
+   "h": 24,
+   "pixels": 180,
+   "element": {
+    "id": "jobUI-2539-1979258394",
+    "binding": "ctr_craftedItem",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "uitk-inline-jobRecipeItem-2"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 18,
+    "box": [
+     1044,
+     643,
+     72,
+     116
+    ]
+   }
+  }
+ ]
+}

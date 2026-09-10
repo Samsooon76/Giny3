@@ -1,0 +1,609 @@
+{
+ "official": "client/dofus3/output/ui_shots/official/hud_character.png",
+ "client": "client/dofus3/output/ui_shots/web/hud_character.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 2756058,
+ "mismatched_pixels": 1845511,
+ "mismatched_ratio": 0.66962,
+ "regions": 90,
+ "worst": [
+  {
+   "x": 0,
+   "y": 0,
+   "w": 2208,
+   "h": 1656,
+   "pixels": 1641365,
+   "element": {
+    "id": "characterSheetUi-root--2082089429",
+    "binding": "ctr_characterStatsDetailed",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     624,
+     228,
+     770,
+     490
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 1272,
+   "w": 624,
+   "h": 384,
+   "pixels": 60096,
+   "element": {
+    "id": "chatview-root--562385889",
+    "binding": "listChat",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "backgroundColor_black_black25",
+     "uitk-inline-chatview-4",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0.25)",
+    "image": null,
+    "depth": 7,
+    "box": [
+     32,
+     860,
+     368,
+     185
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 272,
+   "w": 472,
+   "h": 168,
+   "pixels": 40555,
+   "element": {
+    "id": "questList-root-background",
+    "binding": "background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__background"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(61, 64, 92)",
+    "image": "url(\"http://127.0.0.1:5173/uitk/assets/9f1c2aa1_8466790348161017816.png\")",
+    "depth": 5,
+    "box": [
+     1,
+     181,
+     300,
+     100
+    ]
+   }
+  },
+  {
+   "x": 2864,
+   "y": 80,
+   "w": 80,
+   "h": 432,
+   "pixels": 29739,
+   "element": {
+    "id": "bannerMenu-gd_btnUis_3-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(80, 84, 126, 0.8)",
+    "image": null,
+    "depth": 11,
+    "box": [
+     1882,
+     191,
+     32,
+     32
+    ]
+   }
+  },
+  {
+   "x": 2768,
+   "y": 0,
+   "w": 176,
+   "h": 64,
+   "pixels": 8696,
+   "element": {
+    "id": "gameMenu-root-button_iconRight_Vector",
+    "binding": "button_iconRight_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     1864,
+     9,
+     20,
+     20
+    ]
+   }
+  },
+  {
+   "x": 1544,
+   "y": 712,
+   "w": 184,
+   "h": 104,
+   "pixels": 3986,
+   "element": {
+    "id": "characterSheetUi-root--2082089429",
+    "binding": "ctr_characterStatsDetailed",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     624,
+     228,
+     770,
+     490
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 440,
+   "w": 80,
+   "h": 104,
+   "pixels": 3949,
+   "element": {
+    "id": "characterSheetUi-critical_hit-715439534",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-statTwoColumnsItem-1"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 13,
+    "box": [
+     626,
+     310,
+     360,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 1024,
+   "w": 80,
+   "h": 104,
+   "pixels": 3524,
+   "element": {
+    "id": "characterSheetUi-air--1061896414",
+    "binding": "ctr_leftPart",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-EntityStatsTableItem-1"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     626,
+     692,
+     554,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 592,
+   "w": 80,
+   "h": 96,
+   "pixels": 3280,
+   "element": {
+    "id": "characterSheetUi-root--2082089429",
+    "binding": "ctr_characterStatsDetailed",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     624,
+     228,
+     770,
+     490
+    ]
+   }
+  },
+  {
+   "x": 1552,
+   "y": 640,
+   "w": 152,
+   "h": 64,
+   "pixels": 3052,
+   "element": {
+    "id": "characterSheetUi-dodge--1256452718",
+    "binding": "lbl_statName",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_highlight_secondary80",
+     "dofusLabel",
+     "uitk-inline-statTwoColumnsItem-3",
+     "is-hoverable"
+    ],
+    "text": "Fuite",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     1040,
+     432,
+     39,
+     20
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 1176,
+   "w": 80,
+   "h": 96,
+   "pixels": 3048,
+   "element": {
+    "id": "characterSheetUi-root--1361329961",
+    "binding": "ctr_detailedStats",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-characterSheetUi-11"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     608,
+     212,
+     802,
+     712
+    ]
+   }
+  },
+  {
+   "x": 1552,
+   "y": 536,
+   "w": 168,
+   "h": 48,
+   "pixels": 2897,
+   "element": {
+    "id": "characterSheetUi-mp_reduction--1256452718",
+    "binding": "lbl_statName",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_highlight_secondary80",
+     "dofusLabel",
+     "uitk-inline-statTwoColumnsItem-3",
+     "is-hoverable"
+    ],
+    "text": "Retrait PM",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     1040,
+     352,
+     82,
+     20
+    ]
+   }
+  },
+  {
+   "x": 1584,
+   "y": 400,
+   "w": 128,
+   "h": 56,
+   "pixels": 2716,
+   "element": {
+    "id": "characterSheetUi-all_damage--1256452718",
+    "binding": "lbl_statName",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_highlight_secondary80",
+     "dofusLabel",
+     "uitk-inline-statTwoColumnsItem-3",
+     "is-hoverable"
+    ],
+    "text": "Puissance",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     1040,
+     272,
+     77,
+     20
+    ]
+   }
+  },
+  {
+   "x": 1544,
+   "y": 472,
+   "w": 168,
+   "h": 40,
+   "pixels": 2389,
+   "element": {
+    "id": "characterSheetUi-ap_reduction--1256452718",
+    "binding": "lbl_statName",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_highlight_secondary80",
+     "dofusLabel",
+     "uitk-inline-statTwoColumnsItem-3",
+     "is-hoverable"
+    ],
+    "text": "Retrait PA",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     1040,
+     312,
+     78,
+     20
+    ]
+   }
+  },
+  {
+   "x": 1272,
+   "y": 600,
+   "w": 536,
+   "h": 32,
+   "pixels": 2333,
+   "element": {
+    "id": "characterSheetUi-mp_dodge-447003945",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-statTwoColumnsItem-4"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 13,
+    "box": [
+     979,
+     392,
+     29,
+     20
+    ]
+   }
+  },
+  {
+   "x": 56,
+   "y": 328,
+   "w": 216,
+   "h": 48,
+   "pixels": 2252,
+   "element": {
+    "id": "questList-root-background",
+    "binding": "background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__background"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(61, 64, 92)",
+    "image": "url(\"http://127.0.0.1:5173/uitk/assets/9f1c2aa1_8466790348161017816.png\")",
+    "depth": 5,
+    "box": [
+     1,
+     181,
+     300,
+     100
+    ]
+   }
+  },
+  {
+   "x": 1280,
+   "y": 712,
+   "w": 152,
+   "h": 40,
+   "pixels": 1456,
+   "element": {
+    "id": "characterSheetUi-initiative-715439534",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-statTwoColumnsItem-1"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 13,
+    "box": [
+     626,
+     470,
+     332,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1280,
+   "y": 672,
+   "w": 152,
+   "h": 40,
+   "pixels": 1396,
+   "element": {
+    "id": "characterSheetUi-tackle-715439534",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-statTwoColumnsItem-1"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 13,
+    "box": [
+     626,
+     430,
+     353,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1280,
+   "y": 1096,
+   "w": 128,
+   "h": 32,
+   "pixels": 1348,
+   "element": {
+    "id": "characterSheetUi-root--1361329961",
+    "binding": "ctr_detailedStats",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-characterSheetUi-11"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     608,
+     212,
+     802,
+     712
+    ]
+   }
+  },
+  {
+   "x": 1272,
+   "y": 1296,
+   "w": 104,
+   "h": 32,
+   "pixels": 1252,
+   "element": {
+    "id": "characterSheetUi-root--1361329961",
+    "binding": "ctr_detailedStats",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-characterSheetUi-11"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     608,
+     212,
+     802,
+     712
+    ]
+   }
+  }
+ ]
+}

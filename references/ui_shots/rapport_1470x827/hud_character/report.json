@@ -1,0 +1,380 @@
+{
+ "official": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/official/hud_character.png",
+ "client": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/web/hud_character.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 967042,
+ "mismatched_pixels": 574503,
+ "mismatched_ratio": 0.59408,
+ "regions": 13,
+ "worst": [
+  {
+   "x": 776,
+   "y": 88,
+   "w": 1384,
+   "h": 192,
+   "pixels": 215084,
+   "element": {
+    "id": "characterSheetUi-root--1185737501",
+    "binding": "lbl_name",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "title_medium",
+     "textColor_white_white100",
+     "labelShadow_dropShadows_light",
+     "dofusLabel"
+    ],
+    "text": "Hugo",
+    "font": "Rowdies-Regular 18px/22px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     974,
+     168,
+     1106,
+     34
+    ]
+   }
+  },
+  {
+   "x": 744,
+   "y": 1376,
+   "w": 1432,
+   "h": 280,
+   "pixels": 172341,
+   "element": {
+    "id": "characterSheetUi-root-window_shadow",
+    "binding": "window_shadow",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/styles/images/windowShadow_5101cd5a_n6028146235916264475.png\")",
+    "box": [
+     737,
+     121,
+     1467,
+     1437
+    ]
+   }
+  },
+  {
+   "x": 8,
+   "y": 0,
+   "w": 1728,
+   "h": 96,
+   "pixels": 72354,
+   "element": {
+    "id": "mapInfo-root-1689843842",
+    "binding": "ctr_infos",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     0,
+     0,
+     1747,
+     98
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 1280,
+   "w": 616,
+   "h": 376,
+   "pixels": 48638,
+   "element": {
+    "id": "chatview-root--562385889",
+    "binding": "listChat",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "backgroundColor_black_black25",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0.25)",
+    "image": null,
+    "box": [
+     49,
+     1317,
+     564,
+     283
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 272,
+   "w": 464,
+   "h": 160,
+   "pixels": 34832,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 2872,
+   "y": 80,
+   "w": 72,
+   "h": 432,
+   "pixels": 27390,
+   "element": {
+    "id": "bannerMenu-gd_btnUis_3-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(80, 84, 126, 0.8)",
+    "image": null,
+    "box": [
+     2882,
+     293,
+     49,
+     49
+    ]
+   }
+  },
+  {
+   "x": 56,
+   "y": 328,
+   "w": 216,
+   "h": 48,
+   "pixels": 2252,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 1448,
+   "y": 1440,
+   "w": 80,
+   "h": 16,
+   "pixels": 748,
+   "element": {
+    "id": "characterSheetUi-root--1898205395",
+    "binding": "ctr_pointsRemaining",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1158,
+     1433,
+     977,
+     49
+    ]
+   }
+  },
+  {
+   "x": 24,
+   "y": 328,
+   "w": 24,
+   "h": 24,
+   "pixels": 280,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 16,
+   "y": 1616,
+   "w": 32,
+   "h": 24,
+   "pixels": 192,
+   "element": {
+    "id": "chatview-root-button_iconLeft_Vector",
+    "binding": "button_iconLeft_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(49, 45, 36)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     6,
+     1613,
+     31,
+     31
+    ]
+   }
+  },
+  {
+   "x": 1032,
+   "y": 1496,
+   "w": 184,
+   "h": 8,
+   "pixels": 176,
+   "element": {
+    "id": "characterSheetUi-root--1357966071",
+    "binding": "ctr_footer",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "Footer"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(61, 64, 92, 0.898)",
+    "image": null,
+    "box": [
+     781,
+     1415,
+     1378,
+     86
+    ]
+   }
+  },
+  {
+   "x": 1248,
+   "y": 1496,
+   "w": 120,
+   "h": 8,
+   "pixels": 112,
+   "element": {
+    "id": "characterSheetUi-root--1357966071",
+    "binding": "ctr_footer",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "Footer"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(61, 64, 92, 0.898)",
+    "image": null,
+    "box": [
+     781,
+     1415,
+     1378,
+     86
+    ]
+   }
+  },
+  {
+   "x": 8,
+   "y": 1432,
+   "w": 24,
+   "h": 24,
+   "pixels": 104,
+   "element": {
+    "id": "chatview-root--293950300",
+    "binding": "sv_toggles",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     0,
+     1317,
+     49,
+     283
+    ]
+   }
+  }
+ ]
+}

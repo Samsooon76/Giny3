@@ -1,0 +1,361 @@
+{
+ "official": "client/dofus3/output/ui_shots/official/hud_appearance.png",
+ "client": "client/dofus3/output/ui_shots/web/hud_appearance.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 3338299,
+ "mismatched_pixels": 2710657,
+ "mismatched_ratio": 0.81199,
+ "regions": 12,
+ "worst": [
+  {
+   "x": 0,
+   "y": 0,
+   "w": 2184,
+   "h": 1656,
+   "pixels": 2672616,
+   "element": {
+    "id": "cosmeticUi-ornament1-645066790",
+    "binding": "gradiant",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-CosmeticOrnament-2"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/styles/images/gradientCosmetic.png\")",
+    "depth": 16,
+    "box": [
+     602,
+     507,
+     153,
+     163
+    ]
+   }
+  },
+  {
+   "x": 2864,
+   "y": 80,
+   "w": 80,
+   "h": 392,
+   "pixels": 26910,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "i",
+    "classes": [
+     "uitk-tint-layer"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(182, 179, 230)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/icons/spell.png\")",
+    "depth": 14,
+    "box": [
+     1886,
+     159,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 2768,
+   "y": 0,
+   "w": 176,
+   "h": 64,
+   "pixels": 9712,
+   "element": {
+    "id": "gameMenu-root-button_iconRight_Vector",
+    "binding": "button_iconRight_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     1864,
+     9,
+     20,
+     20
+    ]
+   }
+  },
+  {
+   "x": 624,
+   "y": 1072,
+   "w": 40,
+   "h": 48,
+   "pixels": 732,
+   "element": {
+    "id": "cosmeticUi-root-273657744",
+    "binding": "visualChar",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-cosmeticUi-22"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 12,
+    "box": [
+     2,
+     127,
+     520,
+     688
+    ]
+   }
+  },
+  {
+   "x": 1960,
+   "y": 1064,
+   "w": 40,
+   "h": 24,
+   "pixels": 342,
+   "element": {
+    "id": "cosmeticUi-orn-3-143663172",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-CosmeticOrnamentLine-0"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 12,
+    "box": [
+     594,
+     685,
+     704,
+     178
+    ]
+   }
+  },
+  {
+   "x": 16,
+   "y": 1616,
+   "w": 32,
+   "h": 24,
+   "pixels": 192,
+   "element": {
+    "id": "chatview-root-button_iconLeft_Vector",
+    "binding": "button_iconLeft_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     4,
+     1052,
+     20,
+     20
+    ]
+   }
+  },
+  {
+   "x": 8,
+   "y": 1432,
+   "w": 24,
+   "h": 24,
+   "pixels": 112,
+   "element": {
+    "id": "chatview-root--293950300",
+    "binding": "sv_toggles",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 7,
+    "box": [
+     0,
+     860,
+     32,
+     185
+    ]
+   }
+  },
+  {
+   "x": 600,
+   "y": 1032,
+   "w": 8,
+   "h": 8,
+   "pixels": 14,
+   "element": {
+    "id": "cosmeticUi-root-273657744",
+    "binding": "visualChar",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-cosmeticUi-22"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 12,
+    "box": [
+     2,
+     127,
+     520,
+     688
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 472,
+   "w": 16,
+   "h": 16,
+   "pixels": 12,
+   "element": {
+    "id": "cosmeticUi-ornament1-645066790",
+    "binding": "gradiant",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-CosmeticOrnament-2"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/styles/images/gradientCosmetic.png\")",
+    "depth": 16,
+    "box": [
+     602,
+     151,
+     153,
+     163
+    ]
+   }
+  },
+  {
+   "x": 592,
+   "y": 1056,
+   "w": 8,
+   "h": 8,
+   "pixels": 8,
+   "element": {
+    "id": "cosmeticUi-root-273657744",
+    "binding": "visualChar",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-cosmeticUi-22"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 12,
+    "box": [
+     2,
+     127,
+     520,
+     688
+    ]
+   }
+  },
+  {
+   "x": 592,
+   "y": 1080,
+   "w": 8,
+   "h": 8,
+   "pixels": 5,
+   "element": {
+    "id": "cosmeticUi-root-273657744",
+    "binding": "visualChar",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-cosmeticUi-22"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 12,
+    "box": [
+     2,
+     127,
+     520,
+     688
+    ]
+   }
+  },
+  {
+   "x": 1152,
+   "y": 1128,
+   "w": 8,
+   "h": 8,
+   "pixels": 2,
+   "element": {
+    "id": "cosmeticUi-ornament1-645066790",
+    "binding": "gradiant",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-CosmeticOrnament-2"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/styles/images/gradientCosmetic.png\")",
+    "depth": 16,
+    "box": [
+     602,
+     685,
+     153,
+     163
+    ]
+   }
+  }
+ ]
+}

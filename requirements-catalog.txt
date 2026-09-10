@@ -1,0 +1,3 @@
+# Use with requirements.txt in an isolated environment.
+PyMySQL>=1.1,<2
+capstone>=5,<6

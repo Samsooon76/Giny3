@@ -1,0 +1,608 @@
+{
+ "official": "client/dofus3/output/ui_shots/official/hud_guild.png",
+ "client": "client/dofus3/output/ui_shots/web/hud_guild.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 3324953,
+ "mismatched_pixels": 1623915,
+ "mismatched_ratio": 0.4884,
+ "regions": 20,
+ "worst": [
+  {
+   "x": 0,
+   "y": 0,
+   "w": 2432,
+   "h": 1656,
+   "pixels": 1270110,
+   "element": {
+    "id": "guildBase-root--596078508",
+    "binding": "lv_socialMembers",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "uitk-inline-guildMembers-17",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 12,
+    "box": [
+     359,
+     438,
+     1202,
+     485
+    ]
+   }
+  },
+  {
+   "x": 640,
+   "y": 664,
+   "w": 1664,
+   "h": 72,
+   "pixels": 118664,
+   "element": {
+    "id": "guildBase-root--596078508",
+    "binding": "lv_socialMembers",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "uitk-inline-guildMembers-17",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 12,
+    "box": [
+     359,
+     438,
+     1202,
+     485
+    ]
+   }
+  },
+  {
+   "x": 1120,
+   "y": 800,
+   "w": 720,
+   "h": 312,
+   "pixels": 78055,
+   "element": {
+    "id": "guildBase-root--596078508",
+    "binding": "lv_socialMembers",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "uitk-inline-guildMembers-17",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 12,
+    "box": [
+     359,
+     438,
+     1202,
+     485
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 272,
+   "w": 472,
+   "h": 176,
+   "pixels": 49931,
+   "element": {
+    "id": "questList-18--1651377927",
+    "binding": "lbl_titleQuest",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "quest-title",
+     "dofusLabel",
+     "uitk-inline-questList_quest-3",
+     "title_medium"
+    ],
+    "text": "Wogew l'hewmite",
+    "font": "Lexend-Regular 18px/22px",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 9,
+    "box": [
+     17,
+     214,
+     282,
+     22
+    ]
+   }
+  },
+  {
+   "x": 1296,
+   "y": 256,
+   "w": 272,
+   "h": 160,
+   "pixels": 34929,
+   "element": {
+    "id": "guildBase-root-button_container",
+    "binding": "button_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(140, 168, 0)",
+    "image": null,
+    "depth": 12,
+    "box": [
+     847,
+     216,
+     170,
+     32
+    ]
+   }
+  },
+  {
+   "x": 2864,
+   "y": 80,
+   "w": 80,
+   "h": 392,
+   "pixels": 26872,
+   "element": {
+    "id": "bannerMenu-gd_btnUis_2-itemTile_icon_Vector",
+    "binding": "itemTile_icon_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/icons/spell.png\")",
+    "depth": 13,
+    "box": [
+     1886,
+     159,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 824,
+   "y": 256,
+   "w": 400,
+   "h": 152,
+   "pixels": 20451,
+   "element": {
+    "id": "guildBase-root--2127009964",
+    "binding": "ctr_hall",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-guild-22"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     573,
+     208,
+     210,
+     32
+    ]
+   }
+  },
+  {
+   "x": 2768,
+   "y": 0,
+   "w": 176,
+   "h": 64,
+   "pixels": 8941,
+   "element": {
+    "id": "gameMenu-root-button_iconRight_Vector",
+    "binding": "button_iconRight_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     1864,
+     9,
+     20,
+     20
+    ]
+   }
+  },
+  {
+   "x": 640,
+   "y": 624,
+   "w": 432,
+   "h": 32,
+   "pixels": 4764,
+   "element": {
+    "id": "guildBase-root-tableColumnHeader_label",
+    "binding": "tableColumnHeader_label",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel",
+     "textShort_largeRegular"
+    ],
+    "text": "Nom de personnage",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     511,
+     408,
+     158,
+     20
+    ]
+   }
+  },
+  {
+   "x": 1864,
+   "y": 624,
+   "w": 248,
+   "h": 32,
+   "pixels": 2631,
+   "element": {
+    "id": "guildBase-root-tableColumnHeader_label",
+    "binding": "tableColumnHeader_label",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel",
+     "textShort_largeRegular"
+    ],
+    "text": "Guildatons",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     1265,
+     408,
+     84,
+     20
+    ]
+   }
+  },
+  {
+   "x": 992,
+   "y": 368,
+   "w": 264,
+   "h": 32,
+   "pixels": 2296,
+   "element": {
+    "id": "guildBase-root--1318337179",
+    "binding": "ctr_xpAndHall",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-guild-18"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 13,
+    "box": [
+     577,
+     159,
+     210,
+     92
+    ]
+   }
+  },
+  {
+   "x": 1744,
+   "y": 624,
+   "w": 104,
+   "h": 32,
+   "pixels": 1132,
+   "element": {
+    "id": "guildBase-root-tableColumnHeader_label",
+    "binding": "tableColumnHeader_label",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel",
+     "textShort_largeRegular"
+    ],
+    "text": "Niveau",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     1149,
+     408,
+     55,
+     20
+    ]
+   }
+  },
+  {
+   "x": 944,
+   "y": 360,
+   "w": 32,
+   "h": 48,
+   "pixels": 1016,
+   "element": {
+    "id": "guildBase-root--1318337179",
+    "binding": "ctr_xpAndHall",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-guild-18"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 13,
+    "box": [
+     577,
+     159,
+     210,
+     92
+    ]
+   }
+  },
+  {
+   "x": 1440,
+   "y": 624,
+   "w": 88,
+   "h": 32,
+   "pixels": 1003,
+   "element": {
+    "id": "guildBase-root-tableColumnHeader_label",
+    "binding": "tableColumnHeader_label",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel",
+     "textShort_largeRegular"
+    ],
+    "text": "Rang",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     940,
+     408,
+     41,
+     20
+    ]
+   }
+  },
+  {
+   "x": 1424,
+   "y": 424,
+   "w": 120,
+   "h": 32,
+   "pixels": 908,
+   "element": {
+    "id": "guildBase-root-tab_label",
+    "binding": "tab_label",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel",
+     "textShort_largeRegular"
+    ],
+    "text": "Annuaire",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 12,
+    "box": [
+     934,
+     277,
+     70,
+     20
+    ]
+   }
+  },
+  {
+   "x": 1096,
+   "y": 624,
+   "w": 96,
+   "h": 32,
+   "pixels": 880,
+   "element": {
+    "id": "guildBase-root-tableColumnHeader_label",
+    "binding": "tableColumnHeader_label",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel",
+     "textShort_largeRegular"
+    ],
+    "text": "Note",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     718,
+     408,
+     38,
+     20
+    ]
+   }
+  },
+  {
+   "x": 2120,
+   "y": 624,
+   "w": 88,
+   "h": 32,
+   "pixels": 716,
+   "element": {
+    "id": "guildBase-root-tableColumnHeader_label",
+    "binding": "tableColumnHeader_label",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel",
+     "textShort_largeRegular"
+    ],
+    "text": "Succés",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     1386,
+     408,
+     54,
+     20
+    ]
+   }
+  },
+  {
+   "x": 2288,
+   "y": 192,
+   "w": 32,
+   "h": 32,
+   "pixels": 312,
+   "element": {
+    "id": "guildBase-root-1193790141",
+    "binding": "lbl_guildMotd",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "section_medium",
+     "textColor_white_white65",
+     "dofusLabel"
+    ],
+    "text": "MESSAGE DE GUILDE",
+    "font": "Lexend-Regular 14px/18px",
+    "color": "rgba(255, 255, 255, 0.65)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 11,
+    "box": [
+     1069,
+     133,
+     500,
+     14
+    ]
+   }
+  },
+  {
+   "x": 16,
+   "y": 1616,
+   "w": 32,
+   "h": 24,
+   "pixels": 192,
+   "element": {
+    "id": "chatview-root-button_iconLeft_Vector",
+    "binding": "button_iconLeft_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     4,
+     1052,
+     20,
+     20
+    ]
+   }
+  },
+  {
+   "x": 8,
+   "y": 1432,
+   "w": 24,
+   "h": 24,
+   "pixels": 112,
+   "element": {
+    "id": "chatview-root--293950300",
+    "binding": "sv_toggles",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 7,
+    "box": [
+     0,
+     860,
+     32,
+     185
+    ]
+   }
+  }
+ ]
+}

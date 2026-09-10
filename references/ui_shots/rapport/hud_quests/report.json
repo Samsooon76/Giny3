@@ -1,0 +1,590 @@
+{
+ "official": "client/dofus3/output/ui_shots/official/hud_quests.png",
+ "client": "client/dofus3/output/ui_shots/web/hud_quests.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 3493766,
+ "mismatched_pixels": 1439841,
+ "mismatched_ratio": 0.41212,
+ "regions": 58,
+ "worst": [
+  {
+   "x": 0,
+   "y": 0,
+   "w": 2496,
+   "h": 1656,
+   "pixels": 1351431,
+   "element": {
+    "id": "quests-root-1367894588",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-quests-16"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 7,
+    "box": [
+     795,
+     117,
+     830,
+     888
+    ]
+   }
+  },
+  {
+   "x": 2864,
+   "y": 80,
+   "w": 80,
+   "h": 392,
+   "pixels": 26910,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "i",
+    "classes": [
+     "uitk-tint-layer"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(182, 179, 230)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/icons/spell.png\")",
+    "depth": 14,
+    "box": [
+     1886,
+     159,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1256,
+   "y": 272,
+   "w": 568,
+   "h": 64,
+   "pixels": 9653,
+   "element": {
+    "id": "quests-root--349028275",
+    "binding": "VisualElement",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-quests-19"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 12,
+    "box": [
+     819,
+     141,
+     782,
+     172
+    ]
+   }
+  },
+  {
+   "x": 2768,
+   "y": 0,
+   "w": 176,
+   "h": 64,
+   "pixels": 8684,
+   "element": {
+    "id": "gameMenu-root-button_iconRight_Vector",
+    "binding": "button_iconRight_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     1864,
+     9,
+     20,
+     20
+    ]
+   }
+  },
+  {
+   "x": 808,
+   "y": 384,
+   "w": 80,
+   "h": 48,
+   "pixels": 3264,
+   "element": {
+    "id": "quests-root-794719409",
+    "binding": "MinMaxFilterCategory",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-MinMaxFilterCategory-0"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(1, 1, 1, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     311,
+     224,
+     328,
+     50
+    ]
+   }
+  },
+  {
+   "x": 1304,
+   "y": 688,
+   "w": 304,
+   "h": 32,
+   "pixels": 2409,
+   "element": {
+    "id": "quests-115--468689538",
+    "binding": "lbl_objective",
+    "type": "Label",
+    "classes": [
+     "official-node",
+     "official-Label",
+     "textShort_hugeRegular",
+     "textColor_highlight_secondary100",
+     "dofusLabel",
+     "uitk-inline-quest_objective-5"
+    ],
+    "text": "Vaincre x1 Wabbit Gm en un seul combat",
+    "font": "Lexend-Regular 16px/22px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(1, 1, 1, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     855,
+     448,
+     746,
+     22
+    ]
+   }
+  },
+  {
+   "x": 1544,
+   "y": 640,
+   "w": 232,
+   "h": 24,
+   "pixels": 2038,
+   "element": {
+    "id": "quests-102--468689538",
+    "binding": "lbl_objective",
+    "type": "Label",
+    "classes": [
+     "official-node",
+     "official-Label",
+     "textShort_hugeRegular",
+     "textColor_highlight_secondary100",
+     "dofusLabel",
+     "uitk-inline-quest_objective-5"
+    ],
+    "text": "Découvrir la carte : Laboratoire Wabbit",
+    "font": "Lexend-Regular 16px/22px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(1, 1, 1, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     855,
+     416,
+     746,
+     22
+    ]
+   }
+  },
+  {
+   "x": 1616,
+   "y": 688,
+   "w": 184,
+   "h": 32,
+   "pixels": 1459,
+   "element": {
+    "id": "quests-115--468689538",
+    "binding": "lbl_objective",
+    "type": "Label",
+    "classes": [
+     "official-node",
+     "official-Label",
+     "textShort_hugeRegular",
+     "textColor_highlight_secondary100",
+     "dofusLabel",
+     "uitk-inline-quest_objective-5"
+    ],
+    "text": "Vaincre x1 Wabbit Gm en un seul combat",
+    "font": "Lexend-Regular 16px/22px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(1, 1, 1, 0)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     855,
+     448,
+     746,
+     22
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 944,
+   "w": 40,
+   "h": 48,
+   "pixels": 1362,
+   "element": {
+    "id": "quests-63-toggle_container",
+    "binding": "toggle_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(182, 179, 230, 0.25)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     749,
+     621,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 1392,
+   "w": 40,
+   "h": 40,
+   "pixels": 1362,
+   "element": {
+    "id": "quests-33-toggle_container",
+    "binding": "toggle_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(182, 179, 230, 0.25)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     749,
+     909,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 896,
+   "w": 40,
+   "h": 40,
+   "pixels": 1361,
+   "element": {
+    "id": "quests-62-toggle_container",
+    "binding": "toggle_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(182, 179, 230, 0.25)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     749,
+     585,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 1336,
+   "w": 40,
+   "h": 40,
+   "pixels": 1361,
+   "element": {
+    "id": "quests-32-toggle_container",
+    "binding": "toggle_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(182, 179, 230, 0.25)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     749,
+     873,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 616,
+   "w": 40,
+   "h": 48,
+   "pixels": 1359,
+   "element": {
+    "id": "quests-57-toggle_container",
+    "binding": "toggle_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(182, 179, 230, 0.25)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     749,
+     405,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 1056,
+   "w": 40,
+   "h": 48,
+   "pixels": 1359,
+   "element": {
+    "id": "quests-65-toggle_container",
+    "binding": "toggle_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(182, 179, 230, 0.25)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     749,
+     693,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 1000,
+   "w": 40,
+   "h": 48,
+   "pixels": 1357,
+   "element": {
+    "id": "quests-64-toggle_container",
+    "binding": "toggle_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(182, 179, 230, 0.25)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     749,
+     657,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 672,
+   "w": 40,
+   "h": 48,
+   "pixels": 1335,
+   "element": {
+    "id": "quests-58-toggle_container",
+    "binding": "toggle_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(182, 179, 230, 0.25)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     749,
+     441,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 784,
+   "w": 40,
+   "h": 40,
+   "pixels": 1335,
+   "element": {
+    "id": "quests-60-toggle_container",
+    "binding": "toggle_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(182, 179, 230, 0.25)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     749,
+     513,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 840,
+   "w": 40,
+   "h": 40,
+   "pixels": 1335,
+   "element": {
+    "id": "quests-61-toggle_container",
+    "binding": "toggle_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(182, 179, 230, 0.25)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     749,
+     549,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 1112,
+   "w": 40,
+   "h": 48,
+   "pixels": 1335,
+   "element": {
+    "id": "quests-66-toggle_container",
+    "binding": "toggle_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(182, 179, 230, 0.25)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     749,
+     729,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 1224,
+   "w": 40,
+   "h": 48,
+   "pixels": 1335,
+   "element": {
+    "id": "quests-29-toggle_container",
+    "binding": "toggle_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(182, 179, 230, 0.25)",
+    "image": null,
+    "depth": 14,
+    "box": [
+     749,
+     801,
+     24,
+     24
+    ]
+   }
+  }
+ ]
+}

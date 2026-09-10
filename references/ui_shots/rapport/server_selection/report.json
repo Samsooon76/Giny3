@@ -1,0 +1,583 @@
+{
+ "official": "client/dofus3/output/ui_shots/official/server_selection.png",
+ "client": "client/dofus3/output/ui_shots/web/server_selection.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 1868624,
+ "mismatched_pixels": 1326282,
+ "mismatched_ratio": 0.70976,
+ "regions": 86,
+ "worst": [
+  {
+   "x": 0,
+   "y": 0,
+   "w": 2944,
+   "h": 1584,
+   "pixels": 1263862,
+   "element": {
+    "id": "ServerSelection-serverCard_3--1376494434",
+    "binding": "serverCard",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"/ui-data/styles/images/containCardServerActive.png\")",
+    "depth": 10,
+    "box": [
+     725,
+     168,
+     480,
+     772
+    ]
+   }
+  },
+  {
+   "x": 24,
+   "y": 1560,
+   "w": 544,
+   "h": 64,
+   "pixels": 29482,
+   "element": {
+    "id": "ServerSelection-root-checkboxLine_labelRight",
+    "binding": "checkboxLine_labelRight",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "dofusLabel"
+    ],
+    "text": "Afficher uniquement mes personnages",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgb(182, 179, 230)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 7,
+    "box": [
+     60,
+     1029,
+     300,
+     24
+    ]
+   }
+  },
+  {
+   "x": 2816,
+   "y": 896,
+   "w": 128,
+   "h": 128,
+   "pixels": 9200,
+   "element": {
+    "id": "ServerSelection-root-194920712",
+    "binding": "carousel_arrow",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "official-tinted-bg"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(255, 255, 255, 0.35)",
+    "image": "url(\"/ui-data/styles/images/defaultArrowIcon.png\")",
+    "depth": 7,
+    "box": [
+     1853,
+     599,
+     54,
+     54
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 896,
+   "w": 128,
+   "h": 128,
+   "pixels": 8485,
+   "element": {
+    "id": "ServerSelection-root-1984490596",
+    "binding": "carousel_arrow",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "official-tinted-bg"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(255, 255, 255, 0.35)",
+    "image": "url(\"/ui-data/styles/images/defaultArrowIcon.png\")",
+    "depth": 7,
+    "box": [
+     13,
+     599,
+     54,
+     54
+    ]
+   }
+  },
+  {
+   "x": 1368,
+   "y": 1448,
+   "w": 208,
+   "h": 56,
+   "pixels": 6915,
+   "element": {
+    "id": "ServerSelection-root-playButton_background",
+    "binding": "playButton_background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "official-tinted-bg"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(61, 64, 92, 0.898)",
+    "image": "url(\"/ui-data/styles/images/defaultBackgoundButton_28369203_6441872113072935610.png\")",
+    "depth": 7,
+    "box": [
+     820,
+     898,
+     280,
+     132
+    ]
+   }
+  },
+  {
+   "x": 1376,
+   "y": 400,
+   "w": 208,
+   "h": 72,
+   "pixels": 5119,
+   "element": {
+    "id": "ServerSelection-serverCard_3--1648296041",
+    "binding": "title_bg",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "tintColor_background_medium90",
+     "official-tinted-bg"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(61, 64, 92, 0.898)",
+    "image": "url(\"/ui-data/styles/images/containTitleBg.png\")",
+    "depth": 11,
+    "box": [
+     807,
+     228,
+     316,
+     96
+    ]
+   }
+  },
+  {
+   "x": 2064,
+   "y": 224,
+   "w": 80,
+   "h": 24,
+   "pixels": 680,
+   "element": {
+    "id": "ServerSelection-root--1150610483",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5175/ui-data/styles/images/slideCenterBgHeader_2x.png\")",
+    "depth": 8,
+    "box": [
+     512,
+     0,
+     989,
+     204
+    ]
+   }
+  },
+  {
+   "x": 2152,
+   "y": 224,
+   "w": 56,
+   "h": 24,
+   "pixels": 538,
+   "element": {
+    "id": "ServerSelection-root--1150610483",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5175/ui-data/styles/images/slideCenterBgHeader_2x.png\")",
+    "depth": 8,
+    "box": [
+     512,
+     0,
+     989,
+     204
+    ]
+   }
+  },
+  {
+   "x": 1648,
+   "y": 1552,
+   "w": 40,
+   "h": 32,
+   "pixels": 404,
+   "element": {
+    "id": "ServerSelection-root-playButton_background",
+    "binding": "playButton_background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "official-tinted-bg"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(61, 64, 92, 0.898)",
+    "image": "url(\"/ui-data/styles/images/defaultBackgoundButton_28369203_6441872113072935610.png\")",
+    "depth": 7,
+    "box": [
+     820,
+     898,
+     280,
+     132
+    ]
+   }
+  },
+  {
+   "x": 1192,
+   "y": 336,
+   "w": 40,
+   "h": 24,
+   "pixels": 205,
+   "element": {
+    "id": "ServerSelection-serverCard_3--1376494434",
+    "binding": "serverCard",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"/ui-data/styles/images/containCardServerActive.png\")",
+    "depth": 10,
+    "box": [
+     725,
+     168,
+     480,
+     772
+    ]
+   }
+  },
+  {
+   "x": 1152,
+   "y": 328,
+   "w": 24,
+   "h": 48,
+   "pixels": 191,
+   "element": {
+    "id": "ServerSelection-serverCard_3--1376494434",
+    "binding": "serverCard",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"/ui-data/styles/images/containCardServerActive.png\")",
+    "depth": 10,
+    "box": [
+     725,
+     168,
+     480,
+     772
+    ]
+   }
+  },
+  {
+   "x": 1064,
+   "y": 176,
+   "w": 16,
+   "h": 16,
+   "pixels": 107,
+   "element": {
+    "id": "ServerSelection-root--1150610483",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5175/ui-data/styles/images/slideCenterBgHeader_2x.png\")",
+    "depth": 8,
+    "box": [
+     512,
+     0,
+     989,
+     204
+    ]
+   }
+  },
+  {
+   "x": 112,
+   "y": 288,
+   "w": 24,
+   "h": 24,
+   "pixels": 107,
+   "element": {
+    "id": "ServerSelection-root-370523812",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5175/ui-data/styles/images/slideCornerBgHeader.png\")",
+    "depth": 8,
+    "box": [
+     0,
+     0,
+     512,
+     204
+    ]
+   }
+  },
+  {
+   "x": 96,
+   "y": 248,
+   "w": 40,
+   "h": 40,
+   "pixels": 85,
+   "element": {
+    "id": "ServerSelection-root-370523812",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5175/ui-data/styles/images/slideCornerBgHeader.png\")",
+    "depth": 8,
+    "box": [
+     0,
+     0,
+     512,
+     204
+    ]
+   }
+  },
+  {
+   "x": 1104,
+   "y": 432,
+   "w": 24,
+   "h": 16,
+   "pixels": 81,
+   "element": {
+    "id": "ServerSelection-serverCard_3--1376494434",
+    "binding": "serverCard",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"/ui-data/styles/images/containCardServerActive.png\")",
+    "depth": 10,
+    "box": [
+     725,
+     168,
+     480,
+     772
+    ]
+   }
+  },
+  {
+   "x": 1224,
+   "y": 368,
+   "w": 16,
+   "h": 32,
+   "pixels": 69,
+   "element": {
+    "id": "ServerSelection-serverCard_3--1376494434",
+    "binding": "serverCard",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"/ui-data/styles/images/containCardServerActive.png\")",
+    "depth": 10,
+    "box": [
+     725,
+     168,
+     480,
+     772
+    ]
+   }
+  },
+  {
+   "x": 2288,
+   "y": 216,
+   "w": 16,
+   "h": 24,
+   "pixels": 55,
+   "element": {
+    "id": "ServerSelection-root--1150610483",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5175/ui-data/styles/images/slideCenterBgHeader_2x.png\")",
+    "depth": 8,
+    "box": [
+     512,
+     0,
+     989,
+     204
+    ]
+   }
+  },
+  {
+   "x": 1160,
+   "y": 448,
+   "w": 16,
+   "h": 16,
+   "pixels": 45,
+   "element": {
+    "id": "ServerSelection-serverCard_3--1376494434",
+    "binding": "serverCard",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"/ui-data/styles/images/containCardServerActive.png\")",
+    "depth": 10,
+    "box": [
+     725,
+     168,
+     480,
+     772
+    ]
+   }
+  },
+  {
+   "x": 1128,
+   "y": 624,
+   "w": 16,
+   "h": 16,
+   "pixels": 44,
+   "element": {
+    "id": "ServerSelection-serverCard_3--1376494434",
+    "binding": "serverCard",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"/ui-data/styles/images/containCardServerActive.png\")",
+    "depth": 10,
+    "box": [
+     725,
+     168,
+     480,
+     772
+    ]
+   }
+  },
+  {
+   "x": 1184,
+   "y": 376,
+   "w": 8,
+   "h": 16,
+   "pixels": 40,
+   "element": {
+    "id": "ServerSelection-serverCard_3--1376494434",
+    "binding": "serverCard",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"/ui-data/styles/images/containCardServerActive.png\")",
+    "depth": 10,
+    "box": [
+     725,
+     168,
+     480,
+     772
+    ]
+   }
+  }
+ ]
+}

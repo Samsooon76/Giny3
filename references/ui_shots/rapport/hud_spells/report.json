@@ -1,0 +1,56 @@
+{
+ "official": "client/dofus3/output/ui_shots/official/hud_spells.png",
+ "client": "client/dofus3/output/ui_shots/web/hud_spells.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": false,
+ "compared_pixels": 4862760,
+ "mismatched_pixels": 4305852,
+ "mismatched_ratio": 0.88547,
+ "regions": 5,
+ "worst": [
+  {
+   "x": 0,
+   "y": 0,
+   "w": 2944,
+   "h": 1656,
+   "pixels": 4302972,
+   "element": null
+  },
+  {
+   "x": 56,
+   "y": 328,
+   "w": 216,
+   "h": 48,
+   "pixels": 2252,
+   "element": null
+  },
+  {
+   "x": 24,
+   "y": 328,
+   "w": 24,
+   "h": 24,
+   "pixels": 324,
+   "element": null
+  },
+  {
+   "x": 16,
+   "y": 1616,
+   "w": 32,
+   "h": 24,
+   "pixels": 192,
+   "element": null
+  },
+  {
+   "x": 8,
+   "y": 1432,
+   "w": 24,
+   "h": 24,
+   "pixels": 112,
+   "element": null
+  }
+ ]
+}

@@ -1,0 +1,626 @@
+{
+ "official": "client/dofus3/output/ui_shots/official/hud_mount.png",
+ "client": "client/dofus3/output/ui_shots/web/hud_mount.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 2143992,
+ "mismatched_pixels": 963442,
+ "mismatched_ratio": 0.44937,
+ "regions": 46,
+ "worst": [
+  {
+   "x": 744,
+   "y": 296,
+   "w": 1440,
+   "h": 1360,
+   "pixels": 606082,
+   "element": {
+    "id": "rideParentUI-root-820029249",
+    "binding": "lbl_noParents",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_highlight_secondary80",
+     "italicShort_medium",
+     "dofusLabel",
+     "uitk-inline-rideParentUI-13"
+    ],
+    "text": "Aucune recette trouvée",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     626,
+     359,
+     692,
+     552
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 0,
+   "w": 1752,
+   "h": 104,
+   "pixels": 170943,
+   "element": {
+    "id": "mapInfo-root-881171057",
+    "binding": "ctr_mapCoordsLevel",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement",
+     "uitk-inline-mapInfo-18"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 6,
+    "box": [
+     8,
+     32,
+     1125,
+     26
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 1272,
+   "w": 624,
+   "h": 384,
+   "pixels": 103952,
+   "element": {
+    "id": "chatview-root--562385889",
+    "binding": "listChat",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "backgroundColor_black_black25",
+     "uitk-inline-chatview-4",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0.25)",
+    "image": null,
+    "depth": 7,
+    "box": [
+     32,
+     860,
+     368,
+     185
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 272,
+   "w": 472,
+   "h": 168,
+   "pixels": 33727,
+   "element": {
+    "id": "questList-root-background",
+    "binding": "background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__background"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(61, 64, 92)",
+    "image": "url(\"http://127.0.0.1:5173/uitk/assets/9f1c2aa1_8466790348161017816.png\")",
+    "depth": 5,
+    "box": [
+     1,
+     181,
+     300,
+     100
+    ]
+   }
+  },
+  {
+   "x": 2864,
+   "y": 120,
+   "w": 80,
+   "h": 440,
+   "pixels": 29808,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "i",
+    "classes": [
+     "uitk-tint-layer"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(182, 179, 230)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/icons/map.png\")",
+    "depth": 14,
+    "box": [
+     1886,
+     222,
+     24,
+     24
+    ]
+   }
+  },
+  {
+   "x": 1456,
+   "y": 648,
+   "w": 232,
+   "h": 48,
+   "pixels": 9848,
+   "element": {
+    "id": "rideParentUI-root-820029249",
+    "binding": "lbl_noParents",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_highlight_secondary80",
+     "italicShort_medium",
+     "dofusLabel",
+     "uitk-inline-rideParentUI-13"
+    ],
+    "text": "Aucune recette trouvée",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     626,
+     359,
+     692,
+     552
+    ]
+   }
+  },
+  {
+   "x": 1944,
+   "y": 648,
+   "w": 48,
+   "h": 48,
+   "pixels": 1916,
+   "element": {
+    "id": "rideParentUI-root-820029249",
+    "binding": "lbl_noParents",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_highlight_secondary80",
+     "italicShort_medium",
+     "dofusLabel",
+     "uitk-inline-rideParentUI-13"
+    ],
+    "text": "Aucune recette trouvée",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     626,
+     359,
+     692,
+     552
+    ]
+   }
+  },
+  {
+   "x": 1776,
+   "y": 600,
+   "w": 216,
+   "h": 24,
+   "pixels": 1904,
+   "element": {
+    "id": "rideParentUI-root-820029249",
+    "binding": "lbl_noParents",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_highlight_secondary80",
+     "italicShort_medium",
+     "dofusLabel",
+     "uitk-inline-rideParentUI-13"
+    ],
+    "text": "Aucune recette trouvée",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     626,
+     359,
+     692,
+     552
+    ]
+   }
+  },
+  {
+   "x": 1192,
+   "y": 472,
+   "w": 48,
+   "h": 48,
+   "pixels": 1888,
+   "element": {
+    "id": "rideParentUI-root--691006992",
+    "binding": "ctr_content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-rideParentUI-2"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 7,
+    "box": [
+     602,
+     231,
+     716,
+     700
+    ]
+   }
+  },
+  {
+   "x": 272,
+   "y": 344,
+   "w": 88,
+   "h": 16,
+   "pixels": 708,
+   "element": {
+    "id": "questList-root-background",
+    "binding": "background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__background"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(61, 64, 92)",
+    "image": "url(\"http://127.0.0.1:5173/uitk/assets/9f1c2aa1_8466790348161017816.png\")",
+    "depth": 5,
+    "box": [
+     1,
+     181,
+     300,
+     100
+    ]
+   }
+  },
+  {
+   "x": 1360,
+   "y": 664,
+   "w": 88,
+   "h": 24,
+   "pixels": 648,
+   "element": {
+    "id": "rideParentUI-root-820029249",
+    "binding": "lbl_noParents",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_highlight_secondary80",
+     "italicShort_medium",
+     "dofusLabel",
+     "uitk-inline-rideParentUI-13"
+    ],
+    "text": "Aucune recette trouvée",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     626,
+     359,
+     692,
+     552
+    ]
+   }
+  },
+  {
+   "x": 1704,
+   "y": 656,
+   "w": 24,
+   "h": 32,
+   "pixels": 344,
+   "element": {
+    "id": "rideParentUI-root-820029249",
+    "binding": "lbl_noParents",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_highlight_secondary80",
+     "italicShort_medium",
+     "dofusLabel",
+     "uitk-inline-rideParentUI-13"
+    ],
+    "text": "Aucune recette trouvée",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     626,
+     359,
+     692,
+     552
+    ]
+   }
+  },
+  {
+   "x": 24,
+   "y": 328,
+   "w": 24,
+   "h": 24,
+   "pixels": 324,
+   "element": {
+    "id": "questList-root-background",
+    "binding": "background",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__background"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(61, 64, 92)",
+    "image": "url(\"http://127.0.0.1:5173/uitk/assets/9f1c2aa1_8466790348161017816.png\")",
+    "depth": 5,
+    "box": [
+     1,
+     181,
+     300,
+     100
+    ]
+   }
+  },
+  {
+   "x": 944,
+   "y": 592,
+   "w": 88,
+   "h": 16,
+   "pixels": 246,
+   "element": {
+    "id": "rideParentUI-root-820029249",
+    "binding": "lbl_noParents",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_highlight_secondary80",
+     "italicShort_medium",
+     "dofusLabel",
+     "uitk-inline-rideParentUI-13"
+    ],
+    "text": "Aucune recette trouvée",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     626,
+     359,
+     692,
+     552
+    ]
+   }
+  },
+  {
+   "x": 1024,
+   "y": 1280,
+   "w": 48,
+   "h": 40,
+   "pixels": 208,
+   "element": {
+    "id": "rideParentUI-root-820029249",
+    "binding": "lbl_noParents",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_highlight_secondary80",
+     "italicShort_medium",
+     "dofusLabel",
+     "uitk-inline-rideParentUI-13"
+    ],
+    "text": "Aucune recette trouvée",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     626,
+     359,
+     692,
+     552
+    ]
+   }
+  },
+  {
+   "x": 960,
+   "y": 1032,
+   "w": 24,
+   "h": 32,
+   "pixels": 198,
+   "element": {
+    "id": "rideParentUI-root-820029249",
+    "binding": "lbl_noParents",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_highlight_secondary80",
+     "italicShort_medium",
+     "dofusLabel",
+     "uitk-inline-rideParentUI-13"
+    ],
+    "text": "Aucune recette trouvée",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     626,
+     359,
+     692,
+     552
+    ]
+   }
+  },
+  {
+   "x": 16,
+   "y": 1616,
+   "w": 32,
+   "h": 24,
+   "pixels": 192,
+   "element": {
+    "id": "chatview-root-button_iconLeft_Vector",
+    "binding": "button_iconLeft_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     4,
+     1052,
+     20,
+     20
+    ]
+   }
+  },
+  {
+   "x": 1384,
+   "y": 536,
+   "w": 32,
+   "h": 16,
+   "pixels": 128,
+   "element": {
+    "id": "rideParentUI-root--1947071716",
+    "binding": null,
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "uitk-inline-rideParentUI-11"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 8,
+    "box": [
+     626,
+     341,
+     692,
+     570
+    ]
+   }
+  },
+  {
+   "x": 8,
+   "y": 1432,
+   "w": 24,
+   "h": 24,
+   "pixels": 112,
+   "element": {
+    "id": "chatview-root--293950300",
+    "binding": "sv_toggles",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 7,
+    "box": [
+     0,
+     860,
+     32,
+     185
+    ]
+   }
+  },
+  {
+   "x": 960,
+   "y": 1336,
+   "w": 32,
+   "h": 16,
+   "pixels": 40,
+   "element": {
+    "id": "rideParentUI-root-820029249",
+    "binding": "lbl_noParents",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_highlight_secondary80",
+     "italicShort_medium",
+     "dofusLabel",
+     "uitk-inline-rideParentUI-13"
+    ],
+    "text": "Aucune recette trouvée",
+    "font": "Lexend-Regular 15px/18px",
+    "color": "rgba(182, 179, 230, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "depth": 10,
+    "box": [
+     626,
+     359,
+     692,
+     552
+    ]
+   }
+  }
+ ]
+}

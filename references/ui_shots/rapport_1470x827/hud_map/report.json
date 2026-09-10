@@ -1,0 +1,263 @@
+{
+ "official": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/official/hud_map.png",
+ "client": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/web/hud_map.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 1436585,
+ "mismatched_pixels": 1316721,
+ "mismatched_ratio": 0.91656,
+ "regions": 9,
+ "worst": [
+  {
+   "x": 2640,
+   "y": 80,
+   "w": 304,
+   "h": 1464,
+   "pixels": 370406,
+   "element": {
+    "id": "CartographyMapUI-root-1976582437",
+    "binding": "gd_anomaly",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "scrollbarPadding",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2710,
+     643,
+     833,
+     711
+    ]
+   }
+  },
+  {
+   "x": 624,
+   "y": 472,
+   "w": 408,
+   "h": 896,
+   "pixels": 291495,
+   "element": {
+    "id": "CartographyMapUI-root--1864245988",
+    "binding": "ctr_filterBidHouse",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     640,
+     916,
+     374,
+     55
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 1280,
+   "w": 616,
+   "h": 376,
+   "pixels": 228742,
+   "element": {
+    "id": "chatview-root--562385889",
+    "binding": "listChat",
+    "type": "ListView",
+    "classes": [
+     "official-node",
+     "official-ListView",
+     "backgroundColor_black_black25",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0.25)",
+    "image": null,
+    "box": [
+     49,
+     1317,
+     564,
+     283
+    ]
+   }
+  },
+  {
+   "x": 744,
+   "y": 1376,
+   "w": 1432,
+   "h": 280,
+   "pixels": 222621,
+   "element": {
+    "id": "mapInfo-root-1961645449",
+    "binding": "MapInfoScreenContainer",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     0,
+     0,
+     2940,
+     1654
+    ]
+   }
+  },
+  {
+   "x": 8,
+   "y": 0,
+   "w": 1728,
+   "h": 96,
+   "pixels": 72370,
+   "element": {
+    "id": "mapInfo-root-1689843842",
+    "binding": "ctr_infos",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     0,
+     0,
+     1747,
+     98
+    ]
+   }
+  },
+  {
+   "x": 624,
+   "y": 176,
+   "w": 1688,
+   "h": 136,
+   "pixels": 65754,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "div",
+    "classes": [
+     "official-window-grip",
+     "is-n"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     643,
+     240,
+     1651,
+     11
+    ]
+   }
+  },
+  {
+   "x": 0,
+   "y": 272,
+   "w": 464,
+   "h": 160,
+   "pixels": 50397,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 2192,
+   "y": 1208,
+   "w": 96,
+   "h": 176,
+   "pixels": 14912,
+   "element": {
+    "id": "CartographyMapUI-root-button_container",
+    "binding": "button_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(182, 179, 230, 0.25)",
+    "image": null,
+    "box": [
+     2199,
+     1271,
+     80,
+     49
+    ]
+   }
+  },
+  {
+   "x": 1200,
+   "y": 224,
+   "w": 8,
+   "h": 8,
+   "pixels": 24,
+   "element": {
+    "id": null,
+    "binding": null,
+    "type": "div",
+    "classes": [
+     "official-window-titlebar-tint"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(182, 179, 229, 0.2)",
+    "image": null,
+    "box": [
+     628,
+     181,
+     1681,
+     64
+    ]
+   }
+  }
+ ]
+}

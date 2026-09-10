@@ -1,0 +1,2328 @@
+{
+ "official": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/official/hud_achievements.png",
+ "client": "/Users/hugo/Downloads/Giny.NETCore-2.68/DOFUS_3/output/ui_shots/web/hud_achievements.png",
+ "size": [
+  2940,
+  1654
+ ],
+ "tolerance": 16,
+ "ui_only": true,
+ "compared_pixels": 2791081,
+ "mismatched_pixels": 1235187,
+ "mismatched_ratio": 0.44255,
+ "regions": 85,
+ "worst": [
+  {
+   "x": 0,
+   "y": 0,
+   "w": 2496,
+   "h": 1656,
+   "pixels": 970180,
+   "element": {
+    "id": "achievements-38-225423487",
+    "binding": "lbl_name",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_white_white80",
+     "noLineHeightTitle",
+     "dofusLabel"
+    ],
+    "text": "Donjon des Bworks",
+    "font": "Rowdies-Regular 18px/normal",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     824,
+     260,
+     34
+    ]
+   }
+  },
+  {
+   "x": 1256,
+   "y": 128,
+   "w": 1040,
+   "h": 104,
+   "pixels": 94619,
+   "element": {
+    "id": "achievements-root--930344845",
+    "binding": "tx_mainPts",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(89, 47, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": "url(\"http://127.0.0.1:5173/ui-data/styles/images/trophyBrown.png\")",
+    "box": [
+     1752,
+     155,
+     49,
+     49
+    ]
+   }
+  },
+  {
+   "x": 1224,
+   "y": 248,
+   "w": 744,
+   "h": 96,
+   "pixels": 41920,
+   "element": {
+    "id": "achievements-33--1560780379",
+    "binding": "ctr_title",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     263,
+     570,
+     34
+    ]
+   }
+  },
+  {
+   "x": 2872,
+   "y": 80,
+   "w": 72,
+   "h": 432,
+   "pixels": 27447,
+   "element": {
+    "id": "bannerMenu-gd_btnUis_3-itemTile_container",
+    "binding": "itemTile_container",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(80, 84, 126, 0.8)",
+    "image": null,
+    "box": [
+     2882,
+     293,
+     49,
+     49
+    ]
+   }
+  },
+  {
+   "x": 576,
+   "y": 296,
+   "w": 456,
+   "h": 48,
+   "pixels": 17472,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1224,
+   "y": 856,
+   "w": 784,
+   "h": 48,
+   "pixels": 7870,
+   "element": {
+    "id": "achievements-38--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre la Bworkette dans son donjon.",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     867,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 1776,
+   "y": 712,
+   "w": 88,
+   "h": 88,
+   "pixels": 5500,
+   "element": {
+    "id": "achievements-37--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre le Bouftou Royal dans son donjon",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     680,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 1776,
+   "y": 408,
+   "w": 88,
+   "h": 80,
+   "pixels": 5340,
+   "element": {
+    "id": "achievements-34-414477891",
+    "binding": "openEffect",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1101,
+     436,
+     861,
+     187
+    ]
+   }
+  },
+  {
+   "x": 1224,
+   "y": 1384,
+   "w": 336,
+   "h": 40,
+   "pixels": 4564,
+   "element": {
+    "id": "achievements-48-225423487",
+    "binding": "lbl_name",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_white_white80",
+     "noLineHeightTitle",
+     "dofusLabel"
+    ],
+    "text": "Donjon des Scarafeuilles",
+    "font": "Rowdies-Regular 18px/normal",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     1384,
+     329,
+     34
+    ]
+   }
+  },
+  {
+   "x": 1224,
+   "y": 816,
+   "w": 264,
+   "h": 48,
+   "pixels": 4524,
+   "element": {
+    "id": "achievements-38-225423487",
+    "binding": "lbl_name",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textColor_white_white80",
+     "noLineHeightTitle",
+     "dofusLabel"
+    ],
+    "text": "Donjon des Bworks",
+    "font": "Rowdies-Regular 18px/normal",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     824,
+     260,
+     34
+    ]
+   }
+  },
+  {
+   "x": 1408,
+   "y": 504,
+   "w": 304,
+   "h": 40,
+   "pixels": 2734,
+   "element": {
+    "id": "achievements-34--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre la Shin Larve dans son donjon.",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     493,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 56,
+   "y": 328,
+   "w": 216,
+   "h": 48,
+   "pixels": 2252,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 896,
+   "w": 272,
+   "h": 16,
+   "pixels": 1980,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1752,
+   "y": 368,
+   "w": 216,
+   "h": 24,
+   "pixels": 1976,
+   "element": {
+    "id": "achievements-33--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre Kardorim dans son donjon.",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     306,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 680,
+   "y": 256,
+   "w": 152,
+   "h": 32,
+   "pixels": 1948,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1216,
+   "y": 1120,
+   "w": 224,
+   "h": 32,
+   "pixels": 1832,
+   "element": {
+    "id": "achievements-40--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre le Tournesol Affamé dans son don",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     1054,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 1120,
+   "w": 64,
+   "h": 64,
+   "pixels": 1784,
+   "element": {
+    "id": "achievements-40--1113388440",
+    "binding": "lbl_pointsAchievement",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "labelShadow_dropShadows_medium",
+     "noLineHeightTitle",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "10",
+    "font": "Rowdies-Regular 18px/normal",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1130,
+     1123,
+     46,
+     34
+    ]
+   }
+  },
+  {
+   "x": 1840,
+   "y": 776,
+   "w": 128,
+   "h": 64,
+   "pixels": 1718,
+   "element": {
+    "id": "achievements-37-414477891",
+    "binding": "openEffect",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1101,
+     623,
+     861,
+     187
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 1096,
+   "w": 248,
+   "h": 24,
+   "pixels": 1696,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1880,
+   "y": 720,
+   "w": 88,
+   "h": 48,
+   "pixels": 1556,
+   "element": {
+    "id": "achievements-37-414477891",
+    "binding": "openEffect",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1101,
+     623,
+     861,
+     187
+    ]
+   }
+  },
+  {
+   "x": 1880,
+   "y": 408,
+   "w": 88,
+   "h": 56,
+   "pixels": 1539,
+   "element": {
+    "id": "achievements-33-414477891",
+    "binding": "openEffect",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1101,
+     250,
+     861,
+     187
+    ]
+   }
+  },
+  {
+   "x": 1224,
+   "y": 504,
+   "w": 176,
+   "h": 24,
+   "pixels": 1439,
+   "element": {
+    "id": "achievements-34--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre la Shin Larve dans son donjon.",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     493,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 944,
+   "w": 176,
+   "h": 24,
+   "pixels": 1344,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1224,
+   "y": 1160,
+   "w": 160,
+   "h": 24,
+   "pixels": 1248,
+   "element": {
+    "id": "achievements-40-414477891",
+    "binding": "openEffect",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1101,
+     997,
+     861,
+     187
+    ]
+   }
+  },
+  {
+   "x": 840,
+   "y": 256,
+   "w": 136,
+   "h": 32,
+   "pixels": 1224,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 1048,
+   "w": 152,
+   "h": 24,
+   "pixels": 1220,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 784,
+   "w": 136,
+   "h": 24,
+   "pixels": 1104,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1320,
+   "y": 976,
+   "w": 144,
+   "h": 16,
+   "pixels": 1100,
+   "element": {
+    "id": "achievements-38--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre la Bworkette dans son donjon.",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     867,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 480,
+   "w": 144,
+   "h": 24,
+   "pixels": 1072,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1840,
+   "y": 504,
+   "w": 128,
+   "h": 32,
+   "pixels": 998,
+   "element": {
+    "id": "achievements-34--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre la Shin Larve dans son donjon.",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     493,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 584,
+   "w": 112,
+   "h": 16,
+   "pixels": 888,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 840,
+   "w": 112,
+   "h": 24,
+   "pixels": 848,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 536,
+   "w": 104,
+   "h": 16,
+   "pixels": 796,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 424,
+   "w": 96,
+   "h": 24,
+   "pixels": 744,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 680,
+   "w": 88,
+   "h": 24,
+   "pixels": 716,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1880,
+   "y": 472,
+   "w": 88,
+   "h": 24,
+   "pixels": 694,
+   "element": {
+    "id": "achievements-34-414477891",
+    "binding": "openEffect",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1101,
+     436,
+     861,
+     187
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 1312,
+   "w": 64,
+   "h": 32,
+   "pixels": 685,
+   "element": {
+    "id": "achievements-43--1113388440",
+    "binding": "lbl_pointsAchievement",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "labelShadow_dropShadows_medium",
+     "noLineHeightTitle",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "10",
+    "font": "Rowdies-Regular 18px/normal",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1130,
+     1309,
+     46,
+     34
+    ]
+   }
+  },
+  {
+   "x": 1264,
+   "y": 776,
+   "w": 80,
+   "h": 24,
+   "pixels": 684,
+   "element": {
+    "id": "achievements-37--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre le Bouftou Royal dans son donjon",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     680,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 736,
+   "w": 96,
+   "h": 24,
+   "pixels": 676,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1800,
+   "y": 504,
+   "w": 32,
+   "h": 32,
+   "pixels": 676,
+   "element": {
+    "id": "achievements-34--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre la Shin Larve dans son donjon.",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     493,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 1144,
+   "y": 936,
+   "w": 64,
+   "h": 32,
+   "pixels": 669,
+   "element": {
+    "id": "achievements-38--1113388440",
+    "binding": "lbl_pointsAchievement",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "labelShadow_dropShadows_medium",
+     "noLineHeightTitle",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "10",
+    "font": "Rowdies-Regular 18px/normal",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1130,
+     936,
+     46,
+     34
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 632,
+   "w": 80,
+   "h": 24,
+   "pixels": 636,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1472,
+   "y": 976,
+   "w": 88,
+   "h": 16,
+   "pixels": 632,
+   "element": {
+    "id": "achievements-38--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre la Bworkette dans son donjon.",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     867,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 1800,
+   "y": 808,
+   "w": 32,
+   "h": 32,
+   "pixels": 624,
+   "element": {
+    "id": "achievements-38-414477891",
+    "binding": "openEffect",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1101,
+     810,
+     861,
+     187
+    ]
+   }
+  },
+  {
+   "x": 872,
+   "y": 1096,
+   "w": 88,
+   "h": 24,
+   "pixels": 596,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1672,
+   "y": 816,
+   "w": 40,
+   "h": 32,
+   "pixels": 540,
+   "element": {
+    "id": "achievements-38--1560780379",
+    "binding": "ctr_title",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     824,
+     570,
+     34
+    ]
+   }
+  },
+  {
+   "x": 616,
+   "y": 1000,
+   "w": 80,
+   "h": 16,
+   "pixels": 532,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1672,
+   "y": 424,
+   "w": 40,
+   "h": 32,
+   "pixels": 530,
+   "element": {
+    "id": "achievements-34-414477891",
+    "binding": "openEffect",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1101,
+     436,
+     861,
+     187
+    ]
+   }
+  },
+  {
+   "x": 1672,
+   "y": 728,
+   "w": 40,
+   "h": 32,
+   "pixels": 528,
+   "element": {
+    "id": "achievements-37--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre le Bouftou Royal dans son donjon",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     680,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 960,
+   "y": 688,
+   "w": 56,
+   "h": 16,
+   "pixels": 504,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1896,
+   "y": 672,
+   "w": 72,
+   "h": 16,
+   "pixels": 468,
+   "element": {
+    "id": "achievements-37-414477891",
+    "binding": "openEffect",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1101,
+     623,
+     861,
+     187
+    ]
+   }
+  },
+  {
+   "x": 960,
+   "y": 424,
+   "w": 56,
+   "h": 24,
+   "pixels": 452,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 1672,
+   "y": 776,
+   "w": 40,
+   "h": 32,
+   "pixels": 424,
+   "element": {
+    "id": "achievements-37--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre le Bouftou Royal dans son donjon",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     680,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 1672,
+   "y": 464,
+   "w": 40,
+   "h": 32,
+   "pixels": 424,
+   "element": {
+    "id": "achievements-34--1560780379",
+    "binding": "ctr_title",
+    "type": "DofusVisualElement",
+    "classes": [
+     "official-node",
+     "official-DofusVisualElement"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     450,
+     570,
+     34
+    ]
+   }
+  },
+  {
+   "x": 1752,
+   "y": 696,
+   "w": 216,
+   "h": 8,
+   "pixels": 408,
+   "element": {
+    "id": "achievements-37--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre le Bouftou Royal dans son donjon",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     680,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 1672,
+   "y": 560,
+   "w": 32,
+   "h": 24,
+   "pixels": 388,
+   "element": {
+    "id": "achievements-34--308081673",
+    "binding": "lbl_description",
+    "type": "DofusLabel",
+    "classes": [
+     "official-node",
+     "official-DofusLabel",
+     "textShort_largeRegular",
+     "textColor_white_white80",
+     "dofusLabel"
+    ],
+    "text": "Vaincre la Shin Larve dans son donjon.",
+    "font": "Lexend-Regular 16px/20px",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     1223,
+     493,
+     681,
+     118
+    ]
+   }
+  },
+  {
+   "x": 576,
+   "y": 1040,
+   "w": 32,
+   "h": 32,
+   "pixels": 384,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 976,
+   "y": 1096,
+   "w": 40,
+   "h": 24,
+   "pixels": 380,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 976,
+   "y": 1048,
+   "w": 40,
+   "h": 24,
+   "pixels": 380,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 976,
+   "y": 992,
+   "w": 40,
+   "h": 24,
+   "pixels": 380,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 976,
+   "y": 944,
+   "w": 40,
+   "h": 24,
+   "pixels": 380,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 976,
+   "y": 888,
+   "w": 40,
+   "h": 24,
+   "pixels": 380,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 976,
+   "y": 840,
+   "w": 40,
+   "h": 24,
+   "pixels": 380,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 976,
+   "y": 792,
+   "w": 40,
+   "h": 16,
+   "pixels": 380,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 976,
+   "y": 736,
+   "w": 40,
+   "h": 24,
+   "pixels": 380,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 976,
+   "y": 632,
+   "w": 40,
+   "h": 24,
+   "pixels": 380,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 976,
+   "y": 584,
+   "w": 40,
+   "h": 24,
+   "pixels": 380,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 976,
+   "y": 528,
+   "w": 40,
+   "h": 24,
+   "pixels": 380,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 576,
+   "y": 528,
+   "w": 32,
+   "h": 24,
+   "pixels": 368,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 976,
+   "y": 480,
+   "w": 40,
+   "h": 24,
+   "pixels": 364,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 576,
+   "y": 424,
+   "w": 32,
+   "h": 24,
+   "pixels": 316,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 576,
+   "y": 784,
+   "w": 24,
+   "h": 32,
+   "pixels": 312,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 576,
+   "y": 888,
+   "w": 32,
+   "h": 32,
+   "pixels": 308,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 576,
+   "y": 584,
+   "w": 24,
+   "h": 24,
+   "pixels": 304,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 576,
+   "y": 1096,
+   "w": 24,
+   "h": 24,
+   "pixels": 300,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 576,
+   "y": 840,
+   "w": 24,
+   "h": 24,
+   "pixels": 300,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 24,
+   "y": 328,
+   "w": 24,
+   "h": 24,
+   "pixels": 280,
+   "element": {
+    "id": "questList-root-content",
+    "binding": "content",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement",
+     "resizablewindow__content"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     2,
+     323,
+     459,
+     107
+    ]
+   }
+  },
+  {
+   "x": 16,
+   "y": 1616,
+   "w": 32,
+   "h": 24,
+   "pixels": 192,
+   "element": {
+    "id": "chatview-root-button_iconLeft_Vector",
+    "binding": "button_iconLeft_Vector",
+    "type": "VisualElement",
+    "classes": [
+     "official-node",
+     "official-VisualElement"
+    ],
+    "text": null,
+    "font": "Lexend-Regular 16px/normal",
+    "color": "rgb(49, 45, 36)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     6,
+     1613,
+     31,
+     31
+    ]
+   }
+  },
+  {
+   "x": 576,
+   "y": 680,
+   "w": 32,
+   "h": 32,
+   "pixels": 192,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  },
+  {
+   "x": 584,
+   "y": 632,
+   "w": 16,
+   "h": 24,
+   "pixels": 168,
+   "element": {
+    "id": "achievements-root--1367638730",
+    "binding": "gd_categories",
+    "type": "ScrollView",
+    "classes": [
+     "official-node",
+     "official-ScrollView",
+     "scrollbarOver",
+     "is-interactive"
+    ],
+    "text": null,
+    "font": "NotInter-Regular 14px/normal",
+    "color": "rgb(27, 27, 27)",
+    "background": "rgba(0, 0, 0, 0)",
+    "image": null,
+    "box": [
+     452,
+     253,
+     612,
+     1286
+    ]
+   }
+  }
+ ]
+}

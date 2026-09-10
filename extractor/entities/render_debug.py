@@ -1,4 +1,4 @@
-"""CPU textured-mesh preview. Used to verify extraction without Godot."""
+"""CPU textured-mesh preview. Used to verify extraction without launching the client."""
 
 from __future__ import annotations
 
@@ -86,7 +86,10 @@ def render_entity_preview(
 
     draw_items = []
     for node in nodes:
-        graphic = node.get("graphic")
+        # v2 documents carry the resolved SkinAsset part name in part_ref
+        # (animation graphic ids are 0-based indices into aod.graphics);
+        # fall back to the raw graphic id for v1 documents.
+        graphic = node.get("part_ref", node.get("graphic"))
         tr = node.get("transform")
         if graphic is None or tr is None:
             continue

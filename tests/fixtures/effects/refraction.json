@@ -1,0 +1,34 @@
+{
+  "m_Name": "map_54162245",
+  "mapData": {
+    "mapWindConfiguration": { "rid": -2 },
+    "mapWaveConfiguration": { "rid": -2 },
+    "mapNoiseModifierConfiguration": { "rid": -2 },
+    "mapPostProcessConfiguration": { "rid": -2 },
+    "refractionElements": [
+      { "gfxId": 57971, "materialIndex": 0, "displayBehaviour": 1, "transform": { "m11": 1, "m12": 0, "m21": 0, "m22": 1, "m31": 0, "m32": 0 } }
+    ],
+    "particlesParameters": [],
+    "animatedElements": [],
+    "stagingSequences": [],
+    "backgroundMaterialData": { "shaderData": [{ "rid": 8 }] },
+    "sortableMaterialData": { "shaderData": [{ "rid": 9 }] },
+    "foregroundMaterialData": { "shaderData": [{ "rid": 10 }] }
+  },
+  "references": {
+    "RefIds": [
+      { "rid": 8, "type": { "class": "ParticlesShaderData" }, "data": { "gfxId": 2039, "shaderParameters": [] } },
+      { "rid": 9, "type": { "class": "ShaderData" }, "data": { "gfxId": 306111, "shaderParameters": [] } },
+      {
+        "rid": 10,
+        "type": { "class": "PaintShaderData" },
+        "data": { "gfxId": 57971, "shaderParameters": [{ "rid": 11 }] }
+      },
+      {
+        "rid": 11,
+        "type": { "class": "ShaderRefractionParameters" },
+        "data": { "noiseTexID": 1, "strength": 8.6, "maskTexID": 0 }
+      }
+    ]
+  }
+}
