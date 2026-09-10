@@ -1,0 +1,51 @@
+using System.Collections.Generic;
+using Giny.Core.Network.Messages;
+using Giny.Protocol.Types;
+using Giny.Core.IO.Interfaces;
+using Giny.Protocol;
+using Giny.Protocol.Enums;
+using Version = Giny.Protocol.Types.Version;
+
+namespace Giny.Protocol.Messages
+{
+    public class AllianceAllRanksUpdateRequestMessage : NetworkMessage
+    {
+        public const ushort Id = 1620;
+        public override ushort MessageId => Id;
+
+        public RankInformation[] ranks;
+
+        public AllianceAllRanksUpdateRequestMessage()
+        {
+        }
+        public AllianceAllRanksUpdateRequestMessage(RankInformation[] ranks)
+        {
+            this.ranks = ranks;
+        }
+        public override void Serialize(IDataWriter writer)
+        {
+            writer.WriteShort((short)ranks.Length);
+            for (uint _i1 = 0; _i1 < ranks.Length; _i1++)
+            {
+                (ranks[_i1] as RankInformation).Serialize(writer);
+            }
+
+        }
+        public override void Deserialize(IDataReader reader)
+        {
+            RankInformation _item1 = null;
+            uint _ranksLen = (uint)(reader.ReadUShort());
+            ranks = new RankInformation[_ranksLen];
+            for (uint _i1 = 0; _i1 < _ranksLen; _i1++)
+            {
+                _item1 = new RankInformation();
+                _item1.Deserialize(reader);
+                ranks[_i1] = _item1;
+            }
+
+        }
+
+    }
+}
+
+

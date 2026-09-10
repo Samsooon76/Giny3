@@ -1,0 +1,922 @@
+TABLE_SCHEMA	TABLE_NAME	ENGINE	TABLE_ROWS
+giny_auth	accounts	MyISAM	2
+giny_auth	world_characters	MyISAM	2
+giny_auth	world_servers	MyISAM	1
+giny_world	achievements	InnoDB	3183
+giny_world	achievement_objectives	InnoDB	9806
+giny_world	achievement_rewards	InnoDB	6703
+giny_world	areas	InnoDB	62
+giny_world	bank_items	InnoDB	0
+giny_world	battle_pass_rewards	InnoDB	40
+giny_world	battle_pass_seasons	InnoDB	0
+giny_world	bidshops	InnoDB	4
+giny_world	bidshop_items	InnoDB	0
+giny_world	breeds	InnoDB	19
+giny_world	challenges	InnoDB	738
+giny_world	characters	MyISAM	1
+giny_world	character_items	MyISAM	1
+giny_world	dungeons	InnoDB	124
+giny_world	effects	InnoDB	764
+giny_world	emotes	InnoDB	264
+giny_world	experiences	InnoDB	2339
+giny_world	guilds	InnoDB	0
+giny_world	guild_buildings	InnoDB	3
+giny_world	guild_building_effects	InnoDB	17
+giny_world	guild_building_levels	InnoDB	9
+giny_world	guild_building_level_requirements	InnoDB	9
+giny_world	guild_building_states	InnoDB	0
+giny_world	guild_projects	InnoDB	0
+giny_world	guild_project_contributions	InnoDB	0
+giny_world	guild_project_requirements	InnoDB	0
+giny_world	heads	InnoDB	304
+giny_world	initial_items	InnoDB	0
+giny_world	interactive_skills	InnoDB	17139
+giny_world	items	InnoDB	17489
+giny_world	item_sets	InnoDB	504
+giny_world	living_objects	InnoDB	41
+giny_world	maps	InnoDB	8084
+giny_world	map_positions	InnoDB	11905
+giny_world	map_references	InnoDB	590
+giny_world	map_scroll_actions	InnoDB	2204
+giny_world	monsters	InnoDB	5068
+giny_world	monster_spawns	InnoDB	2459
+giny_world	monster_static_spawns	MyISAM	0
+giny_world	npcs	InnoDB	5926
+giny_world	npc_actions	InnoDB	85
+giny_world	npc_replies	InnoDB	110
+giny_world	npc_spawns	InnoDB	70
+giny_world	ornaments	InnoDB	145
+giny_world	player_battle_pass_claims	InnoDB	0
+giny_world	player_battle_pass_progress	InnoDB	0
+giny_world	player_pokefus_researched_genes	InnoDB	0
+giny_world	player_pokefus_species_progress	InnoDB	0
+giny_world	player_quests	InnoDB	18
+giny_world	player_quest_rewards	InnoDB	48
+giny_world	pokefus	InnoDB	0
+giny_world	pokefus_capture_configuration	InnoDB	0
+giny_world	pokefus_capture_nets	InnoDB	10
+giny_world	pokefus_equipped_genes	InnoDB	0
+giny_world	pokefus_genes	InnoDB	5
+giny_world	pokefus_genome_branches	InnoDB	3
+giny_world	pokefus_species	InnoDB	0
+giny_world	pokefus_unlocked_genes	InnoDB	0
+giny_world	quests	InnoDB	1929
+giny_world	quest_objectives	MyISAM	0
+giny_world	quest_rewards	InnoDB	390
+giny_world	quest_steps	InnoDB	2175
+giny_world	quest_step_rewards	InnoDB	0
+giny_world	quest_templates	InnoDB	195
+giny_world	recipes	InnoDB	4531
+giny_world	skills	InnoDB	318
+giny_world	spells	InnoDB	19084
+giny_world	spell_bombs	InnoDB	9
+giny_world	spell_levels	InnoDB	37705
+giny_world	spell_states	InnoDB	3924
+giny_world	spell_variants	InnoDB	432
+giny_world	subareas	InnoDB	460
+giny_world	titles	InnoDB	341
+giny_world	waypoints	InnoDB	58
+giny_world	weapons	InnoDB	734
+giny_world	world_accounts	InnoDB	0
+TABLE_SCHEMA	TABLE_NAME	ORDINAL_POSITION	COLUMN_NAME	COLUMN_TYPE	IS_NULLABLE	COLUMN_DEFAULT	COLUMN_KEY
+giny_auth	accounts	1	Id	int(11)	NO	NULL	PRI
+giny_auth	accounts	2	Username	varchar(255)	YES	NULL	
+giny_auth	accounts	3	Password	varchar(255)	YES	NULL	
+giny_auth	accounts	4	LastSelectedServerId	int(11)	YES	0	
+giny_auth	accounts	5	IPs	mediumtext	YES	NULL	
+giny_auth	accounts	6	CharactersSlots	int(11)	YES	5	
+giny_auth	accounts	7	Banned	int(11)	YES	0	
+giny_auth	accounts	8	Role	int(11)	YES	1	
+giny_auth	accounts	9	Nickname	varchar(255)	YES	NULL	
+giny_auth	accounts	10	Ogrines	int(11)	YES	0	
+giny_auth	world_characters	1	Id	int(11)	NO	NULL	PRI
+giny_auth	world_characters	2	CharacterId	bigint(20)	YES	NULL	
+giny_auth	world_characters	3	AccountId	int(11)	YES	NULL	
+giny_auth	world_characters	4	ServerId	smallint(6)	YES	NULL	
+giny_auth	world_servers	1	Id	smallint(6)	NO	NULL	PRI
+giny_auth	world_servers	2	Name	varchar(255)	YES	NULL	
+giny_auth	world_servers	3	Type	mediumtext	YES	NULL	
+giny_auth	world_servers	4	MonoAccount	mediumtext	YES	NULL	
+giny_auth	world_servers	5	Host	varchar(255)	YES	NULL	
+giny_auth	world_servers	6	Port	int(11)	YES	NULL	
+giny_world	achievements	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	achievements	2	Name	varchar(255)	YES	NULL	
+giny_world	achievements	3	CategoryId	int(11)	YES	NULL	
+giny_world	achievements	4	Description	varchar(255)	YES	NULL	
+giny_world	achievements	5	Points	int(11)	YES	NULL	
+giny_world	achievements	6	Level	smallint(6)	YES	NULL	
+giny_world	achievements	7	AccountLinked	mediumtext	YES	NULL	
+giny_world	achievements	8	ObjectiveIds	mediumtext	YES	NULL	
+giny_world	achievements	9	RewardIds	mediumtext	YES	NULL	
+giny_world	achievement_objectives	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	achievement_objectives	2	AchievementId	int(11)	YES	NULL	
+giny_world	achievement_objectives	3	ObjectiveOrder	int(11)	YES	NULL	
+giny_world	achievement_objectives	4	Name	varchar(255)	YES	NULL	
+giny_world	achievement_objectives	5	Criterion	varchar(255)	YES	NULL	
+giny_world	achievement_rewards	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	achievement_rewards	2	Criteria	varchar(255)	YES	NULL	
+giny_world	achievement_rewards	3	KamasRatio	mediumtext	YES	NULL	
+giny_world	achievement_rewards	4	ExperienceRatio	mediumtext	YES	NULL	
+giny_world	achievement_rewards	5	KamasScaleWithPlayerLevel	mediumtext	YES	NULL	
+giny_world	achievement_rewards	6	ItemsReward	mediumtext	YES	NULL	
+giny_world	achievement_rewards	7	ItemsQuantityReward	mediumtext	YES	NULL	
+giny_world	achievement_rewards	8	EmotesReward	mediumtext	YES	NULL	
+giny_world	achievement_rewards	9	SpellsReward	mediumtext	YES	NULL	
+giny_world	achievement_rewards	10	TitlesReward	mediumtext	YES	NULL	
+giny_world	achievement_rewards	11	OrnamentsReward	mediumtext	YES	NULL	
+giny_world	areas	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	areas	2	Name	varchar(255)	YES	NULL	
+giny_world	areas	3	SuperAreaId	int(11)	YES	NULL	
+giny_world	areas	4	WorldMapId	int(11)	YES	NULL	
+giny_world	bank_items	1	UId	int(11)	NO	NULL	PRI
+giny_world	bank_items	2	GId	int(11)	YES	NULL	
+giny_world	bank_items	3	Position	tinyint(4)	YES	NULL	
+giny_world	bank_items	4	Quantity	int(11)	YES	NULL	
+giny_world	bank_items	5	Effects	blob	YES	NULL	
+giny_world	bank_items	6	AppearanceId	smallint(6)	YES	NULL	
+giny_world	bank_items	7	Look	varchar(255)	YES	NULL	
+giny_world	bank_items	8	AccountId	int(11)	YES	NULL	
+giny_world	battle_pass_rewards	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	battle_pass_rewards	2	SeasonId	bigint(20)	NO	NULL	MUL
+giny_world	battle_pass_rewards	3	Level	int(11)	NO	NULL	
+giny_world	battle_pass_rewards	4	Track	varchar(8)	NO	NULL	
+giny_world	battle_pass_rewards	5	RewardType	varchar(32)	NO	NULL	
+giny_world	battle_pass_rewards	6	Amount	bigint(20)	NO	NULL	
+giny_world	battle_pass_rewards	7	ItemId	int(11)	YES	NULL	
+giny_world	battle_pass_rewards	8	Label	varchar(120)	NO	NULL	
+giny_world	battle_pass_rewards	9	ShortLabel	varchar(24)	NO	NULL	
+giny_world	battle_pass_rewards	10	DisplayOrder	int(11)	NO	0	
+giny_world	battle_pass_seasons	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	battle_pass_seasons	2	Code	varchar(32)	NO	NULL	UNI
+giny_world	battle_pass_seasons	3	Name	varchar(80)	NO	NULL	
+giny_world	battle_pass_seasons	4	StartsAt	datetime	NO	NULL	
+giny_world	battle_pass_seasons	5	EndsAt	datetime	NO	NULL	
+giny_world	battle_pass_seasons	6	ExperiencePerLevel	int(11)	NO	1000	
+giny_world	battle_pass_seasons	7	LevelCount	int(11)	NO	20	
+giny_world	battle_pass_seasons	8	Enabled	tinyint(1)	NO	1	
+giny_world	bidshops	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	bidshops	2	Quantities	mediumtext	YES	NULL	
+giny_world	bidshops	3	ItemTypes	mediumtext	YES	NULL	
+giny_world	bidshops	4	MaxItemPerAccount	int(11)	YES	NULL	
+giny_world	bidshop_items	1	UId	int(11)	NO	NULL	PRI
+giny_world	bidshop_items	2	GId	int(11)	YES	NULL	
+giny_world	bidshop_items	3	Position	tinyint(4)	YES	NULL	
+giny_world	bidshop_items	4	Quantity	int(11)	YES	NULL	
+giny_world	bidshop_items	5	Effects	blob	YES	NULL	
+giny_world	bidshop_items	6	AppearanceId	smallint(6)	YES	NULL	
+giny_world	bidshop_items	7	Look	varchar(255)	YES	NULL	
+giny_world	bidshop_items	8	BidShopId	bigint(20)	YES	NULL	
+giny_world	bidshop_items	9	AccountId	int(11)	YES	NULL	
+giny_world	bidshop_items	10	Price	bigint(20)	YES	NULL	
+giny_world	bidshop_items	11	Sold	mediumtext	YES	NULL	
+giny_world	breeds	1	Id	tinyint(4)	NO	NULL	PRI
+giny_world	breeds	2	Name	varchar(255)	YES	NULL	
+giny_world	breeds	3	MaleLook	mediumtext	YES	NULL	
+giny_world	breeds	4	FemaleLook	mediumtext	YES	NULL	
+giny_world	breeds	5	StatsPointForStrength	blob	YES	NULL	
+giny_world	breeds	6	StatsPointForIntelligence	blob	YES	NULL	
+giny_world	breeds	7	StatsPointForChance	blob	YES	NULL	
+giny_world	breeds	8	StatsPointForAgility	blob	YES	NULL	
+giny_world	breeds	9	StatsPointForVitality	blob	YES	NULL	
+giny_world	breeds	10	StatsPointForWisdom	blob	YES	NULL	
+giny_world	breeds	11	MaleColors	blob	YES	NULL	
+giny_world	breeds	12	FemaleColors	blob	YES	NULL	
+giny_world	breeds	13	SpellIds	blob	YES	NULL	
+giny_world	breeds	14	GraveBonesId	smallint(6)	YES	NULL	
+giny_world	challenges	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	challenges	2	Name	varchar(255)	YES	NULL	
+giny_world	challenges	3	Description	varchar(255)	YES	NULL	
+giny_world	challenges	4	IncompatiblesChallenges	mediumtext	YES	NULL	
+giny_world	challenges	5	ActivationCriterion	varchar(255)	YES	NULL	
+giny_world	challenges	6	CompletionCriterion	varchar(255)	YES	NULL	
+giny_world	challenges	7	TargetMonsterId	int(11)	YES	NULL	
+giny_world	challenges	8	CategoryId	int(11)	YES	NULL	
+giny_world	characters	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	characters	2	Name	varchar(255)	YES	NULL	
+giny_world	characters	3	AccountId	int(11)	YES	NULL	
+giny_world	characters	4	Look	mediumtext	YES	NULL	
+giny_world	characters	5	ContextualLook	mediumtext	YES	NULL	
+giny_world	characters	6	BreedId	tinyint(4)	YES	NULL	
+giny_world	characters	7	CosmeticId	smallint(6)	YES	NULL	
+giny_world	characters	8	Sex	mediumtext	YES	NULL	
+giny_world	characters	9	MapId	bigint(20)	YES	NULL	
+giny_world	characters	10	CellId	smallint(6)	YES	NULL	
+giny_world	characters	11	Direction	mediumtext	YES	NULL	
+giny_world	characters	12	Experience	bigint(20)	YES	NULL	
+giny_world	characters	13	Stats	blob	YES	NULL	
+giny_world	characters	14	Kamas	bigint(20)	YES	NULL	
+giny_world	characters	15	KnownEmotes	blob	YES	NULL	
+giny_world	characters	16	Shortcuts	blob	YES	NULL	
+giny_world	characters	17	SpawnPointMapId	bigint(20)	YES	NULL	
+giny_world	characters	18	KnownOrnaments	blob	YES	NULL	
+giny_world	characters	19	ActiveOrnamentId	smallint(6)	YES	NULL	
+giny_world	characters	20	Spells	blob	YES	NULL	
+giny_world	characters	21	KnownTitles	blob	YES	NULL	
+giny_world	characters	22	ActiveTitleId	smallint(6)	YES	NULL	
+giny_world	characters	23	Jobs	blob	YES	NULL	
+giny_world	characters	24	GuildId	bigint(20)	YES	NULL	
+giny_world	characters	25	Achievements	blob	YES	NULL	
+giny_world	characters	26	HardcoreInformations	blob	YES	NULL	
+giny_world	characters	27	Quests	blob	YES	NULL	
+giny_world	character_items	1	UId	int(11)	NO	NULL	PRI
+giny_world	character_items	2	GId	smallint(6)	YES	NULL	
+giny_world	character_items	3	Position	tinyint(4)	YES	NULL	
+giny_world	character_items	4	Quantity	int(11)	YES	NULL	
+giny_world	character_items	5	Effects	blob	YES	NULL	
+giny_world	character_items	6	AppearanceId	smallint(6)	YES	NULL	
+giny_world	character_items	7	Look	varchar(255)	YES	NULL	
+giny_world	character_items	8	CharacterId	bigint(20)	YES	NULL	
+giny_world	dungeons	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	dungeons	2	Name	varchar(255)	YES	NULL	
+giny_world	dungeons	3	EntranceMapId	bigint(20)	YES	NULL	
+giny_world	dungeons	4	ExitMapId	bigint(20)	YES	NULL	
+giny_world	dungeons	5	OptimalPlayerLevel	smallint(6)	YES	NULL	
+giny_world	dungeons	6	Rooms	blob	YES	NULL	
+giny_world	effects	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	effects	2	Description	varchar(255)	YES	NULL	
+giny_world	effects	3	Priority	int(11)	YES	NULL	
+giny_world	effects	4	CharacteristicId	int(11)	YES	NULL	
+giny_world	effects	5	UseDice	mediumtext	YES	NULL	
+giny_world	effects	6	ForceMinMax	mediumtext	YES	NULL	
+giny_world	effects	7	Boost	mediumtext	YES	NULL	
+giny_world	effects	8	Active	mediumtext	YES	NULL	
+giny_world	effects	9	OppositeId	mediumtext	YES	NULL	
+giny_world	effects	10	EffectPowerRate	mediumtext	YES	NULL	
+giny_world	effects	11	ElementId	smallint(6)	YES	NULL	
+giny_world	emotes	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	emotes	2	Name	varchar(255)	YES	NULL	
+giny_world	emotes	3	IsAura	mediumtext	YES	NULL	
+giny_world	experiences	1	Level	smallint(6)	NO	NULL	PRI
+giny_world	experiences	2	ExperienceCharacter	bigint(20)	YES	NULL	
+giny_world	experiences	3	ExperienceJob	bigint(20)	YES	NULL	
+giny_world	experiences	4	ExperienceGuild	bigint(20)	YES	NULL	
+giny_world	guilds	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	guilds	2	Name	varchar(255)	YES	NULL	
+giny_world	guilds	3	Emblem	blob	YES	NULL	
+giny_world	guilds	4	CreationDate	mediumtext	YES	NULL	
+giny_world	guilds	5	Experience	bigint(20)	YES	NULL	
+giny_world	guilds	6	Members	blob	YES	NULL	
+giny_world	guilds	7	Motd	blob	YES	NULL	
+giny_world	guild_buildings	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	guild_buildings	2	Code	varchar(64)	NO	NULL	UNI
+giny_world	guild_buildings	3	Name	varchar(255)	NO	NULL	
+giny_world	guild_buildings	4	Description	text	NO	NULL	
+giny_world	guild_buildings	5	DisplayOrder	smallint(6)	NO	NULL	
+giny_world	guild_buildings	6	OverlayX	smallint(6)	NO	NULL	
+giny_world	guild_buildings	7	OverlayY	smallint(6)	NO	NULL	
+giny_world	guild_buildings	8	OverlayWidth	smallint(6)	NO	NULL	
+giny_world	guild_buildings	9	OverlayHeight	smallint(6)	NO	NULL	
+giny_world	guild_buildings	10	Enabled	tinyint(1)	NO	1	
+giny_world	guild_building_effects	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	guild_building_effects	2	BuildingLevelId	bigint(20)	NO	NULL	MUL
+giny_world	guild_building_effects	3	EffectType	varchar(64)	NO	NULL	MUL
+giny_world	guild_building_effects	4	Value	double	NO	NULL	
+giny_world	guild_building_effects	5	Description	varchar(512)	NO	NULL	
+giny_world	guild_building_effects	6	Parameters	longtext	NO	NULL	
+giny_world	guild_building_levels	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	guild_building_levels	2	BuildingId	bigint(20)	NO	NULL	MUL
+giny_world	guild_building_levels	3	Level	tinyint(3) unsigned	NO	NULL	
+giny_world	guild_building_levels	4	KamaCost	bigint(20)	NO	0	
+giny_world	guild_building_levels	5	AssetPath	varchar(512)	NO	NULL	
+giny_world	guild_building_level_requirements	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	guild_building_level_requirements	2	BuildingLevelId	bigint(20)	NO	NULL	MUL
+giny_world	guild_building_level_requirements	3	ItemId	int(11)	NO	NULL	
+giny_world	guild_building_level_requirements	4	RequiredQuantity	int(11)	NO	NULL	
+giny_world	guild_building_states	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	guild_building_states	2	GuildId	bigint(20)	NO	NULL	MUL
+giny_world	guild_building_states	3	BuildingId	bigint(20)	NO	NULL	
+giny_world	guild_building_states	4	Level	tinyint(3) unsigned	NO	1	
+giny_world	guild_building_states	5	UpdatedAt	datetime	NO	NULL	
+giny_world	guild_projects	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	guild_projects	2	GuildId	bigint(20)	NO	NULL	MUL
+giny_world	guild_projects	3	BuildingId	bigint(20)	NO	NULL	
+giny_world	guild_projects	4	TargetLevel	tinyint(3) unsigned	NO	NULL	
+giny_world	guild_projects	5	Status	varchar(32)	NO	'ACTIVE'	
+giny_world	guild_projects	6	KamasContributed	bigint(20)	NO	0	
+giny_world	guild_projects	7	CreatedAt	datetime	NO	NULL	
+giny_world	guild_projects	8	CompletedAt	datetime	YES	NULL	
+giny_world	guild_projects	9	CompletedByCharacterId	bigint(20)	YES	NULL	
+giny_world	guild_project_contributions	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	guild_project_contributions	2	ProjectId	bigint(20)	NO	NULL	MUL
+giny_world	guild_project_contributions	3	CharacterId	bigint(20)	NO	NULL	MUL
+giny_world	guild_project_contributions	4	ContributionType	varchar(16)	NO	NULL	
+giny_world	guild_project_contributions	5	ItemId	int(11)	YES	NULL	
+giny_world	guild_project_contributions	6	Quantity	bigint(20)	NO	NULL	
+giny_world	guild_project_contributions	7	CreatedAt	datetime	NO	NULL	
+giny_world	guild_project_requirements	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	guild_project_requirements	2	ProjectId	bigint(20)	NO	NULL	MUL
+giny_world	guild_project_requirements	3	ItemId	int(11)	NO	NULL	
+giny_world	guild_project_requirements	4	RequiredQuantity	int(11)	NO	NULL	
+giny_world	guild_project_requirements	5	ContributedQuantity	int(11)	NO	0	
+giny_world	heads	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	heads	2	SkinId	smallint(6)	YES	NULL	
+giny_world	initial_items	1	GId	int(11)	NO	NULL	PRI
+giny_world	initial_items	2	Quantity	int(11)	YES	NULL	
+giny_world	interactive_skills	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	interactive_skills	2	MapId	bigint(20)	YES	NULL	
+giny_world	interactive_skills	3	Identifier	bigint(20)	YES	NULL	
+giny_world	interactive_skills	4	ActionIdentifier	mediumtext	YES	NULL	
+giny_world	interactive_skills	5	Type	mediumtext	YES	NULL	
+giny_world	interactive_skills	6	SkillId	mediumtext	YES	NULL	
+giny_world	interactive_skills	7	Param1	varchar(255)	YES	NULL	
+giny_world	interactive_skills	8	Param2	varchar(255)	YES	NULL	
+giny_world	interactive_skills	9	Param3	varchar(255)	YES	NULL	
+giny_world	interactive_skills	10	Criteria	varchar(255)	YES	NULL	
+giny_world	items	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	items	2	Name	varchar(255)	YES	NULL	
+giny_world	items	3	TypeId	smallint(6)	YES	NULL	
+giny_world	items	4	Level	smallint(6)	YES	NULL	
+giny_world	items	5	RealWeight	int(11)	YES	NULL	
+giny_world	items	6	Cursed	mediumtext	YES	NULL	
+giny_world	items	7	Usable	mediumtext	YES	NULL	
+giny_world	items	8	Exchangeable	mediumtext	YES	NULL	
+giny_world	items	9	Price	mediumtext	YES	NULL	
+giny_world	items	10	Etheral	mediumtext	YES	NULL	
+giny_world	items	11	ItemSetId	int(11)	YES	NULL	
+giny_world	items	12	Criteria	varchar(255)	YES	NULL	
+giny_world	items	13	AppearenceId	smallint(6)	YES	NULL	
+giny_world	items	14	DropMonsterIds	blob	YES	NULL	
+giny_world	items	15	RecipeSlots	int(11)	YES	NULL	
+giny_world	items	16	RecipeIds	blob	YES	NULL	
+giny_world	items	17	Effects	blob	YES	NULL	
+giny_world	items	18	CraftXpRatio	int(11)	YES	NULL	
+giny_world	items	19	IsSaleable	mediumtext	YES	NULL	
+giny_world	items	20	Look	varchar(255)	YES	NULL	
+giny_world	item_sets	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	item_sets	2	Name	varchar(255)	YES	NULL	
+giny_world	item_sets	3	Items	blob	YES	NULL	
+giny_world	item_sets	4	Effects	blob	YES	NULL	
+giny_world	living_objects	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	living_objects	2	Type	mediumtext	YES	NULL	
+giny_world	living_objects	3	SkinIds	mediumtext	YES	NULL	
+giny_world	living_objects	4	MaximumLevel	smallint(6)	YES	NULL	
+giny_world	maps	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	maps	2	SubareaId	smallint(6)	YES	NULL	
+giny_world	maps	3	Version	mediumtext	YES	NULL	
+giny_world	maps	4	LeftMap	int(11)	YES	NULL	
+giny_world	maps	5	RightMap	int(11)	YES	NULL	
+giny_world	maps	6	TopMap	int(11)	YES	NULL	
+giny_world	maps	7	BottomMap	int(11)	YES	NULL	
+giny_world	maps	8	Cells	blob	YES	NULL	
+giny_world	maps	9	Elements	blob	YES	NULL	
+giny_world	map_positions	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	map_positions	2	X	int(11)	YES	NULL	
+giny_world	map_positions	3	Y	int(11)	YES	NULL	
+giny_world	map_positions	4	Outdoor	mediumtext	YES	NULL	
+giny_world	map_positions	5	Capabilities	int(11)	YES	NULL	
+giny_world	map_positions	6	Name	varchar(255)	YES	NULL	
+giny_world	map_references	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	map_references	2	MapId	bigint(20)	YES	NULL	
+giny_world	map_references	3	CellId	smallint(6)	YES	NULL	
+giny_world	map_scroll_actions	1	MapId	int(11)	NO	NULL	PRI
+giny_world	map_scroll_actions	2	RightMapId	int(11)	YES	NULL	
+giny_world	map_scroll_actions	3	LeftMapId	int(11)	YES	NULL	
+giny_world	map_scroll_actions	4	TopMapId	int(11)	YES	NULL	
+giny_world	map_scroll_actions	5	BottomMapId	int(11)	YES	NULL	
+giny_world	monsters	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	monsters	2	Name	varchar(255)	YES	NULL	
+giny_world	monsters	3	Race	mediumtext	YES	NULL	
+giny_world	monsters	4	Look	mediumtext	YES	NULL	
+giny_world	monsters	5	UseSummonSlot	mediumtext	YES	NULL	
+giny_world	monsters	6	UseBombSlot	mediumtext	YES	NULL	
+giny_world	monsters	7	CanPlay	mediumtext	YES	NULL	
+giny_world	monsters	8	CanTackle	mediumtext	YES	NULL	
+giny_world	monsters	9	IsBoss	mediumtext	YES	NULL	
+giny_world	monsters	10	Spells	blob	YES	NULL	
+giny_world	monsters	11	IsMiniBoss	mediumtext	YES	NULL	
+giny_world	monsters	12	IsQuestMonster	mediumtext	YES	NULL	
+giny_world	monsters	13	CorrespondingMiniBossId	bigint(20)	YES	NULL	
+giny_world	monsters	14	CanBePushed	mediumtext	YES	NULL	
+giny_world	monsters	15	CanBeCarried	mediumtext	YES	NULL	
+giny_world	monsters	16	CanUsePortal	mediumtext	YES	NULL	
+giny_world	monsters	17	CanSwitchPosition	mediumtext	YES	NULL	
+giny_world	monsters	18	Drops	blob	YES	NULL	
+giny_world	monsters	19	Grades	blob	YES	NULL	
+giny_world	monsters	20	MinDroppedKamas	int(11)	YES	NULL	
+giny_world	monsters	21	MaxDroppedKamas	int(11)	YES	NULL	
+giny_world	monster_spawns	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	monster_spawns	2	MonsterId	smallint(6)	YES	NULL	
+giny_world	monster_spawns	3	SubareaId	smallint(6)	YES	NULL	
+giny_world	monster_spawns	4	Probability	mediumtext	YES	NULL	
+giny_world	monster_static_spawns	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	monster_static_spawns	2	Monsters	mediumtext	YES	NULL	
+giny_world	monster_static_spawns	3	Grades	mediumtext	YES	NULL	
+giny_world	monster_static_spawns	4	MapId	bigint(20)	YES	NULL	
+giny_world	monster_static_spawns	5	CellId	smallint(6)	YES	NULL	
+giny_world	monster_static_spawns	6	Direction	mediumtext	YES	NULL	
+giny_world	npcs	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	npcs	2	Name	varchar(255)	YES	NULL	
+giny_world	npcs	3	Actions	mediumtext	YES	NULL	
+giny_world	npcs	4	Sex	mediumtext	YES	NULL	
+giny_world	npcs	5	Look	mediumtext	YES	NULL	
+giny_world	npc_actions	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	npc_actions	2	NpcSpawnId	bigint(20)	YES	NULL	
+giny_world	npc_actions	3	Action	mediumtext	YES	NULL	
+giny_world	npc_actions	4	Param1	mediumtext	YES	NULL	
+giny_world	npc_actions	5	Param2	mediumtext	YES	NULL	
+giny_world	npc_actions	6	Param3	mediumtext	YES	NULL	
+giny_world	npc_actions	7	Criteria	mediumtext	YES	NULL	
+giny_world	npc_replies	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	npc_replies	2	ReplyId	int(11)	YES	NULL	
+giny_world	npc_replies	3	NpcSpawnId	bigint(20)	YES	NULL	
+giny_world	npc_replies	4	MessageId	int(11)	YES	NULL	
+giny_world	npc_replies	5	ActionIdentifier	mediumtext	YES	NULL	
+giny_world	npc_replies	6	Param1	varchar(255)	YES	NULL	
+giny_world	npc_replies	7	Param2	varchar(255)	YES	NULL	
+giny_world	npc_replies	8	Param3	varchar(255)	YES	NULL	
+giny_world	npc_replies	9	Criteria	varchar(255)	YES	NULL	
+giny_world	npc_spawns	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	npc_spawns	2	TemplateId	smallint(6)	YES	NULL	
+giny_world	npc_spawns	3	MapId	int(11)	YES	NULL	
+giny_world	npc_spawns	4	CellId	smallint(6)	YES	NULL	
+giny_world	npc_spawns	5	Direction	mediumtext	YES	NULL	
+giny_world	ornaments	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	ornaments	2	Name	varchar(255)	YES	NULL	
+giny_world	player_battle_pass_claims	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	player_battle_pass_claims	2	PlayerId	bigint(20)	NO	NULL	MUL
+giny_world	player_battle_pass_claims	3	SeasonId	bigint(20)	NO	NULL	
+giny_world	player_battle_pass_claims	4	Level	int(11)	NO	NULL	
+giny_world	player_battle_pass_claims	5	Track	varchar(8)	NO	NULL	
+giny_world	player_battle_pass_claims	6	ClaimedAt	datetime	NO	NULL	
+giny_world	player_battle_pass_progress	1	PlayerId	bigint(20)	NO	NULL	PRI
+giny_world	player_battle_pass_progress	2	Experience	bigint(20)	NO	0	
+giny_world	player_battle_pass_progress	3	UpdatedAt	datetime	NO	current_timestamp()	
+giny_world	player_battle_pass_progress	4	Vip	tinyint(1)	NO	0	
+giny_world	player_pokefus_researched_genes	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	player_pokefus_researched_genes	2	CharacterId	bigint(20)	NO	NULL	MUL
+giny_world	player_pokefus_researched_genes	3	SpeciesId	bigint(20)	NO	NULL	
+giny_world	player_pokefus_researched_genes	4	GeneId	bigint(20)	NO	NULL	
+giny_world	player_pokefus_researched_genes	5	ResearchedAt	datetime	NO	NULL	
+giny_world	player_pokefus_species_progress	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	player_pokefus_species_progress	2	CharacterId	bigint(20)	NO	NULL	MUL
+giny_world	player_pokefus_species_progress	3	SpeciesId	bigint(20)	NO	NULL	
+giny_world	player_pokefus_species_progress	4	TotalExperience	bigint(20)	NO	0	
+giny_world	player_pokefus_species_progress	5	AvailableExperience	bigint(20)	NO	0	
+giny_world	player_pokefus_species_progress	6	UpdatedAt	datetime	NO	NULL	
+giny_world	player_quests	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	player_quests	2	PlayerId	bigint(20)	NO	NULL	MUL
+giny_world	player_quests	3	TemplateId	bigint(20)	NO	NULL	MUL
+giny_world	player_quests	4	Period	varchar(16)	NO	NULL	
+giny_world	player_quests	5	PeriodKey	varchar(16)	NO	NULL	
+giny_world	player_quests	6	ObjectiveType	varchar(64)	NO	NULL	
+giny_world	player_quests	7	Category	varchar(32)	NO	NULL	
+giny_world	player_quests	8	Title	varchar(180)	NO	NULL	
+giny_world	player_quests	9	Description	text	NO	NULL	
+giny_world	player_quests	10	TargetAmount	int(11)	NO	NULL	
+giny_world	player_quests	11	CurrentAmount	int(11)	NO	0	
+giny_world	player_quests	12	TargetEntityId	bigint(20)	YES	NULL	
+giny_world	player_quests	13	TargetFamilyId	bigint(20)	YES	NULL	
+giny_world	player_quests	14	TargetZoneId	bigint(20)	YES	NULL	
+giny_world	player_quests	15	TargetDungeonId	bigint(20)	YES	NULL	
+giny_world	player_quests	16	TargetResourceId	bigint(20)	YES	NULL	
+giny_world	player_quests	17	TargetRecipeId	bigint(20)	YES	NULL	
+giny_world	player_quests	18	TargetPokefusRarity	varchar(32)	YES	NULL	
+giny_world	player_quests	19	Parameters	longtext	NO	'{}'	
+giny_world	player_quests	20	Completed	tinyint(1)	NO	0	
+giny_world	player_quests	21	CompletedAt	datetime	YES	NULL	
+giny_world	player_quests	22	RewardClaimed	tinyint(1)	NO	0	
+giny_world	player_quests	23	RewardClaimedAt	datetime	YES	NULL	
+giny_world	player_quests	24	GeneratedAt	datetime	NO	NULL	
+giny_world	player_quests	25	ExpiresAt	datetime	NO	NULL	
+giny_world	player_quests	26	SlotNumber	int(11)	NO	NULL	
+giny_world	player_quest_rewards	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	player_quest_rewards	2	PlayerQuestId	bigint(20)	NO	NULL	MUL
+giny_world	player_quest_rewards	3	RewardType	varchar(32)	NO	NULL	
+giny_world	player_quest_rewards	4	Amount	bigint(20)	NO	NULL	
+giny_world	player_quest_rewards	5	ItemId	int(11)	YES	NULL	
+giny_world	player_quest_rewards	6	Parameters	longtext	NO	'{}'	
+giny_world	player_quest_rewards	7	DisplayOrder	int(11)	NO	0	
+giny_world	pokefus	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	pokefus	2	CharacterId	bigint(20)	NO	NULL	MUL
+giny_world	pokefus	3	SpeciesId	bigint(20)	NO	NULL	
+giny_world	pokefus	4	CharacterItemUid	int(11)	YES	NULL	UNI
+giny_world	pokefus	5	CustomName	varchar(255)	YES	NULL	
+giny_world	pokefus	6	Level	smallint(6)	NO	1	
+giny_world	pokefus	7	IndividualExperience	bigint(20)	NO	0	
+giny_world	pokefus	8	CapturedAt	datetime	NO	NULL	
+giny_world	pokefus	9	IsActive	tinyint(1)	NO	0	
+giny_world	pokefus	10	IsLegendary	tinyint(1)	NO	0	
+giny_world	pokefus_capture_configuration	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	pokefus_capture_configuration	2	NormalSpawnRate	double	NO	0.01	
+giny_world	pokefus_capture_configuration	3	LegendarySpawnRate	double	NO	0.0001	
+giny_world	pokefus_capture_configuration	4	CaptureRate	double	NO	0.5	
+giny_world	pokefus_capture_nets	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	pokefus_capture_nets	2	ItemGid	int(11)	NO	NULL	UNI
+giny_world	pokefus_capture_nets	3	MinMonsterLevel	smallint(6)	NO	NULL	MUL
+giny_world	pokefus_capture_nets	4	MaxMonsterLevel	smallint(6)	NO	NULL	
+giny_world	pokefus_capture_nets	5	Enabled	tinyint(1)	NO	1	
+giny_world	pokefus_equipped_genes	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	pokefus_equipped_genes	2	PokefusId	bigint(20)	NO	NULL	MUL
+giny_world	pokefus_equipped_genes	3	GeneId	bigint(20)	NO	NULL	
+giny_world	pokefus_equipped_genes	4	Slot	tinyint(3) unsigned	NO	NULL	
+giny_world	pokefus_equipped_genes	5	EquippedAt	datetime	NO	NULL	
+giny_world	pokefus_genes	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	pokefus_genes	2	SpeciesId	bigint(20)	NO	NULL	MUL
+giny_world	pokefus_genes	3	BranchId	bigint(20)	NO	NULL	
+giny_world	pokefus_genes	4	Name	varchar(255)	NO	NULL	
+giny_world	pokefus_genes	5	Description	text	NO	NULL	
+giny_world	pokefus_genes	6	Tier	tinyint(3) unsigned	NO	NULL	
+giny_world	pokefus_genes	7	XpCost	bigint(20)	NO	NULL	
+giny_world	pokefus_genes	8	KamaCost	bigint(20)	NO	NULL	
+giny_world	pokefus_genes	9	OgrineCost	int(11)	NO	NULL	
+giny_world	pokefus_genes	10	PrerequisiteGeneId	bigint(20)	YES	NULL	MUL
+giny_world	pokefus_genes	11	IconId	int(11)	YES	NULL	
+giny_world	pokefus_genes	12	EffectType	varchar(255)	NO	NULL	
+giny_world	pokefus_genes	13	EffectParameters	longtext	NO	NULL	
+giny_world	pokefus_genes	14	Enabled	tinyint(1)	NO	1	
+giny_world	pokefus_genes	15	DisplayOrder	smallint(6)	NO	NULL	
+giny_world	pokefus_genome_branches	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	pokefus_genome_branches	2	SpeciesId	bigint(20)	NO	NULL	MUL
+giny_world	pokefus_genome_branches	3	Name	varchar(255)	NO	NULL	
+giny_world	pokefus_genome_branches	4	DisplayOrder	smallint(6)	NO	NULL	
+giny_world	pokefus_genome_branches	5	Enabled	tinyint(1)	NO	1	
+giny_world	pokefus_species	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	pokefus_species	2	MonsterId	bigint(20)	NO	NULL	UNI
+giny_world	pokefus_species	3	Name	varchar(255)	NO	NULL	
+giny_world	pokefus_species	4	CaptureEnabled	tinyint(1)	NO	0	
+giny_world	pokefus_species	5	CaptureRate	double	NO	1	
+giny_world	pokefus_species	6	MaximumHealthPercent	tinyint(3) unsigned	NO	100	
+giny_world	pokefus_species	7	RequiredItemId	int(11)	YES	NULL	
+giny_world	pokefus_species	8	MaxActiveGenes	tinyint(3) unsigned	NO	4	
+giny_world	pokefus_species	9	Enabled	tinyint(1)	NO	1	
+giny_world	pokefus_species	10	SpawnEligible	tinyint(1)	NO	1	
+giny_world	pokefus_unlocked_genes	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	pokefus_unlocked_genes	2	PokefusId	bigint(20)	NO	NULL	MUL
+giny_world	pokefus_unlocked_genes	3	GeneId	bigint(20)	NO	NULL	
+giny_world	pokefus_unlocked_genes	4	PaymentMethod	varchar(255)	NO	NULL	
+giny_world	pokefus_unlocked_genes	5	PaidKamas	bigint(20)	NO	0	
+giny_world	pokefus_unlocked_genes	6	PaidOgrines	int(11)	NO	0	
+giny_world	pokefus_unlocked_genes	7	UnlockedAt	datetime	NO	NULL	
+giny_world	quests	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	quests	2	Name	varchar(255)	YES	NULL	
+giny_world	quests	3	StepIds	mediumtext	YES	NULL	
+giny_world	quests	4	CategoryId	smallint(6)	YES	NULL	
+giny_world	quests	5	RepeatType	bigint(20)	YES	NULL	
+giny_world	quests	6	RepeatLimit	tinyint(4)	YES	NULL	
+giny_world	quests	7	IsDungeonQuest	mediumtext	YES	NULL	
+giny_world	quests	8	LevelMin	int(11)	YES	NULL	
+giny_world	quests	9	LevelMax	int(11)	YES	NULL	
+giny_world	quests	10	IsPartyQuest	mediumtext	YES	NULL	
+giny_world	quests	11	StartCriterion	varchar(255)	YES	NULL	
+giny_world	quests	12	Followable	mediumtext	YES	NULL	
+giny_world	quest_objectives	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	quest_objectives	2	StepId	bigint(20)	YES	NULL	
+giny_world	quest_objectives	3	TypeId	tinyint(4)	YES	NULL	
+giny_world	quest_objectives	4	DialogId	int(11)	YES	NULL	
+giny_world	quest_objectives	5	Parameters	blob	YES	NULL	
+giny_world	quest_objectives	6	Coords	blob	YES	NULL	
+giny_world	quest_objectives	7	MapId	bigint(20)	YES	NULL	
+giny_world	quest_rewards	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	quest_rewards	2	TemplateId	bigint(20)	NO	NULL	MUL
+giny_world	quest_rewards	3	RewardType	varchar(32)	NO	NULL	
+giny_world	quest_rewards	4	Amount	bigint(20)	NO	NULL	
+giny_world	quest_rewards	5	ItemId	int(11)	YES	NULL	
+giny_world	quest_rewards	6	Parameters	longtext	NO	'{}'	
+giny_world	quest_rewards	7	DisplayOrder	int(11)	NO	0	
+giny_world	quest_rewards	8	Enabled	tinyint(1)	NO	1	
+giny_world	quest_rewards	9	CreatedAt	datetime	NO	current_timestamp()	
+giny_world	quest_rewards	10	UpdatedAt	datetime	NO	current_timestamp()	
+giny_world	quest_steps	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	quest_steps	2	QuestId	bigint(20)	YES	NULL	
+giny_world	quest_steps	3	Name	varchar(255)	YES	NULL	
+giny_world	quest_steps	4	Description	varchar(255)	YES	NULL	
+giny_world	quest_steps	5	DialogId	int(11)	YES	NULL	
+giny_world	quest_steps	6	OptimalLevel	int(11)	YES	NULL	
+giny_world	quest_steps	7	Duration	int(11)	YES	NULL	
+giny_world	quest_steps	8	ObjectiveIds	mediumtext	YES	NULL	
+giny_world	quest_steps	9	RewardIds	mediumtext	YES	NULL	
+giny_world	quest_step_rewards	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	quest_step_rewards	2	StepId	bigint(20)	YES	NULL	
+giny_world	quest_step_rewards	3	LevelMin	smallint(6)	YES	NULL	
+giny_world	quest_step_rewards	4	LevelMax	smallint(6)	YES	NULL	
+giny_world	quest_step_rewards	5	KamasRatio	mediumtext	YES	NULL	
+giny_world	quest_step_rewards	6	ExperienceRatio	mediumtext	YES	NULL	
+giny_world	quest_step_rewards	7	KamasScaleWithPlayerLevel	mediumtext	YES	NULL	
+giny_world	quest_step_rewards	8	ItemRewards	mediumtext	YES	NULL	
+giny_world	quest_step_rewards	9	EmoteReward	mediumtext	YES	NULL	
+giny_world	quest_step_rewards	10	JobsReward	mediumtext	YES	NULL	
+giny_world	quest_step_rewards	11	SpellsReward	mediumtext	YES	NULL	
+giny_world	quest_step_rewards	12	TitlesReward	mediumtext	YES	NULL	
+giny_world	quest_templates	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	quest_templates	2	Code	varchar(96)	NO	NULL	UNI
+giny_world	quest_templates	3	Name	varchar(160)	NO	NULL	
+giny_world	quest_templates	4	DescriptionTemplate	text	NO	NULL	
+giny_world	quest_templates	5	QuestPeriod	varchar(16)	NO	NULL	MUL
+giny_world	quest_templates	6	ObjectiveType	varchar(64)	NO	NULL	MUL
+giny_world	quest_templates	7	Category	varchar(32)	NO	NULL	
+giny_world	quest_templates	8	MinPlayerLevel	int(11)	NO	NULL	
+giny_world	quest_templates	9	MaxPlayerLevel	int(11)	NO	NULL	
+giny_world	quest_templates	10	TargetAmount	int(11)	NO	NULL	
+giny_world	quest_templates	11	TargetEntityId	bigint(20)	YES	NULL	
+giny_world	quest_templates	12	TargetFamilyId	bigint(20)	YES	NULL	
+giny_world	quest_templates	13	TargetZoneId	bigint(20)	YES	NULL	
+giny_world	quest_templates	14	TargetDungeonId	bigint(20)	YES	NULL	
+giny_world	quest_templates	15	TargetResourceId	bigint(20)	YES	NULL	
+giny_world	quest_templates	16	TargetRecipeId	bigint(20)	YES	NULL	
+giny_world	quest_templates	17	TargetPokefusRarity	varchar(32)	YES	NULL	
+giny_world	quest_templates	18	Parameters	longtext	NO	'{}'	
+giny_world	quest_templates	19	Weight	int(11)	NO	100	
+giny_world	quest_templates	20	Enabled	tinyint(1)	NO	1	
+giny_world	quest_templates	21	CreatedAt	datetime	NO	current_timestamp()	
+giny_world	quest_templates	22	UpdatedAt	datetime	NO	current_timestamp()	
+giny_world	recipes	1	ResultId	bigint(20)	NO	NULL	PRI
+giny_world	recipes	2	Ingredients	mediumtext	YES	NULL	
+giny_world	recipes	3	Quantities	mediumtext	YES	NULL	
+giny_world	recipes	4	JobId	bigint(20)	YES	NULL	
+giny_world	recipes	5	SkillId	bigint(20)	YES	NULL	
+giny_world	skills	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	skills	2	Name	varchar(255)	YES	NULL	
+giny_world	skills	3	ParentJobId	tinyint(4)	YES	NULL	
+giny_world	skills	4	ParentBonesIds	mediumtext	YES	NULL	
+giny_world	skills	5	InteractiveTypeId	int(11)	YES	NULL	
+giny_world	skills	6	MinLevel	smallint(6)	YES	NULL	
+giny_world	skills	7	GatheredRessourceItem	smallint(6)	YES	NULL	
+giny_world	spells	1	Id	smallint(6)	NO	NULL	PRI
+giny_world	spells	2	Name	varchar(255)	YES	NULL	
+giny_world	spells	3	Description	mediumtext	YES	NULL	
+giny_world	spells	4	SpellLevels	blob	YES	NULL	
+giny_world	spells	5	Verbose	mediumtext	YES	NULL	
+giny_world	spells	6	Category	mediumtext	YES	NULL	
+giny_world	spell_bombs	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	spell_bombs	2	ChainReactionSpellId	smallint(6)	YES	NULL	
+giny_world	spell_bombs	3	ExplodSpellId	smallint(6)	YES	NULL	
+giny_world	spell_bombs	4	WallId	tinyint(4)	YES	NULL	
+giny_world	spell_bombs	5	InstantSpellId	smallint(6)	YES	NULL	
+giny_world	spell_bombs	6	ComboCoeff	mediumtext	YES	NULL	
+giny_world	spell_levels	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	spell_levels	2	SpellId	smallint(6)	YES	NULL	
+giny_world	spell_levels	3	Grade	tinyint(4)	YES	NULL	
+giny_world	spell_levels	4	SpellBreed	smallint(6)	YES	NULL	
+giny_world	spell_levels	5	ApCost	smallint(6)	YES	NULL	
+giny_world	spell_levels	6	MinRange	smallint(6)	YES	NULL	
+giny_world	spell_levels	7	MaxRange	smallint(6)	YES	NULL	
+giny_world	spell_levels	8	CastInLine	mediumtext	YES	NULL	
+giny_world	spell_levels	9	CastInDiagonal	mediumtext	YES	NULL	
+giny_world	spell_levels	10	CastTestLos	mediumtext	YES	NULL	
+giny_world	spell_levels	11	CriticalHitProbability	bigint(20)	YES	NULL	
+giny_world	spell_levels	12	NeedFreeCell	mediumtext	YES	NULL	
+giny_world	spell_levels	13	NeedTakenCell	mediumtext	YES	NULL	
+giny_world	spell_levels	14	NeedFreeTrapCell	mediumtext	YES	NULL	
+giny_world	spell_levels	15	RangeCanBeBoosted	mediumtext	YES	NULL	
+giny_world	spell_levels	16	MaxStack	int(11)	YES	NULL	
+giny_world	spell_levels	17	MaxCastPerTurn	bigint(20)	YES	NULL	
+giny_world	spell_levels	18	MaxCastPerTarget	int(11)	YES	NULL	
+giny_world	spell_levels	19	MinCastInterval	int(11)	YES	NULL	
+giny_world	spell_levels	20	InitialCooldown	bigint(20)	YES	NULL	
+giny_world	spell_levels	21	GlobalCooldown	int(11)	YES	NULL	
+giny_world	spell_levels	22	MinPlayerLevel	int(11)	YES	NULL	
+giny_world	spell_levels	23	HideEffects	mediumtext	YES	NULL	
+giny_world	spell_levels	24	Hidden	mediumtext	YES	NULL	
+giny_world	spell_levels	25	StatesCriterion	varchar(255)	YES	NULL	
+giny_world	spell_levels	26	Effects	blob	YES	NULL	
+giny_world	spell_levels	27	CriticalEffects	blob	YES	NULL	
+giny_world	spell_states	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	spell_states	2	Name	varchar(255)	YES	NULL	
+giny_world	spell_states	3	PreventsSpellCast	mediumtext	YES	NULL	
+giny_world	spell_states	4	PreventsFight	mediumtext	YES	NULL	
+giny_world	spell_states	5	IsSilent	mediumtext	YES	NULL	
+giny_world	spell_states	6	CantDealDamage	mediumtext	YES	NULL	
+giny_world	spell_states	7	Invulnerable	mediumtext	YES	NULL	
+giny_world	spell_states	8	Incurable	mediumtext	YES	NULL	
+giny_world	spell_states	9	CantBeMoved	mediumtext	YES	NULL	
+giny_world	spell_states	10	CantBePushed	mediumtext	YES	NULL	
+giny_world	spell_states	11	CantSwitchPosition	mediumtext	YES	NULL	
+giny_world	spell_states	12	InvulnerableMelee	mediumtext	YES	NULL	
+giny_world	spell_states	13	InvulnerableRange	mediumtext	YES	NULL	
+giny_world	spell_states	14	CantTackle	mediumtext	YES	NULL	
+giny_world	spell_states	15	CantBeTackled	mediumtext	YES	NULL	
+giny_world	spell_variants	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	spell_variants	2	BreedId	tinyint(4)	YES	NULL	
+giny_world	spell_variants	3	SpellIds	blob	YES	NULL	
+giny_world	subareas	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	subareas	2	Name	varchar(255)	YES	NULL	
+giny_world	subareas	3	AreaId	int(11)	YES	NULL	
+giny_world	subareas	4	Level	mediumtext	YES	NULL	
+giny_world	subareas	5	MonsterIds	blob	YES	NULL	
+giny_world	subareas	6	QuestIds	blob	YES	NULL	
+giny_world	subareas	7	NpcIds	blob	YES	NULL	
+giny_world	subareas	8	AssociatedZaapMapId	int(11)	YES	NULL	
+giny_world	subareas	9	AchievementId	int(11)	YES	NULL	
+giny_world	titles	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	titles	2	Name	varchar(255)	YES	NULL	
+giny_world	waypoints	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	waypoints	2	MapId	bigint(20)	YES	NULL	
+giny_world	waypoints	3	SubareaId	bigint(20)	YES	NULL	
+giny_world	waypoints	4	Activated	mediumtext	YES	NULL	
+giny_world	weapons	1	Id	bigint(20)	NO	NULL	PRI
+giny_world	weapons	2	Name	varchar(255)	YES	NULL	
+giny_world	weapons	3	TypeId	smallint(6)	YES	NULL	
+giny_world	weapons	4	Level	smallint(6)	YES	NULL	
+giny_world	weapons	5	RealWeight	int(11)	YES	NULL	
+giny_world	weapons	6	Cursed	mediumtext	YES	NULL	
+giny_world	weapons	7	Usable	mediumtext	YES	NULL	
+giny_world	weapons	8	Exchangeable	mediumtext	YES	NULL	
+giny_world	weapons	9	Price	mediumtext	YES	NULL	
+giny_world	weapons	10	Etheral	mediumtext	YES	NULL	
+giny_world	weapons	11	ItemSetId	int(11)	YES	NULL	
+giny_world	weapons	12	Criteria	varchar(255)	YES	NULL	
+giny_world	weapons	13	AppearenceId	smallint(6)	YES	NULL	
+giny_world	weapons	14	DropMonsterIds	blob	YES	NULL	
+giny_world	weapons	15	RecipeSlots	int(11)	YES	NULL	
+giny_world	weapons	16	RecipeIds	blob	YES	NULL	
+giny_world	weapons	17	Effects	blob	YES	NULL	
+giny_world	weapons	18	CraftXpRatio	int(11)	YES	NULL	
+giny_world	weapons	19	IsSaleable	mediumtext	YES	NULL	
+giny_world	weapons	20	ApCost	smallint(6)	YES	NULL	
+giny_world	weapons	21	MinRange	smallint(6)	YES	NULL	
+giny_world	weapons	22	MaxRange	smallint(6)	YES	NULL	
+giny_world	weapons	23	MaxCastPerTurn	smallint(6)	YES	NULL	
+giny_world	weapons	24	CastInLine	mediumtext	YES	NULL	
+giny_world	weapons	25	CastInDiagonal	mediumtext	YES	NULL	
+giny_world	weapons	26	CastTestLos	mediumtext	YES	NULL	
+giny_world	weapons	27	CriticalHitProbability	smallint(6)	YES	NULL	
+giny_world	weapons	28	CriticalHitBonus	smallint(6)	YES	NULL	
+giny_world	world_accounts	1	AccountId	int(11)	NO	NULL	PRI
+giny_world	world_accounts	2	BankKamas	bigint(20)	YES	NULL	
+TABLE_SCHEMA	TABLE_NAME	INDEX_NAME	NON_UNIQUE	SEQ_IN_INDEX	COLUMN_NAME
+giny_auth	accounts	PRIMARY	0	1	Id
+giny_auth	world_characters	PRIMARY	0	1	Id
+giny_auth	world_servers	PRIMARY	0	1	Id
+giny_world	achievements	PRIMARY	0	1	Id
+giny_world	achievement_objectives	PRIMARY	0	1	Id
+giny_world	achievement_rewards	PRIMARY	0	1	Id
+giny_world	areas	PRIMARY	0	1	Id
+giny_world	bank_items	PRIMARY	0	1	UId
+giny_world	battle_pass_rewards	IX_battle_pass_rewards_season	1	1	SeasonId
+giny_world	battle_pass_rewards	IX_battle_pass_rewards_season	1	2	Level
+giny_world	battle_pass_rewards	IX_battle_pass_rewards_season	1	3	Track
+giny_world	battle_pass_rewards	PRIMARY	0	1	Id
+giny_world	battle_pass_rewards	UX_battle_pass_rewards_slot	0	1	SeasonId
+giny_world	battle_pass_rewards	UX_battle_pass_rewards_slot	0	2	Level
+giny_world	battle_pass_rewards	UX_battle_pass_rewards_slot	0	3	Track
+giny_world	battle_pass_rewards	UX_battle_pass_rewards_slot	0	4	DisplayOrder
+giny_world	battle_pass_seasons	PRIMARY	0	1	Id
+giny_world	battle_pass_seasons	UX_battle_pass_seasons_code	0	1	Code
+giny_world	bidshops	PRIMARY	0	1	Id
+giny_world	bidshop_items	PRIMARY	0	1	UId
+giny_world	breeds	PRIMARY	0	1	Id
+giny_world	challenges	PRIMARY	0	1	Id
+giny_world	characters	PRIMARY	0	1	Id
+giny_world	character_items	PRIMARY	0	1	UId
+giny_world	dungeons	PRIMARY	0	1	Id
+giny_world	effects	PRIMARY	0	1	Id
+giny_world	emotes	PRIMARY	0	1	Id
+giny_world	experiences	PRIMARY	0	1	Level
+giny_world	guilds	PRIMARY	0	1	Id
+giny_world	guild_buildings	PRIMARY	0	1	Id
+giny_world	guild_buildings	UK_guild_building_code	0	1	Code
+giny_world	guild_building_effects	IX_guild_building_effect_level	1	1	BuildingLevelId
+giny_world	guild_building_effects	IX_guild_building_effect_type	1	1	EffectType
+giny_world	guild_building_effects	PRIMARY	0	1	Id
+giny_world	guild_building_levels	PRIMARY	0	1	Id
+giny_world	guild_building_levels	UK_guild_building_level	0	1	BuildingId
+giny_world	guild_building_levels	UK_guild_building_level	0	2	Level
+giny_world	guild_building_level_requirements	PRIMARY	0	1	Id
+giny_world	guild_building_level_requirements	UK_guild_level_requirement	0	1	BuildingLevelId
+giny_world	guild_building_level_requirements	UK_guild_level_requirement	0	2	ItemId
+giny_world	guild_building_states	IX_guild_building_state_guild	1	1	GuildId
+giny_world	guild_building_states	PRIMARY	0	1	Id
+giny_world	guild_building_states	UK_guild_building_state	0	1	GuildId
+giny_world	guild_building_states	UK_guild_building_state	0	2	BuildingId
+giny_world	guild_projects	IX_guild_project_active	1	1	GuildId
+giny_world	guild_projects	IX_guild_project_active	1	2	Status
+giny_world	guild_projects	PRIMARY	0	1	Id
+giny_world	guild_projects	UK_guild_project_target	0	1	GuildId
+giny_world	guild_projects	UK_guild_project_target	0	2	BuildingId
+giny_world	guild_projects	UK_guild_project_target	0	3	TargetLevel
+giny_world	guild_project_contributions	IX_guild_contribution_character	1	1	CharacterId
+giny_world	guild_project_contributions	IX_guild_contribution_character	1	2	CreatedAt
+giny_world	guild_project_contributions	IX_guild_contribution_project	1	1	ProjectId
+giny_world	guild_project_contributions	IX_guild_contribution_project	1	2	CreatedAt
+giny_world	guild_project_contributions	PRIMARY	0	1	Id
+giny_world	guild_project_requirements	PRIMARY	0	1	Id
+giny_world	guild_project_requirements	UK_guild_project_requirement	0	1	ProjectId
+giny_world	guild_project_requirements	UK_guild_project_requirement	0	2	ItemId
+giny_world	heads	PRIMARY	0	1	Id
+giny_world	initial_items	PRIMARY	0	1	GId
+giny_world	interactive_skills	PRIMARY	0	1	Id
+giny_world	items	PRIMARY	0	1	Id
+giny_world	item_sets	PRIMARY	0	1	Id
+giny_world	living_objects	PRIMARY	0	1	Id
+giny_world	maps	PRIMARY	0	1	Id
+giny_world	map_positions	PRIMARY	0	1	Id
+giny_world	map_references	PRIMARY	0	1	Id
+giny_world	map_scroll_actions	PRIMARY	0	1	MapId
+giny_world	monsters	PRIMARY	0	1	Id
+giny_world	monster_spawns	PRIMARY	0	1	Id
+giny_world	monster_static_spawns	PRIMARY	0	1	Id
+giny_world	npcs	PRIMARY	0	1	Id
+giny_world	npc_actions	PRIMARY	0	1	Id
+giny_world	npc_replies	PRIMARY	0	1	Id
+giny_world	npc_spawns	PRIMARY	0	1	Id
+giny_world	ornaments	PRIMARY	0	1	Id
+giny_world	player_battle_pass_claims	IX_player_battle_pass_claims_player	1	1	PlayerId
+giny_world	player_battle_pass_claims	IX_player_battle_pass_claims_player	1	2	SeasonId
+giny_world	player_battle_pass_claims	PRIMARY	0	1	Id
+giny_world	player_battle_pass_claims	UX_player_battle_pass_claims	0	1	PlayerId
+giny_world	player_battle_pass_claims	UX_player_battle_pass_claims	0	2	SeasonId
+giny_world	player_battle_pass_claims	UX_player_battle_pass_claims	0	3	Level
+giny_world	player_battle_pass_claims	UX_player_battle_pass_claims	0	4	Track
+giny_world	player_battle_pass_progress	PRIMARY	0	1	PlayerId
+giny_world	player_pokefus_researched_genes	IX_pokefus_research_player_species	1	1	CharacterId
+giny_world	player_pokefus_researched_genes	IX_pokefus_research_player_species	1	2	SpeciesId
+giny_world	player_pokefus_researched_genes	PRIMARY	0	1	Id
+giny_world	player_pokefus_researched_genes	UK_pokefus_research_player_gene	0	1	CharacterId
+giny_world	player_pokefus_researched_genes	UK_pokefus_research_player_gene	0	2	GeneId
+giny_world	player_pokefus_species_progress	PRIMARY	0	1	Id
+giny_world	player_pokefus_species_progress	UK_pokefus_progress_player_species	0	1	CharacterId
+giny_world	player_pokefus_species_progress	UK_pokefus_progress_player_species	0	2	SpeciesId
+giny_world	player_quests	FK_player_quests_template	1	1	TemplateId
+giny_world	player_quests	IX_player_quests_active	1	1	PlayerId
+giny_world	player_quests	IX_player_quests_active	1	2	Period
+giny_world	player_quests	IX_player_quests_active	1	3	PeriodKey
+giny_world	player_quests	IX_player_quests_active	1	4	Completed
+giny_world	player_quests	IX_player_quests_claim	1	1	PlayerId
+giny_world	player_quests	IX_player_quests_claim	1	2	Completed
+giny_world	player_quests	IX_player_quests_claim	1	3	RewardClaimed
+giny_world	player_quests	IX_player_quests_claim	1	4	ExpiresAt
+giny_world	player_quests	PRIMARY	0	1	Id
+giny_world	player_quests	UX_player_quests_period_slot	0	1	PlayerId
+giny_world	player_quests	UX_player_quests_period_slot	0	2	Period
+giny_world	player_quests	UX_player_quests_period_slot	0	3	PeriodKey
+giny_world	player_quests	UX_player_quests_period_slot	0	4	SlotNumber
+giny_world	player_quests	UX_player_quests_period_template	0	1	PlayerId
+giny_world	player_quests	UX_player_quests_period_template	0	2	PeriodKey
+giny_world	player_quests	UX_player_quests_period_template	0	3	TemplateId
+giny_world	player_quest_rewards	IX_player_quest_rewards_quest	1	1	PlayerQuestId
+giny_world	player_quest_rewards	IX_player_quest_rewards_quest	1	2	DisplayOrder
+giny_world	player_quest_rewards	PRIMARY	0	1	Id
+giny_world	pokefus	IX_pokefus_active	1	1	CharacterId
+giny_world	pokefus	IX_pokefus_active	1	2	IsActive
+giny_world	pokefus	IX_pokefus_owner	1	1	CharacterId
+giny_world	pokefus	IX_pokefus_owner_species	1	1	CharacterId
+giny_world	pokefus	IX_pokefus_owner_species	1	2	SpeciesId
+giny_world	pokefus	PRIMARY	0	1	Id
+giny_world	pokefus	UK_pokefus_character_item	0	1	CharacterItemUid
+giny_world	pokefus_capture_configuration	PRIMARY	0	1	Id
+giny_world	pokefus_capture_nets	PRIMARY	0	1	Id
+giny_world	pokefus_capture_nets	UK_pokefus_capture_net_item	0	1	ItemGid
+giny_world	pokefus_capture_nets	UK_pokefus_capture_net_range	0	1	MinMonsterLevel
+giny_world	pokefus_capture_nets	UK_pokefus_capture_net_range	0	2	MaxMonsterLevel
+giny_world	pokefus_equipped_genes	PRIMARY	0	1	Id
+giny_world	pokefus_equipped_genes	UK_pokefus_equipped_instance_gene	0	1	PokefusId
+giny_world	pokefus_equipped_genes	UK_pokefus_equipped_instance_gene	0	2	GeneId
+giny_world	pokefus_equipped_genes	UK_pokefus_equipped_instance_slot	0	1	PokefusId
+giny_world	pokefus_equipped_genes	UK_pokefus_equipped_instance_slot	0	2	Slot
+giny_world	pokefus_genes	IX_pokefus_gene_prerequisite	1	1	PrerequisiteGeneId
+giny_world	pokefus_genes	IX_pokefus_gene_tree	1	1	SpeciesId
+giny_world	pokefus_genes	IX_pokefus_gene_tree	1	2	BranchId
+giny_world	pokefus_genes	IX_pokefus_gene_tree	1	3	DisplayOrder
+giny_world	pokefus_genes	PRIMARY	0	1	Id
+giny_world	pokefus_genes	UK_pokefus_gene_name	0	1	SpeciesId
+giny_world	pokefus_genes	UK_pokefus_gene_name	0	2	Name
+giny_world	pokefus_genome_branches	IX_pokefus_branch_species_order	1	1	SpeciesId
+giny_world	pokefus_genome_branches	IX_pokefus_branch_species_order	1	2	DisplayOrder
+giny_world	pokefus_genome_branches	PRIMARY	0	1	Id
+giny_world	pokefus_genome_branches	UK_pokefus_branch_name	0	1	SpeciesId
+giny_world	pokefus_genome_branches	UK_pokefus_branch_name	0	2	Name
+giny_world	pokefus_species	PRIMARY	0	1	Id
+giny_world	pokefus_species	UK_pokefus_species_monster	0	1	MonsterId
+giny_world	pokefus_unlocked_genes	PRIMARY	0	1	Id
+giny_world	pokefus_unlocked_genes	UK_pokefus_unlock_instance_gene	0	1	PokefusId
+giny_world	pokefus_unlocked_genes	UK_pokefus_unlock_instance_gene	0	2	GeneId
+giny_world	quests	PRIMARY	0	1	Id
+giny_world	quest_objectives	PRIMARY	0	1	Id
+giny_world	quest_rewards	IX_quest_rewards_template	1	1	TemplateId
+giny_world	quest_rewards	IX_quest_rewards_template	1	2	Enabled
+giny_world	quest_rewards	PRIMARY	0	1	Id
+giny_world	quest_rewards	UX_quest_rewards_template_type	0	1	TemplateId
+giny_world	quest_rewards	UX_quest_rewards_template_type	0	2	RewardType
+giny_world	quest_steps	PRIMARY	0	1	Id
+giny_world	quest_step_rewards	PRIMARY	0	1	Id
+giny_world	quest_templates	IX_quest_templates_objective	1	1	ObjectiveType
+giny_world	quest_templates	IX_quest_templates_objective	1	2	Enabled
+giny_world	quest_templates	IX_quest_templates_pool	1	1	QuestPeriod
+giny_world	quest_templates	IX_quest_templates_pool	1	2	MinPlayerLevel
+giny_world	quest_templates	IX_quest_templates_pool	1	3	MaxPlayerLevel
+giny_world	quest_templates	IX_quest_templates_pool	1	4	Enabled
+giny_world	quest_templates	PRIMARY	0	1	Id
+giny_world	quest_templates	UX_quest_templates_code	0	1	Code
+giny_world	recipes	PRIMARY	0	1	ResultId
+giny_world	skills	PRIMARY	0	1	Id
+giny_world	spells	PRIMARY	0	1	Id
+giny_world	spell_bombs	PRIMARY	0	1	Id
+giny_world	spell_levels	PRIMARY	0	1	Id
+giny_world	spell_states	PRIMARY	0	1	Id
+giny_world	spell_variants	PRIMARY	0	1	Id
+giny_world	subareas	PRIMARY	0	1	Id
+giny_world	titles	PRIMARY	0	1	Id
+giny_world	waypoints	PRIMARY	0	1	Id
+giny_world	weapons	PRIMARY	0	1	Id
+giny_world	world_accounts	PRIMARY	0	1	AccountId
+table_name	exact_count
+quest_objectives	0
+quest_step_rewards	0
+battle_pass_seasons	1
+pokefus_species	1
+pokefus_capture_configuration	1
+world_accounts	1
+guilds	0
+items	18118
+spells	17729
+monsters	4971

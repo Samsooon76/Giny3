@@ -1,0 +1,70 @@
+/* Classic creation screen, measured against the official 3.6 reference.
+   Scoped here because the other screens can use the newer extracted theme. */
+.official-stage--characterCreation .official-canvas {
+  /* The oversized entity preview must never scroll the surface on focus. */
+  overflow: clip;
+}
+.official-stage--characterCreation [data-name="window_background"] {
+  background-color: #26231d !important;
+  box-shadow: 0 8px 20px #0006 !important;
+}
+.official-stage--characterCreation [data-name="window_inner"] {
+  box-shadow: none !important;
+}
+.official-stage--characterCreation [data-name="button_container"],
+.official-stage--characterCreation [data-name="dropdown_content"] {
+  background-color: #4c4940 !important;
+}
+.official-stage--characterCreation [data-name="ctr_breeds"] [data-name="itemTile_container"],
+.official-stage--characterCreation [data-name="entity_choice"] {
+  background-color: #37392e !important;
+  border-radius: 7px;
+}
+.official-stage--characterCreation [data-name^="tg_role_"] {
+  width: 44px !important;
+  height: 44px !important;
+  background: #494b40 !important;
+}
+.official-stage--characterCreation [data-name^="tg_role_"] [data-name="toggle_container"] {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.official-stage--characterCreation [data-name^="tg_role_"] [data-name="toggle_icon"] {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.official-stage--characterCreation [data-name^="tg_role_"] [data-name="toggle_label"],
+.official-stage--characterCreation [data-name^="tg_role_"] [data-name="toggle_indicatorCircle"] {
+  display: none;
+}
+.official-stage--characterCreation [data-name^="tg_role_"].activeTrue {
+  box-shadow: inset 0 0 0 2px #b2d35b !important;
+}
+.official-stage--characterCreation [data-name="sv_heads"] {
+  pointer-events: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #969182 #302d26;
+}
+.official-stage--characterCreation [data-name="ctr_breeds"] {
+  gap: 8px;
+}
+.official-stage--characterCreation [data-name="colorPickerField_ctrText"] {
+  width: auto !important;
+  flex: 1;
+  min-width: 0;
+}
+.official-stage--characterCreation [data-name="bloc_archetype"] [data-name^="spellSlot_"] {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  min-height: 48px !important;
+}
+.official-stage--characterCreation [data-name="lbl_breed"] {
+  font-family: "Lexend-Regular", sans-serif !important;
+  font-weight: 700;
+  text-shadow: 2px 3px 1px #101a1d;
+}

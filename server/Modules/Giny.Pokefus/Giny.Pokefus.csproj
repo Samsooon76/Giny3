@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <BaseOutputPath></BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Servers\Giny.World\Giny.World.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\Ressources\SQL\Patches\001_pokefus_genome_phase1.sql" Link="Data\Migrations\001_pokefus_genome_phase1.sql" />
+    <EmbeddedResource Include="..\..\Ressources\SQL\Patches\002_pokefus_capture_nets.sql" Link="Data\Migrations\002_pokefus_capture_nets.sql" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <!-- macOS/Linux: copy into the running World Release Modules folder -->
+    <MakeDir Directories="$(MSBuildThisFileDirectory)..\..\Servers\Giny.World\bin\$(Configuration)\net6.0\Modules" />
+    <Copy SourceFiles="$(TargetDir)Giny.Pokefus.dll" DestinationFolder="$(MSBuildThisFileDirectory)..\..\Servers\Giny.World\bin\$(Configuration)\net6.0\Modules" SkipUnchangedFiles="true" />
+  </Target>
+
+</Project>

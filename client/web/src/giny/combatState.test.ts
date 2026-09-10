@@ -1,0 +1,173 @@
+import { describe, expect, it } from 'vitest'
+import { emptyCombat, movementCells, parseCombatEvent, reduceCombat, variationLabel, variationResource, VARIATION_COLORS, type CombatEvent, type CombatSnapshot } from './combatState'
+export const snapshot: CombatSnapshot = {
+  fight_key: 'fight-a', fight_id: 7, map_id: 154644, phase: 'preparation', turn: 1, active_id: 101,
+  controlled_id: 101, team: 1, leader: true, ready: false, remaining_ms: 30000, placement: [230, 231], enemy_placement: [250], timeline: [101, -3], cooldowns: [], marks: [],
+  fighters: [{ id: 101, name: 'Joueur', level: 20, look: '{1|||100}', team: 1, cell: 230, direction: 1, life: 100, max_life: 100, shield: 0, ap: 6, mp: 3, alive: true, ready: false, breed: 1 }, { id: -3, name: 'Bouftou', level: 5, look: '{48|||100}', team: 0, cell: 250, direction: 5, life: 50, max_life: 50, shield: 5, ap: 4, mp: 3, alive: true, ready: false, breed: 0 }],
+}
+const event = (name: string, data: Record<string, unknown>, revision = 2): CombatEvent => ({ schemaVersion: 1, revision, characterId: '101', fightKey: 'fight-a', name, data, snapshot: null })
+const joined = () => reduceCombat(emptyCombat(), { ...event('GameFightJoinMessage', {}, 1), snapshot }, 1000)
+describe('recipient combat state', () => {
+  it('rejects malformed cells without replacing the live snapshot', () => {
+    const valid = { ...event('GameFightJoinMessage', {}), snapshot }
+    expect(parseCombatEvent(JSON.stringify(valid))?.snapshot?.fighters.length).toBe(2)
+    expect(parseCombatEvent(JSON.stringify({ ...valid, snapshot: { ...snapshot, fighters: [{ ...snapshot.fighters[0], cell: 560 }] } }))).toBeNull()
+  })
+  it('separates preparation, a turn timer and the technical ready request', () => {
+    const initial = joined()
+    expect(initial.deadline).toBe(31000)
+    const turn = reduceCombat(initial, event('GameFightTurnStartMessage', { id: 101, waitTime: 300 }), 2000)
+    expect(turn.snapshot?.phase).toBe('fighting'); expect(turn.deadline).toBe(32000)
+    const ready = reduceCombat(turn, event('GameFightTurnReadyRequestMessage', { id: 101 }, 3), 3000)
+    expect(ready.snapshot?.ready).toBe(false)
+  })
+  it('applies ordered losses and shield loss only once', () => {
+    const hit = event('GameActionFightLifeAndShieldPointsLostMessage', { targetId: -3, loss: 12, shieldLoss: 5, permanentDamages: 2 })
+    const state = reduceCombat(joined(), hit)
+    expect(state.snapshot?.fighters[1]).toMatchObject({ life: 38, max_life: 48, shield: 0 })
+    expect(reduceCombat(state, hit)).toBe(state)
+  })
+  it('retains a turn deadline when the root sequence ends before the server timer starts', () => {
+    const turn = reduceCombat(joined(), event('GameFightTurnStartMessage', { id: 101, waitTime: 300 }), 2000)
+    const checkpoint = reduceCombat(turn, { ...event('SequenceEndMessage', {}, 3), snapshot: { ...turn.snapshot!, remaining_ms: 0 } }, 2100)
+    expect(checkpoint.deadline).toBe(32000)
+  })
+  it('preserves exact rewards and quantities after returning to the map', () => {
+    const result = reduceCombat(joined(), event('GameFightEndMessage', { duration: 65000, results: [{ id: '101', outcome: 2, alive: true, level: 21, rewards: { kamas: '123', objects: [{ objectId: 385, quantity: 13 }] }, additional: [{ _type: 'FightResultExperienceData', experienceFightDelta: '9007199254740993' }] }] }))
+    expect(result.result?.participants[0]).toMatchObject({ xp: '9007199254740993', loot: [{ gid: 385, quantity: 13 }], name: 'Joueur' })
+    const world = reduceCombat(result, event('GameContextCreateMessage', { context: 1 }, 3))
+    expect(world.snapshot).toBeNull(); expect(world.result).toBe(result.result)
+  })
+  it('does not turn a repeated result into a new reward window state', () => {
+    const end = event('GameFightEndMessage', { duration: 10, results: [] })
+    const result = reduceCombat(joined(), end)
+    expect(reduceCombat(result, end)).toBe(result)
+  })
+  it('uses the Giny challenge enum: completed is zero', () => {
+    const proposed = reduceCombat(joined(), event('ChallengeAddMessage', { challengeInformation: { challengeId: 8, name: 'Nomade', xpBonus: 25, dropBonus: 25, state: 2 } }))
+    const done = reduceCombat(proposed, event('ChallengeResultMessage', { challengeId: 8, success: true }, 3))
+    expect(done.challenges[0].state).toBe(0)
+  })
+  it('retains measured statistics with the result without counting replayed actions twice', () => {
+    const hit = event('GameActionFightLifeAndShieldPointsLostMessage', { sourceId: 101, targetId: -3, loss: 28, shieldLoss: 5 })
+    let state = reduceCombat(joined(), hit)
+    state = reduceCombat(state, hit)
+    state = reduceCombat(state, event('GameActionFightLifePointsGainMessage', { sourceId: 101, targetId: 101, delta: 4 }, 3))
+    state = reduceCombat(state, event('GameActionFightDeathMessage', { sourceId: 101, targetId: -3 }, 4))
+    state = reduceCombat(state, event('GameFightEndMessage', { duration: 1000, results: [] }, 5))
+    state = reduceCombat(state, event('GameContextCreateMessage', { context: 1 }, 6))
+    expect(state.result?.statistics?.['101']).toEqual({ damage: 28, received: 0, heal: 4, healed: 4, kills: 1 })
+    expect(state.result?.statistics?.['-3'].received).toBe(28)
+    expect(state.result?.turn).toBe(1)
+  })
+  it('does not invent statistics when reconnecting during a fight', () => {
+    const reconnected = reduceCombat(emptyCombat(), { ...event('checkpoint', {}, 1), snapshot: { ...snapshot, phase: 'fighting' } })
+    const hit = reduceCombat(reconnected, event('GameActionFightLifePointsLostMessage', { sourceId: 101, targetId: -3, loss: 10 }))
+    expect(hit.statistics).toBeUndefined()
+  })
+  it('distinguishes spell AP cost from walk MP cost through emission metadata', () => {
+    const base = joined()
+    const spell = reduceCombat(base, event('GameActionFightPointsVariationMessage', { actionId: 0, sourceId: 101, targetId: 101, delta: -4, resource: 'ap', reason: 'spell_cost' }))
+    expect(spell.snapshot?.fighters[0]).toMatchObject({ ap: 2, mp: 3 })
+    expect(spell.variations[0]).toMatchObject({ target: 101, delta: -4, resource: 'ap', reason: 'spell_cost' })
+    const walk = reduceCombat(spell, event('GameActionFightPointsVariationMessage', { actionId: 0, sourceId: 101, targetId: 101, delta: -2, resource: 'mp', reason: 'movement_cost' }, 3))
+    expect(walk.snapshot?.fighters[0]).toMatchObject({ ap: 2, mp: 1 })
+  })
+  it('resolves known withdrawal/gain actionIds without metadata', () => {
+    expect(variationResource({ actionId: 101 })).toBe('ap')
+    expect(variationResource({ actionId: 127 })).toBe('mp')
+    expect(variationResource({ actionId: 120 })).toBe('ap')
+    expect(variationResource({ actionId: 78 })).toBe('mp')
+    const base = joined()
+    const loss = reduceCombat(base, event('GameActionFightPointsVariationMessage', { actionId: 127, sourceId: -3, targetId: 101, delta: -1 }))
+    expect(loss.snapshot?.fighters[0].mp).toBe(2)
+    expect(loss.variations[0]).toMatchObject({ resource: 'mp', reason: 'withdraw' })
+  })
+  it('never guesses the resource of a bare actionId 0 and awaits the snapshot', () => {
+    expect(variationResource({ actionId: 0, delta: -3 })).toBeNull()
+    const base = joined()
+    const ambiguous = reduceCombat(base, event('GameActionFightPointsVariationMessage', { actionId: 0, sourceId: 101, targetId: 101, delta: -3 }))
+    expect(ambiguous.snapshot?.fighters[0]).toMatchObject({ ap: 6, mp: 3 })
+    expect(ambiguous.variations).toEqual([])
+  })
+  it('journals tackles and dodges without debiting the dodged amount', () => {
+    const base = joined()
+    const tackled = reduceCombat(base, event('GameActionFightTackledMessage', { actionId: 0, sourceId: 101, tacklersIds: [-3] }))
+    expect(tackled.tackles[0]).toMatchObject({ target: 101, tacklers: [-3] })
+    expect(tackled.snapshot?.fighters[0]).toMatchObject({ ap: 6, mp: 3 })
+    const tackleLoss = reduceCombat(tackled, event('GameActionFightPointsVariationMessage', { actionId: 127, sourceId: 101, targetId: 101, delta: -2, resource: 'mp', reason: 'tackle' }, 3))
+    expect(tackleLoss.snapshot?.fighters[0].mp).toBe(1)
+    const dodged = reduceCombat(tackleLoss, event('GameActionFightDodgePointLossMessage', { actionId: 309, sourceId: -3, targetId: 101, amount: 1 }, 4))
+    expect(dodged.dodges[0]).toMatchObject({ target: 101, resource: 'mp', dodged: 1 })
+    expect(dodged.snapshot?.fighters[0].mp).toBe(1)
+  })
+  it('advances the authoritative cell on the confirmed movement path', () => {
+    expect(movementCells({ keyMovements: [230, 231] })).toEqual([230, 231])
+    const base = joined()
+    const moved = reduceCombat(base, event('GameMapMovementMessage', { actorId: 101, keyMovements: [230, 246, 262] }))
+    expect(moved.snapshot?.fighters[0].cell).toBe(262)
+  })
+  it('tracks root-sequence nesting and the last closed action', () => {    const base = joined()
+    const start = reduceCombat(base, event('SequenceStartMessage', { sequenceType: 2, authorId: 101 }))
+    expect(start.sequenceDepth).toBe(1)
+    const end = reduceCombat(start, event('SequenceEndMessage', { sequenceType: 2, authorId: 101, actionId: 5 }, 3))
+    expect(end.sequenceDepth).toBe(0)
+    expect(end.lastSequence).toMatchObject({ type: 2, author: 101, action: 5 })
+  })
+  it('nests child sequences and closes them before their root', () => {
+    const base = joined()
+    const root = reduceCombat(base, event('SequenceStartMessage', { sequenceType: 2, authorId: 101 }))
+    const child = reduceCombat(root, event('SequenceChildStartMessage', { sequenceId: 7, parentId: 3, sequenceType: 5, authorId: 101 }, 3))
+    expect(child.sequenceDepth).toBe(2)
+    expect(child.sequenceStack).toMatchObject([{ id: -1, type: 2 }, { id: 7, type: 5 }])
+    const closed = reduceCombat(child, event('SequenceChildEndMessage', { sequenceId: 7, parentId: 3, sequenceType: 5, authorId: 101 }, 4))
+    expect(closed.sequenceDepth).toBe(1)
+    // An unknown child id never corrupts the stack.
+    const stray = reduceCombat(closed, event('SequenceChildEndMessage', { sequenceId: 99, parentId: 3, sequenceType: 5, authorId: 101 }, 5))
+    expect(stray.sequenceDepth).toBe(1)
+    const end = reduceCombat(stray, event('SequenceEndMessage', { sequenceType: 2, authorId: 101, actionId: 3 }, 6))
+    expect(end.sequenceDepth).toBe(0)
+    expect(end.sequenceStack).toEqual([])
+  })
+  it('a root end sweeps unclosed children instead of leaking depth', () => {
+    const base = joined()
+    const root = reduceCombat(base, event('SequenceStartMessage', { sequenceType: 2, authorId: 101 }))
+    const child = reduceCombat(root, event('SequenceChildStartMessage', { sequenceId: 7, parentId: 3, sequenceType: 5, authorId: 101 }, 3))
+    const end = reduceCombat(child, event('SequenceEndMessage', { sequenceType: 2, authorId: 101, actionId: 3 }, 4))
+    expect(end.sequenceDepth).toBe(0)
+  })
+  it('labels resource deltas without mixing PA and PM', () => {
+    expect(variationLabel(-2, 'ap')).toBe('−2 PA')
+    expect(variationLabel(-1, 'mp')).toBe('−1 PM')
+    expect(variationLabel(3, 'ap')).toBe('+3 PA')
+    expect(VARIATION_COLORS.ap).not.toBe(VARIATION_COLORS.mp)
+  })
+  it('reconciles absolute checkpoint values without replaying deltas', () => {
+    const base = joined()
+    const spent = reduceCombat(base, event('GameActionFightPointsVariationMessage', { actionId: 0, sourceId: 101, targetId: 101, delta: -2, resource: 'ap', reason: 'spell_cost' }))
+    expect(spent.snapshot?.fighters[0].ap).toBe(4)
+    const checkpoint = reduceCombat(spent, { ...event('SequenceEndMessage', {}, 3), snapshot: { ...spent.snapshot!, fighters: spent.snapshot!.fighters.map(f => f.id === 101 ? { ...f, ap: 4, mp: 3 } : f) } })
+    expect(checkpoint.snapshot?.fighters[0]).toMatchObject({ ap: 4, mp: 3 })
+    // Replayed or stale revisions never debit twice.
+    expect(reduceCombat(checkpoint, event('GameActionFightPointsVariationMessage', { actionId: 0, sourceId: 101, targetId: 101, delta: -2, resource: 'ap', reason: 'spell_cost' }, 2))).toBe(checkpoint)
+  })
+  it('upserts and removes marks without leaking hidden coordinates', () => {
+    const base = joined()
+    const glyph = { markId: 12, markType: 1, active: true, markAuthorId: 101, markTeamId: 1, markimpactCell: 250, markSpellId: 2083, cells: [{ cellId: 250, cellColor: 12345 }] }
+    const marked = reduceCombat(base, event('GameActionFightMarkCellsMessage', { mark: glyph }))
+    expect(marked.snapshot?.marks).toMatchObject([{ markId: 12, center: 250, cells: [{ cellId: 250, color: 12345 }] }])
+    const hidden = { markId: 13, markType: 2, active: true, markAuthorId: -3, markTeamId: 0, markimpactCell: -1, markSpellId: 197, cells: [] }
+    const trapped = reduceCombat(marked, event('GameActionFightMarkCellsMessage', { mark: hidden }, 3))
+    expect(trapped.snapshot?.marks).toHaveLength(2)
+    expect(trapped.snapshot?.marks[1]).toMatchObject({ markId: 13, center: -1, cells: [] })
+    const cleared = reduceCombat(trapped, event('GameActionFightUnmarkCellsMessage', { markId: 12 }, 4))
+    expect(cleared.snapshot?.marks.map(m => m.markId)).toEqual([13])
+  })
+  it('normalizes snapshot marks at the boundary', () => {
+    const base = joined()
+    expect(base.snapshot?.marks).toEqual([])
+    const parsed = parseCombatEvent(JSON.stringify({ ...event('GameFightJoinMessage', {}, 1), snapshot: { ...snapshot, marks: [{ markId: 5, cells: [{ cellId: 250, cellColor: 7 }] }] } }))
+    expect(parsed?.snapshot?.marks).toMatchObject([{ markId: 5, cells: [{ cellId: 250, color: 7 }] }])
+    expect(parseCombatEvent(JSON.stringify({ ...event('GameFightJoinMessage', {}, 1), snapshot: { ...snapshot, marks: {} } }))).toBeNull()
+  })
+})

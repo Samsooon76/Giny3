@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Servers\Giny.World\Giny.World.csproj" />
+    <EmbeddedResource Include="..\..\Ressources\SQL\Patches\002_guild_camp.sql" Link="Data\Migrations\002_guild_camp.sql" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <MakeDir Directories="$(MSBuildThisFileDirectory)..\..\Servers\Giny.World\bin\$(Configuration)\net6.0\Modules" />
+    <Copy SourceFiles="$(TargetDir)Giny.GuildCamp.dll" DestinationFolder="$(MSBuildThisFileDirectory)..\..\Servers\Giny.World\bin\$(Configuration)\net6.0\Modules" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

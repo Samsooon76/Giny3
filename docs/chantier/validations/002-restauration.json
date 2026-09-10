@@ -1,0 +1,397 @@
+[
+  {
+    "table": "giny_auth.accounts",
+    "match": true,
+    "checksum": "2326875751"
+  },
+  {
+    "table": "giny_auth.world_characters",
+    "match": true,
+    "checksum": "3907516605"
+  },
+  {
+    "table": "giny_auth.world_servers",
+    "match": true,
+    "checksum": "4041243392"
+  },
+  {
+    "table": "giny_world.achievements",
+    "match": true,
+    "checksum": "2980917702"
+  },
+  {
+    "table": "giny_world.achievement_objectives",
+    "match": true,
+    "checksum": "1914728955"
+  },
+  {
+    "table": "giny_world.achievement_rewards",
+    "match": true,
+    "checksum": "917014178"
+  },
+  {
+    "table": "giny_world.areas",
+    "match": true,
+    "checksum": "758184880"
+  },
+  {
+    "table": "giny_world.bank_items",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.battle_pass_rewards",
+    "match": true,
+    "checksum": "824666412"
+  },
+  {
+    "table": "giny_world.battle_pass_seasons",
+    "match": true,
+    "checksum": "1569493986"
+  },
+  {
+    "table": "giny_world.bidshops",
+    "match": true,
+    "checksum": "3093347443"
+  },
+  {
+    "table": "giny_world.bidshop_items",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.breeds",
+    "match": true,
+    "checksum": "1238977175"
+  },
+  {
+    "table": "giny_world.challenges",
+    "match": true,
+    "checksum": "2819390793"
+  },
+  {
+    "table": "giny_world.characters",
+    "match": true,
+    "checksum": "3830786824"
+  },
+  {
+    "table": "giny_world.character_items",
+    "match": true,
+    "checksum": "1893546379"
+  },
+  {
+    "table": "giny_world.dungeons",
+    "match": true,
+    "checksum": "269083459"
+  },
+  {
+    "table": "giny_world.effects",
+    "match": true,
+    "checksum": "1002297067"
+  },
+  {
+    "table": "giny_world.emotes",
+    "match": true,
+    "checksum": "3686521750"
+  },
+  {
+    "table": "giny_world.experiences",
+    "match": true,
+    "checksum": "1077098565"
+  },
+  {
+    "table": "giny_world.guilds",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.guild_buildings",
+    "match": true,
+    "checksum": "4263860088"
+  },
+  {
+    "table": "giny_world.guild_building_effects",
+    "match": true,
+    "checksum": "2580354514"
+  },
+  {
+    "table": "giny_world.guild_building_levels",
+    "match": true,
+    "checksum": "3342905181"
+  },
+  {
+    "table": "giny_world.guild_building_level_requirements",
+    "match": true,
+    "checksum": "418475160"
+  },
+  {
+    "table": "giny_world.guild_building_states",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.guild_projects",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.guild_project_contributions",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.guild_project_requirements",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.heads",
+    "match": true,
+    "checksum": "244704544"
+  },
+  {
+    "table": "giny_world.initial_items",
+    "match": true,
+    "checksum": "2101263362"
+  },
+  {
+    "table": "giny_world.interactive_skills",
+    "match": true,
+    "checksum": "541664905"
+  },
+  {
+    "table": "giny_world.items",
+    "match": true,
+    "checksum": "3751675347"
+  },
+  {
+    "table": "giny_world.item_sets",
+    "match": true,
+    "checksum": "812900559"
+  },
+  {
+    "table": "giny_world.living_objects",
+    "match": true,
+    "checksum": "2609073700"
+  },
+  {
+    "table": "giny_world.maps",
+    "match": true,
+    "checksum": "3129018698"
+  },
+  {
+    "table": "giny_world.map_positions",
+    "match": true,
+    "checksum": "586970859"
+  },
+  {
+    "table": "giny_world.map_references",
+    "match": true,
+    "checksum": "4109895305"
+  },
+  {
+    "table": "giny_world.map_scroll_actions",
+    "match": true,
+    "checksum": "2659195537"
+  },
+  {
+    "table": "giny_world.monsters",
+    "match": true,
+    "checksum": "3989307062"
+  },
+  {
+    "table": "giny_world.monster_spawns",
+    "match": true,
+    "checksum": "1297105652"
+  },
+  {
+    "table": "giny_world.monster_static_spawns",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.npcs",
+    "match": true,
+    "checksum": "1860866170"
+  },
+  {
+    "table": "giny_world.npc_actions",
+    "match": true,
+    "checksum": "2287695321"
+  },
+  {
+    "table": "giny_world.npc_replies",
+    "match": true,
+    "checksum": "967227284"
+  },
+  {
+    "table": "giny_world.npc_spawns",
+    "match": true,
+    "checksum": "2789262648"
+  },
+  {
+    "table": "giny_world.ornaments",
+    "match": true,
+    "checksum": "3304561739"
+  },
+  {
+    "table": "giny_world.player_battle_pass_claims",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.player_battle_pass_progress",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.player_pokefus_researched_genes",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.player_pokefus_species_progress",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.player_quests",
+    "match": true,
+    "checksum": "724911086"
+  },
+  {
+    "table": "giny_world.player_quest_rewards",
+    "match": true,
+    "checksum": "2254403385"
+  },
+  {
+    "table": "giny_world.pokefus",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.pokefus_capture_configuration",
+    "match": true,
+    "checksum": "829972993"
+  },
+  {
+    "table": "giny_world.pokefus_capture_nets",
+    "match": true,
+    "checksum": "149008028"
+  },
+  {
+    "table": "giny_world.pokefus_equipped_genes",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.pokefus_genes",
+    "match": true,
+    "checksum": "1391192792"
+  },
+  {
+    "table": "giny_world.pokefus_genome_branches",
+    "match": true,
+    "checksum": "4290930561"
+  },
+  {
+    "table": "giny_world.pokefus_species",
+    "match": true,
+    "checksum": "1118966429"
+  },
+  {
+    "table": "giny_world.pokefus_unlocked_genes",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.quests",
+    "match": true,
+    "checksum": "3407079387"
+  },
+  {
+    "table": "giny_world.quest_objectives",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.quest_rewards",
+    "match": true,
+    "checksum": "2038538184"
+  },
+  {
+    "table": "giny_world.quest_steps",
+    "match": true,
+    "checksum": "1374834493"
+  },
+  {
+    "table": "giny_world.quest_step_rewards",
+    "match": true,
+    "checksum": "0"
+  },
+  {
+    "table": "giny_world.quest_templates",
+    "match": true,
+    "checksum": "2322305598"
+  },
+  {
+    "table": "giny_world.recipes",
+    "match": true,
+    "checksum": "3419234417"
+  },
+  {
+    "table": "giny_world.skills",
+    "match": true,
+    "checksum": "2568769329"
+  },
+  {
+    "table": "giny_world.spells",
+    "match": true,
+    "checksum": "1922879946"
+  },
+  {
+    "table": "giny_world.spell_bombs",
+    "match": true,
+    "checksum": "893223301"
+  },
+  {
+    "table": "giny_world.spell_levels",
+    "match": true,
+    "checksum": "76776281"
+  },
+  {
+    "table": "giny_world.spell_states",
+    "match": true,
+    "checksum": "340569601"
+  },
+  {
+    "table": "giny_world.spell_variants",
+    "match": true,
+    "checksum": "3296394920"
+  },
+  {
+    "table": "giny_world.subareas",
+    "match": true,
+    "checksum": "573832754"
+  },
+  {
+    "table": "giny_world.titles",
+    "match": true,
+    "checksum": "1538600697"
+  },
+  {
+    "table": "giny_world.waypoints",
+    "match": true,
+    "checksum": "4276441106"
+  },
+  {
+    "table": "giny_world.weapons",
+    "match": true,
+    "checksum": "1171946083"
+  },
+  {
+    "table": "giny_world.world_accounts",
+    "match": true,
+    "checksum": "1957257166"
+  }
+]

@@ -1,0 +1,41 @@
+import { afterEach, expect, it, vi } from 'vitest'
+import { HudRefreshQueue } from './HudRefreshQueue'
+afterEach(() => vi.useRealTimers())
+it('coalesces bursts but reconciles a mutation arriving during the request', async () => {
+  vi.useFakeTimers()
+  let finish!: () => void
+  const refresh = vi.fn().mockImplementationOnce(() => new Promise<void>(resolve => { finish = resolve })).mockResolvedValue(undefined)
+  const queue = new HudRefreshQueue(refresh)
+  for (let i = 0; i < 20; i++) queue.request()
+  await vi.advanceTimersByTimeAsync(100)
+  expect(refresh).toHaveBeenCalledTimes(1)
+  queue.request(); finish()
+  await vi.advanceTimersByTimeAsync(100)
+  expect(refresh).toHaveBeenCalledTimes(2)
+  queue.reset()
+})
+it('drops pending refreshes on disconnect and isolates the previous connection', async () => {
+  vi.useFakeTimers()
+  const refresh = vi.fn().mockResolvedValue(undefined)
+  const queue = new HudRefreshQueue(refresh)
+  queue.request(); queue.reset()
+  await vi.advanceTimersByTimeAsync(100)
+  expect(refresh).not.toHaveBeenCalled()
+  queue.request(); await vi.advanceTimersByTimeAsync(100)
+  expect(refresh).toHaveBeenCalledTimes(1)
+  queue.reset()
+})
+it('does not let an old in-flight request alter a reconnected queue', async () => {
+  vi.useFakeTimers()
+  const completions: Array<() => void> = []
+  const refresh = vi.fn(() => new Promise<void>(resolve => completions.push(resolve)))
+  const queue = new HudRefreshQueue(refresh)
+  queue.request(); await vi.advanceTimersByTimeAsync(100)
+  queue.reset(); queue.request(); await vi.advanceTimersByTimeAsync(100)
+  completions[0](); await vi.advanceTimersByTimeAsync(0)
+  queue.request(); await vi.advanceTimersByTimeAsync(100)
+  expect(refresh).toHaveBeenCalledTimes(2)
+  completions[1](); await vi.advanceTimersByTimeAsync(100)
+  expect(refresh).toHaveBeenCalledTimes(3)
+  queue.reset(); completions[2]()
+})

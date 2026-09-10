@@ -1,0 +1,24 @@
+{
+  "currentManifestMaps": 17353,
+  "currentManifestBytes": 3320053,
+  "currentEntityCount": 786,
+  "currentUnavailableCount": 45,
+  "existingReleaseReportSummary": {
+    "format": "giny.world-release.v1",
+    "source_version": "3.6.10.11",
+    "maps": 17353,
+    "expected_maps": 17353,
+    "entities": 670,
+    "atlas_maps_reused": 31,
+    "files_linked": 169365,
+    "missing_files": 0,
+    "maps_with_source_gaps": 7042,
+    "absent_props": 70,
+    "missing_drawable_gfx": 1127,
+    "maps_with_unavailable_props": 2409,
+    "unsupported_animation_props": 127,
+    "maps_ready_for_supported_renderer": 14036,
+    "atlas_frames_verified": 5846
+  },
+  "warning": "release-report is an existing historical artifact, not a fresh validation of current pixels; entity counts already differ from current manifest"
+}

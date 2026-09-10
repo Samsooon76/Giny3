@@ -1,0 +1,21 @@
+@import './ui/dofus3-assets.css';
+@import './ui/themes.css';
+@import './ui/dofus3-globals.css';
+
+@font-face { font-family: Lexend; src: url('/fonts/Lexend-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: Lexend; src: url('/fonts/Lexend-Medium.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: Lexend; src: url('/fonts/Lexend-SemiBold.ttf') format('truetype'); font-weight: 600; }
+@font-face { font-family: Lexend; src: url('/fonts/Lexend-Bold.ttf') format('truetype'); font-weight: 700; }
+
+html, body, #root { 
+  margin: 0; 
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden; 
+  background: #07040f; 
+  color: #fff; 
+  font-family: 'Lexend-Regular', Lexend, sans-serif; 
+}
+
+button, input { font: inherit; }
+

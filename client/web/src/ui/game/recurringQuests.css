@@ -1,0 +1,11 @@
+.recurring-quests-panel{position:absolute;left:24px;top:112px;z-index:1400;pointer-events:auto;color:#f4f2ed;background:#24263c;border:1px solid #626181;border-radius:8px;padding:12px;font:14px/1.5 sans-serif;box-shadow:0 8px 32px #0008}
+.recurring-quests-panel.expanded{width:420px;max-height:78vh;display:flex;flex-direction:column;gap:8px}
+.recurring-quests-panel button{color:inherit;background:#41425e;padding:7px 10px;border:1px solid #777691;border-radius:4px;cursor:pointer}
+.recurring-quests-panel button:disabled{opacity:.5;cursor:default}
+.recurring-quests-panel button[aria-pressed=true]{background:#626181;border-color:#e4f263}
+.recurring-quests-panel nav{display:flex;gap:5px;flex-wrap:wrap}
+.recurring-content{overflow:auto;min-height:0}
+.recurring-content article{border-top:1px solid #626181;padding:12px 0}
+.recurring-content p{margin:6px 0}
+.recurring-content progress{width:75%;margin-right:10px;accent-color:#d7ec54}
+.battlepass-slot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:8px 0}

@@ -1,0 +1,112 @@
+.login-form { width: 100%; display: flex; flex-direction: column; gap: 14px; padding: 10px 14px; box-sizing: border-box; }
+.login-form, .login-form * { pointer-events: auto; }
+.login-form label { display: flex; flex-direction: column; gap: 6px; color: #f2ecdf; font-size: 15px; font-weight: 600; text-shadow: 0 1px 3px #000c; }
+.login-form input { height: 46px; box-sizing: border-box; border: 1px solid #736d63; border-radius: 4px; outline: 0; background: #171717e8; color: #fff; padding: 0 14px; box-shadow: inset 0 2px 7px #000a; }
+.login-form input:focus { border-color: #d9ef44; box-shadow: 0 0 0 2px #d9ef4438, inset 0 2px 7px #000a; }
+.giny-submit { height: 52px; margin-top: 4px; border: 1px solid #e5c66e; border-radius: 5px; color: #1b1710; font-size: 15px; font-weight: 800; letter-spacing: .6px; background: linear-gradient(#f5dc78, #c79631); box-shadow: inset 0 1px #fff7bc, 0 3px 8px #0008; cursor: pointer; }
+.giny-submit:hover { filter: brightness(1.1); }
+.giny-submit:disabled { filter: grayscale(1); opacity: .65; }
+
+.creation-info-backdrop { position: fixed; inset: 0; z-index: 96; display: flex; align-items: center; justify-content: center; background: #060812a8; backdrop-filter: blur(3px); pointer-events: auto; }
+.creation-info-dialog { width: min(760px, 88vw); max-height: min(690px, 84vh); box-sizing: border-box; display: flex; flex-direction: column; border: 1px solid #6d7082; border-radius: 7px; background: #191b2bf5; color: #d7d8df; box-shadow: 0 20px 55px #000d, inset 0 1px #ffffff17; }
+.creation-info-dialog > header { flex: 0 0 auto; min-height: 66px; display: flex; align-items: center; justify-content: space-between; padding: 10px 14px 10px 20px; border-bottom: 1px solid #343748; background: linear-gradient(#2d3044, #222536); }
+.creation-info-dialog h2 { margin: 1px 0 0; color: #f2f3f6; font-size: 21px; line-height: 1.15; }
+.creation-info-dialog header small { color: #d9e94e; font-size: 11px; font-weight: 750; text-transform: uppercase; letter-spacing: .04em; }
+.creation-info-dialog header button { width: 35px; height: 35px; border: 1px solid #696c7c; border-radius: 4px; background: linear-gradient(#53576d, #303447); color: #f2f3f6; font-size: 25px; line-height: 30px; cursor: pointer; }
+.creation-info-dialog header button:hover { border-color: #dce94a; color: #efff56; }
+.creation-mechanics { overflow: auto; padding: 20px 24px; color: #d7d9e0; font-size: 13px; line-height: 1.5; }
+.creation-mechanics h3 { margin: 15px 0 5px; color: #e7ed67; font-size: 16px; }
+.creation-mechanics li { margin-left: 18px; }
+
+
+/* Keep this above the HUD and account chrome, below error notifications. */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: #000;
+  isolation: isolate;
+  cursor: wait;
+}
+.loading-emblem {
+  position: absolute;
+  right: max(0px, env(safe-area-inset-right));
+  bottom: max(0px, env(safe-area-inset-bottom));
+  width: clamp(130px, 14vw, 200px);
+  height: auto;
+  /* Remove the capture's near-black background without altering its emblem. */
+  filter: grayscale(1) contrast(1.2);
+  user-select: none;
+  pointer-events: none;
+  animation: loading-emblem-pulse 1.8s ease-in-out infinite;
+}
+@keyframes loading-emblem-pulse {
+  0%, 100% { opacity: .55; }
+  50% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .loading-emblem { animation: none; }
+}
+.world-screen, .world-viewport { position: relative; width: 100%; height: 100%; overflow: hidden; background: #000; }
+.world-viewport canvas { display: block; }
+/* Border hint, official-client style: the whole edge under the cursor takes a
+   shadow and an arrow points at the neighbour map. */
+.world-message, .world-identity { position: absolute; z-index: 10; top: 16px; border: 1px solid #6d6458; border-radius: 4px; background: #14110ed9; padding: 8px 12px; color: #eee9df; font-size: 12px; pointer-events: none; }
+.world-message { left: 50%; transform: translateX(-50%); color: #ffb2a8; }
+.world-identity { right: 16px; }
+
+.app-error-banner {
+  position: fixed;
+  z-index: 2100;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: min(600px, 90vw);
+  border: 1px solid #ff4d4d;
+  border-radius: 6px;
+  background: #1c0f13f2;
+  backdrop-filter: blur(6px);
+  padding: 10px 20px;
+  color: #ffb2b2;
+  font: 600 13px/1.4 Lexend, sans-serif;
+  box-shadow: 0 10px 30px #000c, 0 0 10px #ff222233;
+  pointer-events: none;
+  animation: app-error-in 200ms ease-out forwards;
+}
+@keyframes app-error-in {
+  from { opacity: 0; transform: translate(-50%, -10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.game-browser {
+  position: absolute; top: 60px; right: 270px; z-index: 3; width: 268px; max-height: calc(100vh - 120px);
+  display: flex; flex-direction: column; overflow: hidden; border: 1px solid #6d7188; border-radius: 8px;
+  background: #141726f2; box-shadow: 0 16px 40px #000a;
+}
+.game-browser header {
+  display: flex; align-items: center; justify-content: space-between; padding: 7px 6px 7px 10px;
+  border-bottom: 1px solid #4c5066; color: #e7e9f2; font-size: 12px;
+}
+.game-browser header button { width: 22px; height: 22px; border: 0; border-radius: 4px; background: transparent; color: #c9ccd8; font-size: 17px; cursor: pointer; }
+.game-browser-tabs { display: flex; gap: 4px; padding: 0 7px; }
+.game-browser-tabs button {
+  flex: 1; border: 1px solid #5c6076; border-radius: 4px; padding: 4px 6px;
+  background: transparent; color: #c4c7d4; font: 600 11px/1.2 Lexend, sans-serif; cursor: pointer;
+}
+.game-browser-tabs button.is-active { border-color: #d9ef44; color: #f0ff59; }
+.game-browser input { margin: 7px; border: 1px solid #5c6076; border-radius: 4px; outline: 0; padding: 6px 8px; background: #0e1020; color: #e2e4ee; font: 12px inherit; }
+.game-browser input:focus { border-color: #d9ef44; }
+.game-browser footer { padding: 7px; border-top: 1px solid #4c5066; }
+.game-browser footer button {
+  width: 100%; border: 1px solid #5c6076; border-radius: 4px; padding: 6px 8px;
+  background: linear-gradient(#3a3e55, #262a3d); color: #dfe1ea; font: 600 12px/1.25 Lexend, sans-serif; cursor: pointer;
+}
+.game-browser footer button:hover { border-color: #d9ef44; color: #f0ff59; }
+.game-browser ul { flex: 1; min-height: 0; margin: 0; padding: 0 4px 6px; overflow: auto; list-style: none; }
+.game-browser li button {
+  width: 100%; padding: 4px 7px; border: 0; border-radius: 3px; background: transparent; color: #c4c7d4;
+  text-align: left; font: 11px/1.35 ui-monospace, monospace; cursor: pointer;
+}
+.game-browser li button:hover { background: #2b3048; color: #f0ff59; }
+
+.world-message button { pointer-events: auto; margin-left: 12px; padding: 5px 10px; cursor: pointer; }

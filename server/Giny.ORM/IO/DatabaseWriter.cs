@@ -1,0 +1,314 @@
+using MySql.Data.MySqlClient;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.IO;
+using Giny;
+using Giny.ORM.Interfaces;
+using Giny.ORM.Attributes;
+using Giny.Core;
+using System.Globalization;
+using Giny.Core.IO;
+using System.Text;
+using System.Diagnostics;
+using Giny.ORM.Expressions;
+
+namespace Giny.ORM.IO
+{
+    public class DatabaseWriter
+    {
+        private const string SqlDateFormat = "yyyy-MM-dd HH:mm:ss";
+
+        private string TableName
+        {
+            get;
+            set;
+        }
+        private PropertyInfo[] AddProperties
+        {
+            get;
+            set;
+        }
+        private PropertyInfo[] UpdateProperties
+        {
+            get;
+            set;
+        }
+        private PropertyInfo PrimaryProperty
+        {
+            get;
+            set;
+        }
+        private Type Type
+        {
+            get;
+            set;
+        }
+        public bool HasNoUpdateProperties
+        {
+            get;
+            set;
+        }
+        public DatabaseWriter(Type type)
+        {
+            this.Type = type;
+            var definition = TableManager.Instance.GetDefinition(type);
+            this.AddProperties = GetAddProperties(type);
+            this.UpdateProperties = GetUpdateProperties(type);
+            this.TableName = definition.TableAttribute.TableName;
+            this.PrimaryProperty = definition.PrimaryProperty;
+            this.HasNoUpdateProperties = UpdateProperties.Length == 0;
+        }
+        public void Use(IRecord[] elements, DatabaseAction action)
+        {
+            if (elements.Length == 0) return;
+            if (!Enum.IsDefined(typeof(DatabaseAction), action)) throw new ArgumentOutOfRangeException(nameof(action));
+            DatabaseManager.Instance.ExecuteTransaction((connection, transaction) =>
+            {
+                // All chunks belong to one transaction: a failure must not acknowledge a partial lot.
+                foreach (var batch in elements.Chunk(500))
+                {
+                    switch (action)
+                    {
+                        case DatabaseAction.Add: AddElements(batch, connection, transaction); break;
+                        case DatabaseAction.Update: UpdateElements(batch, connection, transaction); break;
+                        case DatabaseAction.Remove: DeleteElements(batch, connection, transaction); break;
+                    }
+                }
+                return true;
+            });
+        }
+
+        private void AddElements(IRecord[] elements, MySqlConnection connection, MySqlTransaction transaction)
+        {
+            using var command = new MySqlCommand(string.Empty, connection, transaction);
+
+            List<string> final = new List<string>();
+
+            for (int i = 0; i < elements.Length; i++)
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.Append("(");
+
+                foreach (var property in AddProperties)
+                {
+                    sb.Append(string.Format("?{0}{1},", property.Name, i));
+                    MySqlParameter mySQLParam = new MySqlParameter("?" + property.Name + i, ConvertObject(property, elements[i]));
+                    command.Parameters.Add(mySQLParam);
+                }
+
+                sb = sb.Remove(sb.Length - 1, 1);
+                sb.Append(")");
+
+                final.Add(sb.ToString());
+            }
+
+            command.CommandText = string.Format(QueryConstants.Insert, TableName, string.Join(",", final), SqlColumns.List(AddProperties));
+
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Unable to add element to database (" + TableName + ") " +
+                     ex.Message);
+            }
+        }
+
+        private void UpdateElements(IRecord[] elements, MySqlConnection connection, MySqlTransaction transaction)
+        {
+            if (HasNoUpdateProperties)
+            {
+                throw new Exception("Unable to update elements. " + TableName + " has no update property.");
+            }
+
+
+            using var command = new MySqlCommand(string.Empty, connection, transaction);
+
+            var sql = new StringBuilder();
+            for (int i = 0; i < elements.Length; i++)
+            {
+                StringBuilder sb = new StringBuilder();
+
+                foreach (var property in UpdateProperties)
+                {
+                    sb.Append(string.Format("{2} = ?{0}{1},", property.Name, i, SqlColumns.Quote(SqlColumns.Name(property))));
+                    MySqlParameter mySQLParam = new MySqlParameter("?" + property.Name + i, ConvertObject(property, elements[i]));
+                    command.Parameters.Add(mySQLParam);
+                }
+
+                sb = sb.Remove(sb.Length - 1, 1);
+
+                var text = string.Format("{0}", string.Join(",", sb.ToString()));
+
+                command.Parameters.AddWithValue("?recordKey" + i, PrimaryProperty.GetValue(elements[i]));
+                sql.AppendFormat(QueryConstants.UpdateWhere, TableName, text,
+                    SqlColumns.Quote(SqlColumns.Name(PrimaryProperty)) + "=?recordKey" + i).Append(';');
+            }
+
+            command.CommandText = sql.ToString();
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Unable update database element (" + TableName + ") " +
+                     ex.Message);
+            }
+
+
+        }
+        private void DeleteElements(IEnumerable<IRecord> elements, MySqlConnection connection, MySqlTransaction transaction)
+        {
+            foreach (var batch in elements.Chunk(500))
+            {
+                using var command = new MySqlCommand(string.Empty, connection, transaction);
+                var names = new List<string>();
+                for (int i = 0; i < batch.Length; i++)
+                {
+                    var name = "?recordKey" + i;
+                    names.Add(name);
+                    command.Parameters.AddWithValue(name, PrimaryProperty.GetValue(batch[i]));
+                }
+                command.CommandText = string.Format(QueryConstants.DeleteWhere, TableName,
+                    SqlColumns.Quote(SqlColumns.Name(PrimaryProperty)) + " IN (" + string.Join(",", names) + ")");
+                command.ExecuteNonQuery();
+            }
+        }
+        /* Maybe store all properties info instead of calling .NET reflection methods? */
+        public static object ConvertObject(PropertyInfo property, IRecord element)
+        {
+            var value = property.GetValue(element);
+
+            if (value == null)
+            {
+                return null;
+            }
+
+            // A non-null Nullable<T> is boxed as T. Do not treat it as a collection.
+            if (Nullable.GetUnderlyingType(property.PropertyType) != null)
+            {
+                return value;
+            }
+
+            MethodInfo serializationMethod = TableManager.Instance.GetSerializationMethods(property.PropertyType);
+
+            if (property.PropertyType == typeof(DateTime))
+            {
+                value = ((DateTime)value).ToString(SqlDateFormat);
+            }
+            else if (property.PropertyType == typeof(bool))
+            {
+                value = Convert.ToByte(value);
+            }
+            else if (property.CustomAttributes.Count() > 0 && property.GetCustomAttribute<BlobAttribute>() != null)
+            {
+                byte[] content = Protobuf.Serialize(value);
+                return content;
+            }
+            else if (serializationMethod != null)
+            {
+                value = serializationMethod.Invoke(null, new object[] { value });
+            }
+            else if (value is Enum)
+            {
+                value = value.ToString();
+            }
+            else if (property.PropertyType.IsGenericType)
+            {
+                if (element.GetType().Name == "IdolRecord")
+                {
+
+                }
+                List<object> results = new List<object>();
+
+                Type genericType = property.PropertyType.GetGenericTypeDefinition();
+
+                if (genericType == typeof(List<>))
+                {
+                    var values = (IList)value;
+
+                    foreach (var v in values)
+                    {
+                        results.Add(v.ToString().Replace(",", "."));
+                    }
+                    return string.Join(",", results);
+                }
+                else
+                {
+                    throw new Exception("Unhandled generic type " + property.PropertyType.Name);
+                }
+            }
+
+            return value;
+        }
+
+        public static PropertyInfo[] GetUpdateProperties(Type type)
+        {
+            return type.GetProperties().Where(property => property.GetCustomAttribute(typeof(IgnoreAttribute)) == null
+            && property.GetCustomAttribute(typeof(UpdateAttribute), false) != null).OrderBy(x => x.MetadataToken).ToArray();
+        }
+        public static PropertyInfo[] GetAddProperties(Type type)
+        {
+            return type.GetProperties().Where(property => property.GetCustomAttribute(typeof(IgnoreAttribute)) == null).OrderBy(x => x.MetadataToken).ToArray();
+        }
+
+        public static void Update<T>(T item) where T : IRecord
+        {
+            TableManager.Instance.GetWriter(typeof(T)).Use(new IRecord[] { item }, DatabaseAction.Update);
+        }
+
+        public static void Update<T>(IEnumerable<T> items) where T : IRecord
+        {
+            TableManager.Instance.GetWriter(typeof(T)).Use(items.Cast<IRecord>().ToArray(), DatabaseAction.Update);
+        }
+
+        public static void Insert<T>(T item) where T : IRecord
+        {
+            TableManager.Instance.GetWriter(typeof(T)).Use(new IRecord[] { item }, DatabaseAction.Add);
+        }
+
+        /// <summary>Persist prepared records in the caller's transaction. No cache or save-queue effects.</summary>
+        public static void InsertTransactional<T>(IEnumerable<T> items, MySqlConnection connection, MySqlTransaction transaction) where T : IRecord
+        {
+            var records = items.Cast<IRecord>().ToArray();
+            if (records.Length == 0) return;
+            if (transaction.Connection != connection) throw new ArgumentException("Transaction connection mismatch.");
+            foreach (var batch in records.Chunk(500))
+                TableManager.Instance.GetWriter(typeof(T)).AddElements(batch, connection, transaction);
+        }
+        public static void Insert<T>(IEnumerable<T> items) where T : IRecord
+        {
+            TableManager.Instance.GetWriter(typeof(T)).Use(items.Cast<IRecord>().ToArray(), DatabaseAction.Add);
+        }
+
+        public static void Delete<T>(string fieldName, object value) where T : IRecord
+        {
+            var definition = TableManager.Instance.GetDefinition(typeof(T));
+
+            DatabaseManager.Instance.Query(string.Format(QueryConstants.DeleteWhere, definition.TableAttribute.TableName,
+                fieldName + "=" + value));
+        }
+        public static void Delete<T>(T item) where T : IRecord
+        {
+            TableManager.Instance.GetWriter(typeof(T)).Use(new IRecord[] { item }, DatabaseAction.Remove);
+        }
+        public static void Delete<T>(IEnumerable<T> items) where T : IRecord
+        {
+            TableManager.Instance.GetWriter(typeof(T)).Use(items.Cast<IRecord>().ToArray(), DatabaseAction.Remove);
+
+        }
+
+    }
+
+    public enum DatabaseAction
+    {
+        Add,
+        Update,
+        Remove
+    }
+}

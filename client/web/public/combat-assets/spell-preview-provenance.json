@@ -1,0 +1,19 @@
+{
+  "game-entry-D5YuSIvZ.js": {
+    "algorithm": "SHA256",
+    "hash": "ec9d48006e3827f38dd34a43cbcc14c40805eccf32fc9279bf65604ba8692c3b",
+    "blockSize": 4194304,
+    "blocks": [
+      "628b1f12d68a4f7b4fa036f1bfdf147b2e2eeb6498018395f328ad1e517c589c",
+      "d8db45e174a930f85ff7d0bc682632c30ccf9b3519ffd8ebe3248e36d7b0a016"
+    ]
+  },
+  "fight-damage-preview-worker-Cn1mce5-.js": {
+    "algorithm": "SHA256",
+    "hash": "70e160c232f2ea11c3f8708a72c6b984c6e2666a966c8d1318bb0043cf6b639e",
+    "blockSize": 4194304,
+    "blocks": [
+      "70e160c232f2ea11c3f8708a72c6b984c6e2666a966c8d1318bb0043cf6b639e"
+    ]
+  }
+}

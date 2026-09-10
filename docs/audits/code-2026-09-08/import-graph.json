@@ -1,0 +1,1454 @@
+{
+  "method": "TypeScript compiler AST, import/export/dynamic import/new URL graph from src/main.tsx; exported declaration symbol reference candidates require manual validation",
+  "fileCount": 331,
+  "unreachable": [
+    "src/game/effects/shaders/mapDeformation.ts",
+    "src/game/effects/shaders/refraction.ts",
+    "src/game/particles/ParticleEvents.ts",
+    "src/ui/themeStore.ts",
+    "src/ui/bubble/components/controls.tsx",
+    "src/ui/bubble/components/GameWindow.tsx",
+    "src/ui/bubble/components/ItemTile.tsx",
+    "src/ui/bubble/components/VirtualItemGrid.tsx",
+    "src/ui/bubble/windows/inventory/EquipmentPanel.tsx",
+    "src/ui/bubble/windows/inventory/StoragePanel.tsx",
+    "src/ui/bubble/windows/inventory/InventoryView.tsx"
+  ],
+  "exportsWithoutExternalProductionReference": [
+    {
+      "file": "src/giny/combatState.ts",
+      "line": 78,
+      "name": "variationReason",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/giny/combatState.ts",
+      "line": 83,
+      "name": "variationLabel",
+      "internal": 0,
+      "testRefs": 4
+    },
+    {
+      "file": "src/giny/combatState.ts",
+      "line": 94,
+      "name": "movementCells",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/giny/combatState.ts",
+      "line": 89,
+      "name": "VARIATION_COLORS",
+      "internal": 0,
+      "testRefs": 3
+    },
+    {
+      "file": "src/giny/combatState.ts",
+      "line": 90,
+      "name": "DODGE_COLOR",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/catalog.ts",
+      "line": 253,
+      "name": "resetCatalog",
+      "internal": 0,
+      "testRefs": 42
+    },
+    {
+      "file": "src/ui/game/catalog.ts",
+      "line": 284,
+      "name": "hydrateCatalog",
+      "internal": 2,
+      "testRefs": 43
+    },
+    {
+      "file": "src/ui/game/catalog.ts",
+      "line": 385,
+      "name": "tableRecords",
+      "internal": 1,
+      "testRefs": 4
+    },
+    {
+      "file": "src/ui/game/catalog.ts",
+      "line": 403,
+      "name": "stampNames",
+      "internal": 17,
+      "testRefs": 5
+    },
+    {
+      "file": "src/ui/game/catalog.ts",
+      "line": 508,
+      "name": "hint",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/catalog.ts",
+      "line": 572,
+      "name": "previewAchievements",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/catalog.ts",
+      "line": 625,
+      "name": "previewSpells",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/debug/sessionLogger.ts",
+      "line": 120,
+      "name": "readPreviousSession",
+      "internal": 0,
+      "testRefs": 3
+    },
+    {
+      "file": "src/debug/sessionLogger.ts",
+      "line": 130,
+      "name": "resetSessionLoggerForTests",
+      "internal": 0,
+      "testRefs": 2
+    },
+    {
+      "file": "src/giny/parsers.ts",
+      "line": 39,
+      "name": "ServerSelectionRefusedError",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/giny/parsers.ts",
+      "line": 112,
+      "name": "HIDDEN_CHAT_PREFIXES",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/repeaters.ts",
+      "line": 109,
+      "name": "expandRepeater",
+      "internal": 0,
+      "testRefs": 5
+    },
+    {
+      "file": "src/ui/official/moduleOptions.ts",
+      "line": 15,
+      "name": "sanitizeModuleOptions",
+      "internal": 2,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/official/moduleOptions.ts",
+      "line": 9,
+      "name": "DEFAULT_MODULE_OPTIONS",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/official/tooltipStore.ts",
+      "line": 12,
+      "name": "TOOLTIP_DELAY_MS",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/tooltipBuilders.ts",
+      "line": 63,
+      "name": "parseCriterionString",
+      "internal": 1,
+      "testRefs": 6
+    },
+    {
+      "file": "src/ui/game/tooltipBuilders.ts",
+      "line": 83,
+      "name": "parseCriteriaExpression",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/game/tooltipBuilders.ts",
+      "line": 90,
+      "name": "buildItemTooltipRepeaters",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/tooltipBuilders.ts",
+      "line": 239,
+      "name": "buildSpellTooltipRepeaters",
+      "internal": 1,
+      "testRefs": 4
+    },
+    {
+      "file": "src/ui/game/worldmap.ts",
+      "line": 36,
+      "name": "worldmapZoomKey",
+      "internal": 1,
+      "testRefs": 4
+    },
+    {
+      "file": "src/ui/game/worldmap.ts",
+      "line": 40,
+      "name": "worldmapLevels",
+      "internal": 1,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/game/worldmap.ts",
+      "line": 132,
+      "name": "worldmapPixelToMap",
+      "internal": 0,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/game/worldmap.ts",
+      "line": 12,
+      "name": "WORLDMAP_TILE_SIZE",
+      "internal": 10,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/worldmapStore.ts",
+      "line": 61,
+      "name": "clampScale",
+      "internal": 4,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/worldmapStore.ts",
+      "line": 59,
+      "name": "ZOOM_STEP",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/chatStore.ts",
+      "line": 65,
+      "name": "chatChannelFromShortcut",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/chatStore.ts",
+      "line": 8,
+      "name": "CHAT_CHANNELS",
+      "internal": 6,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/chatStore.ts",
+      "line": 25,
+      "name": "CHAT_DRAFT_MAX_LENGTH",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/magnetism.ts",
+      "line": 37,
+      "name": "clamp",
+      "internal": 4,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/magnetism.ts",
+      "line": 19,
+      "name": "MIN_WINDOW_PX",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/hudWidgetManager.tsx",
+      "line": 8,
+      "name": "HUD_MODULES",
+      "internal": 4,
+      "testRefs": 5
+    },
+    {
+      "file": "src/ui/game/MinimapView.tsx",
+      "line": 24,
+      "name": "MINIMAP_MAPS_ACROSS",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/game/hudBindings.ts",
+      "line": 235,
+      "name": "resolveHud",
+      "internal": 1,
+      "testRefs": 218
+    },
+    {
+      "file": "src/ui/game/chatTabs.ts",
+      "line": 27,
+      "name": "defaultChatTabs",
+      "internal": 4,
+      "testRefs": 7
+    },
+    {
+      "file": "src/ui/game/chatTabs.ts",
+      "line": 36,
+      "name": "readChatTabs",
+      "internal": 1,
+      "testRefs": 6
+    },
+    {
+      "file": "src/ui/official/uss.ts",
+      "line": 50,
+      "name": "fontFamily",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/OfficialIcon.tsx",
+      "line": 14,
+      "name": "propertySprite",
+      "internal": 1,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 123,
+      "name": "shortcutKey",
+      "internal": 1,
+      "testRefs": 7
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 186,
+      "name": "unwrapHost",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 195,
+      "name": "hostWindows",
+      "internal": 0,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 276,
+      "name": "hasDragHandle",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 356,
+      "name": "headerButtonUss",
+      "internal": 4,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 429,
+      "name": "declaredSize",
+      "internal": 2,
+      "testRefs": 4
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 628,
+      "name": "titleBarUss",
+      "internal": 2,
+      "testRefs": 4
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 64,
+      "name": "WINDOW_ID_PROPERTY",
+      "internal": 3,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 65,
+      "name": "WINDOW_TITLE_PROPERTY",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 66,
+      "name": "WINDOW_ICON_PROPERTY",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 67,
+      "name": "WINDOW_WIDTH_PROPERTY",
+      "internal": 3,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 68,
+      "name": "WINDOW_HEIGHT_PROPERTY",
+      "internal": 3,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 70,
+      "name": "WINDOW_FLOW_PROPERTY",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/windowChrome.ts",
+      "line": 73,
+      "name": "WINDOW_CHROME_PROPERTY",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/treePrep.ts",
+      "line": 15,
+      "name": "mounted",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/official/treePrep.ts",
+      "line": 26,
+      "name": "atRest",
+      "internal": 2,
+      "testRefs": 6
+    },
+    {
+      "file": "src/ui/official/treePrep.ts",
+      "line": 207,
+      "name": "applyContentVariantSlots",
+      "internal": 2,
+      "testRefs": 5
+    },
+    {
+      "file": "src/ui/official/treePrep.ts",
+      "line": 221,
+      "name": "stampTextInputIcons",
+      "internal": 2,
+      "testRefs": 4
+    },
+    {
+      "file": "src/ui/official/treePrep.ts",
+      "line": 311,
+      "name": "hideRuntimeBadges",
+      "internal": 2,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/official/treePrep.ts",
+      "line": 355,
+      "name": "applyToggleGroupVariants",
+      "internal": 2,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/official/treePrep.ts",
+      "line": 408,
+      "name": "sizeSecondaryXLargeToggles",
+      "internal": 2,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/official/treePrep.ts",
+      "line": 490,
+      "name": "hasAuthoredSize",
+      "internal": 1,
+      "testRefs": 6
+    },
+    {
+      "file": "src/ui/official/treePrep.ts",
+      "line": 505,
+      "name": "collapsedByHiddenChildren",
+      "internal": 2,
+      "testRefs": 7
+    },
+    {
+      "file": "src/ui/official/treePrep.ts",
+      "line": 556,
+      "name": "normalizeGapMargins",
+      "internal": 1,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/official/stylesheet.ts",
+      "line": 82,
+      "name": "compileComponentRules",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/official/stylesheet.ts",
+      "line": 25,
+      "name": "RUNTIME_STYLES",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/data/assetUrl.ts",
+      "line": 1,
+      "name": "GAME_DATA_PREFIX",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/entities/clipLoader.ts",
+      "line": 10,
+      "name": "animationCache",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/game/renderer/ActorRecolor.ts",
+      "line": 179,
+      "name": "actorRecolorProgram",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/renderer/ActorRecolor.ts",
+      "line": 29,
+      "name": "ACHROMATIC_SATURATION",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/renderer/ActorRecolor.ts",
+      "line": 49,
+      "name": "NEUTRAL_ACTOR_RECOLOR",
+      "internal": 0,
+      "testRefs": 5
+    },
+    {
+      "file": "src/game/renderer/ActorRecolor.ts",
+      "line": 100,
+      "name": "ACTOR_RECOLOR_BIT",
+      "internal": 1,
+      "testRefs": 5
+    },
+    {
+      "file": "src/game/renderer/ActorRecolor.ts",
+      "line": 153,
+      "name": "ACTOR_RECOLOR_BITS",
+      "internal": 1,
+      "testRefs": 3
+    },
+    {
+      "file": "src/game/particles/parameters.ts",
+      "line": 30,
+      "name": "keyCurve",
+      "internal": 3,
+      "testRefs": 4
+    },
+    {
+      "file": "src/game/cells/CellGrid.ts",
+      "line": 140,
+      "name": "unityToPixi",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/cells/CellGrid.ts",
+      "line": 144,
+      "name": "insideDiamond",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/cells/CellGrid.ts",
+      "line": 5,
+      "name": "MAP_ROWS",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/cells/CellGrid.ts",
+      "line": 6,
+      "name": "CELL_COUNT",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/entities/affine.ts",
+      "line": 4,
+      "name": "unityAffineToPixi",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/entities/affine.ts",
+      "line": 9,
+      "name": "composeAffine",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/combat/spellScripts.ts",
+      "line": 17,
+      "name": "hydrateSpellScripts",
+      "internal": 1,
+      "testRefs": 4
+    },
+    {
+      "file": "src/game/combat/spellScripts.ts",
+      "line": 21,
+      "name": "resetSpellScripts",
+      "internal": 0,
+      "testRefs": 2
+    },
+    {
+      "file": "src/game/combat/spellScripts.ts",
+      "line": 29,
+      "name": "parseScriptAnimId",
+      "internal": 1,
+      "testRefs": 5
+    },
+    {
+      "file": "src/game/combat/combatAssets.ts",
+      "line": 11,
+      "name": "combatAssets",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/cascade.ts",
+      "line": 76,
+      "name": "stateSelectors",
+      "internal": 2,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/official/cascade.ts",
+      "line": 5,
+      "name": "STATE_SUFFIX",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/controls.ts",
+      "line": 64,
+      "name": "isDropdownListPart",
+      "internal": 1,
+      "testRefs": 4
+    },
+    {
+      "file": "src/ui/official/controls.ts",
+      "line": 11,
+      "name": "ENTITY_TYPES",
+      "internal": 0,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/official/controls.ts",
+      "line": 23,
+      "name": "SCOPED_HOST_TYPES",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/controls.ts",
+      "line": 38,
+      "name": "GAUGE_COLOR_VARS",
+      "internal": 4,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/patterns.ts",
+      "line": 123,
+      "name": "normalizeGiny",
+      "internal": 4,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/official/patterns.ts",
+      "line": 174,
+      "name": "ginySize",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/official/patterns.ts",
+      "line": 178,
+      "name": "findGiny",
+      "internal": 1,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/official/patterns.ts",
+      "line": 192,
+      "name": "layoutFacts",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/official/uitk.ts",
+      "line": 189,
+      "name": "uitkSheetAlias",
+      "internal": 2,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/official/uitk.ts",
+      "line": 228,
+      "name": "inlinedTemplateName",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/uitk.ts",
+      "line": 283,
+      "name": "applyUitkTextStyle",
+      "internal": 1,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/official/uitk.ts",
+      "line": 292,
+      "name": "loadUitkTheme",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/uitk.ts",
+      "line": 301,
+      "name": "useUitkTheme",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/uitk.ts",
+      "line": 312,
+      "name": "isActiveUitkTint",
+      "internal": 2,
+      "testRefs": 7
+    },
+    {
+      "file": "src/ui/official/uitk.ts",
+      "line": 6,
+      "name": "UITK_BASES",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/uitk.ts",
+      "line": 59,
+      "name": "INLINED_UITK_TEMPLATES",
+      "internal": 2,
+      "testRefs": 8
+    },
+    {
+      "file": "src/ui/official/uitk.ts",
+      "line": 72,
+      "name": "INLINED_HOST_BINDINGS",
+      "internal": 1,
+      "testRefs": 4
+    },
+    {
+      "file": "src/ui/official/uitk.ts",
+      "line": 86,
+      "name": "INLINED_TREE_HOST_BINDINGS",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/official/uitk.ts",
+      "line": 165,
+      "name": "UITK_SHEETLESS_TEMPLATES",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/uitk.ts",
+      "line": 182,
+      "name": "UITK_SHEET_ALIASES",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/uitk.ts",
+      "line": 195,
+      "name": "UITK_TEMPLATE_SHEETS",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/windowFixups.ts",
+      "line": 49,
+      "name": "WINDOW_FIXUPS",
+      "internal": 2,
+      "testRefs": 7
+    },
+    {
+      "file": "src/ui/official/treeLoader.ts",
+      "line": 52,
+      "name": "loadTree",
+      "internal": 3,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/bubble/windows/inventory/positions.ts",
+      "line": 67,
+      "name": "ALL_EQUIPMENT_SLOTS",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/bubble/windows/inventory/filter.ts",
+      "line": 30,
+      "name": "typeIdOf",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/bubble/windows/inventory/filter.ts",
+      "line": 51,
+      "name": "bagItems",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/bubble/windows/inventory/filter.ts",
+      "line": 63,
+      "name": "matchesSearch",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/bubble/windows/inventory/filter.ts",
+      "line": 77,
+      "name": "defaultEquipPositions",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/game/InventoryRecipes.tsx",
+      "line": 6,
+      "name": "recipeAvailability",
+      "internal": 1,
+      "testRefs": 4
+    },
+    {
+      "file": "src/ui/game/LiveActions.tsx",
+      "line": 7,
+      "name": "defaultItemAction",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/referenceCatalog.ts",
+      "line": 6,
+      "name": "loadReferenceCatalog",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/calendar.ts",
+      "line": 7,
+      "name": "calendarWeek",
+      "internal": 1,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/game/hudRepeaters.ts",
+      "line": 42,
+      "name": "LIST_TEMPLATES",
+      "internal": 20,
+      "testRefs": 17
+    },
+    {
+      "file": "src/ui/game/companions.ts",
+      "line": 7,
+      "name": "companionStat",
+      "internal": 1,
+      "testRefs": 5
+    },
+    {
+      "file": "src/ui/game/encyclopedia.ts",
+      "line": 29,
+      "name": "filterMonsters",
+      "internal": 1,
+      "testRefs": 4
+    },
+    {
+      "file": "src/ui/game/encyclopedia.ts",
+      "line": 12,
+      "name": "ENCYCLOPEDIA_TABS",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/encyclopedia.ts",
+      "line": 13,
+      "name": "ITEM_CATEGORIES",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/game/bannerGeometry.ts",
+      "line": 19,
+      "name": "sizeForGrid",
+      "internal": 1,
+      "testRefs": 6
+    },
+    {
+      "file": "src/ui/game/bannerGeometry.ts",
+      "line": 34,
+      "name": "snapBannerSize",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/game/bannerGeometry.ts",
+      "line": 8,
+      "name": "BANNER_SLOT_PX",
+      "internal": 4,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/bannerGeometry.ts",
+      "line": 9,
+      "name": "BANNER_PAD_PX",
+      "internal": 4,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/bannerGeometry.ts",
+      "line": 11,
+      "name": "BANNER_HEADER_PX",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/bannerGeometry.ts",
+      "line": 12,
+      "name": "BANNER_MIN_PX",
+      "internal": 2,
+      "testRefs": 5
+    },
+    {
+      "file": "src/ui/game/bannerGeometry.ts",
+      "line": 13,
+      "name": "BANNER_USS_WIDTH",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/bannerGeometry.ts",
+      "line": 14,
+      "name": "BANNER_USS_HEIGHT",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/bannerGeometry.ts",
+      "line": 15,
+      "name": "BANNER_DEFAULT_TOP",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/windows.ts",
+      "line": 30,
+      "name": "TREE_WRAPPERS",
+      "internal": 1,
+      "testRefs": 4
+    },
+    {
+      "file": "src/ui/game/windows.ts",
+      "line": 71,
+      "name": "EXTRA_WINDOWS",
+      "internal": 1,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/game/hudBannerMenu.tsx",
+      "line": 91,
+      "name": "resolveBannerMenu",
+      "internal": 1,
+      "testRefs": 24
+    },
+    {
+      "file": "src/ui/game/monsterGroupTooltip.ts",
+      "line": 54,
+      "name": "loadMonsterCatalog",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/game/monsterGroupTooltip.ts",
+      "line": 73,
+      "name": "resetMonsterCatalog",
+      "internal": 0,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/game/monsterGroupTooltip.ts",
+      "line": 87,
+      "name": "groupLevel",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/game/monsterGroupTooltip.ts",
+      "line": 91,
+      "name": "dropPercent",
+      "internal": 1,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/game/monsterGroupTooltip.ts",
+      "line": 103,
+      "name": "monsterGrade",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/game/monsterGroupTooltip.ts",
+      "line": 108,
+      "name": "estimateKamas",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/game/monsterGroupTooltip.ts",
+      "line": 117,
+      "name": "levelGapCoefficient",
+      "internal": 2,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/game/monsterGroupTooltip.ts",
+      "line": 123,
+      "name": "applyXpPreview",
+      "internal": 1,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/game/monsterGroupTooltip.ts",
+      "line": 187,
+      "name": "monsterXpLabel",
+      "internal": 0,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/game/monsterGroupTooltip.ts",
+      "line": 6,
+      "name": "XP_GROUP",
+      "internal": 2,
+      "testRefs": 2
+    },
+    {
+      "file": "src/game/particles/effectTexturePaths.ts",
+      "line": 4,
+      "name": "QUALIFIED_EFFECT_TEXTURES",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/particles/effectTexturePaths.ts",
+      "line": 5,
+      "name": "effectTexturePathQualified",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/renderer/spriteFactory.ts",
+      "line": 75,
+      "name": "markNearest",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/effects/catalog.ts",
+      "line": 7,
+      "name": "effectTextureUrl",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/effects/WindState.ts",
+      "line": 4,
+      "name": "elementParameters",
+      "internal": 3,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/effects/WindState.ts",
+      "line": 47,
+      "name": "mapWindParams",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/effects/WindState.ts",
+      "line": 53,
+      "name": "worldPhase",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/effects/WindState.ts",
+      "line": 58,
+      "name": "animationDelta",
+      "internal": 3,
+      "testRefs": 3
+    },
+    {
+      "file": "src/game/effects/WindState.ts",
+      "line": 85,
+      "name": "bendWeight",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/effects/WindState.ts",
+      "line": 188,
+      "name": "needsWaveMaterial",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/effects/RefractionPass.ts",
+      "line": 65,
+      "name": "refractionTexture",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/effects/MapEffects.ts",
+      "line": 134,
+      "name": "mapEffectsSourceHasTimers",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/renderer/mapScene.ts",
+      "line": 26,
+      "name": "isUnresolvedVeil",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/renderer/mapScene.ts",
+      "line": 71,
+      "name": "bumpUnsupported",
+      "internal": 2,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/renderer/mapScene.ts",
+      "line": 106,
+      "name": "mapTextureUrls",
+      "internal": 1,
+      "testRefs": 3
+    },
+    {
+      "file": "src/game/renderer/mapScene.ts",
+      "line": 19,
+      "name": "SKIP_LAYERS",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/renderer/mapScene.ts",
+      "line": 142,
+      "name": "loadTextures",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/combat/SpellDamagePreview.ts",
+      "line": 8,
+      "name": "damageInput",
+      "internal": 1,
+      "testRefs": 4
+    },
+    {
+      "file": "src/game/combat/SpellDamagePreview.ts",
+      "line": 33,
+      "name": "collectDamagePreview",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/game/combatTargetTooltip.ts",
+      "line": 26,
+      "name": "fighterTooltipResolver",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/combat/SpellPreview.ts",
+      "line": 7,
+      "name": "resolvePreviewSpell",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/combat/CombatGrid.ts",
+      "line": 6,
+      "name": "combatNeighbours",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/game/combat/CombatGrid.ts",
+      "line": 24,
+      "name": "tacticalDistance",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/combat/CombatGrid.ts",
+      "line": 33,
+      "name": "reachableCells",
+      "internal": 0,
+      "testRefs": 3
+    },
+    {
+      "file": "src/game/combat/CombatGrid.ts",
+      "line": 71,
+      "name": "spellCells",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/combat/MovementPreview.ts",
+      "line": 7,
+      "name": "roundLoss",
+      "internal": 2,
+      "testRefs": 2
+    },
+    {
+      "file": "src/game/combat/MovementPreview.ts",
+      "line": 8,
+      "name": "tackleLoss",
+      "internal": 3,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/camera/CameraController.ts",
+      "line": 23,
+      "name": "MAP_FOCUS_OFFSET",
+      "internal": 2,
+      "testRefs": 4
+    },
+    {
+      "file": "src/game/renderer/InteractiveOutline.ts",
+      "line": 13,
+      "name": "OUTLINE_COLOR",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/game/renderer/InteractiveOutline.ts",
+      "line": 14,
+      "name": "OUTLINE_ALPHA_CLIP",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/game/renderer/InteractiveOutline.ts",
+      "line": 15,
+      "name": "OUTLINE_THICKNESS",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/renderer/InteractiveOutline.ts",
+      "line": 24,
+      "name": "OUTLINE_FRAGMENT",
+      "internal": 1,
+      "testRefs": 6
+    },
+    {
+      "file": "src/game/renderer/MapChangeArrow.ts",
+      "line": 7,
+      "name": "MAP_ARROW_URL",
+      "internal": 2,
+      "testRefs": 2
+    },
+    {
+      "file": "src/game/renderer/MapChangeArrow.ts",
+      "line": 14,
+      "name": "MAP_ARROW_TINT",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/game/renderer/MapChangeArrow.ts",
+      "line": 20,
+      "name": "MAP_ARROW_ROTATION",
+      "internal": 1,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/official/dumpBoxes.ts",
+      "line": 47,
+      "name": "uniqueSurfaces",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/official/dumpBoxes.ts",
+      "line": 51,
+      "name": "pickSurfaces",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/dumpBoxes.ts",
+      "line": 83,
+      "name": "paintedImage",
+      "internal": 4,
+      "testRefs": 5
+    },
+    {
+      "file": "src/ui/official/dumpBoxes.ts",
+      "line": 97,
+      "name": "paintStyle",
+      "internal": 4,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/dumpBoxes.ts",
+      "line": 121,
+      "name": "collectClientBoxes",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/dumpBoxes.ts",
+      "line": 164,
+      "name": "dumpClientBoxes",
+      "internal": 3,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/dumpBoxes.ts",
+      "line": 170,
+      "name": "installDumpClientBoxes",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/dumpBoxes.ts",
+      "line": 209,
+      "name": "boxText",
+      "internal": 1,
+      "testRefs": 3
+    },
+    {
+      "file": "src/ui/official/inspector.ts",
+      "line": 51,
+      "name": "officialPath",
+      "internal": 1,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/official/UiInspector.tsx",
+      "line": 18,
+      "name": "installUiInspector",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/official/themeStore.ts",
+      "line": 6,
+      "name": "validTheme",
+      "internal": 2,
+      "testRefs": 2
+    },
+    {
+      "file": "src/game/effects/shaders/mapDeformation.ts",
+      "line": 3,
+      "name": "WIND_VERTEX",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/effects/shaders/mapDeformation.ts",
+      "line": 19,
+      "name": "WAVE_FRAGMENT",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/effects/shaders/refraction.ts",
+      "line": 1,
+      "name": "REFRACTION_FRAGMENT",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/particles/ParticleEvents.ts",
+      "line": 34,
+      "name": "isKnownParticleEvent",
+      "internal": 0,
+      "testRefs": 4
+    },
+    {
+      "file": "src/game/particles/ParticleEvents.ts",
+      "line": 5,
+      "name": "PARTICLE_EVENT_BIRTH",
+      "internal": 2,
+      "testRefs": 3
+    },
+    {
+      "file": "src/game/particles/ParticleEvents.ts",
+      "line": 6,
+      "name": "PARTICLE_EVENT_UNKNOWN",
+      "internal": 1,
+      "testRefs": 0
+    },
+    {
+      "file": "src/game/particles/ParticleEvents.ts",
+      "line": 7,
+      "name": "PARTICLE_EVENT_DEATH",
+      "internal": 2,
+      "testRefs": 3
+    },
+    {
+      "file": "src/game/particles/ParticleEvents.ts",
+      "line": 14,
+      "name": "ParticleEventQueue",
+      "internal": 0,
+      "testRefs": 2
+    },
+    {
+      "file": "src/ui/themeStore.ts",
+      "line": 4,
+      "name": "DOFUS3_THEMES",
+      "internal": 3,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/themeStore.ts",
+      "line": 49,
+      "name": "themeStore",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/bubble/components/controls.tsx",
+      "line": 155,
+      "name": "Decor",
+      "internal": 0,
+      "testRefs": 0
+    },
+    {
+      "file": "src/ui/bubble/windows/inventory/InventoryView.tsx",
+      "line": 12,
+      "name": "InventoryView",
+      "internal": 0,
+      "testRefs": 0
+    }
+  ]
+}

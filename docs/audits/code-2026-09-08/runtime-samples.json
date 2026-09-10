@@ -1,0 +1,1895 @@
+{
+  "environment": "Chromium headless, Vite dev, 1920x1080; GPU backend not identified; first test timed out at 180 seconds, remaining tests interrupted; not representative PC FPS or production benchmark",
+  "trace": "client/web/test-results/performance-records-local-map-loading-and-frame-cadence-chromium/trace.zip",
+  "samples": [
+    {
+      "callId": "call@16",
+      "sample": {
+        "mapId": 154644,
+        "readyMs": 3357.7000000029802,
+        "sceneMs": 983.7000000029802,
+        "draws": 153,
+        "sceneBuilding": false,
+        "camera": {
+          "x": 960,
+          "y": 538.3946980854197,
+          "scale": 1.0603829160530192
+        },
+        "neighbours": [
+          {
+            "label": "NeighbourMap:right:154132",
+            "alpha": 0.85
+          },
+          {
+            "label": "NeighbourMap:left:155156",
+            "alpha": 0.85
+          },
+          {
+            "label": "NeighbourMap:top:154643",
+            "alpha": 0.85
+          },
+          {
+            "label": "NeighbourMap:bottom:154645",
+            "alpha": 0.85
+          }
+        ],
+        "renderedFrames": 3,
+        "skippedFrames": 188,
+        "particles": {
+          "systems": 5,
+          "particles": 66,
+          "steps": 77,
+          "limit": 4096
+        },
+        "effects": {
+          "active": 261,
+          "ignored": 1,
+          "missingTextures": 0,
+          "cpuMs": 2.699999999254942,
+          "renderTargetBytes": 0,
+          "passes": 0,
+          "particlesCapped": 0,
+          "families": [
+            "paint_shader",
+            "particles",
+            "particles_shader",
+            "postprocess_config",
+            "pp_bloom",
+            "shader_dissolve",
+            "shader_distortion",
+            "shader_emissive",
+            "shader_rotation",
+            "shader_scale",
+            "shader_wave",
+            "shader_wind",
+            "wave_config",
+            "wind_config"
+          ]
+        },
+        "props": [
+          {
+            "animation": "AnimState0_0",
+            "frame": 57,
+            "frames": 140,
+            "visible": true,
+            "version": 55
+          }
+        ],
+        "frameP50": 16.699999999999818,
+        "frameP95": 32.80000000000018,
+        "frameP99": 600,
+        "textureBackend": "bc7",
+        "compressedMapSources": 3,
+        "textures": {
+          "entries": 552,
+          "bytes": 222337012,
+          "budget": 268435456,
+          "pinned": 552,
+          "overBudgetBytes": 0,
+          "evictions": 0,
+          "running": 0,
+          "queued": 0
+        },
+        "documents": {
+          "entries": 5,
+          "estimatedBytes": 3799660,
+          "budget": 33554432
+        },
+        "resolution": 1,
+        "staticVisible": 3366,
+        "staticTotal": 7683
+      }
+    },
+    {
+      "callId": "call@18",
+      "sample": {
+        "p50": 550.0999999999985,
+        "p95": 666.7000000000007,
+        "p99": 715.7000000000044,
+        "longFrames": 119,
+        "resources": [
+          {
+            "url": "/game-data/optimized/manifest.json",
+            "bytes": 3320053,
+            "ms": 20.699999999254942
+          },
+          {
+            "url": "/game-data/optimized/maps/154644-a644d9579d34b20864382a9e804021d72a03fc95975b59a56b0f43a2060656a2.json",
+            "bytes": 1048439,
+            "ms": 9.600000001490116
+          },
+          {
+            "url": "/game-data/client/world/MapArrow.png",
+            "bytes": 958,
+            "ms": 7.5
+          },
+          {
+            "url": "/game-data/gfx/62942.png",
+            "bytes": 11694,
+            "ms": 9.300000000745058
+          },
+          {
+            "url": "/game-data/effects/noises/500.png",
+            "bytes": 53587,
+            "ms": 8.699999999254942
+          },
+          {
+            "url": "/game-data/effects/noises/517.png",
+            "bytes": 55570,
+            "ms": 9.299999997019768
+          },
+          {
+            "url": "/game-data/effects/wave/wavesDynamics/9.png",
+            "bytes": 2286,
+            "ms": 3.7999999970197678
+          },
+          {
+            "url": "/game-data/effects/wave/wavesDissolveDynamics/2.png",
+            "bytes": 3613,
+            "ms": 3.699999999254942
+          },
+          {
+            "url": "/game-data/effects/noises/1.png",
+            "bytes": 120560,
+            "ms": 3.300000000745058
+          },
+          {
+            "url": "/game-data/effects/noises/56.png",
+            "bytes": 417441,
+            "ms": 6.400000002235174
+          },
+          {
+            "url": "/game-data/effects/noises/52.png",
+            "bytes": 41481,
+            "ms": 3.199999999254942
+          },
+          {
+            "url": "/game-data/effects/emissives/2128.png",
+            "bytes": 34560,
+            "ms": 3.800000000745058
+          },
+          {
+            "url": "/game-data/effects/particles/2128.png",
+            "bytes": 49838,
+            "ms": 3.400000002235174
+          },
+          {
+            "url": "/game-data/gfx/47560.png",
+            "bytes": 310149,
+            "ms": 4.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/404316.png",
+            "bytes": 8002,
+            "ms": 2.899999998509884
+          },
+          {
+            "url": "/game-data/effects/noises/22.png",
+            "bytes": 53243,
+            "ms": 2.100000001490116
+          },
+          {
+            "url": "/game-data/effects/masks/201.png",
+            "bytes": 2029,
+            "ms": 1.699999999254942
+          },
+          {
+            "url": "/game-data/effects/noises/0.png",
+            "bytes": 45396,
+            "ms": 2.800000000745058
+          },
+          {
+            "url": "/game-data/effects/noises/2.png",
+            "bytes": 82830,
+            "ms": 3.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/305396.png",
+            "bytes": 26872,
+            "ms": 3.099999997764826
+          },
+          {
+            "url": "/game-data/gfx/404315.png",
+            "bytes": 5774,
+            "ms": 4.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/404328.png",
+            "bytes": 6486,
+            "ms": 3.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/73422.png",
+            "bytes": 3315,
+            "ms": 3
+          },
+          {
+            "url": "/game-data/gfx/73423.png",
+            "bytes": 2604,
+            "ms": 3.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/73424.png",
+            "bytes": 3674,
+            "ms": 3.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/900090.png",
+            "bytes": 5284,
+            "ms": 3.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/900091.png",
+            "bytes": 6583,
+            "ms": 3.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/900093.png",
+            "bytes": 2570,
+            "ms": 2.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900095.png",
+            "bytes": 749,
+            "ms": 2.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/900096.png",
+            "bytes": 546,
+            "ms": 3.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900097.png",
+            "bytes": 829,
+            "ms": 3.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900098.png",
+            "bytes": 838,
+            "ms": 4
+          },
+          {
+            "url": "/game-data/gfx/900139.png",
+            "bytes": 7580,
+            "ms": 2.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900140.png",
+            "bytes": 7866,
+            "ms": 2.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/900141.png",
+            "bytes": 880,
+            "ms": 2.2999999970197678
+          },
+          {
+            "url": "/game-data/gfx/900142.png",
+            "bytes": 1233,
+            "ms": 4.300000000745058
+          },
+          {
+            "url": "/game-data/gfx/900143.png",
+            "bytes": 900,
+            "ms": 3.400000002235174
+          },
+          {
+            "url": "/game-data/gfx/900144.png",
+            "bytes": 846,
+            "ms": 4
+          },
+          {
+            "url": "/game-data/gfx/900145.png",
+            "bytes": 929,
+            "ms": 5.099999997764826
+          },
+          {
+            "url": "/game-data/gfx/73431.png",
+            "bytes": 8030,
+            "ms": 5.099999997764826
+          },
+          {
+            "url": "/game-data/gfx/73432.png",
+            "bytes": 7963,
+            "ms": 5.300000000745058
+          },
+          {
+            "url": "/game-data/gfx/73433.png",
+            "bytes": 10623,
+            "ms": 5.200000002980232
+          },
+          {
+            "url": "/game-data/gfx/900132.png",
+            "bytes": 2482,
+            "ms": 4.300000000745058
+          },
+          {
+            "url": "/game-data/gfx/900134.png",
+            "bytes": 1017,
+            "ms": 3.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900136.png",
+            "bytes": 735,
+            "ms": 7.300000000745058
+          },
+          {
+            "url": "/game-data/gfx/73419.png",
+            "bytes": 3923,
+            "ms": 7.300000000745058
+          },
+          {
+            "url": "/game-data/gfx/73420.png",
+            "bytes": 3417,
+            "ms": 7.5
+          },
+          {
+            "url": "/game-data/gfx/73421.png",
+            "bytes": 4509,
+            "ms": 4.900000002235174
+          },
+          {
+            "url": "/game-data/gfx/73426.png",
+            "bytes": 13638,
+            "ms": 4.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/73427.png",
+            "bytes": 16620,
+            "ms": 4.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/73428.png",
+            "bytes": 18540,
+            "ms": 5.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/73429.png",
+            "bytes": 1230,
+            "ms": 4.300000000745058
+          },
+          {
+            "url": "/game-data/gfx/900099.png",
+            "bytes": 3392,
+            "ms": 3.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900100.png",
+            "bytes": 4257,
+            "ms": 4.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/900102.png",
+            "bytes": 3620,
+            "ms": 4.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/900103.png",
+            "bytes": 4533,
+            "ms": 5.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/19726.png",
+            "bytes": 14264,
+            "ms": 8.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900264.png",
+            "bytes": 12371,
+            "ms": 7.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/900262.png",
+            "bytes": 15720,
+            "ms": 6.5
+          },
+          {
+            "url": "/game-data/effects/noises/8.png",
+            "bytes": 5474,
+            "ms": 5.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/900263.png",
+            "bytes": 15875,
+            "ms": 7.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/900258.png",
+            "bytes": 3930,
+            "ms": 7.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/900259.png",
+            "bytes": 2620,
+            "ms": 6.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900260.png",
+            "bytes": 1591,
+            "ms": 5.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/900261.png",
+            "bytes": 11430,
+            "ms": 4.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/900255.png",
+            "bytes": 5051,
+            "ms": 4.200000002980232
+          },
+          {
+            "url": "/game-data/effects/masks/900254.png",
+            "bytes": 10289,
+            "ms": 4.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/900254.png",
+            "bytes": 91144,
+            "ms": 2.2000000029802322
+          },
+          {
+            "url": "/game-data/gfx/900256.png",
+            "bytes": 12944,
+            "ms": 10.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/900257.png",
+            "bytes": 3395,
+            "ms": 9.400000002235174
+          },
+          {
+            "url": "/game-data/gfx/900171.png",
+            "bytes": 1928,
+            "ms": 9.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/900120.png",
+            "bytes": 5035,
+            "ms": 6.799999997019768
+          },
+          {
+            "url": "/game-data/gfx/900121.png",
+            "bytes": 6708,
+            "ms": 4.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/900123.png",
+            "bytes": 1932,
+            "ms": 3.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/900124.png",
+            "bytes": 4063,
+            "ms": 3.900000002235174
+          },
+          {
+            "url": "/game-data/gfx/900125.png",
+            "bytes": 4891,
+            "ms": 3.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/900127.png",
+            "bytes": 712,
+            "ms": 4.400000002235174
+          },
+          {
+            "url": "/game-data/gfx/900128.png",
+            "bytes": 2593,
+            "ms": 4.300000000745058
+          },
+          {
+            "url": "/game-data/effects/masks/204.png",
+            "bytes": 81336,
+            "ms": 6.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/801983.png",
+            "bytes": 3259,
+            "ms": 4.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/801989.png",
+            "bytes": 18302,
+            "ms": 5.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/801988.png",
+            "bytes": 7439,
+            "ms": 4.299999997019768
+          },
+          {
+            "url": "/game-data/gfx/801981.png",
+            "bytes": 2411,
+            "ms": 4.300000000745058
+          },
+          {
+            "url": "/game-data/effects/masks/203.png",
+            "bytes": 88128,
+            "ms": 5.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/801982.png",
+            "bytes": 2223,
+            "ms": 4.900000002235174
+          },
+          {
+            "url": "/game-data/gfx/801980.png",
+            "bytes": 2371,
+            "ms": 4.100000001490116
+          },
+          {
+            "url": "/game-data/effects/masks/3.png",
+            "bytes": 221009,
+            "ms": 8.099999997764826
+          },
+          {
+            "url": "/game-data/gfx/801987.png",
+            "bytes": 4642,
+            "ms": 5.599999997764826
+          },
+          {
+            "url": "/game-data/gfx/801986.png",
+            "bytes": 2999,
+            "ms": 5.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/801985.png",
+            "bytes": 3182,
+            "ms": 5.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/801984.png",
+            "bytes": 3429,
+            "ms": 6.200000002980232
+          },
+          {
+            "url": "/game-data/gfx/19725.png",
+            "bytes": 11958,
+            "ms": 7.300000000745058
+          },
+          {
+            "url": "/game-data/gfx/900243.png",
+            "bytes": 15693,
+            "ms": 4.5
+          },
+          {
+            "url": "/game-data/gfx/900244.png",
+            "bytes": 27441,
+            "ms": 4.300000000745058
+          },
+          {
+            "url": "/game-data/gfx/900245.png",
+            "bytes": 11430,
+            "ms": 3.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900246.png",
+            "bytes": 1639,
+            "ms": 4.099999997764826
+          },
+          {
+            "url": "/game-data/gfx/900247.png",
+            "bytes": 1591,
+            "ms": 5.5
+          },
+          {
+            "url": "/game-data/gfx/900248.png",
+            "bytes": 3973,
+            "ms": 5.299999997019768
+          },
+          {
+            "url": "/game-data/gfx/900250.png",
+            "bytes": 3950,
+            "ms": 5.699999999254942
+          },
+          {
+            "url": "/game-data/effects/masks/900242.png",
+            "bytes": 7933,
+            "ms": 3.7000000029802322
+          },
+          {
+            "url": "/game-data/gfx/900242.png",
+            "bytes": 81760,
+            "ms": 4.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/900249.png",
+            "bytes": 4066,
+            "ms": 4.300000000745058
+          },
+          {
+            "url": "/game-data/gfx/900251.png",
+            "bytes": 3690,
+            "ms": 3.7000000029802322
+          },
+          {
+            "url": "/game-data/gfx/900252.png",
+            "bytes": 715,
+            "ms": 3.2999999970197678
+          },
+          {
+            "url": "/game-data/gfx/900114.png",
+            "bytes": 5265,
+            "ms": 5.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/900115.png",
+            "bytes": 6411,
+            "ms": 4.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/900117.png",
+            "bytes": 1833,
+            "ms": 4.599999997764826
+          },
+          {
+            "url": "/game-data/gfx/73406.png",
+            "bytes": 5679,
+            "ms": 3.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/73407.png",
+            "bytes": 5027,
+            "ms": 5.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/73408.png",
+            "bytes": 4186,
+            "ms": 4.699999999254942
+          },
+          {
+            "url": "/game-data/effects/noises/31.png",
+            "bytes": 5032,
+            "ms": 4.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/900196.png",
+            "bytes": 2303,
+            "ms": 3.2000000029802322
+          },
+          {
+            "url": "/game-data/gfx/73012.png",
+            "bytes": 12198,
+            "ms": 5.5
+          },
+          {
+            "url": "/game-data/gfx/73015.png",
+            "bytes": 1050,
+            "ms": 4.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/73013.png",
+            "bytes": 7373,
+            "ms": 4.599999997764826
+          },
+          {
+            "url": "/game-data/gfx/73014.png",
+            "bytes": 7770,
+            "ms": 4
+          },
+          {
+            "url": "/game-data/effects/noises/46.png",
+            "bytes": 539647,
+            "ms": 15.600000001490116
+          },
+          {
+            "url": "/game-data/effects/masks/12.png",
+            "bytes": 15934,
+            "ms": 5.700000002980232
+          },
+          {
+            "url": "/game-data/gfx/57871.png",
+            "bytes": 124641,
+            "ms": 6.800000000745058
+          },
+          {
+            "url": "/game-data/effects/masks/900170.png",
+            "bytes": 1940,
+            "ms": 5.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/900170.png",
+            "bytes": 9552,
+            "ms": 7.099999997764826
+          },
+          {
+            "url": "/game-data/gfx/802059.png",
+            "bytes": 13392,
+            "ms": 5.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/802058.png",
+            "bytes": 4139,
+            "ms": 3.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/802057.png",
+            "bytes": 2816,
+            "ms": 3.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/802056.png",
+            "bytes": 2690,
+            "ms": 3.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/802055.png",
+            "bytes": 2752,
+            "ms": 4
+          },
+          {
+            "url": "/game-data/effects/noises/47.png",
+            "bytes": 41096,
+            "ms": 3.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/801994.png",
+            "bytes": 15160,
+            "ms": 2.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/801993.png",
+            "bytes": 4457,
+            "ms": 3.5
+          },
+          {
+            "url": "/game-data/gfx/801992.png",
+            "bytes": 2873,
+            "ms": 3.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/801991.png",
+            "bytes": 3205,
+            "ms": 3.300000000745058
+          },
+          {
+            "url": "/game-data/gfx/801990.png",
+            "bytes": 3341,
+            "ms": 4.5
+          },
+          {
+            "url": "/game-data/gfx/801979.png",
+            "bytes": 16956,
+            "ms": 4.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/801973.png",
+            "bytes": 2345,
+            "ms": 6.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/801978.png",
+            "bytes": 6959,
+            "ms": 5
+          },
+          {
+            "url": "/game-data/gfx/801971.png",
+            "bytes": 1593,
+            "ms": 4.299999997019768
+          },
+          {
+            "url": "/game-data/gfx/801972.png",
+            "bytes": 1852,
+            "ms": 4.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/801970.png",
+            "bytes": 1830,
+            "ms": 3.5
+          },
+          {
+            "url": "/game-data/gfx/801977.png",
+            "bytes": 3819,
+            "ms": 3.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/801976.png",
+            "bytes": 2960,
+            "ms": 4
+          },
+          {
+            "url": "/game-data/gfx/801975.png",
+            "bytes": 2801,
+            "ms": 3.5
+          },
+          {
+            "url": "/game-data/gfx/801974.png",
+            "bytes": 3052,
+            "ms": 3.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900287.png",
+            "bytes": 25801,
+            "ms": 3.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/900288.png",
+            "bytes": 1122,
+            "ms": 19.400000002235174
+          },
+          {
+            "url": "/game-data/gfx/900289.png",
+            "bytes": 10473,
+            "ms": 19.5
+          },
+          {
+            "url": "/game-data/gfx/900290.png",
+            "bytes": 4698,
+            "ms": 19.700000002980232
+          },
+          {
+            "url": "/game-data/gfx/900292.png",
+            "bytes": 15228,
+            "ms": 18.599999997764826
+          },
+          {
+            "url": "/game-data/gfx/900294.png",
+            "bytes": 3324,
+            "ms": 4.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/900295.png",
+            "bytes": 7518,
+            "ms": 3.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/900296.png",
+            "bytes": 2871,
+            "ms": 3.7999999970197678
+          },
+          {
+            "url": "/game-data/gfx/900297.png",
+            "bytes": 2792,
+            "ms": 4.099999997764826
+          },
+          {
+            "url": "/game-data/gfx/900299.png",
+            "bytes": 2947,
+            "ms": 4.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/900300.png",
+            "bytes": 2560,
+            "ms": 4.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/900301.png",
+            "bytes": 12261,
+            "ms": 4.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/63483.png",
+            "bytes": 51473,
+            "ms": 4.699999999254942
+          },
+          {
+            "url": "/game-data/effects/noises/28.png",
+            "bytes": 433,
+            "ms": 4.599999997764826
+          },
+          {
+            "url": "/game-data/gfx/900325.png",
+            "bytes": 4176,
+            "ms": 3.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/900327.png",
+            "bytes": 11495,
+            "ms": 3.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/900331.png",
+            "bytes": 2324,
+            "ms": 3.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/900333.png",
+            "bytes": 1009,
+            "ms": 4.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/900334.png",
+            "bytes": 967,
+            "ms": 4.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/900332.png",
+            "bytes": 3781,
+            "ms": 3.5
+          },
+          {
+            "url": "/game-data/gfx/17576.png",
+            "bytes": 11910,
+            "ms": 4.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/900266.png",
+            "bytes": 10202,
+            "ms": 3.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/900267.png",
+            "bytes": 12593,
+            "ms": 3.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/19727.png",
+            "bytes": 19722,
+            "ms": 3.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900268.png",
+            "bytes": 12208,
+            "ms": 3.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900270.png",
+            "bytes": 14415,
+            "ms": 3.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/900269.png",
+            "bytes": 15722,
+            "ms": 3
+          },
+          {
+            "url": "/game-data/gfx/900271.png",
+            "bytes": 11430,
+            "ms": 5.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/900272.png",
+            "bytes": 1591,
+            "ms": 4.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/900273.png",
+            "bytes": 1912,
+            "ms": 5
+          },
+          {
+            "url": "/game-data/gfx/900275.png",
+            "bytes": 4431,
+            "ms": 3
+          },
+          {
+            "url": "/game-data/effects/masks/900274.png",
+            "bytes": 9511,
+            "ms": 3.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/900274.png",
+            "bytes": 84506,
+            "ms": 4.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900276.png",
+            "bytes": 4204,
+            "ms": 3.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/900277.png",
+            "bytes": 4664,
+            "ms": 4.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/900177.png",
+            "bytes": 737,
+            "ms": 3.900000002235174
+          },
+          {
+            "url": "/game-data/gfx/900324.png",
+            "bytes": 739,
+            "ms": 3.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/900323.png",
+            "bytes": 1309,
+            "ms": 2.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/900322.png",
+            "bytes": 3904,
+            "ms": 9.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/900155.png",
+            "bytes": 1047,
+            "ms": 8.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/900154.png",
+            "bytes": 1341,
+            "ms": 9.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/900148.png",
+            "bytes": 2849,
+            "ms": 9.099999997764826
+          },
+          {
+            "url": "/game-data/effects/particles/2025.png",
+            "bytes": 6444,
+            "ms": 9.199999999254942
+          },
+          {
+            "url": "/game-data/effects/particles/2135.png",
+            "bytes": 24777,
+            "ms": 1.8999999985098839
+          },
+          {
+            "url": "/game-data/effects/particles/2000.png",
+            "bytes": 1266,
+            "ms": 5.600000001490116
+          },
+          {
+            "url": "/game-data/effects/particles/1.png",
+            "bytes": 6489,
+            "ms": 6.5
+          },
+          {
+            "url": "/game-data/optimized/entities-manifest.json",
+            "bytes": 95413,
+            "ms": 7.5
+          },
+          {
+            "url": "/game-data/optimized/maps/154132-3ca73f14f98d554f0adb50031fa4cc39485c75e485efbfa7fed14ed625db79f4.json",
+            "bytes": 903028,
+            "ms": 18.800000000745058
+          },
+          {
+            "url": "/game-data/optimized/maps/155156-0839bca7d703939a770273f1b3149550bcc0d0c236f2194380b1ff8d916ea7b6.json",
+            "bytes": 1089106,
+            "ms": 25
+          },
+          {
+            "url": "/game-data/optimized/entities/6570fb2374820602734e34dda812b13a75e544a1e1f4a0a6be9c0086548a0a20.json",
+            "bytes": 1234595,
+            "ms": 33.899999998509884
+          },
+          {
+            "url": "/game-data/textures/look_1_10_2012_00_00_1-static-0.webp",
+            "bytes": 23764,
+            "ms": 3.099999997764826
+          },
+          {
+            "url": "/game-data/textures/look_1_10_2012_01_00_10-0.webp",
+            "bytes": 338316,
+            "ms": 3.400000002235174
+          },
+          {
+            "url": "/game-data/textures/look_1_10_2012_02_00_2012-0.webp",
+            "bytes": 123062,
+            "ms": 2.199999999254942
+          },
+          {
+            "url": "/game-data/textures/look_1_10_2012_03_00_1-movement-0.webp",
+            "bytes": 16876,
+            "ms": 4.400000002235174
+          },
+          {
+            "url": "/game-data/textures/look_1_10_2012_04_00_1-1-static-0.webp",
+            "bytes": 220986,
+            "ms": 4
+          },
+          {
+            "url": "/game-data/optimized/clips/3405cdb2bbc4f5c85a3526e7832526cdfaee7d1d2386cc61d0d179bd75a973a6.json",
+            "bytes": 327949,
+            "ms": 6.099999997764826
+          },
+          {
+            "url": "/game-data/gfx/17909.png",
+            "bytes": 6504,
+            "ms": 11.5
+          },
+          {
+            "url": "/game-data/optimized/entities/9da215cf1f04a71afa779d5bffffcc2c8b8d6a95da5ec8602d12f85fdb9bc63f.json",
+            "bytes": 1716360,
+            "ms": 30.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/17907.png",
+            "bytes": 6915,
+            "ms": 3.5
+          },
+          {
+            "url": "/game-data/gfx/17908.png",
+            "bytes": 6765,
+            "ms": 3.199999999254942
+          },
+          {
+            "url": "/game-data/textures/1839-0.png",
+            "bytes": 6748108,
+            "ms": 44.20000000298023
+          },
+          {
+            "url": "/game-data/gfx/13419.png",
+            "bytes": 1619,
+            "ms": 7.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/900135.png",
+            "bytes": 1539,
+            "ms": 4.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/19087.png",
+            "bytes": 3877,
+            "ms": 8.300000000745058
+          },
+          {
+            "url": "/game-data/gfx/19646.png",
+            "bytes": 4134,
+            "ms": 8.200000002980232
+          },
+          {
+            "url": "/game-data/gfx/900105.png",
+            "bytes": 2794,
+            "ms": 8.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/900106.png",
+            "bytes": 5138,
+            "ms": 7.099999997764826
+          },
+          {
+            "url": "/game-data/gfx/900109.png",
+            "bytes": 1695,
+            "ms": 4
+          },
+          {
+            "url": "/game-data/gfx/900110.png",
+            "bytes": 2710,
+            "ms": 3.099999997764826
+          },
+          {
+            "url": "/game-data/gfx/900111.png",
+            "bytes": 3226,
+            "ms": 4
+          },
+          {
+            "url": "/game-data/gfx/900112.png",
+            "bytes": 1450,
+            "ms": 4.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/900113.png",
+            "bytes": 771,
+            "ms": 4.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/900104.png",
+            "bytes": 1656,
+            "ms": 3.300000000745058
+          },
+          {
+            "url": "/game-data/gfx/900092.png",
+            "bytes": 4166,
+            "ms": 5.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/900094.png",
+            "bytes": 2864,
+            "ms": 4.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/19126.png",
+            "bytes": 4332,
+            "ms": 2.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/19647.png",
+            "bytes": 4484,
+            "ms": 6.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/19648.png",
+            "bytes": 3945,
+            "ms": 2.599999997764826
+          },
+          {
+            "url": "/game-data/gfx/900119.png",
+            "bytes": 1848,
+            "ms": 1.6000000014901161
+          },
+          {
+            "url": "/game-data/gfx/900122.png",
+            "bytes": 2639,
+            "ms": 2.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/73409.png",
+            "bytes": 1171,
+            "ms": 2.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/900195.png",
+            "bytes": 5637,
+            "ms": 2.900000002235174
+          },
+          {
+            "url": "/game-data/gfx/900309.png",
+            "bytes": 3164,
+            "ms": 2.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/900305.png",
+            "bytes": 3240,
+            "ms": 8.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/59485.png",
+            "bytes": 4414,
+            "ms": 4.599999997764826
+          },
+          {
+            "url": "/game-data/gfx/32945.png",
+            "bytes": 1324,
+            "ms": 3.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/46908.png",
+            "bytes": 3476,
+            "ms": 2.199999999254942
+          },
+          {
+            "url": "/game-data/optimized/clips/005eb3ef57fef6d320eaa6d54183dfe6b204d998b50e19aae2a17b1ca6242343.json",
+            "bytes": 30740,
+            "ms": 14.400000002235174
+          },
+          {
+            "url": "/game-data/effects/masks/701008.png",
+            "bytes": 1236,
+            "ms": 13.300000000745058
+          },
+          {
+            "url": "/game-data/effects/masks/10.png",
+            "bytes": 82904,
+            "ms": 9.299999997019768
+          },
+          {
+            "url": "/game-data/effects/masks/4.png",
+            "bytes": 166046,
+            "ms": 13.299999997019768
+          },
+          {
+            "url": "/game-data/effects/masks/701009.png",
+            "bytes": 5464,
+            "ms": 16.5
+          },
+          {
+            "url": "/game-data/effects/masks/1.png",
+            "bytes": 224031,
+            "ms": 8.199999999254942
+          },
+          {
+            "url": "/game-data/effects/masks/17968.png",
+            "bytes": 2643,
+            "ms": 6.900000002235174
+          },
+          {
+            "url": "/game-data/effects/masks/16847.png",
+            "bytes": 4683,
+            "ms": 5.600000001490116
+          },
+          {
+            "url": "/game-data/effects/masks/17967.png",
+            "bytes": 2629,
+            "ms": 3.5
+          },
+          {
+            "url": "/game-data/gfx/7592.png",
+            "bytes": 6172,
+            "ms": 7.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/7583.png",
+            "bytes": 6090,
+            "ms": 7.200000002980232
+          },
+          {
+            "url": "/game-data/gfx/7579.png",
+            "bytes": 4985,
+            "ms": 7.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/17534.png",
+            "bytes": 5660,
+            "ms": 8.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/7585.png",
+            "bytes": 5692,
+            "ms": 6.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/11861.png",
+            "bytes": 630,
+            "ms": 4.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/72519.png",
+            "bytes": 3609,
+            "ms": 6.400000002235174
+          },
+          {
+            "url": "/game-data/gfx/72527.png",
+            "bytes": 1743,
+            "ms": 5.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/72528.png",
+            "bytes": 1394,
+            "ms": 4.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/72521.png",
+            "bytes": 2977,
+            "ms": 3.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/72520.png",
+            "bytes": 3892,
+            "ms": 3.199999999254942
+          },
+          {
+            "url": "/game-data/gfx/72522.png",
+            "bytes": 2059,
+            "ms": 6
+          },
+          {
+            "url": "/game-data/gfx/72523.png",
+            "bytes": 1331,
+            "ms": 5
+          },
+          {
+            "url": "/game-data/gfx/72524.png",
+            "bytes": 1029,
+            "ms": 4.599999997764826
+          },
+          {
+            "url": "/game-data/gfx/900147.png",
+            "bytes": 1206,
+            "ms": 4.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/900150.png",
+            "bytes": 716,
+            "ms": 5.5
+          },
+          {
+            "url": "/game-data/gfx/72526.png",
+            "bytes": 2308,
+            "ms": 5.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/900073.png",
+            "bytes": 811,
+            "ms": 5.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/72476.png",
+            "bytes": 2792,
+            "ms": 7.900000002235174
+          },
+          {
+            "url": "/game-data/gfx/72487.png",
+            "bytes": 1600,
+            "ms": 6.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/72488.png",
+            "bytes": 1044,
+            "ms": 5.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/72489.png",
+            "bytes": 999,
+            "ms": 4.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/72477.png",
+            "bytes": 1112,
+            "ms": 3.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/900077.png",
+            "bytes": 5494,
+            "ms": 6.799999997019768
+          },
+          {
+            "url": "/game-data/gfx/900081.png",
+            "bytes": 2553,
+            "ms": 5.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/900082.png",
+            "bytes": 3096,
+            "ms": 6.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/900079.png",
+            "bytes": 2642,
+            "ms": 6.200000002980232
+          },
+          {
+            "url": "/game-data/gfx/900080.png",
+            "bytes": 2791,
+            "ms": 5.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/900085.png",
+            "bytes": 3545,
+            "ms": 6.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/900086.png",
+            "bytes": 1119,
+            "ms": 10.099999997764826
+          },
+          {
+            "url": "/game-data/gfx/900087.png",
+            "bytes": 1502,
+            "ms": 8.400000002235174
+          },
+          {
+            "url": "/game-data/gfx/900088.png",
+            "bytes": 932,
+            "ms": 7.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/17368.png",
+            "bytes": 848,
+            "ms": 3.900000002235174
+          },
+          {
+            "url": "/game-data/gfx/17373.png",
+            "bytes": 1755,
+            "ms": 3.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/900158.png",
+            "bytes": 3058,
+            "ms": 5.099999997764826
+          },
+          {
+            "url": "/game-data/gfx/900153.png",
+            "bytes": 3236,
+            "ms": 4.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/900337.png",
+            "bytes": 2010,
+            "ms": 3.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/900336.png",
+            "bytes": 1978,
+            "ms": 4.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/900335.png",
+            "bytes": 1833,
+            "ms": 3.5
+          },
+          {
+            "url": "/game-data/gfx/900341.png",
+            "bytes": 2312,
+            "ms": 3.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/10666.png",
+            "bytes": 490,
+            "ms": 2.100000001490116
+          },
+          {
+            "url": "/game-data/gfx/900282.png",
+            "bytes": 3676,
+            "ms": 3.199999999254942
+          },
+          {
+            "url": "/game-data/effects/particles/2012.png",
+            "bytes": 387,
+            "ms": 3.300000000745058
+          },
+          {
+            "url": "/game-data/optimized/maps/154643-e1e7dd84a6bbbb112b8c159c70643d8f77e9e27458b21e178a31df03ef541827.json",
+            "bytes": 1105876,
+            "ms": 6.600000001490116
+          },
+          {
+            "url": "/game-data/gfx/900179.png",
+            "bytes": 1135,
+            "ms": 4.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/900313.png",
+            "bytes": 2120,
+            "ms": 5.5
+          },
+          {
+            "url": "/game-data/gfx/900316.png",
+            "bytes": 1426,
+            "ms": 5.800000000745058
+          },
+          {
+            "url": "/game-data/gfx/73411.png",
+            "bytes": 1850,
+            "ms": 8.899999998509884
+          },
+          {
+            "url": "/game-data/gfx/73412.png",
+            "bytes": 1003,
+            "ms": 5.699999999254942
+          },
+          {
+            "url": "/game-data/gfx/39758.png",
+            "bytes": 3467,
+            "ms": 3.600000001490116
+          },
+          {
+            "url": "/game-data/effects/emissives/1.png",
+            "bytes": 1188,
+            "ms": 3.399999998509884
+          },
+          {
+            "url": "/game-data/effects/particles/2239.png",
+            "bytes": 108,
+            "ms": 3
+          },
+          {
+            "url": "/game-data/effects/particles/667.png",
+            "bytes": 1044,
+            "ms": 4.800000000745058
+          },
+          {
+            "url": "/game-data/effects/noises/1001.png",
+            "bytes": 181,
+            "ms": 4.699999999254942
+          },
+          {
+            "url": "/game-data/effects/windModels/0.png",
+            "bytes": 21477,
+            "ms": 4.699999999254942
+          },
+          {
+            "url": "/game-data/optimized/maps/154645-579eb6106dc47d440a0bc9f85b84503e620a7e2f1152173869539af710353db9.json",
+            "bytes": 927020,
+            "ms": 11.599999997764826
+          },
+          {
+            "url": "/game-data/gfx/62805.png",
+            "bytes": 2274,
+            "ms": 6.5
+          },
+          {
+            "url": "/game-data/gfx/900205.png",
+            "bytes": 1428,
+            "ms": 6.399999998509884
+          },
+          {
+            "url": "/game-data/gfx/900204.png",
+            "bytes": 3113,
+            "ms": 4.099999997764826
+          },
+          {
+            "url": "/game-data/gfx/900207.png",
+            "bytes": 902,
+            "ms": 3.899999998509884
+          },
+          {
+            "url": "/game-data/effects/particles/2186.png",
+            "bytes": 44168,
+            "ms": 3.599999997764826
+          },
+          {
+            "url": "/game-data/effects/masks/900202.png",
+            "bytes": 4505,
+            "ms": 3.699999999254942
+          }
+        ]
+      }
+    },
+    {
+      "callId": "call@38",
+      "sample": {
+        "mapId": 153878788,
+        "readyMs": 3466.699999999255,
+        "sceneMs": 1040.0999999977648,
+        "draws": 851,
+        "sceneBuilding": false,
+        "camera": {
+          "x": 960,
+          "y": 538.3946980854197,
+          "scale": 1.0603829160530192
+        },
+        "neighbours": [
+          {
+            "label": "NeighbourMap:left:154010372",
+            "alpha": 0.85
+          },
+          {
+            "label": "NeighbourMap:right:153879300",
+            "alpha": 0.85
+          },
+          {
+            "label": "NeighbourMap:bottom:153878787",
+            "alpha": 0.85
+          },
+          {
+            "label": "NeighbourMap:top:153878789",
+            "alpha": 0.85
+          }
+        ],
+        "renderedFrames": 2,
+        "skippedFrames": 195,
+        "particles": {
+          "systems": 6,
+          "particles": 20,
+          "steps": 76,
+          "limit": 4096
+        },
+        "effects": {
+          "active": 274,
+          "ignored": 0,
+          "missingTextures": 0,
+          "cpuMs": 4.199999999254942,
+          "renderTargetBytes": 0,
+          "passes": 0,
+          "particlesCapped": 0,
+          "families": [
+            "animated_props",
+            "paint_shader",
+            "particles",
+            "particles_shader",
+            "postprocess_config",
+            "shader_color_animation",
+            "shader_dissolve",
+            "shader_distortion",
+            "shader_emissive",
+            "shader_rotation",
+            "shader_scale",
+            "shader_translation",
+            "shader_wind",
+            "wind_config"
+          ]
+        },
+        "props": [
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimState0_0",
+            "frame": 0,
+            "frames": 1,
+            "visible": true,
+            "version": 2
+          },
+          {
+            "animation": "AnimStart_0",
+            "frame": 56,
+            "frames": 59,
+            "visible": true,
+            "version": 56
+          }
+        ],
+        "frameP50": 16.699999999999818,
+        "frameP95": 33.19999999999982,
+        "frameP99": 66.70000000000027,
+        "textureBackend": "bc7",
+        "compressedMapSources": 7,
+        "textures": {
+          "entries": 380,
+          "bytes": 152497208,
+          "budget": 268435456,
+          "pinned": 380,
+          "overBudgetBytes": 0,
+          "evictions": 0,
+          "running": 0,
+          "queued": 0
+        },
+        "documents": {
+          "entries": 5,
+          "estimatedBytes": 4550782,
+          "budget": 33554432
+        },
+        "resolution": 1,
+        "staticVisible": 4287,
+        "staticTotal": 9137
+      }
+    }
+  ]
+}

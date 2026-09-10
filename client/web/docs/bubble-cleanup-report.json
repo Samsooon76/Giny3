@@ -1,0 +1,12 @@
+{
+  "files": 418649,
+  "reclaimable_bytes": 20897488896,
+  "reclaimable_gib": 19.462,
+  "removed_paths": [
+    "client/dofus3/output",
+    "client/dofus3/.cache",
+    "client/web/game-data"
+  ],
+  "reference_captures": "client/dofus3/references",
+  "retained_runtime": "client/web/runtime-assets"
+}

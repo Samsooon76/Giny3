@@ -1,0 +1,42 @@
+.inventory-recipes-host > .official-node { display: none !important; }
+.inventory-recipes-host { min-height: 0 !important; height: 100% !important; padding: 0 !important; }
+.official-canvas .inventory-recipes {
+  display: flex; flex-direction: column; width: 100%; height: 100%; min-height: 0;
+  color: #deddd5; background: #27251f; font: 14px/20px Lexend-Regular, sans-serif;
+}
+.inventory-recipes *, .inventory-recipes *::before, .inventory-recipes *::after { box-sizing: border-box; }
+.official-canvas .inventory-recipes__filters {
+  display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 12px 16px;
+  padding: 16px; background: #3d3b35; flex-shrink: 0;
+}
+.official-canvas .inventory-recipes input:not([type=checkbox]), .official-canvas .inventory-recipes select {
+  width: 100%; min-width: 0; height: 32px; padding: 4px 8px; border: 1px solid #656259;
+  border-radius: 0; background: #27251f; color: #dddcd4; font: inherit;
+}
+.official-canvas .inventory-recipes select { background: #5a5750; text-overflow: ellipsis; }
+.official-canvas .inventory-recipes__levels { display: flex; flex-direction: row; align-items: center; gap: 10px; }
+.official-canvas .inventory-recipes__levels input { flex: 1; width: 54px; }
+.official-canvas .inventory-recipes__list { display: block; flex: 1; min-height: 0; overflow-y: auto; padding: 10px 12px 0 16px; scrollbar-color: #79766b #302e28; scrollbar-width: thin; }
+.official-canvas .inventory-recipes__recipe { display: flex; flex-direction: row; gap: 12px; min-height: 110px; padding: 12px; margin-bottom: 8px; border-radius: 9px; background: #373b2e; }
+.official-canvas .inventory-recipes__result { display: flex; flex-direction: column; align-items: center; justify-content: space-between; width: 64px; flex: 0 0 64px; color: #a5a494; }
+.inventory-recipes__result > img { width: 64px; height: 64px; object-fit: contain; }
+.official-canvas .inventory-recipes__details { display: flex; flex-direction: column; flex: 1; min-width: 0; gap: 16px; }
+.official-canvas .inventory-recipes__name { display: flex; flex-direction: row; justify-content: space-between; gap: 10px; }
+.inventory-recipes__name strong { color: #f5f4ec; font-family: Rowdies-Regular, sans-serif; font-weight: 400; }
+.inventory-recipes__name > span { color: #aaa99a; white-space: nowrap; font-size: 12px; }
+.official-canvas .inventory-recipes__ingredients { display: flex; flex-direction: row; flex-wrap: wrap; gap: 6px; }
+.official-canvas .inventory-recipes__ingredient { display: block; position: relative; width: 46px; height: 46px; background: #ffffff0b; }
+.inventory-recipes__ingredient img { width: 100%; height: 100%; object-fit: contain; }
+.inventory-recipes__ingredient > span { position: absolute; top: 0; left: 3px; color: #fff; text-shadow: 1px 1px 2px #000; }
+.inventory-recipes__ingredient.is-missing { box-shadow: inset 0 0 0 1px #a76c55; }
+.official-canvas .inventory-recipes__footer { display: flex; flex-direction: column; flex-shrink: 0; gap: 8px; padding: 14px 20px 8px; border-top: 1px solid #57544a; background: #3d3b35; }
+.official-canvas .inventory-recipes__footer label { display: flex; flex-direction: row; align-items: center; gap: 10px; font-size: 13px; color: #aaa797; }
+.inventory-recipes__footer label:has(input:checked) { color: #b0c75c; }
+.inventory-recipes input[type=checkbox] { width: 14px; height: 14px; margin: 0; accent-color: #a5bf50; }
+.inventory-recipes__footer > span { align-self: flex-end; font-size: 13px; }
+.inventory-recipes__empty { padding: 24px 16px; color: #b7b3a5; }
+.official-window[data-window="recipes"] { background: #3d3b35; }
+
+.official-window[data-window="recipes"] .header.primary { background: #a2432b !important; background-image: linear-gradient(90deg, #963c27, #b75a39, #963c27) !important; }
+.official-window[data-window="recipes"] [data-binding="window_background"] { background: #3d3b35 !important; }
+.inventory-recipes { pointer-events: auto; }

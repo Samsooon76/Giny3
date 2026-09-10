@@ -1,0 +1,86 @@
+/* Pause menu: keep the extracted window, labels and icons, restoring the
+   runtime geometry and palette shown in the reference client. Scoped here so
+   login screens and other official dropdowns retain their own theme. */
+.official-overlay--mainMenu [data-binding="PauseMenu"] {
+  color: #e4e3ed;
+  font-family: Lexend, sans-serif;
+}
+.official-overlay--mainMenu [data-binding="window_background"] {
+  background: var(--background_dark100) !important;
+  box-shadow: 0 6px 16px #0005 !important;
+}
+.official-overlay--mainMenu [data-binding="window_inner"],
+.official-overlay--mainMenu [data-binding="window_shadow"] { display: none !important; }
+.official-overlay--mainMenu [data-binding="header"] { background: var(--background_medium100) !important; }
+.official-overlay--mainMenu [data-binding="header_titleLabel"] { color: #f1f0f5 !important; }
+.official-overlay--mainMenu [data-binding="window_content"] { height: auto !important; }
+.official-overlay--mainMenu [data-binding="ctr_mainPart"] { padding: 24px 0 !important; gap: 24px !important; }
+.official-overlay--mainMenu .official-Divider {
+  height: 1px !important;
+  min-height: 1px;
+  background: #ffffff1a !important;
+}
+.official-overlay--mainMenu .official-Divider > * { visibility: hidden; }
+.official-overlay--mainMenu .official-DropdownButton { width: 100% !important; }
+.official-overlay--mainMenu [data-binding="dropdown_content"] { height: 100%; }
+.official-overlay--mainMenu [data-binding="dropdown_dropdown"] {
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  gap: 4px !important;
+}
+.official-overlay--mainMenu [data-binding="dropdown_caption"] {
+  flex: 1 !important;
+  height: 32px;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  background: var(--buttons_buttonSecondaryHover) !important;
+  box-shadow: inset 0 1px #ffffff30;
+  border-radius: 2px;
+}
+.official-overlay--mainMenu [data-binding="dropdown_captionLabel"] {
+  text-transform: uppercase;
+  font-size: 14px !important;
+  font-family: Lexend, sans-serif !important;
+  font-weight: 700;
+  color: #e4e3ed !important;
+  text-shadow: 0 2px #0006;
+}
+.official-overlay--mainMenu [data-binding="dropdown_chevron"] {
+  width: 32px !important;
+  height: 32px !important;
+  background: var(--buttons_buttonSecondaryHover) !important;
+  box-shadow: inset 0 1px #ffffff30;
+}
+.official-overlay--mainMenu [data-binding="dropdown_chevron_Vector"] {
+  display: block !important;
+  width: 9px !important;
+  height: 9px !important;
+  background: none !important;
+  border-right: 2px solid #b5b3c6 !important;
+  border-bottom: 2px solid #b5b3c6 !important;
+  transform: translateY(-3px) rotate(45deg);
+}
+.official-overlay--mainMenu [data-binding="ctr_options"] > button > [data-binding="button_container"],
+.official-overlay--mainMenu [data-binding="btn_sub"] > [data-binding="button_container"] {
+  background: var(--buttons_buttonSecondaryHover) !important;
+  box-shadow: inset 0 1px #ffffff30 !important;
+}
+.official-overlay--mainMenu button:disabled { opacity: 1; filter: none; cursor: not-allowed; }
+.official-overlay--mainMenu [data-binding="button_label"] { color: #e4e3ed !important; }
+.official-overlay--mainMenu [data-binding="lbl_sub_text"] { color: var(--highlight_secondary80) !important; }
+.official-overlay--mainMenu [data-binding="ctr_subPart"] { gap: 16px !important; }
+.official-overlay--mainMenu [data-binding="ctr_sub_txt"] { height: 32px; }
+.official-overlay--mainMenu [data-binding="ctr_footer"] { background: var(--background_medium100) !important; }
+.official-overlay--mainMenu [data-binding="btn_close"] > [data-binding="button_container"] {
+  background: var(--buttons_buttonPrimary) !important;
+  box-shadow: inset 0 1px #d7e47266 !important;
+}
+.official-overlay--mainMenu [data-binding="lbl_buildNumber"] { color: var(--highlight_primary80) !important; }
+.official-overlay--mainMenu button:not(:disabled):hover > [data-binding="button_container"],
+.official-overlay--mainMenu .official-DropdownButton:not(:disabled):hover [data-binding="dropdown_caption"],
+.official-overlay--mainMenu .official-DropdownButton:not(:disabled):hover [data-binding="dropdown_chevron"] { filter: brightness(1.16); }
+.official-overlay--mainMenu button:focus-visible { outline: 2px solid #dbe878; outline-offset: 3px; }
+
+.official-overlay--mainMenu [data-binding="dropdown_choice"] { display: none !important; }

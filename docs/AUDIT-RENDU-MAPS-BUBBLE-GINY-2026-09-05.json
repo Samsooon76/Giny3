@@ -1,0 +1,132 @@
+{
+  "date": "2026-09-05",
+  "method": "Static source audit; PNG IHDR size arithmetic, not measured GPU residency; gzip level 6 computed offline; selected roots prefer raw JSON before gzip as runtime does.",
+  "unique_map_document_formats": {
+    "legacy": 1728,
+    "giny.dofus3.map.v3": 31,
+    "giny.dofus3.map.v2": 4,
+    "giny.dofus3.map.v1": 2
+  },
+  "samples": [
+    {
+      "map_id": 154644,
+      "json_bytes": 647074,
+      "gzip6_bytes": 34523,
+      "elements_total": 1771,
+      "eligible_elements": 1768,
+      "requested_map_textures": 279,
+      "png_disk_bytes": 3786020,
+      "rgba8_base_level_bytes_estimate": 37750688,
+      "missing_files": []
+    },
+    {
+      "map_id": 153878788,
+      "json_bytes": 762204,
+      "gzip6_bytes": 45210,
+      "elements_total": 2198,
+      "eligible_elements": 2195,
+      "requested_map_textures": 216,
+      "png_disk_bytes": 6421284,
+      "rgba8_base_level_bytes_estimate": 55392412,
+      "missing_files": []
+    },
+    {
+      "map_id": 153880836,
+      "json_bytes": 401467,
+      "gzip6_bytes": 26422,
+      "elements_total": 938,
+      "eligible_elements": 935,
+      "requested_map_textures": 189,
+      "png_disk_bytes": 8378794,
+      "rgba8_base_level_bytes_estimate": 83172036,
+      "missing_files": []
+    }
+  ],
+  "bubble": {
+    "version": "0.1.328",
+    "archive_sha256": "9d2bd53656e91c52b20db881225617625222d74b41f965dd961bfd35d7301a8f",
+    "manifest_pack_format": "raw-concat-v1",
+    "observed_ktx_sample": {
+      "path": "map3/textures-ktx-bc7/mapgfx/20109.ktx2",
+      "hash": "a5974cde0729313a05ba42e1840e7f5acdd120bd8c9e1405ed2eb22d9df3a0c6",
+      "file_bytes": 79453,
+      "width": 1024,
+      "height": 1012,
+      "vkFormat": 145,
+      "supercompressionScheme": 2,
+      "levels": 1,
+      "sha256_verified": true
+    },
+    "comparison_giny_png": {
+      "path": "client/dofus3/output/gfx/20109.png",
+      "file_bytes": 150411,
+      "width": 1022,
+      "height": 1010
+    },
+    "evidence": [
+      {
+        "bundle": "dist/assets/x-D8TUb0j1.js",
+        "label": "Map3 assembles BC7 blocks into layer atlases; compatibility PNG packs",
+        "pretty_lines": [
+          7297,
+          7320
+        ],
+        "excerpt": "            return F.add(H), A.record(`mapgfx/${H}`), Pe.error(`map3 GFX ${H} abandonné après retries, zone transparente dans l'atlas`, re), null;\n        } })); return { blocks: new Map(L.filter(H => H !== null)), degraded: F }; })(), O; };\n        if (i.atlasSource === \"ktx\")\n            for (const w of [\"background\", \"sortable\", \"foreground\"])\n                k(w, (async () => { const F = y.map.materialGroups[w].atlas, L = Math.max(1, F.width), Y = Math.max(1, F.height), { blocks: H, degraded: re } = await R(), X = Object.entries(F.rects).flatMap(([ie, Be]) => { const be = H.get(ie); if (be)\n                    return [{ rect: Be, image: be }]; if (re.has(ie))\n                    return []; throw new Error(`blocs KTX GFX ${ie} absents`); }); y.atlasTextures[w] = z0(this.gl, L, Y, X), S.set(w, X.length > 0 ? Math.ceil(L / 4) * Math.ceil(Y / 4) * 16 : 4); })());\n        else if (i.atlasSource === \"packs\") {\n            const w = {};\n            f = w;\n            const F = await Jh(`${n}/packs`, c), L = s?.atlasCacheRevision === null || s === null ? `packs:${F}` : `packs:${F}:document:${encodeURIComponent(s.atlasCacheRevision)}`, Y = () => (d.promise ??= Em(y.map, `${n}/packs`, w, c)).then(H => H.images);\n            for (const H of [\"background\", \"sortable\", \"foreground\"])\n                k(H, (async () => { const re = await bm(e, H, y.map, Y, { cache: s?.atlasCache ?? i.atlasCache ?? !0, cacheSourceKey: L, signal: c }, w); try {\n                    y.atlasTextures[H] = yt(this.gl, re.source, { wrap: \"clamp\", filter: \"linear\", colorSpace: \"linear\" }), S.set(H, re.width * re.height * 4);\n                }\n                finally {\n                    const X = re.release();\n                    this.trackAsyncTask(this.pendingAtlasCacheWriteTasks, X);\n                } })());\n        }\n        else\n            for (const w of [\"background\", \"sortable\", \"foreground\"])\n                B(w, `${n}/maps/${e}/atlas_${w}.png`, { wrap: \"clamp\", filter: \"linear\", colorSpace: \"linear\" });\n        for (const w of Object.keys(y.map.particleSprites ?? {})) {"
+      },
+      {
+        "bundle": "dist/assets/x-D8TUb0j1.js",
+        "label": "Desktop BC7 selection with compatibility fallback",
+        "pretty_lines": [
+          7805,
+          7805
+        ],
+        "excerpt": "function Ev(t, e, n = {}) { const r = t.startsWith(\"dofus-assets:\"); return { ...r && e ? { atlasSource: \"ktx\", mapKtxProfile: \"bc7\", actorKtxProfile: \"bc7\", binFormat: \"bin\" } : { atlasSource: \"packs\", atlasCache: !0, binFormat: r ? \"bin\" : \"bin.gz\" }, ...n }; }"
+      },
+      {
+        "bundle": "dist/assets/x-D8TUb0j1.js",
+        "label": "64 MiB block cache",
+        "pretty_lines": [
+          5805,
+          5825
+        ],
+        "excerpt": "const Xe = new Map;\nlet zi = 0;\nconst Dd = 64 * 1024 * 1024;\nfunction _c() { return { entries: Xe.size, bytes: zi, limit: Dd }; }\nfunction V0(t, e) { return Rd(t, e); }\nfunction W0(t) { for (; zi > Dd;) {\n    let e = null;\n    for (const n of Xe) {\n        const r = n[1];\n        if (r !== t && r.settled && r.size > 0) {\n            e = n;\n            break;\n        }\n    }\n    if (!e)\n        return;\n    Xe.delete(e[0]), zi -= e[1].size;\n} }\nasync function q0(t, e, n, r) { Ht(r); const i = t.gl; return Md(t, async (s) => { const o = await Id(e, r); Ht(r); const a = new s.texture(o); try {\n    let l;\n    if (a.needsTranscoding) {"
+      },
+      {
+        "bundle": "dist/assets/game-entry-D5YuSIvZ.js",
+        "label": "Neighbour preload constants and idle gate",
+        "pretty_lines": [
+          9276,
+          9308
+        ],
+        "excerpt": "    _inFlight = 0;\n    _idleTimeMs = 0;\n    _active = !1;\n    _generation = 0;\n    _sessionId = null;\n    _totalWarmCount = 0;\n    _totalFailureCount = 0;\n    _totalCancelledCount = 0;\n    _staleCompletionIgnoreCount = 0;\n    _peakInFlight = 0;\n    constructor(t, n) { this._getMapSource = t, this._hasMapPosition = n; }\n    setNeighbors(t, n) { this._generation++, this._sessionId = n?.sessionId ?? null; const a = [t.left, t.right, t.top, t.bottom].filter(o => o != null && o > 0 && this._hasMapPosition(o)), r = new Set(a); for (const o of this._entries.values())\n        r.has(o.mapId) || this._abortEntry(o); const s = new Map; for (const o of a) {\n        const l = this._entries.get(o);\n        if (l && (l.state === \"warmed\" || l.state === \"inflight\")) {\n            s.set(o, l);\n            continue;\n        }\n        s.set(o, { mapId: o, generation: this._generation, state: \"queued\", failures: 0, retryable: !0, abortController: null });\n    } this._neighborMapIds = a, this._entries = s, this._idleTimeMs = 0, this._active = a.length > 0; }\n    onIdle(t) { !this._active || this._neighborMapIds.length === 0 || (this._idleTimeMs += t, !(this._idleTimeMs < t8e) && this._preloadNext()); }\n    resetIdle() { this._idleTimeMs = 0; }\n    cancel(t) { this._active = !1, this._idleTimeMs = 0, this._neighborMapIds = []; for (const n of this._entries.values())\n        n.mapId !== t && this._abortEntry(n); }\n    getState(t) { return this._entries.get(t)?.state ?? null; }\n    getStats() { let t = 0, n = 0, a = 0, r = 0, s = 0; for (const o of this._entries.values())\n        switch (o.state) {\n            case \"queued\":\n                t++;\n                break;\n            case \"inflight\":\n                n++;\n                break;"
+      },
+      {
+        "bundle": "dist/assets/index-BP60ZkRz.js",
+        "label": "Map3 branch precedes stable frame skip",
+        "pretty_lines": [
+          2905,
+          2912
+        ],
+        "excerpt": "        this._applyMap3CameraConstraints(), this._advanceEntitiesForMap3(e, w), this.map3Runtime.renderFrame(e, this._buildMap3WorldInputs(e));\n        const A = performance.now();\n        this._lastFrameEndTime = A, this.frameProfiling = { ...Bt, camera: C, total: A - o, callback: A - o, gap: Math.max(0, r - (A - o)), rafDelay: p, interFrameIdle: f, missedVsyncs: _, longTaskMs: u, longTaskCount: d, gcMs: h, gcCount: g };\n        return;\n    } const T = this.dialogueBubbles.drainRemovedTextureUrls(); T.length > 0 && this.renderer.removeTextures(T); const b = this.delayedActionBubbles.drainRemovedTextureUrls(); b.length > 0 && this.renderer.removeTextures(b); let E = !1; this.smileyBubbles.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]])), E = !0; }), this.dialogueBubbles.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]]), { generateMipmaps: !1 }), E = !0; }), this.delayedActionBubbles.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]]), { generateMipmaps: !1 }), E = !0; }), this.entityIcons.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]])), E = !0; }), this.fightCellMarker.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]])), E = !0; }), this.fightPingMarkers.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]])), E = !0; }), this.fightTempPings.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]])), E = !0; }), this.fightTeamBaseHero.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]])), E = !0; }), this.fightTeamBaseCompanion.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]])), E = !0; }), this.fightTurnIndicator.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]])), E = !0; }), this.fightTeamBaseSummon.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]])), E = !0; }), this.fightPathTrace.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]])), E = !0; }), this.fightPlacementCell.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]])), E = !0; }), this.fightMarkFloor.uploadPendingTextures((A, x) => { this.renderer.uploadTextures(new Map([[A, x]])), E = !0; }); const S = T.length > 0 || E; if (this._shouldSkipStableFrame({ cameraMoved: v.cameraMoved, gridRebuilt: v.gridRebuilt, timedOverlayActive: y || M, renderStateChanged: S })) {\n        const A = performance.now(), x = C;\n        this._lastFrameEndTime = A, this.frameProfiling = { ...Bt, camera: C, total: x, callback: A - o, callbackOverhead: Math.max(0, A - o - x), gap: Math.max(0, r - x), rafDelay: p, interFrameIdle: f, missedVsyncs: _, longTaskMs: u, longTaskCount: d, gcMs: h, gcCount: g }, this._drawCalls = 0;\n        return;"
+      },
+      {
+        "bundle": "dist-electron/main.cjs",
+        "label": "Brotli map data decompression",
+        "pretty_lines": [
+          3260,
+          3265
+        ],
+        "excerpt": "    e = new URL(t).pathname;\n}\ncatch {\n    return !1;\n} return e.includes(\"/map3/\") && e.endsWith(\"/map.bin\"); }\nfunction Ac(t) { return new Uint8Array((0, bc.brotliDecompressSync)(t)); }"
+      },
+      {
+        "bundle": "dist/assets/data-loader-utils-Btf16hSR.js",
+        "label": "Binary MessagePack and gzip loader",
+        "pretty_lines": [
+          203,
+          216
+        ],
+        "excerpt": "const J = 31, G = 139, c = { requestCount: 0, binRequestCount: 0, jsonRequestCount: 0, rawDecodeCount: 0, gzipDecodeCount: 0, contentEncodingPassthroughCount: 0, abortCount: 0, failureCount: 0, lastFetchDurationMs: 0, lastDecodeDurationMs: 0, lastTotalDurationMs: 0 };\nfunction ce() { return { ...c }; }\nfunction v(t) { return t.length >= 2 && t[0] === J && t[1] === G; }\nasync function x(t) { const e = new DecompressionStream(\"gzip\"), r = new Uint8Array(t.byteLength); r.set(t); const o = new Blob([r.buffer]).stream().pipeThrough(e), s = await new Response(o).arrayBuffer(); return new Uint8Array(s); }\nasync function K(t, e, r = fetch) { return (await W(t, e, r)).data; }\nasync function W(t, e, r = fetch) { const o = performance.now(); c.requestCount++, c.binRequestCount++; try {\n    w(e, void 0, `Fetch aborted before request: ${t}`);\n    const s = performance.now(), n = await r(t, { signal: e?.signal });\n    if (c.lastFetchDurationMs = performance.now() - s, !n.ok)\n        throw new Error(`${n.status} ${t}`);\n    const i = n.headers.get(\"Content-Encoding\"), u = n.headers.get(\"x-dofus-asset-hash\"), d = performance.now(), l = new Uint8Array(await n.arrayBuffer());\n    w(e, void 0, `Fetch aborted while decoding: ${t}`);\n    let f;\n    return i === \"gzip\" || i === \"br\" ? (c.contentEncodingPassthroughCount++, f = y(l)) : v(l) ? (c.gzipDecodeCount++, f = y(await x(l))) : (c.rawDecodeCount++, f = y(l)), c.lastDecodeDurationMs = performance.now() - d, c.lastTotalDurationMs = performance.now() - o, { data: f, assetHash: u };"
+      }
+    ]
+  }
+}

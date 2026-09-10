@@ -1,0 +1,518 @@
+{
+  "date": "2026-09-05",
+  "method": "Analyse statique locale, aucun combat exécuté",
+  "protocol": [
+    {
+      "message": "GameRolePlayAttackMonsterRequestMessage",
+      "id": 9329,
+      "fields": [
+        [
+          "double",
+          "monsterGroupId"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/roleplay/fight/GameRolePlayAttackMonsterRequestMessage.cs"
+    },
+    {
+      "message": "GameFightJoinMessage",
+      "id": 8166,
+      "fields": [
+        [
+          "bool",
+          "isTeamPhase"
+        ],
+        [
+          "bool",
+          "canBeCancelled"
+        ],
+        [
+          "bool",
+          "canSayReady"
+        ],
+        [
+          "bool",
+          "isFightStarted"
+        ],
+        [
+          "short",
+          "timeMaxBeforeFightStart"
+        ],
+        [
+          "byte",
+          "fightType"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightJoinMessage.cs"
+    },
+    {
+      "message": "GameFightPlacementPossiblePositionsMessage",
+      "id": 282,
+      "fields": [
+        [
+          "short[]",
+          "positionsForChallengers"
+        ],
+        [
+          "short[]",
+          "positionsForDefenders"
+        ],
+        [
+          "byte",
+          "teamNumber"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightPlacementPossiblePositionsMessage.cs"
+    },
+    {
+      "message": "GameFightPlacementPositionRequestMessage",
+      "id": 7043,
+      "fields": [
+        [
+          "short",
+          "cellId"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightPlacementPositionRequestMessage.cs"
+    },
+    {
+      "message": "GameFightReadyMessage",
+      "id": 4840,
+      "fields": [
+        [
+          "bool",
+          "isReady"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightReadyMessage.cs"
+    },
+    {
+      "message": "GameFightHumanReadyStateMessage",
+      "id": 109,
+      "fields": [
+        [
+          "long",
+          "characterId"
+        ],
+        [
+          "bool",
+          "isReady"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightHumanReadyStateMessage.cs"
+    },
+    {
+      "message": "ChallengeModSelectMessage",
+      "id": 4455,
+      "fields": [
+        [
+          "byte",
+          "challengeMod"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/challenge/ChallengeModSelectMessage.cs"
+    },
+    {
+      "message": "ChallengeModSelectedMessage",
+      "id": 4667,
+      "fields": [
+        [
+          "byte",
+          "challengeMod"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/challenge/ChallengeModSelectedMessage.cs"
+    },
+    {
+      "message": "ChallengeReadyMessage",
+      "id": 9700,
+      "fields": [
+        [
+          "byte",
+          "challengeMod"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/challenge/ChallengeReadyMessage.cs"
+    },
+    {
+      "message": "ChallengeProposalMessage",
+      "id": 8830,
+      "fields": [
+        [
+          "ChallengeInformation[]",
+          "challengeProposals"
+        ],
+        [
+          "double",
+          "timer"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/challenge/ChallengeProposalMessage.cs"
+    },
+    {
+      "message": "ChallengeSelectionMessage",
+      "id": 5920,
+      "fields": [
+        [
+          "int",
+          "challengeId"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/challenge/ChallengeSelectionMessage.cs"
+    },
+    {
+      "message": "ChallengeSelectedMessage",
+      "id": 8045,
+      "fields": [
+        [
+          "ChallengeInformation",
+          "challengeInformation"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/challenge/ChallengeSelectedMessage.cs"
+    },
+    {
+      "message": "ChallengeValidateMessage",
+      "id": 8427,
+      "fields": [
+        [
+          "int",
+          "challengeId"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/challenge/ChallengeValidateMessage.cs"
+    },
+    {
+      "message": "ChallengeAddMessage",
+      "id": 8563,
+      "fields": [
+        [
+          "ChallengeInformation",
+          "challengeInformation"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/challenge/ChallengeAddMessage.cs"
+    },
+    {
+      "message": "ChallengeBonusChoiceMessage",
+      "id": 2271,
+      "fields": [
+        [
+          "byte",
+          "challengeBonus"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/challenge/ChallengeBonusChoiceMessage.cs"
+    },
+    {
+      "message": "ChallengeBonusChoiceSelectedMessage",
+      "id": 4926,
+      "fields": [
+        [
+          "byte",
+          "challengeBonus"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/challenge/ChallengeBonusChoiceSelectedMessage.cs"
+    },
+    {
+      "message": "GameFightStartMessage",
+      "id": 9783,
+      "fields": [],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightStartMessage.cs"
+    },
+    {
+      "message": "GameFightTurnStartMessage",
+      "id": 217,
+      "fields": [
+        [
+          "double",
+          "id"
+        ],
+        [
+          "int",
+          "waitTime"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightTurnStartMessage.cs"
+    },
+    {
+      "message": "GameFightTurnEndMessage",
+      "id": 7900,
+      "fields": [
+        [
+          "double",
+          "id"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightTurnEndMessage.cs"
+    },
+    {
+      "message": "GameFightNewRoundMessage",
+      "id": 8261,
+      "fields": [
+        [
+          "int",
+          "roundNumber"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightNewRoundMessage.cs"
+    },
+    {
+      "message": "GameFightTurnFinishMessage",
+      "id": 3915,
+      "fields": [
+        [
+          "bool",
+          "isAfk"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightTurnFinishMessage.cs"
+    },
+    {
+      "message": "GameFightTurnReadyRequestMessage",
+      "id": 379,
+      "fields": [
+        [
+          "double",
+          "id"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightTurnReadyRequestMessage.cs"
+    },
+    {
+      "message": "GameFightTurnReadyMessage",
+      "id": 9655,
+      "fields": [
+        [
+          "bool",
+          "isReady"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightTurnReadyMessage.cs"
+    },
+    {
+      "message": "SequenceStartMessage",
+      "id": 7231,
+      "fields": [
+        [
+          "byte",
+          "sequenceType"
+        ],
+        [
+          "double",
+          "authorId"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/actions/sequence/SequenceStartMessage.cs"
+    },
+    {
+      "message": "SequenceEndMessage",
+      "id": 1586,
+      "fields": [
+        [
+          "short",
+          "actionId"
+        ],
+        [
+          "double",
+          "authorId"
+        ],
+        [
+          "byte",
+          "sequenceType"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/actions/sequence/SequenceEndMessage.cs"
+    },
+    {
+      "message": "GameActionAcknowledgementMessage",
+      "id": 5751,
+      "fields": [
+        [
+          "bool",
+          "valid"
+        ],
+        [
+          "byte",
+          "actionId"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/actions/GameActionAcknowledgementMessage.cs"
+    },
+    {
+      "message": "GameActionFightCastRequestMessage",
+      "id": 6438,
+      "fields": [
+        [
+          "short",
+          "spellId"
+        ],
+        [
+          "short",
+          "cellId"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/actions/fight/GameActionFightCastRequestMessage.cs"
+    },
+    {
+      "message": "GameActionFightSpellCastMessage",
+      "id": 2679,
+      "fields": [
+        [
+          "short",
+          "spellId"
+        ],
+        [
+          "short",
+          "spellLevel"
+        ],
+        [
+          "short[]",
+          "portalsIds"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/actions/fight/GameActionFightSpellCastMessage.cs"
+    },
+    {
+      "message": "GameFightSynchronizeMessage",
+      "id": 8985,
+      "fields": [
+        [
+          "GameFightFighterInformations[]",
+          "fighters"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightSynchronizeMessage.cs"
+    },
+    {
+      "message": "GameFightEndMessage",
+      "id": 2386,
+      "fields": [
+        [
+          "int",
+          "duration"
+        ],
+        [
+          "short",
+          "rewardRate"
+        ],
+        [
+          "short",
+          "lootShareLimitMalus"
+        ],
+        [
+          "FightResultListEntry[]",
+          "results"
+        ],
+        [
+          "NamedPartyTeamWithOutcome[]",
+          "namedPartyTeamsOutcomes"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightEndMessage.cs"
+    },
+    {
+      "message": "GameFightResumeMessage",
+      "id": 2675,
+      "fields": [
+        [
+          "GameFightSpellCooldown[]",
+          "spellCooldowns"
+        ],
+        [
+          "byte",
+          "summonCount"
+        ],
+        [
+          "byte",
+          "bombCount"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightResumeMessage.cs"
+    },
+    {
+      "message": "GameFightTurnResumeMessage",
+      "id": 7389,
+      "fields": [
+        [
+          "int",
+          "remainingTime"
+        ]
+      ],
+      "path": "server/Giny.Protocol/Messages/game/context/fight/GameFightTurnResumeMessage.cs"
+    }
+  ],
+  "bubble": [
+    {
+      "archivePath": "dist/assets/context-Cc6atjn4.js",
+      "sha256": "1668e033d10384616ed08fb59f8f595dbb21c1f30eb2d9421e757a2a74cf6364",
+      "evidence": []
+    },
+    {
+      "archivePath": "dist/assets/roleplay-CuazbBtr.js",
+      "sha256": "57cb1d673da016dd02279570a396d54f227117dd678a8f40fb558e7db0203846",
+      "evidence": []
+    },
+    {
+      "archivePath": "dist/assets/game_action-BY5ovYju.js",
+      "sha256": "0ff1c5a86d79976cdc351587f25628ac5842b431f247288ce646630ce2680c59",
+      "evidence": []
+    },
+    {
+      "archivePath": "dist/assets/fight-Czbxl41R.js",
+      "sha256": "20208a1c7ce22f42cf8d9af7bb2354690b81544b73eeb41bb9fce988db51c267",
+      "evidence": []
+    },
+    {
+      "archivePath": "dist/assets/challenge-Cs23h8rB.js",
+      "sha256": "e4abfda4104ebd83ae0939575c626739cceaba7e4b6873da1b1e2870692a11b5",
+      "evidence": []
+    },
+    {
+      "archivePath": "dist/assets/game-entry-D5YuSIvZ.js",
+      "sha256": "ec9d48006e3827f38dd34a43cbcc14c40805eccf32fc9279bf65604ba8692c3b",
+      "evidence": [
+        {
+          "token": "_flushSequenceBuffer",
+          "characterOffset": 38617,
+          "excerpt": "e:t._messageType,sequenceDepth:this._sequenceDepth,bufferedCount:this._sequenceBuffer.length}),this._flushSequenceBuffer(t._sessionId)),this._sequenceDepth>0){this._sequenceBuffer.push({msg:t,priority:this._priorityForType(t._messageType),queuedAt:performance.now()}),t._messageType===\"SequenceStartMessage\"&&this._sequenceDepth++,t._messageType===\"SequenceEndMessage\"&&(this._sequenceDepth--,this._sequenceDepth<=0&&this._flushSequenceBuffer(t._sessionId));return}this.emit(t._messageType,t,{bypassLock:!1,sessionId:t._sessionId})}}_flushSequenceBuffer(t){const n=this._sequenceBuffer.splice(0,this."
+        },
+        {
+          "token": "_fightSequenceMovementComplete",
+          "characterOffset": 1044719,
+          "excerpt": ".x,aggressable:m.status}})});const s=(u,m)=>{const g=u,f=Number(g.actorId),x=g.keyMovements,v=n$e(g._fightSequenceMovementComplete);if(x.length===0){Yj.warn(\"Ignoring GameMapMovementMessage with empty path\",{actorId:f}),v.complete();return}const I=u0e(x[x.length-1]);n.preemptMovementCommands(f);let y=!0;n.enqueueServerCommand(f,\"protocol-map-movement\",async S=>{const C=()=>y&&t.actorManager.getActor(f)===S,w=t.getMapLoadContext(t.mapSessionId,\"interactive\"),R=h0e(x,S,t.engine.gridCells,t.gameContext),A=R.length>=2?()=>a.markFighterActionStarted(f,w):void 0;if(t.engine.smileyBubbles.cancel(f),t"
+        },
+        {
+          "token": "__FightTurnReady",
+          "characterOffset": 431167,
+          "excerpt": "$e.isSpectator)return!1;if($e.phase===\"battle\"){if(!$e.playerTurnActive)return!1;U.messageBus.emit(\"__FightTurnReady\",{_messageType:\"__FightTurnReady\"});return}if($e.phase===\"placement\"){if(!$e.canSayReady)return!1;const W=ae.selectedCharacter?.id??0,$=W>0&&$e.readyStates.get(W)===!0;U.messageBus.emit(\"__FightReady\",{_messageType:\"__FightReady\",isReady:!$});return}return!1})),L.push(En.register(pt.ToggleMute,()=>{const U=!Gn().muteAll,W=t.current;W&&(W.engine.audioManager.muted=U),Ei(\"muteAll\",U)})),L.push(En.register(pt.ToggleHud,()=>{Qee(PN())})),L.push(En.register(pt.OpenOptions,()=>{hi(\"op"
+        },
+        {
+          "token": "__MonsterGroupAttack",
+          "characterOffset": 994114,
+          "excerpt": "x},${r.y},${r.worldMapId},${encodeURIComponent(s)},${o}::${l}}`}function Vj(e,t){e.messageBus.emit(\"__MonsterGroupAttack\",{_messageType:\"__MonsterGroupAttack\",monsterGroupId:t})}async function S4e(e,t){const n=t.cellId;if(!Number.isInteger(n)||n<0)return;if(e.isAutoTripBusy()&&(e.stopAutoTrip(),await e.waitForAutoTripTaxiCleanup()),e.clearActionStack(\"manual-monster-attack\"),e.actorManager.userActor?.cellId===n){Vj(e,t.actorId);return}!await e.movePlayerToCell(n,()=>{Vj(e,t.actorId)})&&e.actorManager.userActor?.cellId===n&&Vj(e,t.actorId)}const Rb=10;function kC(e){return e.length===0}function"
+        },
+        {
+          "token": "MonsterGroupTooltip",
+          "characterOffset": 952009,
+          "excerpt": "ement-tooltip__progress-label\",children:[u.value,\"/\",u.maxValue]})]})]},u.id)})]})]})}const d3e=Lt(\"MonsterGroupTooltip\"),X0=1<<20,gc=100,Kre=gc*X0,u3e=1.5,H8=1e9;function a_(e){return new Intl.NumberFormat(\"fr-FR\").format(e).replace(/\\u202f/g,\" \")}function h3e(e){return e>0&&e<.01?\"< 0,01 %\":`${new Intl.NumberFormat(\"fr-FR\",{maximumFractionDigits:2}).format(e)} %`}function m3e(e){return e>0&&e<.01?\"<0,01%\":`${new Intl.NumberFormat(\"fr-FR\",{maximumFractionDigits:2}).format(e)}%`}function z8(e,t){if(!Number.isFinite(e)||e<0||e>gc)throw new B(\"Monster group drop projection received an invalid ra"
+        },
+        {
+          "token": "enqueueActorSequenceCommand",
+          "characterOffset": 1175176,
+          "excerpt": "osition(t,n,a,r=\"iso-actor-disposition\"){this.actorLifecycleController.setActorDisposition(t,n,a,r)}enqueueActorSequenceCommand(t,n,a,r){this._requireHandlerContext().actorQueue.enqueueServerCommand(t,n,a,{onDiscard:r})}refreshQuestIcons(){const t=new Map,n=ae.selectedCharacter?.level??this.actorManager.userActor?.data?.level??0;for(const a of this.actorManager.getAllActors()){const r=d$e(a.data,this.questNpcMeta,this.questIconManifest,n);r&&t.set(a.actorId,[r])}this.engine.entityIcons.syncLayer(\"quest\",t)}rebuildQuestMapMarkers(){this.questMapMarkers=$8e(this.questMapMarkerUpdates,this.engine"
+        },
+        {
+          "token": "HurrySequencePlayback",
+          "characterOffset": 1908261,
+          "excerpt": "cuteSpellScriptAnimationRequest,Q),e.messageBus.on(Ni.SummonAnimationRequest,ce),e.messageBus.on(Ni.HurrySequencePlayback,ne),()=>{e.messageBus.off(Ni.SlideAnimationRequest,D),e.messageBus.off(Ni.TeleportAnimationRequest,L),e.messageBus.off(Ni.ExchangePositionsAnimationRequest,E),e.messageBus.off(Ni.CarryCharacterAnimationRequest,q),e.messageBus.off(Ni.ThrowCharacterAnimationRequest,U),e.messageBus.off(Ni.VanishAnimationRequest,W),e.messageBus.off(Ni.InvisibilityAnimationRequest,$),e.messageBus.off(Ni.InvisibleDetectedAnimationRequest,le),e.messageBus.off(Ni.TackleAnimationRequest,X),e.message"
+        },
+        {
+          "token": "playFightResultJingle",
+          "characterOffset": 1396461,
+          "excerpt": "meter(t,n){this._globalParameters.set(t,n),this._send({type:\"set-global-parameter\",name:t,value:n})}playFightResultJingle(t){return this._send({type:\"play-fight-result-jingle\",isVictory:t}),Promise.resolve()}ensureContext(){throw new B(\"Le renderer de jeu Electron ne possède pas d’AudioContext\",{runtime:\"dedicated-audio\"})}playMusicPlaylist(t){const n={type:\"play-music-playlist\",playlistId:t};return this._musicIntent=n,this._musicPaused=!1,this._musicSeekPosition=null,this._send(n),Promise.resolve()}playMusic(t,n=.5){const a={type:\"play-music\",url:t,fadeIn:n};return this._musicIntent=a,this._m"
+        }
+      ]
+    }
+  ]
+}

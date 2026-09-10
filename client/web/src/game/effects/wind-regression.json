@@ -1,0 +1,1358 @@
+[
+  {
+    "element": {
+      "transform": {
+        "m11": 0.8,
+        "m12": 0.2,
+        "m21": 0.3,
+        "m22": 1.1,
+        "m31": 12,
+        "m32": -40
+      },
+      "parameters": {
+        "ShaderWindParameters": {
+          "flexibility": 0.7,
+          "shouldSwing": 0,
+          "worldSpaceBendStart": {
+            "x": 15,
+            "y": -20
+          },
+          "bendAxe": {
+            "x": 0.3,
+            "y": 1
+          },
+          "bendAxeMultiplier": 60
+        },
+        "ShaderTranslationParameters": {
+          "direction": {
+            "x": 1,
+            "y": -0.5
+          },
+          "amplitude": 8,
+          "frequency": 0.8,
+          "animationCurveType": 0,
+          "shouldSmooth": 0,
+          "linkAmplitudeToWind": false
+        },
+        "ShaderScaleParameters": {
+          "amplitude": 0.2,
+          "frequency": 0.4,
+          "axes": {
+            "x": 1,
+            "y": -0.5
+          }
+        },
+        "ShaderRotationParameters": {
+          "amplitude": 30,
+          "frequency": 0.1
+        }
+      }
+    },
+    "env": {
+      "wind": {
+        "active": false,
+        "parameters": {
+          "windPower": -0.8,
+          "mainWindNoiseDirection": {
+            "x": 1,
+            "y": 0.4
+          },
+          "mainWindNoiseTiling": {
+            "x": 0.01,
+            "y": 0.02
+          },
+          "swingAmplitudeMultiplier": 0.5
+        }
+      },
+      "wave": {
+        "active": false
+      },
+      "noise": {
+        "active": false
+      }
+    },
+    "time": 0,
+    "worldX": 1204,
+    "worldY": 860,
+    "points": [
+      [
+        -40,
+        -100
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        80
+      ]
+    ],
+    "expected": [
+      {
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0,
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      {
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0,
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      {
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0,
+        "scaleX": 1,
+        "scaleY": 1
+      }
+    ]
+  },
+  {
+    "element": {
+      "transform": {
+        "m11": -1.3,
+        "m12": 0.2,
+        "m21": 0.3,
+        "m22": 1.1,
+        "m31": 12,
+        "m32": -40
+      },
+      "parameters": {
+        "ShaderWindParameters": {
+          "flexibility": 0.7,
+          "shouldSwing": 1,
+          "worldSpaceBendStart": {
+            "x": 15,
+            "y": -20
+          },
+          "bendAxe": {
+            "x": 0.3,
+            "y": 1
+          },
+          "bendAxeMultiplier": 60
+        },
+        "ShaderTranslationParameters": {
+          "direction": {
+            "x": 1,
+            "y": -0.5
+          },
+          "amplitude": 8,
+          "frequency": 0.8,
+          "animationCurveType": 1,
+          "shouldSmooth": 1,
+          "linkAmplitudeToWind": true
+        },
+        "ShaderScaleParameters": {
+          "amplitude": 0.2,
+          "frequency": 0.4,
+          "axes": {
+            "x": 1,
+            "y": -0.5
+          }
+        },
+        "ShaderRotationParameters": {
+          "amplitude": 30,
+          "frequency": 0.1
+        }
+      }
+    },
+    "env": {
+      "wind": {
+        "active": true,
+        "parameters": {
+          "windPower": -0.6000000000000001,
+          "mainWindNoiseDirection": {
+            "x": 1,
+            "y": 0.4
+          },
+          "mainWindNoiseTiling": {
+            "x": 0.01,
+            "y": 0.02
+          },
+          "swingAmplitudeMultiplier": 0.5
+        }
+      },
+      "wave": {
+        "active": false
+      },
+      "noise": {
+        "active": false
+      }
+    },
+    "time": 0.17,
+    "worldX": 1204,
+    "worldY": 860,
+    "points": [
+      [
+        -40,
+        -100
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        80
+      ]
+    ],
+    "expected": [
+      {
+        "offsetX": 0.21574567035601044,
+        "offsetY": -0.10787283517800522,
+        "rotation": 0.027910734921823718,
+        "scaleX": 1.0414375580993285,
+        "scaleY": 0.9792812209503358
+      },
+      {
+        "offsetX": 0.21574567035601044,
+        "offsetY": -0.10787283517800522,
+        "rotation": 0.027910734921823718,
+        "scaleX": 1.0414375580993285,
+        "scaleY": 0.9792812209503358
+      },
+      {
+        "offsetX": 12.139613934708768,
+        "offsetY": 4.985119985617401,
+        "rotation": 0.027910734921823718,
+        "scaleX": 1.0414375580993285,
+        "scaleY": 0.9792812209503358
+      }
+    ]
+  },
+  {
+    "element": {
+      "transform": {
+        "m11": 0.8,
+        "m12": 0.2,
+        "m21": 0.3,
+        "m22": 1.1,
+        "m31": 12,
+        "m32": -40
+      },
+      "parameters": {
+        "ShaderWindParameters": {
+          "flexibility": 0.7,
+          "shouldSwing": 0,
+          "worldSpaceBendStart": {
+            "x": 15,
+            "y": -20
+          },
+          "bendAxe": {
+            "x": 0.3,
+            "y": 1
+          },
+          "bendAxeMultiplier": 60
+        },
+        "ShaderTranslationParameters": {
+          "direction": {
+            "x": 1,
+            "y": -0.5
+          },
+          "amplitude": 8,
+          "frequency": 0.8,
+          "animationCurveType": 2,
+          "shouldSmooth": 0,
+          "linkAmplitudeToWind": false
+        },
+        "ShaderScaleParameters": {
+          "amplitude": 0.2,
+          "frequency": 0.4,
+          "axes": {
+            "x": 1,
+            "y": -0.5
+          }
+        },
+        "ShaderRotationParameters": {
+          "amplitude": 30,
+          "frequency": 0.1
+        }
+      }
+    },
+    "env": {
+      "wind": {
+        "active": true,
+        "parameters": {
+          "windPower": -0.4,
+          "mainWindNoiseDirection": {
+            "x": 1,
+            "y": 0.4
+          },
+          "mainWindNoiseTiling": {
+            "x": 0.01,
+            "y": 0.02
+          },
+          "swingAmplitudeMultiplier": 0.5
+        }
+      },
+      "wave": {
+        "active": false
+      },
+      "noise": {
+        "active": false
+      }
+    },
+    "time": 0.34,
+    "worldX": 1204,
+    "worldY": 860,
+    "points": [
+      [
+        -40,
+        -100
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        80
+      ]
+    ],
+    "expected": [
+      {
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0.05550333158666088,
+        "scaleX": 1.0754251380736104,
+        "scaleY": 0.9622874309631948
+      },
+      {
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0.05550333158666088,
+        "scaleX": 1.0754251380736104,
+        "scaleY": 0.9622874309631948
+      },
+      {
+        "offsetX": 8.746989919055174,
+        "offsetY": 3.49879596762207,
+        "rotation": 0.05550333158666088,
+        "scaleX": 1.0754251380736104,
+        "scaleY": 0.9622874309631948
+      }
+    ]
+  },
+  {
+    "element": {
+      "transform": {
+        "m11": -1.3,
+        "m12": 0.2,
+        "m21": 0.3,
+        "m22": 1.1,
+        "m31": 12,
+        "m32": -40
+      },
+      "parameters": {
+        "ShaderWindParameters": {
+          "flexibility": 0.7,
+          "shouldSwing": 1,
+          "worldSpaceBendStart": {
+            "x": 15,
+            "y": -20
+          },
+          "bendAxe": {
+            "x": 0.3,
+            "y": 1
+          },
+          "bendAxeMultiplier": 60
+        },
+        "ShaderTranslationParameters": {
+          "direction": {
+            "x": 1,
+            "y": -0.5
+          },
+          "amplitude": 8,
+          "frequency": 0.8,
+          "animationCurveType": 0,
+          "shouldSmooth": 1,
+          "linkAmplitudeToWind": true
+        },
+        "ShaderScaleParameters": {
+          "amplitude": 0.2,
+          "frequency": 0.4,
+          "axes": {
+            "x": 1,
+            "y": -0.5
+          }
+        },
+        "ShaderRotationParameters": {
+          "amplitude": 30,
+          "frequency": 0.1
+        }
+      }
+    },
+    "env": {
+      "wind": {
+        "active": true,
+        "parameters": {
+          "windPower": -0.2,
+          "mainWindNoiseDirection": {
+            "x": 1,
+            "y": 0.4
+          },
+          "mainWindNoiseTiling": {
+            "x": 0.01,
+            "y": 0.02
+          },
+          "swingAmplitudeMultiplier": 0.5
+        }
+      },
+      "wave": {
+        "active": false
+      },
+      "noise": {
+        "active": false
+      }
+    },
+    "time": 0.51,
+    "worldX": 1204,
+    "worldY": 860,
+    "points": [
+      [
+        -40,
+        -100
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        80
+      ]
+    ],
+    "expected": [
+      {
+        "offsetX": 0.4371154773874154,
+        "offsetY": -0.2185577386937077,
+        "rotation": 0.08246327801074355,
+        "scaleX": 1.0958521789017377,
+        "scaleY": 0.9520739105491312
+      },
+      {
+        "offsetX": 0.4371154773874154,
+        "offsetY": -0.2185577386937077,
+        "rotation": 0.08246327801074355,
+        "scaleX": 1.0958521789017377,
+        "scaleY": 0.9520739105491312
+      },
+      {
+        "offsetX": 4.411738232171667,
+        "offsetY": 1.4791065349047614,
+        "rotation": 0.08246327801074355,
+        "scaleX": 1.0958521789017377,
+        "scaleY": 0.9520739105491312
+      }
+    ]
+  },
+  {
+    "element": {
+      "transform": {
+        "m11": 0.8,
+        "m12": 0.2,
+        "m21": 0.3,
+        "m22": 1.1,
+        "m31": 12,
+        "m32": -40
+      },
+      "parameters": {
+        "ShaderWindParameters": {
+          "flexibility": 0.7,
+          "shouldSwing": 0,
+          "worldSpaceBendStart": {
+            "x": 15,
+            "y": -20
+          },
+          "bendAxe": {
+            "x": 0.3,
+            "y": 1
+          },
+          "bendAxeMultiplier": 60
+        },
+        "ShaderTranslationParameters": {
+          "direction": {
+            "x": 1,
+            "y": -0.5
+          },
+          "amplitude": 8,
+          "frequency": 0.8,
+          "animationCurveType": 1,
+          "shouldSmooth": 0,
+          "linkAmplitudeToWind": false
+        },
+        "ShaderScaleParameters": {
+          "amplitude": 0.2,
+          "frequency": 0.4,
+          "axes": {
+            "x": 1,
+            "y": -0.5
+          }
+        },
+        "ShaderRotationParameters": {
+          "amplitude": 30,
+          "frequency": 0.1
+        }
+      }
+    },
+    "env": {
+      "wind": {
+        "active": true,
+        "parameters": {
+          "windPower": 0,
+          "mainWindNoiseDirection": {
+            "x": 1,
+            "y": 0.4
+          },
+          "mainWindNoiseTiling": {
+            "x": 0.01,
+            "y": 0.02
+          },
+          "swingAmplitudeMultiplier": 0.5
+        }
+      },
+      "wave": {
+        "active": false
+      },
+      "noise": {
+        "active": false
+      }
+    },
+    "time": 0.68,
+    "worldX": 1204,
+    "worldY": 860,
+    "points": [
+      [
+        -40,
+        -100
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        80
+      ]
+    ],
+    "expected": [
+      {
+        "offsetX": 4.352,
+        "offsetY": -2.176,
+        "rotation": 0.10848327342295865,
+        "scaleX": 1.0990461425696652,
+        "scaleY": 0.9504769287151674
+      },
+      {
+        "offsetX": 4.352,
+        "offsetY": -2.176,
+        "rotation": 0.10848327342295865,
+        "scaleX": 1.0990461425696652,
+        "scaleY": 0.9504769287151674
+      },
+      {
+        "offsetX": 4.352,
+        "offsetY": -2.176,
+        "rotation": 0.10848327342295865,
+        "scaleX": 1.0990461425696652,
+        "scaleY": 0.9504769287151674
+      }
+    ]
+  },
+  {
+    "element": {
+      "transform": {
+        "m11": -1.3,
+        "m12": 0.2,
+        "m21": 0.3,
+        "m22": 1.1,
+        "m31": 12,
+        "m32": -40
+      },
+      "parameters": {
+        "ShaderWindParameters": {
+          "flexibility": 0.7,
+          "shouldSwing": 1,
+          "worldSpaceBendStart": {
+            "x": 15,
+            "y": -20
+          },
+          "bendAxe": {
+            "x": 0.3,
+            "y": 1
+          },
+          "bendAxeMultiplier": 60
+        },
+        "ShaderTranslationParameters": {
+          "direction": {
+            "x": 1,
+            "y": -0.5
+          },
+          "amplitude": 8,
+          "frequency": 0.8,
+          "animationCurveType": 2,
+          "shouldSmooth": 1,
+          "linkAmplitudeToWind": true
+        },
+        "ShaderScaleParameters": {
+          "amplitude": 0.2,
+          "frequency": 0.4,
+          "axes": {
+            "x": 1,
+            "y": -0.5
+          }
+        },
+        "ShaderRotationParameters": {
+          "amplitude": 30,
+          "frequency": 0.1
+        }
+      }
+    },
+    "env": {
+      "wind": {
+        "active": true,
+        "parameters": {
+          "windPower": 0.2,
+          "mainWindNoiseDirection": {
+            "x": 1,
+            "y": 0.4
+          },
+          "mainWindNoiseTiling": {
+            "x": 0.01,
+            "y": 0.02
+          },
+          "swingAmplitudeMultiplier": 0.5
+        }
+      },
+      "wave": {
+        "active": false
+      },
+      "noise": {
+        "active": false
+      }
+    },
+    "time": 0.8500000000000001,
+    "worldX": 1204,
+    "worldY": 860,
+    "points": [
+      [
+        -40,
+        -100
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        80
+      ]
+    ],
+    "expected": [
+      {
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0.13326673100785952,
+        "scaleX": 1.0844327925502015,
+        "scaleY": 0.9577836037248992
+      },
+      {
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0.13326673100785952,
+        "scaleX": 1.0844327925502015,
+        "scaleY": 0.9577836037248992
+      },
+      {
+        "offsetX": 4.737830595087753,
+        "offsetY": 2.032676376246263,
+        "rotation": 0.13326673100785952,
+        "scaleX": 1.0844327925502015,
+        "scaleY": 0.9577836037248992
+      }
+    ]
+  },
+  {
+    "element": {
+      "transform": {
+        "m11": 0.8,
+        "m12": 0.2,
+        "m21": 0.3,
+        "m22": 1.1,
+        "m31": 12,
+        "m32": -40
+      },
+      "parameters": {
+        "ShaderWindParameters": {
+          "flexibility": 0.7,
+          "shouldSwing": 0,
+          "worldSpaceBendStart": {
+            "x": 15,
+            "y": -20
+          },
+          "bendAxe": {
+            "x": 0.3,
+            "y": 1
+          },
+          "bendAxeMultiplier": 60
+        },
+        "ShaderTranslationParameters": {
+          "direction": {
+            "x": 1,
+            "y": -0.5
+          },
+          "amplitude": 8,
+          "frequency": 0.8,
+          "animationCurveType": 0,
+          "shouldSmooth": 0,
+          "linkAmplitudeToWind": false
+        },
+        "ShaderScaleParameters": {
+          "amplitude": 0.2,
+          "frequency": 0.4,
+          "axes": {
+            "x": 1,
+            "y": -0.5
+          }
+        },
+        "ShaderRotationParameters": {
+          "amplitude": 30,
+          "frequency": 0.1
+        }
+      }
+    },
+    "env": {
+      "wind": {
+        "active": true,
+        "parameters": {
+          "windPower": 0.4,
+          "mainWindNoiseDirection": {
+            "x": 1,
+            "y": 0.4
+          },
+          "mainWindNoiseTiling": {
+            "x": 0.01,
+            "y": 0.02
+          },
+          "swingAmplitudeMultiplier": 0.5
+        }
+      },
+      "wave": {
+        "active": false
+      },
+      "noise": {
+        "active": false
+      }
+    },
+    "time": 1.02,
+    "worldX": 1204,
+    "worldY": 860,
+    "points": [
+      [
+        -40,
+        -100
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        80
+      ]
+    ],
+    "expected": [
+      {
+        "offsetX": -2.943999999999999,
+        "offsetY": 1.4719999999999995,
+        "rotation": 0.15653115852651922,
+        "scaleX": 1.054639434673427,
+        "scaleY": 0.9726802826632865
+      },
+      {
+        "offsetX": -2.943999999999999,
+        "offsetY": 1.4719999999999995,
+        "rotation": 0.15653115852651922,
+        "scaleX": 1.054639434673427,
+        "scaleY": 0.9726802826632865
+      },
+      {
+        "offsetX": 3.837420317184975,
+        "offsetY": 4.184568126873989,
+        "rotation": 0.15653115852651922,
+        "scaleX": 1.054639434673427,
+        "scaleY": 0.9726802826632865
+      }
+    ]
+  },
+  {
+    "element": {
+      "transform": {
+        "m11": -1.3,
+        "m12": 0.2,
+        "m21": 0.3,
+        "m22": 1.1,
+        "m31": 12,
+        "m32": -40
+      },
+      "parameters": {
+        "ShaderWindParameters": {
+          "flexibility": 0.7,
+          "shouldSwing": 1,
+          "worldSpaceBendStart": {
+            "x": 15,
+            "y": -20
+          },
+          "bendAxe": {
+            "x": 0.3,
+            "y": 1
+          },
+          "bendAxeMultiplier": 60
+        },
+        "ShaderTranslationParameters": {
+          "direction": {
+            "x": 1,
+            "y": -0.5
+          },
+          "amplitude": 8,
+          "frequency": 0.8,
+          "animationCurveType": 1,
+          "shouldSmooth": 1,
+          "linkAmplitudeToWind": true
+        },
+        "ShaderScaleParameters": {
+          "amplitude": 0.2,
+          "frequency": 0.4,
+          "axes": {
+            "x": 1,
+            "y": -0.5
+          }
+        },
+        "ShaderRotationParameters": {
+          "amplitude": 30,
+          "frequency": 0.1
+        }
+      }
+    },
+    "env": {
+      "wind": {
+        "active": true,
+        "parameters": {
+          "windPower": 0.6000000000000001,
+          "mainWindNoiseDirection": {
+            "x": 1,
+            "y": 0.4
+          },
+          "mainWindNoiseTiling": {
+            "x": 0.01,
+            "y": 0.02
+          },
+          "swingAmplitudeMultiplier": 0.5
+        }
+      },
+      "wave": {
+        "active": false
+      },
+      "noise": {
+        "active": false
+      }
+    },
+    "time": 1.1900000000000002,
+    "worldX": 1204,
+    "worldY": 860,
+    "points": [
+      [
+        -40,
+        -100
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        80
+      ]
+    ],
+    "expected": [
+      {
+        "offsetX": 4.772764187370994,
+        "offsetY": -2.386382093685497,
+        "rotation": 0.17801137828149255,
+        "scaleX": 1.0150225589120756,
+        "scaleY": 0.9924887205439622
+      },
+      {
+        "offsetX": 4.772764187370994,
+        "offsetY": -2.386382093685497,
+        "rotation": 0.17801137828149255,
+        "scaleX": 1.0150225589120756,
+        "scaleY": 0.9924887205439622
+      },
+      {
+        "offsetX": 7.981898482759566,
+        "offsetY": 2.136455422652288,
+        "rotation": 0.17801137828149255,
+        "scaleX": 1.0150225589120756,
+        "scaleY": 0.9924887205439622
+      }
+    ]
+  },
+  {
+    "element": {
+      "transform": {
+        "m11": 0.8,
+        "m12": 0.2,
+        "m21": 0.3,
+        "m22": 1.1,
+        "m31": 12,
+        "m32": -40
+      },
+      "parameters": {
+        "ShaderWindParameters": {
+          "flexibility": 0.7,
+          "shouldSwing": 0,
+          "worldSpaceBendStart": {
+            "x": 15,
+            "y": -20
+          },
+          "bendAxe": {
+            "x": 0.3,
+            "y": 1
+          },
+          "bendAxeMultiplier": 60
+        },
+        "ShaderTranslationParameters": {
+          "direction": {
+            "x": 1,
+            "y": -0.5
+          },
+          "amplitude": 8,
+          "frequency": 0.8,
+          "animationCurveType": 2,
+          "shouldSmooth": 0,
+          "linkAmplitudeToWind": false
+        },
+        "ShaderScaleParameters": {
+          "amplitude": 0.2,
+          "frequency": 0.4,
+          "axes": {
+            "x": 1,
+            "y": -0.5
+          }
+        },
+        "ShaderRotationParameters": {
+          "amplitude": 30,
+          "frequency": 0.1
+        }
+      }
+    },
+    "env": {
+      "wind": {
+        "active": true,
+        "parameters": {
+          "windPower": 0.8,
+          "mainWindNoiseDirection": {
+            "x": 1,
+            "y": 0.4
+          },
+          "mainWindNoiseTiling": {
+            "x": 0.01,
+            "y": 0.02
+          },
+          "swingAmplitudeMultiplier": 0.5
+        }
+      },
+      "wave": {
+        "active": false
+      },
+      "noise": {
+        "active": false
+      }
+    },
+    "time": 1.36,
+    "worldX": 1204,
+    "worldY": 860,
+    "points": [
+      [
+        -40,
+        -100
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        80
+      ]
+    ],
+    "expected": [
+      {
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0.19746254972337512,
+        "scaleX": 0.9727048064482675,
+        "scaleY": 1.0136475967758662
+      },
+      {
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0.19746254972337512,
+        "scaleX": 0.9727048064482675,
+        "scaleY": 1.0136475967758662
+      },
+      {
+        "offsetX": -7.22349659073818,
+        "offsetY": -2.889398636295272,
+        "rotation": 0.19746254972337512,
+        "scaleX": 0.9727048064482675,
+        "scaleY": 1.0136475967758662
+      }
+    ]
+  },
+  {
+    "element": {
+      "transform": {
+        "m11": -1.3,
+        "m12": 0.2,
+        "m21": 0.3,
+        "m22": 1.1,
+        "m31": 12,
+        "m32": -40
+      },
+      "parameters": {
+        "ShaderWindParameters": {
+          "flexibility": 0.7,
+          "shouldSwing": 1,
+          "worldSpaceBendStart": {
+            "x": 15,
+            "y": -20
+          },
+          "bendAxe": {
+            "x": 0.3,
+            "y": 1
+          },
+          "bendAxeMultiplier": 60
+        },
+        "ShaderTranslationParameters": {
+          "direction": {
+            "x": 1,
+            "y": -0.5
+          },
+          "amplitude": 8,
+          "frequency": 0.8,
+          "animationCurveType": 0,
+          "shouldSmooth": 1,
+          "linkAmplitudeToWind": true
+        },
+        "ShaderScaleParameters": {
+          "amplitude": 0.2,
+          "frequency": 0.4,
+          "axes": {
+            "x": 1,
+            "y": -0.5
+          }
+        },
+        "ShaderRotationParameters": {
+          "amplitude": 30,
+          "frequency": 0.1
+        }
+      }
+    },
+    "env": {
+      "wind": {
+        "active": true,
+        "parameters": {
+          "windPower": 1,
+          "mainWindNoiseDirection": {
+            "x": 1,
+            "y": 0.4
+          },
+          "mainWindNoiseTiling": {
+            "x": 0.01,
+            "y": 0.02
+          },
+          "swingAmplitudeMultiplier": 0.5
+        }
+      },
+      "wave": {
+        "active": false
+      },
+      "noise": {
+        "active": false
+      }
+    },
+    "time": 1.53,
+    "worldX": 1204,
+    "worldY": 860,
+    "points": [
+      [
+        -40,
+        -100
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        80
+      ]
+    ],
+    "expected": [
+      {
+        "offsetX": 3.946743776831473,
+        "offsetY": -1.9733718884157365,
+        "rotation": 0.21466296024602466,
+        "scaleX": 0.9352944038430555,
+        "scaleY": 1.0323527980784721
+      },
+      {
+        "offsetX": 3.946743776831473,
+        "offsetY": -1.9733718884157365,
+        "rotation": 0.21466296024602466,
+        "scaleX": 0.9352944038430555,
+        "scaleY": 1.0323527980784721
+      },
+      {
+        "offsetX": -17.36604912370982,
+        "offsetY": -15.988836809917663,
+        "rotation": 0.21466296024602466,
+        "scaleX": 0.9352944038430555,
+        "scaleY": 1.0323527980784721
+      }
+    ]
+  },
+  {
+    "element": {
+      "transform": {
+        "m11": 0.8,
+        "m12": 0.2,
+        "m21": 0.3,
+        "m22": 1.1,
+        "m31": 12,
+        "m32": -40
+      },
+      "parameters": {
+        "ShaderWindParameters": {
+          "flexibility": 0.7,
+          "shouldSwing": 0,
+          "worldSpaceBendStart": {
+            "x": 15,
+            "y": -20
+          },
+          "bendAxe": {
+            "x": 0.3,
+            "y": 1
+          },
+          "bendAxeMultiplier": 60
+        },
+        "ShaderTranslationParameters": {
+          "direction": {
+            "x": 1,
+            "y": -0.5
+          },
+          "amplitude": 8,
+          "frequency": 0.8,
+          "animationCurveType": 1,
+          "shouldSmooth": 0,
+          "linkAmplitudeToWind": false
+        },
+        "ShaderScaleParameters": {
+          "amplitude": 0.2,
+          "frequency": 0.4,
+          "axes": {
+            "x": 1,
+            "y": -0.5
+          }
+        },
+        "ShaderRotationParameters": {
+          "amplitude": 30,
+          "frequency": 0.1
+        }
+      }
+    },
+    "env": {
+      "wind": {
+        "active": true,
+        "parameters": {
+          "windPower": 1.2000000000000002,
+          "mainWindNoiseDirection": {
+            "x": 1,
+            "y": 0.4
+          },
+          "mainWindNoiseTiling": {
+            "x": 0.01,
+            "y": 0.02
+          },
+          "swingAmplitudeMultiplier": 0.5
+        }
+      },
+      "wave": {
+        "active": false
+      },
+      "noise": {
+        "active": false
+      }
+    },
+    "time": 1.7000000000000002,
+    "worldX": 1204,
+    "worldY": 860,
+    "points": [
+      [
+        -40,
+        -100
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        80
+      ]
+    ],
+    "expected": [
+      {
+        "offsetX": 2.8800000000000026,
+        "offsetY": -1.4400000000000013,
+        "rotation": 0.2294165523597886,
+        "scaleX": 0.909517294753398,
+        "scaleY": 1.045241352623301
+      },
+      {
+        "offsetX": 2.8800000000000026,
+        "offsetY": -1.4400000000000013,
+        "rotation": 0.2294165523597886,
+        "scaleX": 0.909517294753398,
+        "scaleY": 1.045241352623301
+      },
+      {
+        "offsetX": -18.554004335110285,
+        "offsetY": -10.013601734044116,
+        "rotation": 0.2294165523597886,
+        "scaleX": 0.909517294753398,
+        "scaleY": 1.045241352623301
+      }
+    ]
+  },
+  {
+    "element": {
+      "transform": {
+        "m11": -1.3,
+        "m12": 0.2,
+        "m21": 0.3,
+        "m22": 1.1,
+        "m31": 12,
+        "m32": -40
+      },
+      "parameters": {
+        "ShaderWindParameters": {
+          "flexibility": 0.7,
+          "shouldSwing": 1,
+          "worldSpaceBendStart": {
+            "x": 15,
+            "y": -20
+          },
+          "bendAxe": {
+            "x": 0.3,
+            "y": 1
+          },
+          "bendAxeMultiplier": 60
+        },
+        "ShaderTranslationParameters": {
+          "direction": {
+            "x": 1,
+            "y": -0.5
+          },
+          "amplitude": 8,
+          "frequency": 0.8,
+          "animationCurveType": 2,
+          "shouldSmooth": 1,
+          "linkAmplitudeToWind": true
+        },
+        "ShaderScaleParameters": {
+          "amplitude": 0.2,
+          "frequency": 0.4,
+          "axes": {
+            "x": 1,
+            "y": -0.5
+          }
+        },
+        "ShaderRotationParameters": {
+          "amplitude": 30,
+          "frequency": 0.1
+        }
+      }
+    },
+    "env": {
+      "wind": {
+        "active": true,
+        "parameters": {
+          "windPower": 1.4000000000000001,
+          "mainWindNoiseDirection": {
+            "x": 1,
+            "y": 0.4
+          },
+          "mainWindNoiseTiling": {
+            "x": 0.01,
+            "y": 0.02
+          },
+          "swingAmplitudeMultiplier": 0.5
+        }
+      },
+      "wave": {
+        "active": false
+      },
+      "noise": {
+        "active": false
+      }
+    },
+    "time": 1.87,
+    "worldX": 1204,
+    "worldY": 860,
+    "points": [
+      [
+        -40,
+        -100
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        20,
+        80
+      ]
+    ],
+    "expected": [
+      {
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0.2415551584369599,
+        "scaleX": 0.9000078955796184,
+        "scaleY": 1.0499960522101908
+      },
+      {
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0.2415551584369599,
+        "scaleX": 0.9000078955796184,
+        "scaleY": 1.0499960522101908
+      },
+      {
+        "offsetX": 4.121633699569369,
+        "offsetY": 9.496991774685858,
+        "rotation": 0.2415551584369599,
+        "scaleX": 0.9000078955796184,
+        "scaleY": 1.0499960522101908
+      }
+    ]
+  }
+]

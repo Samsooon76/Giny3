@@ -1,0 +1,7 @@
+/* Character creation reference: compact paired spell browser. */
+.official-stage--characterCreation [data-name="window_spells"] { background: #25231e; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 18px #0007; }
+.official-stage--characterCreation [data-name="window_spells"] [data-name="window_background"],
+.official-stage--characterCreation [data-name="window_spells"] [data-name="window_inner"] { background: #25231e; }
+.official-stage--characterCreation [data-name="window_spells"] .header { background: linear-gradient(90deg,#923a23,#af4b30,#923a23) !important; }
+.official-stage--characterCreation [data-name="window_spells"] [data-name="header_titleLabel"] { color: #fff3df; font-size: 20px; font-weight: bold; }
+.official-stage--characterCreation [data-name="window_spells"] [data-name="spellSlot_1"] { background-repeat: no-repeat !important; background-size: 38px 38px !important; background-position: center !important; border-image: none !important; }

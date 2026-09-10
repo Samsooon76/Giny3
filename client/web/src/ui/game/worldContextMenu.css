@@ -1,0 +1,12 @@
+.world-context-menu, .world-menu-submenu { background: #090c09e8; color: #b0cc65; border-radius: 4px; padding: 3px 0; font: 11px/1.25 Lexend-Regular, sans-serif; width: max-content; max-width: calc(100vw - 16px); }
+.world-context-menu { position: fixed; z-index: 100000; min-width: 140px; }
+.world-context-menu button { display: flex; align-items: center; gap: 7px; padding: 4px 7px; background: none; border: 0; width: 100%; font: inherit; color: inherit; text-align: left; cursor: pointer; white-space: nowrap; }
+.world-context-menu button:disabled, .world-context-menu button[aria-checked=false] { color: #a4a292; }
+.world-context-menu button:disabled { cursor: default; }
+.world-context-menu button:enabled:hover, .world-context-menu button:focus-visible, .world-context-menu button[aria-expanded=true] { background: #a0bd5588; color: #eef0d6; outline: none; }
+.world-menu-separator { height: 1px; background: #7775; margin: 3px 0; }
+.world-menu-options { position: relative; }
+.world-menu-arrow { margin-left: auto; font-size: 17px; line-height: 12px; padding-left: 10px; }
+.world-menu-submenu { position: absolute; left: 100%; }
+.world-menu-submenu.opens-left { left: auto; right: 100%; }
+.world-menu-check { width: 11px; height: 11px; flex: 0 0 11px; border: 1px solid #a4a292; display: flex; align-items: center; justify-content: center; }

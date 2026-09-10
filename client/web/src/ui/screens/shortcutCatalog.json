@@ -1,0 +1,816 @@
+[
+  {
+    "title": "Général",
+    "rows": [
+      {
+        "id": "s0-0",
+        "label": "Fermer l’interface active",
+        "key": "Échap",
+        "fixed": true
+      },
+      {
+        "id": "s0-1",
+        "label": "Valider l’action de l’interface active",
+        "key": "Entrée + Entrée",
+        "fixed": true
+      },
+      {
+        "id": "s0-2",
+        "label": "Activer / désactiver les sons",
+        "key": "Ctrl + M",
+        "fixed": true
+      },
+      {
+        "id": "s0-3",
+        "label": "Défiler vers le haut",
+        "key": "Flèche haut",
+        "fixed": true
+      },
+      {
+        "id": "s0-4",
+        "label": "Défiler vers le bas",
+        "key": "Flèche bas",
+        "fixed": true
+      },
+      {
+        "id": "s0-5",
+        "label": "Action vers la droite",
+        "key": "Flèche droite",
+        "fixed": true
+      },
+      {
+        "id": "s0-6",
+        "label": "Action vers la gauche",
+        "key": "Flèche gauche",
+        "fixed": true
+      },
+      {
+        "id": "s0-7",
+        "label": "Afficher / masquer les interfaces visibles à l’écran",
+        "key": "Alt + <"
+      },
+      {
+        "id": "s0-8",
+        "label": "Aller au nord",
+        "key": ""
+      },
+      {
+        "id": "s0-9",
+        "label": "Aller au sud",
+        "key": ""
+      },
+      {
+        "id": "s0-10",
+        "label": "Aller à l’ouest",
+        "key": ""
+      },
+      {
+        "id": "s0-11",
+        "label": "Aller à l’est",
+        "key": ""
+      }
+    ]
+  },
+  {
+    "title": "Menus",
+    "rows": [
+      {
+        "id": "s1-0",
+        "label": "Ouvrir la feuille de personnage",
+        "key": "C",
+        "windowId": "character"
+      },
+      {
+        "id": "s1-1",
+        "label": "Ouvrir le livre de sorts",
+        "key": "S",
+        "windowId": "spells"
+      },
+      {
+        "id": "s1-2",
+        "label": "Ouvrir l’inventaire",
+        "key": "I",
+        "windowId": "inventory"
+      },
+      {
+        "id": "s1-3",
+        "label": "Ouvrir les cosmétiques",
+        "key": "Maj + C",
+        "windowId": "cosmetics"
+      },
+      {
+        "id": "s1-4",
+        "label": "Ouvrir mon profil",
+        "key": "Maj + P",
+        "windowId": "profile"
+      },
+      {
+        "id": "s1-5",
+        "label": "Ouvrir la recherche de groupe",
+        "key": "Maj + F",
+        "windowId": "groupSearch"
+      },
+      {
+        "id": "s1-6",
+        "label": "Ouvrir le livre de quêtes",
+        "key": "Q",
+        "windowId": "quests"
+      },
+      {
+        "id": "s1-7",
+        "label": "Ouvrir la carte du monde",
+        "key": "M",
+        "windowId": "map"
+      },
+      {
+        "id": "s1-8",
+        "label": "Ouvrir la carte dans les songes infinis",
+        "key": "Alt + M"
+      },
+      {
+        "id": "s1-9",
+        "label": "Ouvrir l’interface d’aventure",
+        "key": "Maj + A"
+      },
+      {
+        "id": "s1-10",
+        "label": "Ouvrir les classements",
+        "key": "Ctrl + L"
+      },
+      {
+        "id": "s1-11",
+        "label": "Afficher la liste d’amis",
+        "key": "F",
+        "windowId": "friends"
+      },
+      {
+        "id": "s1-12",
+        "label": "Afficher les informations de guilde",
+        "key": "G",
+        "windowId": "guild"
+      },
+      {
+        "id": "s1-13",
+        "label": "Afficher les informations d’alliance",
+        "key": "A",
+        "windowId": "alliance"
+      },
+      {
+        "id": "s1-14",
+        "label": "Afficher les informations sur le conjoint",
+        "key": "Ctrl + Q"
+      },
+      {
+        "id": "s1-15",
+        "label": "Ouvrir le Kolizéum",
+        "key": "K",
+        "windowId": "kolizeum"
+      },
+      {
+        "id": "s1-16",
+        "label": "Ouvrir la Bourse aux kamas / Boutique / Cadeaux",
+        "key": "R",
+        "windowId": "shop"
+      },
+      {
+        "id": "s1-17",
+        "label": "Ouvrir le livre des métiers",
+        "key": "J",
+        "windowId": "jobs"
+      },
+      {
+        "id": "s1-18",
+        "label": "Ouvrir l’interface d’élevage",
+        "key": "D",
+        "windowId": "mount"
+      },
+      {
+        "id": "s1-19",
+        "label": "Ouvrir le calendrier",
+        "key": "X",
+        "windowId": "calendar"
+      },
+      {
+        "id": "s1-20",
+        "label": "Ouvrir les succès",
+        "key": "U",
+        "windowId": "achievements"
+      },
+      {
+        "id": "s1-21",
+        "label": "Ouvrir l’encyclopédie",
+        "key": "B",
+        "windowId": "encyclopedia"
+      },
+      {
+        "id": "s1-22",
+        "label": "Ouvrir le bestiaire dans les songes infinis",
+        "key": "Alt + B"
+      },
+      {
+        "id": "s1-23",
+        "label": "Ouvrir les informations d’alignement",
+        "key": ""
+      },
+      {
+        "id": "s1-24",
+        "label": "Entrer / Sortir du Havre-Sac",
+        "key": "H",
+        "windowId": "havenbag"
+      },
+      {
+        "id": "s1-25",
+        "label": "Ouvrir les ensembles",
+        "key": "E",
+        "windowId": "builds"
+      },
+      {
+        "id": "s1-26",
+        "label": "Entrer / Sortir des Songes infinis",
+        "key": "T"
+      },
+      {
+        "id": "s1-27",
+        "label": "Ouvrir l’interface d’expéditions",
+        "key": "`"
+      },
+      {
+        "id": "s1-28",
+        "label": "Ouvrir les informations des Compagnons",
+        "key": "V",
+        "windowId": "companions"
+      },
+      {
+        "id": "s1-29",
+        "label": "Afficher / masquer la liste des attitudes",
+        "key": "N"
+      },
+      {
+        "id": "s1-30",
+        "label": "Afficher la carte de combat",
+        "key": "L"
+      }
+    ]
+  },
+  {
+    "title": "Infobulle",
+    "rows": [
+      {
+        "id": "s2-0",
+        "label": "Fermer les infobulles épinglées",
+        "key": "Maj + Échap"
+      },
+      {
+        "id": "s2-1",
+        "label": "Afficher les jets théoriques des effets",
+        "key": "Ctrl",
+        "fixed": true
+      },
+      {
+        "id": "s2-2",
+        "label": "Épingler l’infobulle",
+        "key": "Alt"
+      },
+      {
+        "id": "s2-3",
+        "label": "Comparer avec un objet équipé",
+        "key": "OEM1"
+      }
+    ]
+  },
+  {
+    "title": "Discussion",
+    "rows": [
+      {
+        "id": "s3-0",
+        "label": "Correspondant précédent dans l’historique",
+        "key": "Maj + Flèche haut"
+      },
+      {
+        "id": "s3-1",
+        "label": "Correspondant suivant dans l’historique",
+        "key": "Maj + Flèche bas"
+      },
+      {
+        "id": "s3-2",
+        "label": "Message sur le canal Guilde",
+        "key": "Ctrl + Alt + Entrée"
+      },
+      {
+        "id": "s3-3",
+        "label": "Message sur le canal Groupe",
+        "key": "Maj + Entrée"
+      },
+      {
+        "id": "s3-4",
+        "label": "Message sur le canal Équipe",
+        "key": "Ctrl + Entrée"
+      },
+      {
+        "id": "s3-5",
+        "label": "Compléter le nom d’un personnage",
+        "key": ""
+      },
+      {
+        "id": "s3-6",
+        "label": "Afficher l’onglet suivant du chat",
+        "key": "Ctrl + Page suivante"
+      },
+      {
+        "id": "s3-7",
+        "label": "Afficher l’onglet précédent du chat",
+        "key": "Ctrl + Page précédente"
+      },
+      {
+        "id": "s3-8",
+        "label": "Afficher l’onglet 1 du chat",
+        "key": ""
+      },
+      {
+        "id": "s3-9",
+        "label": "Afficher l’onglet 2 du chat",
+        "key": ""
+      },
+      {
+        "id": "s3-10",
+        "label": "Afficher l’onglet 3 du chat",
+        "key": ""
+      },
+      {
+        "id": "s3-11",
+        "label": "Afficher l’onglet 4 du chat",
+        "key": ""
+      },
+      {
+        "id": "s3-12",
+        "label": "Afficher l’onglet 5 du chat",
+        "key": ""
+      },
+      {
+        "id": "s3-13",
+        "label": "Afficher l’onglet 6 du chat",
+        "key": ""
+      },
+      {
+        "id": "s3-14",
+        "label": "Afficher l’onglet 7 du chat",
+        "key": ""
+      },
+      {
+        "id": "s3-15",
+        "label": "Afficher l’onglet 8 du chat",
+        "key": ""
+      },
+      {
+        "id": "s3-16",
+        "label": "Activer / désactiver le canal Général",
+        "key": ""
+      },
+      {
+        "id": "s3-17",
+        "label": "Activer / désactiver le canal Groupe",
+        "key": ""
+      },
+      {
+        "id": "s3-18",
+        "label": "Activer / désactiver le canal Kolizéum",
+        "key": ""
+      },
+      {
+        "id": "s3-19",
+        "label": "Activer / désactiver le canal Équipe",
+        "key": ""
+      },
+      {
+        "id": "s3-20",
+        "label": "Afficher / masquer les informations de combat dans le chat",
+        "key": "Ctrl + B"
+      },
+      {
+        "id": "s3-21",
+        "label": "Activer / désactiver le canal Guilde",
+        "key": ""
+      },
+      {
+        "id": "s3-22",
+        "label": "Activer / désactiver le canal Alliance",
+        "key": ""
+      },
+      {
+        "id": "s3-23",
+        "label": "Activer / désactiver le canal Commerce",
+        "key": ""
+      },
+      {
+        "id": "s3-24",
+        "label": "Activer / désactiver le canal Recrutement",
+        "key": ""
+      },
+      {
+        "id": "s3-25",
+        "label": "Activer la fenêtre de discussion",
+        "key": "Espace"
+      },
+      {
+        "id": "s3-26",
+        "label": "Modifier la hauteur du chat",
+        "key": "+"
+      }
+    ]
+  },
+  {
+    "title": "Options",
+    "rows": [
+      {
+        "id": "s4-0",
+        "label": "Afficher le menu des options",
+        "key": "O"
+      },
+      {
+        "id": "s4-1",
+        "label": "Afficher / masquer la grille",
+        "key": "Maj + &"
+      },
+      {
+        "id": "s4-2",
+        "label": "Activer / désactiver la transparence des entités",
+        "key": "Maj + É"
+      },
+      {
+        "id": "s4-3",
+        "label": "Afficher / masquer les coordonnées de la carte",
+        "key": ""
+      },
+      {
+        "id": "s4-4",
+        "label": "Activer / désactiver le mode créature",
+        "key": "Maj + ("
+      },
+      {
+        "id": "s4-5",
+        "label": "Afficher le nom des personnages",
+        "key": "P"
+      },
+      {
+        "id": "s4-6",
+        "label": "Afficher les infobulles des entités / Afficher les barres de vie et de bouclier",
+        "key": "Z"
+      },
+      {
+        "id": "s4-7",
+        "label": "Mettre en valeur les éléments interactifs",
+        "key": "Y"
+      }
+    ]
+  },
+  {
+    "title": "Combat",
+    "rows": [
+      {
+        "id": "s5-0",
+        "label": "Attaquer au corps à corps",
+        "key": "<"
+      },
+      {
+        "id": "s5-1",
+        "label": "Terminer le tour",
+        "key": "Tabulation"
+      },
+      {
+        "id": "s5-2",
+        "label": "Passer en mode ping temporaire",
+        "key": "Ctrl + S"
+      },
+      {
+        "id": "s5-3",
+        "label": "Placer un ping permanent",
+        "key": "W"
+      },
+      {
+        "id": "s5-4",
+        "label": "Placer un ping permanent avec le symbole cœur",
+        "key": ""
+      },
+      {
+        "id": "s5-5",
+        "label": "Placer un ping permanent avec le symbole crâne",
+        "key": ""
+      },
+      {
+        "id": "s5-6",
+        "label": "Placer un ping permanent avec le symbole épée",
+        "key": ""
+      },
+      {
+        "id": "s5-7",
+        "label": "Placer un ping permanent avec le symbole bouclier",
+        "key": ""
+      },
+      {
+        "id": "s5-8",
+        "label": "Placer un ping permanent avec le symbole cible",
+        "key": ""
+      },
+      {
+        "id": "s5-9",
+        "label": "Placer un ping permanent avec le symbole 3",
+        "key": ""
+      },
+      {
+        "id": "s5-10",
+        "label": "Placer un ping permanent avec le symbole 2",
+        "key": ""
+      },
+      {
+        "id": "s5-11",
+        "label": "Placer un ping permanent avec le symbole 1",
+        "key": ""
+      },
+      {
+        "id": "s5-12",
+        "label": "Afficher / masquer les états",
+        "key": "Maj + Z"
+      }
+    ]
+  },
+  {
+    "title": "Barres de raccourcis rapides",
+    "rows": [
+      {
+        "id": "s6-0",
+        "label": "Afficher les sorts / Afficher les objets",
+        "key": ""
+      },
+      {
+        "id": "s6-1",
+        "label": "Onglet de raccourcis rapides précédent",
+        "key": "Page précédente"
+      },
+      {
+        "id": "s6-2",
+        "label": "Onglet de raccourcis rapides suivant",
+        "key": "Page suivante"
+      },
+      {
+        "id": "s6-3",
+        "label": "Emplacement 1 (Ligne 1)",
+        "key": "&"
+      },
+      {
+        "id": "s6-4",
+        "label": "Emplacement 2",
+        "key": "É"
+      },
+      {
+        "id": "s6-5",
+        "label": "Emplacement 3",
+        "key": "\""
+      },
+      {
+        "id": "s6-6",
+        "label": "Emplacement 4",
+        "key": "'"
+      },
+      {
+        "id": "s6-7",
+        "label": "Emplacement 5",
+        "key": "("
+      },
+      {
+        "id": "s6-8",
+        "label": "Emplacement 6",
+        "key": "§"
+      },
+      {
+        "id": "s6-9",
+        "label": "Emplacement 7",
+        "key": "È"
+      },
+      {
+        "id": "s6-10",
+        "label": "Emplacement 8",
+        "key": "!"
+      },
+      {
+        "id": "s6-11",
+        "label": "Emplacement 9",
+        "key": "Ç"
+      },
+      {
+        "id": "s6-12",
+        "label": "Emplacement 10",
+        "key": "À"
+      },
+      {
+        "id": "s6-13",
+        "label": "Emplacement 11",
+        "key": ")"
+      },
+      {
+        "id": "s6-14",
+        "label": "Emplacement 12",
+        "key": "-"
+      },
+      {
+        "id": "s6-15",
+        "label": "Emplacement 13 (Ligne 2)",
+        "key": "Ctrl + &"
+      },
+      {
+        "id": "s6-16",
+        "label": "Emplacement 14",
+        "key": "Ctrl + É"
+      },
+      {
+        "id": "s6-17",
+        "label": "Emplacement 15",
+        "key": "Ctrl + \""
+      },
+      {
+        "id": "s6-18",
+        "label": "Emplacement 16",
+        "key": "Ctrl + '"
+      },
+      {
+        "id": "s6-19",
+        "label": "Emplacement 17",
+        "key": "Ctrl + ("
+      },
+      {
+        "id": "s6-20",
+        "label": "Emplacement 18",
+        "key": "Ctrl + §"
+      },
+      {
+        "id": "s6-21",
+        "label": "Emplacement 19",
+        "key": "Ctrl + È"
+      },
+      {
+        "id": "s6-22",
+        "label": "Emplacement 20",
+        "key": "Ctrl + !"
+      },
+      {
+        "id": "s6-23",
+        "label": "Emplacement 21",
+        "key": "Ctrl + Ç"
+      },
+      {
+        "id": "s6-24",
+        "label": "Emplacement 22",
+        "key": "Ctrl + À"
+      },
+      {
+        "id": "s6-25",
+        "label": "Emplacement 23",
+        "key": "Ctrl + )"
+      },
+      {
+        "id": "s6-26",
+        "label": "Emplacement 24",
+        "key": "Ctrl + -"
+      },
+      {
+        "id": "s6-27",
+        "label": "Emplacement 25 (Ligne 3)",
+        "key": "Ctrl + Maj + &"
+      },
+      {
+        "id": "s6-28",
+        "label": "Emplacement 26",
+        "key": "Ctrl + Maj + É"
+      },
+      {
+        "id": "s6-29",
+        "label": "Emplacement 27",
+        "key": "Ctrl + Maj + \""
+      },
+      {
+        "id": "s6-30",
+        "label": "Emplacement 28",
+        "key": "Ctrl + Maj + '"
+      },
+      {
+        "id": "s6-31",
+        "label": "Emplacement 29",
+        "key": "Ctrl + Maj + ("
+      },
+      {
+        "id": "s6-32",
+        "label": "Emplacement 30",
+        "key": "Ctrl + Maj + §"
+      },
+      {
+        "id": "s6-33",
+        "label": "Emplacement 31",
+        "key": "Ctrl + Maj + È"
+      },
+      {
+        "id": "s6-34",
+        "label": "Emplacement 32",
+        "key": "Ctrl + Maj + !"
+      },
+      {
+        "id": "s6-35",
+        "label": "Emplacement 33",
+        "key": "Ctrl + Maj + Ç"
+      },
+      {
+        "id": "s6-36",
+        "label": "Emplacement 34",
+        "key": "Ctrl + Maj + À"
+      },
+      {
+        "id": "s6-37",
+        "label": "Emplacement 35",
+        "key": "Ctrl + Maj + )"
+      },
+      {
+        "id": "s6-38",
+        "label": "Emplacement 36",
+        "key": "Ctrl + Maj + -"
+      },
+      {
+        "id": "s6-39",
+        "label": "Page 1",
+        "key": "Alt + &"
+      },
+      {
+        "id": "s6-40",
+        "label": "Page 2",
+        "key": "Alt + É"
+      },
+      {
+        "id": "s6-41",
+        "label": "Page 3",
+        "key": "Alt + \""
+      },
+      {
+        "id": "s6-42",
+        "label": "Page 4",
+        "key": "Alt + '"
+      },
+      {
+        "id": "s6-43",
+        "label": "Page 5",
+        "key": "Alt + ("
+      },
+      {
+        "id": "s6-44",
+        "label": "Page 6",
+        "key": "Alt + §"
+      },
+      {
+        "id": "s6-45",
+        "label": "Page 7",
+        "key": "Alt + È"
+      },
+      {
+        "id": "s6-46",
+        "label": "Page 8",
+        "key": "Alt + !"
+      },
+      {
+        "id": "s6-47",
+        "label": "Page 9",
+        "key": "Alt + Ç"
+      },
+      {
+        "id": "s6-48",
+        "label": "Page 10",
+        "key": "Alt + À"
+      },
+      {
+        "id": "s6-49",
+        "label": "Page 11",
+        "key": "Alt + )"
+      },
+      {
+        "id": "s6-50",
+        "label": "Page 12",
+        "key": "Alt + -"
+      }
+    ]
+  },
+  {
+    "title": "Divers",
+    "rows": [
+      {
+        "id": "s7-0",
+        "label": "Suivre les déplacements du chef de groupe",
+        "key": "Ctrl + W"
+      },
+      {
+        "id": "s7-1",
+        "label": "Fusionner (Forgemagie)",
+        "key": "Maj + Espace"
+      },
+      {
+        "id": "s7-2",
+        "label": "Fusionner tout (Forgemagie)",
+        "key": "Ctrl + Espace"
+      }
+    ]
+  }
+]

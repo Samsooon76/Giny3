@@ -1,0 +1,8 @@
+.live-action-panel,.live-action-status{position:absolute;right:24px;top:110px;z-index:1500;pointer-events:auto;background:#24263c;color:#f4f2ed;border:1px solid #626181;border-radius:8px;padding:16px;max-width:340px;box-shadow:0 8px 32px #0008;font:15px/1.5 sans-serif}
+.live-action-panel header{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.live-action-panel form{display:flex;flex-direction:column;gap:10px}
+.live-action-panel label{display:flex;flex-direction:column;gap:4px}
+.live-action-panel input,.live-action-panel select{padding:8px;background:#141524;color:inherit;border:1px solid #626181;border-radius:4px}
+.live-action-panel button,.live-action-status button{padding:8px 12px;border:1px solid #777691;border-radius:4px;background:#41425e;color:inherit;cursor:pointer}
+.live-action-panel button:disabled{opacity:.5;cursor:default}
+.live-action-status{top:70px;display:flex;align-items:center;gap:12px}

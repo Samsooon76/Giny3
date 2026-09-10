@@ -1,0 +1,13 @@
+{
+  "Host": "127.0.0.1",
+  "Port": 8443,
+  "SQLHost": "127.0.0.1",
+  "SQLPort": 3307,
+  "SQLUser": "root",
+  "SQLPassword": "",
+  "SQLDBName": "giny_auth",
+  "IPCHost": "127.0.0.1",
+  "IPCPort": 18000,
+  "APIHost": "127.0.0.1",
+  "APIPort": 9001
+}

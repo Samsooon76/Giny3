@@ -1,0 +1,58 @@
+[
+  {
+    "asar": "resources/app.asar",
+    "entry": "dist/assets/app-CgRsD63L.js",
+    "sha256": "684380ea5f44337fb233a78ac87d188e21bc122246afb6a9ba8a6942083f4387",
+    "needle": "entityTextureBudgetMB:192",
+    "characterOffset": 505478,
+    "excerpt": "}function C9(e,t){switch(e){case\"low\":return{tier:e,signals:t,quality:\"low\",environmentEffectsEnabledByDefault:!1,creatureModeActorLimit:10,entityTextureBudgetMB:192,spriteAtlasMaxPages:4,rendererBackendResources:{persistentVertexBudgetBytesByCategory:{animation:Up(24e3)},maskRenderTargetScale:.5}};case\"medium\":return{tier:e,signals:t,quality:\"medium\",environmentEffectsEnabledByDefault:!0,creatureModeActorLimit:25,entityTextureBudgetMB:384,spriteAtlasMaxPages:8,rendererBackendResources:{persistentVertexBudgetBytesByCategory:{animation:Up(4e4)}}};case\"high\":return{tier:e,signals:t,quality:\"high\",environmentEffectsEnabledByDefault:!0,creatureModeActorLimit:150,entityTextureBudgetMB:768,spriteAtlasMaxPages:12,rendererBackendResources:{persistentVertexBudgetBytesByCategory:{animation"
+  },
+  {
+    "asar": "resources/app.asar",
+    "entry": "dist/assets/game-entry-D5YuSIvZ.js",
+    "sha256": "ec9d48006e3827f38dd34a43cbcc14c40805eccf32fc9279bf65604ba8692c3b",
+    "needle": "freezeStaticAnimations:!0",
+    "characterOffset": 279338,
+    "excerpt": " ancien\",options:{graphicsPreset:\"low\",quality:\"low\",qualityAuto:!1,antiAliasingMode:\"none\",antiAliasingQuality:\"1x\",renderScalePercent:100,freezeStaticAnimations:!0,fpsLimit:60,backgroundFpsLimit:30,vsync:!0,environmentEffectsEnabled:!1,environmentEffectsAuto:!1,cameraShakeEnabled:!0,specialTransitions:!1,showEveryMonsters:!1,creatureLimit:10,auraMode:\"never\"}},{id:\"medium\",title:\"PC MOYEN\",description:\"Bon équilibre entre netteté, effets et stabilité à 60 images/s.\",ram:\"8 Go de RAM\",processor:\"GPU intégré récent ou dédié\",options:{graphicsPreset:\"medium\",quality:\"medium\",qualityAuto:!1,antiAliasingMode:\"msaa\",antiAliasingQuality:\"2x\",renderScalePercent:100,freezeStaticAnimations:!1,fpsLimit:60,backgroundFpsLimit:30,vsync:!0,environmentEffectsEnabled:!0,environmentEffectsAuto:!"
+  },
+  {
+    "asar": "resources/app.asar",
+    "entry": "dist/assets/index-AJmcKxRp.js",
+    "sha256": "af36f10763f07e72a07fe2d7df0bfd63da822de150d06b19983b0b240e347026",
+    "needle": "maxBacklog",
+    "characterOffset": 12414,
+    "excerpt": "rror(`Request backlog full for priority \"${n}\" (${e} queued max)`);return t.name=\"BacklogOverflowError\",t}class Be{maxConcurrent;maxRetries;maxBacklog;starvationThresholdMs;_active=0;_queue=[];_orderSeed=0;_dropPolicy;_stats={droppedCount:0,droppedByPriority:{critical:0,interactive:0,preload:0},starvedCount:0,maxQueueWaitMs:0,totalQueueWaitMs:0,queuedExecutions:0};constructor(e=6,t=3){const r=typeof e==\"number\"?{maxConcurrent:e,maxRetries:t}:e;this.maxConcurrent=r.maxConcurrent??6,this.maxRetries=r.maxRetries??3,this.maxBacklog=Math.max(0,r.maxBacklog??ve),this.starvationThresholdMs=Math.max(0,r.starvationThresholdMs??xe),this._dropPolicy={...Ae,...r.dropPolicy}}schedule(e,t){const r=Y(t);return r.signal?.aborted?Promise.reject(x()):new Promise((s,o)=>{const i={executeAndResolve:"
+  },
+  {
+    "asar": "resources/app.asar",
+    "entry": "dist/assets/game-entry-D5YuSIvZ.js",
+    "sha256": "ec9d48006e3827f38dd34a43cbcc14c40805eccf32fc9279bf65604ba8692c3b",
+    "needle": "async loadMap(t)",
+    "characterOffset": 1084496,
+    "excerpt": "bottom??0),left:u_(t?.left??0),right:u_(t?.right??0)}}resolvePreloadMaps(){return this._authoritativeNeighbours??this.resolveNeighborMaps()}async loadMap(t){const n=performance.now(),a=this._currentMapId,r=this.beginSession(t);let s=null;try{if(s=await this._prepareMap3(t,this.getLoadContext(r)),!this.isSessionCurrent(r,t))return;const o=s.commit();this._clearMapRuntimeState(),this._commitMapData(o),this._sweepRetiredActorResources(\"all\"),this._host.engine.setMinimapPlayerPosition(t),this._host.emit(ze.MapLoaded,{mapId:t,hasGround:!0}),this._host.messageBus.emit(ze.MapLoaded,{mapId:t})}catch(o){throw this.isSessionCurrent(r,t)&&(this._currentMapId=a),o}finally{s?.dispose(),this._lastMapLoadDurationMs=performance.now()-n}}async handleCurrentMap(t,n=null){if(t===0)return;const a=th"
+  },
+  {
+    "asar": "resources/app.asar",
+    "entry": "dist/assets/actor-ktx-njFgatT7.js",
+    "sha256": "c9605b36c764fb19a3732e5b08e441f569a6e6dcf0518c29b9ebcc5455bfe612",
+    "needle": "_archiveHead",
+    "characterOffset": 18945,
+    "excerpt": "lamp(color, vec4(0.0), vec4(1.0));\n}\n`,R={PERMANENT:0,ARCHIVABLE:1,THROWABLE:2};class xe{memoryLimit;memoryUsed=0;_destroy;_handles=new Map;_archiveHead=null;_archiveTail=null;_archiveCount=0;constructor(e,t=null){this.memoryLimit=e,this._destroy=t||(()=>{})}add(e,t,r=1,s=R.ARCHIVABLE){const n=this._handles.get(e);if(n)return this.hold(e),n;const l={key:e,element:t,size:r,management:s,nLocks:s===R.PERMANENT?0:1,prev:null,next:null,archived:!1};return this._handles.set(e,l),this.memoryUsed+=r,this._evictIfNeeded(),l}hold(e){const t=this._handles.get(e);return t?(t.management===R.PERMANENT||(t.nLocks===0&&this._removeFromArchive(t),t.nLocks++),t):null}release(e){const t=this._handles.get(e);!t||t.management===R.PERMANENT||t.nLocks!==0&&(t.nLocks-=1,t.nLocks===0&&(t.management===R.T"
+  },
+  {
+    "asar": "resources/app.asar",
+    "entry": "dist/assets/x-D8TUb0j1.js",
+    "sha256": "8f6a775c7d2a169e3ed60a4f84fa019c13db90f090b13e00872cfb42c967c33e",
+    "needle": "drawElementsInstanced",
+    "characterOffset": 172711,
+    "excerpt": "nt;le++)qe(),h.drawElements(h.TRIANGLES,6,L.indexType??h.UNSIGNED_INT,(N.firstIndex+le*6)*te);this.frame.drawCalls+=N.quadCount}else z>1?(h.drawElementsInstanced(h.TRIANGLES,N.indexCount??N.quadCount*6,L.indexType??h.UNSIGNED_INT,(N.firstIndex??N.firstQuad*6)*(L.indexStride??4),z),this.frame.drawCalls++):(h.drawElements(h.TRIANGLES,N.indexCount??N.quadCount*6,L.indexType??h.UNSIGNED_INT,(N.firstIndex??N.firstQuad*6)*(L.indexStride??4)),this.frame.drawCalls++)}if(this.frame.quads+=N.quadCount*z,N.batchKind===\"actor\"&&!H){const te=N.actorDrawCount;this.frame.actorDraw.stateRuns++,this.frame.actorDraw.logicalCommands+=te,this.frame.actorDraw.logicalIndices+=N.indexCount;const le=qe===null?1:N.quadCount;this.frame.actorDraw.apiCalls+=le,this.frame.actorDraw.drawElementsCalls+=le,this"
+  },
+  {
+    "asar": "resources/app.asar",
+    "entry": "dist/assets/app-CgRsD63L.js",
+    "sha256": "684380ea5f44337fb233a78ac87d188e21bc122246afb6a9ba8a6942083f4387",
+    "needle": "gpuEntityArchivedTextureBytes",
+    "characterOffset": 953195,
+    "excerpt": "puUploadBytes:0,frameSpikeLastTextureUploadCount:0,gpuMemoryBytes:0,gpuTextureBytes:0,gpuEntityTextureBytes:0,gpuEntityTextureBudgetBytes:0,gpuEntityArchivedTextureBytes:0,gpuEntityPinnedTextureBytes:0,gpuEntityEvictionCount:0,gpuEntityEvictedBytes:0,gpuEntityArchiveReuploadCount:0,ephemeralGroupReleasedCount:0,ephemeralGroupReleasedBytes:0,ephemeralGroupReloadCount:0,gpuAttachmentBytes:0,gpuVertexBufferBytes:0,gpuPersistentVertexBytes:0,gpuPersistentVertexCapacityBytes:0,gpuPersistentVertexBudgetBytes:0,gpuPersistentVertexChunkCount:0,gpuPersistentMapVertexBytes:0,gpuPersistentMapVertexBudgetBytes:0,gpuPersistentMapVertexOverBudgetBytes:0,gpuPersistentAnimationVertexBytes:0,gpuPersistentAnimationVertexBudgetBytes:0,gpuPersistentAnimationVertexOverBudgetBytes:0,gpuPersistentOther"
+  }
+]

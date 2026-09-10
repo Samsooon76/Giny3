@@ -1,0 +1,50 @@
+.npc-menu { min-width: 190px; font-size: 13px; }
+.npc-menu > strong, .npc-menu > p { display: block; margin: 8px 12px; max-width: 300px; }
+.npc-menu button { padding: 9px 12px; }
+.npc-overlay { position: fixed; inset: 0; z-index: 99000; display: flex; align-items: center; justify-content: center; padding: 24px; background: #070a0766; color: #eeeedd; font: 14px/1.5 Lexend-Regular, sans-serif; }
+.npc-panel { width: min(960px, 100%); max-height: calc(100dvh - 48px); display: flex; flex-direction: column; background: #24291f; border: 1px solid #737b52; border-radius: 5px; box-shadow: 0 12px 55px #0009; overflow: auto; outline: none; }
+.npc-panel > header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 22px; background: #191f17; border-bottom: 1px solid #55603c; }
+.npc-panel header span { font-size: 12px; color: #aabb8e; }
+.npc-panel h2 { font-size: 23px; margin: 0; font-weight: 500; }
+.npc-panel h3 { margin: 0; padding: 14px; font-size: 15px; font-weight: 500; color: #c5d497; }
+.npc-panel button { font: inherit; color: #edf1dc; border: 1px solid #697849; border-radius: 3px; padding: 7px 13px; background: #424f2e; cursor: pointer; }
+.npc-panel button:hover:enabled { background: #61753d; }
+.npc-panel button:focus-visible, .npc-panel input:focus-visible { outline: 2px solid #ccdf8e; outline-offset: 2px; }
+.npc-panel button:disabled { opacity: .5; cursor: default; }
+.npc-panel .npc-close { border: 0; background: none; font-size: 27px; padding: 0 7px; }
+.npc-panel--talk { width: min(740px, 100%); }
+.npc-dialog-body { padding: 26px; display: flex; gap: 22px; }
+.npc-portrait { width: 130px; min-height: 200px; flex-shrink: 0; position: relative; }
+.npc-conversation { flex: 1; min-width: 0; }
+.npc-question { background: #ecebd7; color: #292c20; border-radius: 5px; padding: 20px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.npc-replies { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; }
+.npc-replies button { display: flex; gap: 10px; text-align: left; background: #343e29; }
+.npc-replies button span { color: #b5cd78; }
+.npc-tabs { display: flex; align-items: center; gap: 8px; padding: 14px 20px; }
+.npc-tabs [aria-pressed=true] { background: #697f3c; }
+.npc-tabs > span { margin-left: auto; color: #d4d993; }
+.npc-items { overflow-y: auto; min-height: 0; }
+.npc-panel--shop > .npc-items { padding: 0 20px 20px; }
+.npc-item-row { display: flex; gap: 12px; align-items: center; padding: 12px 4px; border-bottom: 1px solid #535a383d; margin: 0; }
+.npc-item-picto { display: inline-flex; width: 44px; height: 44px; flex-shrink: 0; background: #181f16; border: 1px solid #58613d; border-radius: 3px; }
+.npc-item-picto img { width: 100%; height: 100%; object-fit: contain; }
+.npc-item-name { flex: 1; min-width: 0; }
+.npc-item-name strong { font-weight: 400; overflow-wrap: anywhere; }
+.npc-item-name small { display: block; color: #afb69b; margin-top: 4px; }
+.npc-item-controls { display: flex; align-items: center; gap: 10px; }
+.npc-item-controls input { width: 76px; padding: 7px; border: 1px solid #64714b; background: #151d13; color: #fff; border-radius: 3px; font: inherit; }
+.npc-item-controls output { min-width: 85px; font-size: 12px; color: #d4d993; text-align: right; }
+.npc-trade-columns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; padding: 0 16px 16px; min-height: 180px; }
+.npc-trade-columns > div { background: #1c2419; border-radius: 3px; min-width: 0; display: flex; flex-direction: column; }
+.npc-trade-columns .npc-items { padding: 0 12px 12px; max-height: 48dvh; }
+.npc-trade-columns .npc-item-row { flex-wrap: wrap; }
+.npc-trade-columns .npc-item-controls { margin-left: auto; }
+.npc-reward { display: flex; align-items: center; gap: 10px; padding: 10px 0; }
+.npc-reward span:not(.npc-item-picto) { flex: 1; overflow-wrap: anywhere; }
+.npc-empty, .npc-hint { color: #b0b7a0; padding: 12px; }
+.npc-hint { font-size: 12px; }
+.npc-panel footer { padding: 16px 22px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid #55603c; font-size: 12px; }
+.npc-panel .npc-primary { background: #637d34; white-space: nowrap; }
+.npc-status, .npc-error { margin: 0; padding: 12px 22px; }
+.npc-error { color: #ffbfaa; background: #472d26; }
+@media (max-width: 760px) { .npc-overlay { padding: 8px; } .npc-panel { max-height: calc(100dvh - 16px); } .npc-dialog-body { padding: 15px; } .npc-portrait { display: none; } .npc-trade-columns { grid-template-columns: 1fr; } .npc-item-row { flex-wrap: wrap; } .npc-item-controls { margin-left: auto; } .npc-tabs { flex-wrap: wrap; } .npc-panel footer { flex-wrap: wrap; } }

@@ -1,0 +1,6 @@
+.character-context-menu { min-width: 210px; max-height: calc(100vh - 16px); }
+.character-menu-title { text-transform: uppercase; text-align: center; color: #bebeb5; padding: 4px 8px 5px; border-bottom: 1px solid #7775; }
+.character-context-menu button { padding: 4px 7px; }
+.character-menu-info { padding: 5px 8px; color: #bebeb5; }
+
+.character-menu-icon { display: inline-block; width: 12px; height: 12px; flex: 0 0 12px; background: currentColor; mask-size: contain; mask-repeat: no-repeat; mask-position: center; }

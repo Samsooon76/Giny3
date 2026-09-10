@@ -1,0 +1,38 @@
+/* Spell display modes are host-sized, like the native SpellList controller.
+   Override the saved frame width without moving the user's window. */
+.spell-window--0 { width: 760px !important; }
+.spell-window--1 { width: 1440px !important; }
+.spell-window--2 { width: 530px !important; }
+.spell-window [data-binding="spell_content"],
+.spell-window [data-binding="ctr_spellBase"] { width: 100%; min-height: 0; }
+.spell-window [data-binding="gd_spells"] { min-height: 0; overflow-y: auto; }
+.spell-window [data-binding="ctr_grid"],
+.spell-window [data-binding="gd_spells"] {
+  background: var(--background_dark100) !important;
+}
+.spell-window > [data-binding="header"] {
+  background-image: linear-gradient(90deg, var(--header_background), var(--header_gradient), var(--header_background)) !important;
+}
+.spell-window > [data-binding="header"] > .uitk-tint-layer { display: none; }
+.spell-window [data-binding="ctr_spellBase"] [data-binding="header"] {
+  background-color: var(--background_medium90) !important;
+}
+.spell-window [data-binding="tabs"] .activeTrue {
+  border-bottom: 2px solid var(--highlight_primary100);
+  color: var(--highlight_primary100);
+}
+.spell-window [data-binding="tabs"] .activeFalse { border-bottom: 2px solid var(--highlight_secondary35); }
+.spell-window [data-binding="tab_label"] { text-transform: uppercase; letter-spacing: 2px; }
+.spell-window [data-binding="header_ornament_left"],
+.spell-window [data-binding="header_ornament_right"] { background-image: var(--header_ornament) !important; }
+.spell-window--2 [data-binding="header_ornament_left"],
+.spell-window--2 [data-binding="header_ornament_right"] { display: none !important; }
+.spell-window [data-binding="choice_icon"] { filter: grayscale(1); }
+.spell-window [data-binding="btn_spell"]:hover { outline: 1px solid var(--highlight_secondary100); outline-offset: -1px; }
+.spell-window .spell-view-icon { background: none !important; width: 20px !important; height: 20px !important; position: relative; }
+.spell-view-icon > * { display: none !important; }
+.spell-view-icon::before { display: none !important; }
+.spell-view-icon::after { content: ''; position: absolute; left: 1px; top: 1px; background: currentColor; }
+.spell-view-icon--0::after { width: 18px; height: 3px; box-shadow: 0 5px, 0 10px, 0 15px; }
+.spell-view-icon--1::after { width: 8px; height: 8px; box-shadow: 10px 0, 0 10px, 10px 10px; }
+.spell-view-icon--2::after { width: 5px; height: 5px; box-shadow: 7px 0, 14px 0, 0 7px, 7px 7px, 14px 7px, 0 14px, 7px 14px, 14px 14px; }

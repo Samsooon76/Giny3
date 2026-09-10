@@ -1,0 +1,14 @@
+.shortcuts-section { padding: 16px 18px; }
+.shortcut-setting { display: grid; grid-template-columns: minmax(0, 1fr) 126px 28px; align-items: center; gap: 8px; min-height: 36px; }
+.shortcut-setting label { padding: 5px 0; }
+.shortcut-key { width: 100%; height: 25px; min-width: 0; border: 1px solid var(--highlight_secondary25); background: var(--background_dark100); padding: 3px 8px; font-size: 10px !important; text-overflow: ellipsis; cursor: pointer; }
+.shortcut-key:disabled { background: transparent; opacity: .75; cursor: default; }
+.shortcut-key:focus { outline: 1px solid var(--highlight_primary100); }
+.shortcut-reset { width: 28px; height: 28px; padding: 0; border-radius: 2px; background: var(--highlight_secondary25) !important; font-size: 19px !important; }
+.shortcut-profile { display: flex; justify-content: space-between; align-items: center; min-height: 38px; }
+.shortcut-profile select { width: 40%; border: 0; border-top: 1px solid var(--highlight_secondary35); padding: 6px 10px; background: var(--highlight_secondary25); }
+.shortcut-profile option { background: var(--background_medium100); }
+.shortcuts-navigation { padding-bottom: 10px; border-bottom: 1px solid #ffffff20; }
+.shortcuts-navigation .options-subcategory { background: transparent !important; padding: 8px 38px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.shortcuts-navigation .options-subcategory[aria-current="true"] { background: var(--highlight_secondary25) !important; }
+.shortcut-notice { position: sticky; bottom: 0; padding: 10px; background: var(--background_medium100); color: var(--highlight_primary100); border: 1px solid currentColor; }

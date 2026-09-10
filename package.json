@@ -1,0 +1,14 @@
+{
+  "name": "giny-workspace",
+  "private": true,
+  "type": "module",
+  "description": "Entry points for the Giny web/Electron client; dependencies are managed in client/web.",
+  "scripts": {
+    "dev": "npm --prefix client/web run dev --",
+    "build": "npm --prefix client/web run build --",
+    "test": "npm --prefix client/web run test --",
+    "test:e2e": "npm --prefix client/web run test:e2e --",
+    "app": "npm --prefix client/web run app --",
+    "build:benchmark": "npm --prefix client/web run build:benchmark --"
+  }
+}

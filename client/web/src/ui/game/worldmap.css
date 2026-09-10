@@ -1,0 +1,149 @@
+/* Cartography view: the tiled parchment plus its overlays.
+
+   Everything painted here is an extracted asset — `worldmaps/<id>/<zoom>/*.jpg`
+   for the parchment, `worldmaps/hints/<gfx>.png` for the pins,
+   `worldmaps/markers/currenMapHighlight.png` for the current-map frame — so the
+   rules below only place them. Colours come from the DarkStone tokens the
+   official theme already exposes. */
+
+.giny-worldmap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--background_dark100, #1b1d32);
+}
+
+.giny-worldmap.is-interactive {
+  cursor: grab;
+}
+
+.giny-worldmap.is-panning {
+  cursor: grabbing;
+}
+
+/* The parchment. Scaled as one layer so the tiles keep integer positions
+   inside it and only the layer carries the fractional zoom. */
+.giny-worldmap__sheet {
+  position: absolute;
+  inset: 0 auto auto 0;
+  transform-origin: 0 0;
+}
+
+.giny-worldmap__tile {
+  position: absolute;
+  display: block;
+  /* One extra pixel of the tile's own edge, so a fractional zoom cannot open a
+     hairline between two tiles. */
+  margin: 0;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Pins keep their native size at every zoom, the way the official view does. */
+.giny-worldmap__overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.giny-worldmap__pin {
+  position: absolute;
+  display: block;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.65));
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.giny-worldmap__pin-group {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.giny-worldmap__pin-group.is-expanded {
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .giny-worldmap__pin-group .giny-worldmap__pin {
+    transition: left 120ms ease-out, top 120ms ease-out;
+  }
+}
+
+.giny-worldmap__group-frame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.giny-worldmap__pin-count {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -15%);
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, 0 0 3px #000;
+  pointer-events: none;
+}
+
+/* `currenMapHighlight`: the four corner brackets around the map you stand on.
+   It covers exactly one map cell, anchored on the cell's corner, so it scales
+   with the parchment instead of keeping a native size. */
+.giny-worldmap__here {
+  position: absolute;
+  pointer-events: none;
+  image-rendering: auto;
+}
+
+.giny-worldmap__coords {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 1px 8px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: var(--white_white100, #fff);
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Minimap "you are here". The official widget paints the `pin` glyph over the
+   parchment; the fill is sampled from the official capture (no theme token
+   carries it). */
+.giny-worldmap__player {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  transform: translate(-50%, -85%);
+  pointer-events: none;
+  background-color: #2962e6;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.55));
+}
+
+.giny-worldmap__empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--highlight_secondary80, #b6b3e6cc);
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+}

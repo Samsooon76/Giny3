@@ -1,0 +1,19 @@
+/* Compiled legacy windows carry literal DarkStone paint. Override only chrome,
+   leaving the world, portraits, item art and semantic health colours intact. */
+html[data-ui-theme] .official-overlay [data-binding="window_background"] { background-color: var(--background_dark100) !important; }
+html[data-ui-theme] .official-overlay [data-binding="header"] { background-color: var(--header_background) !important; }
+html[data-ui-theme] .official-overlay [data-binding="ctr_footer"] { background-color: var(--background_medium90) !important; }
+html[data-ui-theme] .official-overlay [data-binding="button_container"] { background-color: var(--buttons_buttonSecondary) !important; }
+html[data-ui-theme] .official-overlay [data-binding="btn_close"] > [data-binding="button_container"] { background: var(--buttons_buttonPrimary) !important; }
+html[data-ui-theme] .official-overlay [data-binding="dropdown_caption"],
+html[data-ui-theme] .official-overlay [data-binding="dropdown_chevron"] { background-color: var(--buttons_buttonSecondaryHover) !important; }
+html[data-ui-theme] .chat-tab-menu { color: var(--highlight_primary100); }
+html[data-ui-theme] .chat-menu-main, html[data-ui-theme] .chat-menu-icons { background-color: var(--background_dark95); }
+html[data-ui-theme] .chat-menu-main > button[aria-expanded="true"] { background: var(--buttons_buttonPrimary); }
+html[data-ui-theme] .chat-menu-icons button[aria-checked="true"],
+html[data-ui-theme] [aria-checked="true"] > .chat-menu-check::after { color: var(--highlight_primary100); }
+html[data-ui-theme] [aria-checked="true"] > .chat-menu-radio { background-color: var(--highlight_primary100); }
+html[data-ui-theme] [data-tree="chatview"] [data-binding="background"] { background-color: var(--background_medium100) !important; }
+html[data-ui-theme] [data-tree="chatview"] [data-name="header"] { background-color: var(--header_background) !important; }
+html[data-ui-theme] [data-tree="chatview"] .chat-channel-tab { color: var(--highlight_secondary100) !important; }
+html[data-ui-theme] [data-tree="chatview"] .chat-channel-tab.activeTrue { color: var(--highlight_primary100) !important; }

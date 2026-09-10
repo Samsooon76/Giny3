@@ -1,0 +1,50 @@
+{
+  "name": "giny-web-client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "app": "npm run build && electron .",
+    "app:dev": "GINY_VITE_URL=http://localhost:5173/ electron .",
+    "test:performance": "E2E_RENDER_BENCHMARK=1 playwright test e2e/electron-shell.spec.ts",
+    "build:benchmark": "tsc -b && vite build --mode benchmark --outDir dist-benchmark",
+    "test:native": "node --test server/*.test.mjs",
+    "test:all": "npm run test && npm run test:native",
+    "legacy:assets:prepare": "../dofus3/.venv-assets/bin/python scripts/prepare-assets.py --bc7",
+    "legacy:assets:prepare-entities": "../dofus3/.venv-assets/bin/python scripts/prepare-entities.py",
+    "legacy:assets:verify": "../dofus3/.venv-assets/bin/python scripts/verify-prepared-assets.py",
+    "legacy:assets:world": "node scripts/build-world.mjs",
+    "legacy:assets:ambient": "node scripts/build-world-ambient.mjs",
+    "legacy:assets:effects-audit": "../dofus3/.venv-assets/bin/python scripts/audit-world-effects.py",
+    "legacy:assets:effects-verify": "../dofus3/.venv-assets/bin/python scripts/verify-world-effects.py",
+    "assets:verify": "node scripts/verify-runtime-assets.mjs",
+    "assets:import-bubble": "python3 scripts/import-bubble-map3.py"
+  },
+  "dependencies": {
+    "fzstd": "^0.1.1",
+    "pixi.js": "^8.20.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^6.0.4",
+    "electron": "^38.2.0",
+    "oxlint": "^1.75.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0",
+    "vitest": "^4.1.11"
+  },
+  "main": "electron/main.mjs"
+}

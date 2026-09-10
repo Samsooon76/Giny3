@@ -1,0 +1,84 @@
+{
+  "items": {
+    "server_count": 18118,
+    "client_count": 21748,
+    "shared": 16448,
+    "server_only": 1670,
+    "client_only": 5300,
+    "client_only_examples": [
+      44,
+      49,
+      55,
+      58,
+      62,
+      65,
+      66,
+      67,
+      91,
+      97
+    ],
+    "source": "client/dofus3/output/data/items.json.gz",
+    "different_level_on_shared": 471,
+    "different_type_on_shared": 305
+  },
+  "spells": {
+    "server_count": 17729,
+    "client_count": 17067,
+    "shared": 14178,
+    "server_only": 3551,
+    "client_only": 2889,
+    "client_only_examples": [
+      210,
+      351,
+      544,
+      588,
+      1116,
+      1493,
+      1495,
+      1497,
+      1499,
+      1598
+    ],
+    "source": "client/dofus3/output/data/spells.json.gz"
+  },
+  "monsters": {
+    "server_count": 4971,
+    "client_count": 5135,
+    "shared": 4570,
+    "server_only": 401,
+    "client_only": 565,
+    "client_only_examples": [
+      7381,
+      7382,
+      7383,
+      7384,
+      7385,
+      7386,
+      7387,
+      7388,
+      7389,
+      7390
+    ],
+    "source": "client/dofus3/output/data/monsters.json.gz"
+  },
+  "recipes": {
+    "server_count": 4446,
+    "client_count": 4858,
+    "shared": 4191,
+    "server_only": 255,
+    "client_only": 667,
+    "client_only_examples": [
+      697,
+      700,
+      968,
+      6712,
+      8098,
+      8325,
+      8411,
+      8412,
+      8413,
+      8415
+    ],
+    "source": "client/dofus3/output/data/recipes.json.gz"
+  }
+}

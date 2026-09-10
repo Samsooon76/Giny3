@@ -1,0 +1,31 @@
+.chat-tab-menu {
+  box-sizing: border-box; position: fixed; z-index: 10000; width: 230px; max-width: calc(100vw - 16px);
+  max-height: calc(100dvh - 16px); padding: 0;
+  color: #dbe858;
+  font: 12px/1.3 Lexend-Regular, sans-serif; box-shadow: 0 3px 12px #0008;
+  scrollbar-width: thin; scrollbar-color: #777955 #17170f; pointer-events: auto;
+}
+.chat-tab-menu button {
+  display: flex; align-items: center; gap: 8px; width: 100%; min-height: 23px;
+  margin: 0; padding: 3px 9px; border: 0; border-radius: 0; background: transparent;
+  color: inherit; font: inherit; text-align: left; cursor: pointer;
+}
+.chat-tab-menu button[role="menuitemcheckbox"][aria-checked="false"] { color: #b1adcf; }
+.chat-tab-menu button:hover, .chat-tab-menu button:focus-visible { background: #dcdf6530; outline: none; }
+.chat-menu-check { width: 12px; height: 12px; flex: 0 0 12px; border: 1px solid #a8a3c9; background: #171724; }
+[aria-checked="true"] > .chat-menu-check::after { content: '✓'; display: block; color: #edff51; font-size: 14px; line-height: 11px; }
+.chat-menu-separator { height: 1px; margin: 3px 8px; background: #a1a17c40; }
+.chat-menu-arrow { margin-left: auto; }
+.chat-tab-menu .chat-menu-delete { color: #d16e77; }
+.chat-menu-delete img { width: 13px; height: 13px; opacity: .7; }
+.chat-tab-menu button:disabled { opacity: .4; cursor: default; }
+
+.chat-menu-main { width: 230px; max-width: 100%; max-height: calc(100dvh - 16px); overflow-y: auto; padding: 5px 0; background: rgb(15 15 10 / 88%); }
+.chat-tab-menu.has-icons { width: 280px; padding-right: 50px; }
+.chat-menu-icons { position: absolute; right: 0; bottom: 52px; width: 50px; max-height: calc(100dvh - 68px); overflow-y: auto; padding: 5px 0; background: rgb(15 15 10 / 90%); border-radius: 0 4px 4px 0; scrollbar-width: thin; }
+.chat-menu-icons button { justify-content: center; padding: 3px 5px; gap: 7px; color: #b1adcf; min-height: 23px; }
+.chat-menu-icons button[aria-checked="true"] { color: #e5ef53; }
+.chat-menu-icon { width: 16px; height: 16px; background: currentColor; mask-size: contain; mask-repeat: no-repeat; mask-position: center; }
+.chat-menu-radio { flex: 0 0 12px; height: 12px; border: 1px solid #aaa6cc; border-radius: 50%; }
+[aria-checked="true"] > .chat-menu-radio { background: #e5ef53; box-shadow: inset 0 0 0 2px #24231e; }
+.chat-menu-main > button[aria-expanded="true"] { background: linear-gradient(#8d9427, #a1a73d); color: #f1f0c0; }

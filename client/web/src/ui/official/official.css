@@ -1,0 +1,466 @@
+.official-stage { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #07040f; }
+.official-stage--login { background: transparent !important; }
+.official-wrap { position: relative; flex: none; overflow: clip; }
+.official-canvas { position: absolute; inset: 0; display: flex; transform-origin: top left; overflow: hidden; font-family: Lexend, sans-serif; }
+.official-canvas.uitk-root {
+  color: #fff;
+  font-family: "Lexend-Regular", Lexend, sans-serif;
+}
+.official-tree-frame { position: absolute; z-index: 1; display: flex; pointer-events: none; }
+.official-tree-frame > .official-node { width: 100%; height: 100%; }
+.official-background { position: absolute; inset: 0; background-size: cover; background-position: center; }
+/* Fonts cascade in UI Toolkit exactly as they do in CSS: only elements whose
+   USS declares -unity-font override the family. Pinning it per node would make
+   every extracted font declaration a no-op. */
+:where(.official-node) { font-family: inherit; }
+.official-node { pointer-events: none; }
+/* Visual reset is for the compiled-JSON paint path. Under `.uitk-root` the
+   dofus3-ui sheets (specificity 0 via :where()) have to be able to set
+   background, colour and padding. `color` stays out of the reset: at (0,3,0)
+   it beat every generated USS colour rule and utility class, pinning all
+   classic-screen text to the inherited DarkStone root. */
+.official-canvas:not(.uitk-root) .official-node {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+/* Unity tints a sprite then draws children on top. A CSS mask on the element
+   also masks descendants, so the sprite lives on ::before. Variables come from
+   ussToCss; 364 tinted nodes share this, not a per-binding rattrapage. */
+.official-tinted-bg { isolation: isolate; }
+.official-tinted-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  background-color: var(--official-tint);
+  -webkit-mask-image: var(--official-mask-image, none);
+  mask-image: var(--official-mask-image, none);
+  -webkit-mask-size: var(--official-mask-size, 100% 100%);
+  mask-size: var(--official-mask-size, 100% 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: var(--official-mask-position, center);
+  mask-position: var(--official-mask-position, center);
+  -webkit-mask-box-image-source: var(--official-mask-border, none);
+  -webkit-mask-box-image-slice: var(--official-mask-slice);
+  -webkit-mask-box-image-width: var(--official-mask-width);
+  -webkit-mask-box-image-repeat: stretch;
+  mask-border-source: var(--official-mask-border, none);
+  mask-border-slice: var(--official-mask-slice);
+  mask-border-width: var(--official-mask-width);
+  mask-border-repeat: stretch;
+}
+button.official-node, .official-node.is-clickable, .official-node.is-interactive { cursor: pointer; appearance: none; pointer-events: auto; }
+/* UA button (specificity 0,0,1) beats dofus3-ui `:where()`. Figma fills live
+   on #button_container / #itemTile_container, so the host must stay clear. */
+.official-canvas.uitk-root button {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border-width: 0;
+  border-style: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+.official-node.is-hoverable, .is-hoverable { pointer-events: auto; }
+.official-Slot.is-empty > [data-name="itemTile_container"] { background-color: var(--black_black35); }
+.official-Slot.inventory > [data-name="itemTile_container"] { box-shadow: inset 0 0 0 1px var(--black_black25); }
+button.official-node:disabled { cursor: default; filter: grayscale(.75); opacity: .6; }
+.official-loading { height: 100%; display: grid; place-items: center; }
+.official-icon { display: block; width: 100%; height: 100%; flex: none; background: center / contain no-repeat; pointer-events: none; }
+.official-native-input { width: 100%; height: 100%; min-width: 0; border: 0; outline: 0; box-sizing: border-box; background: transparent; color: inherit; font: inherit; pointer-events: auto; }
+.official-native-input::placeholder { color: currentcolor; opacity: .55; }
+/* The chip already paints the USS swatch; the native picker is the hit target. */
+.official-ColorPickerField .official-native-input { opacity: 0; cursor: pointer; }
+.official-Slot img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+.official-PlayButton { pointer-events: auto; }
+
+.entity-preview { position: absolute; inset: 0; overflow: visible; pointer-events: none; }
+.entity-preview canvas { display: block; width: 100%; height: 100%; }
+.entity-preview--portrait { overflow: hidden; }
+
+.authenticated-chrome { position: fixed; inset: 0; z-index: 80; pointer-events: none; }
+.official-overlay { position: fixed; inset: 0; z-index: 82; display: flex; align-items: center; justify-content: center; overflow: hidden; pointer-events: none; }
+.official-overlay .official-node { pointer-events: none; }
+.official-overlay button.official-node,
+.official-overlay .official-node.is-clickable,
+.official-overlay .official-node.is-interactive,
+.official-overlay input { pointer-events: auto; }
+.official-overlay--characterHeader { z-index: 81; }
+.official-overlay--gameMenu { z-index: 84; }
+.official-overlay--mainMenu { z-index: 102; }
+.official-overlay--mainMenu.is-modal .official-WindowFigma, .official-overlay--mainMenu.is-modal .official-WindowFigma * { pointer-events: auto; }
+.official-modal-backdrop { position: fixed; inset: 0; z-index: 101; border: 0; background: #070914a8; pointer-events: auto; cursor: default; backdrop-filter: blur(3px); }
+
+/* ---- In-game HUD ---------------------------------------------------------
+   The extracted trees keep their own USS sizing, so the HUD only positions
+   their hosts and never restyles what is inside them. */
+.game-hud { position: absolute; inset: 0; z-index: 60; pointer-events: none; font-family: Lexend, sans-serif; }
+.game-hud .hud-sync-warning,
+.game-hud .game-browser { pointer-events: auto; }
+.official-tree-host { width: 100%; height: 100%; display: flex; overflow: hidden; }
+.official-tree-host > .official-node { width: 100%; height: 100%; }
+
+/* The HUD surface letterboxes the official runtime space; each widget tree
+   places itself inside it from its own USS. */
+.official-hud { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; pointer-events: none; }
+.official-hud .official-wrap { pointer-events: none; }
+.official-hud-layer { position: absolute; inset: 0; pointer-events: none; }
+/* Tree wrappers must not isolate the z-index of their windows. */
+.official-hud-layer .official-tree-frame { z-index: auto; }
+.official-hud-chrome { z-index: 2147483646; }
+.official-hud-layer .official-node { pointer-events: none; }
+/* A window takes the click, exactly like the official client: the world below
+   only reacts where no HUD surface is. `picking-mode: Ignore` is the official
+   opt-out and wins over it. Anything inside stays inert, which is also what
+   makes an empty part of a window a drag surface. */
+.official-hud-layer .official-window { pointer-events: auto; }
+.official-hud-layer .official-drag-handle { pointer-events: auto; }
+.official-hud-layer .official-window.is-flow { position: relative; }
+.official-hud-layer button.official-node, .official-hud-layer input,
+.official-hud-layer .official-node.is-clickable,
+.official-hud-layer .official-node.is-hoverable,
+.official-hud-layer .official-node.is-interactive,
+.official-hud-layer .is-hoverable { pointer-events: auto; }
+.official-node[data-picking="ignore"],
+.official-hud-layer .official-node[data-picking="ignore"] { pointer-events: none; }
+.official-hud-tooltips {
+  position: absolute; inset: 0; z-index: 2147483647; pointer-events: none; overflow: visible;
+}
+.official-hud-tooltips .official-tree-host { overflow: visible; pointer-events: none; }
+.official-hud-tooltips .official-tree-host > .official-node { width: auto; height: auto; }
+
+/* ---- Official window chrome ----------------------------------------------
+   `MagneticDragWindow` and `WindowFigma` are C# components: the UXML holds
+   their flags, the constructor draws the handle, the grips and the title bar.
+   The renderer builds the same three, so all that is left here is making them
+   clickable and pointing the cursor at them. */
+.official-window { user-select: none; }
+.official-window.is-movable { cursor: default; }
+/* A window with a handle — MagneticDragWindow `#header` or the WindowFigma
+   title bar C# builds — only grabs from that band. Windows without one
+   (a notification) still drag from any inert part of themselves. */
+.official-window.is-movable:not(:has(.official-drag-handle)):active { cursor: grabbing; }
+.official-drag-handle { cursor: grab; }
+.official-drag-handle:active { cursor: grabbing; }
+
+.official-window-grips { position: absolute; inset: 0; pointer-events: none; }
+.official-window-grip { position: absolute; z-index: 6; pointer-events: auto; touch-action: none; }
+.official-window-grip.is-n, .official-window-grip.is-s { left: 10px; right: 10px; height: 7px; cursor: ns-resize; }
+.official-window-grip.is-e, .official-window-grip.is-w { top: 10px; bottom: 10px; width: 7px; cursor: ew-resize; }
+.official-window-grip.is-n { top: -3px; }
+.official-window-grip.is-s { bottom: -3px; }
+.official-window-grip.is-e { right: -3px; }
+.official-window-grip.is-w { left: -3px; }
+.official-window-grip.is-ne, .official-window-grip.is-nw,
+.official-window-grip.is-se, .official-window-grip.is-sw { width: 13px; height: 13px; }
+.official-window-grip.is-ne { top: -3px; right: -3px; cursor: nesw-resize; }
+.official-window-grip.is-nw { top: -3px; left: -3px; cursor: nwse-resize; }
+.official-window-grip.is-se { bottom: -3px; right: -3px; cursor: nwse-resize; }
+.official-window-grip.is-sw { bottom: -3px; left: -3px; cursor: nesw-resize; }
+
+/* The title bar `WindowFigma` builds in code, drawn with the same `.header`
+   chrome the widgets use. Sizes, sprites and colours come from the extracted
+   stylesheet; only the stacking and the pointer states are added here, since a
+   USS pseudo-class is compiled per node and this element has no node. */
+.official-window-titlebar { pointer-events: auto; z-index: 5; }
+.official-window-titlebar > .header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.official-window-titlebar [data-name="header_ornament_left"],
+.official-window-titlebar [data-name="header_ornament_right"] { pointer-events: none; }
+.official-window-title { position: relative; z-index: 1; }
+.official-window-close { padding: 0; border: 0; cursor: pointer; background-repeat: no-repeat; background-position: center; }
+.official-window-titlebar .window__close-button { pointer-events: auto; cursor: pointer; flex-shrink: 0; }
+
+/* The three dots and the menu they open. `#header_right` is absolute, so the
+   button already sits where the official sheet puts it; only the stacking and
+   the pointer states are added. */
+.official-window-options { pointer-events: auto; z-index: 6; }
+.official-window-options-button { padding: 0; border: 0; cursor: pointer; }
+.official-window-options-button:hover { background-color: #ffffff1a; }
+.official-window-options-button[aria-expanded="true"] { background-color: #ffffff26; }
+.official-window-options-icon { display: block; background-repeat: no-repeat; background-position: center; }
+.official-window-menu {
+  top: calc(100% + 2px); right: 0; z-index: 40;
+  box-shadow: 0 10px 26px #000a;
+}
+.official-window-menu.is-flipped { top: auto; bottom: calc(100% + 2px); }
+.official-window-menu-item { border: 0; cursor: pointer; text-align: left; }
+.official-window-menu-item:hover:enabled { background-color: #717168db; }
+.official-window-menu-item:disabled { cursor: default; }
+
+/* Inspect mode makes every extracted node hittable, including those with
+   picking-mode: Ignore, so a background Image is selectable. */
+html.ui-inspecting .official-node,
+html.ui-inspecting .official-hud-layer .official-node,
+html.ui-inspecting .official-node[data-picking="ignore"],
+html.ui-inspecting .official-hud-layer .official-node[data-picking="ignore"] { pointer-events: auto; }
+
+#giny-ui-inspector-host { position: fixed; inset: 0; z-index: 10000; pointer-events: none; }
+.ui-inspect-outline {
+  position: fixed; box-sizing: border-box; pointer-events: none;
+  border: 1px solid #e4ec66; box-shadow: 0 0 0 1px #0008 inset, 0 0 0 9999px #07040f22;
+}
+.ui-inspect-outline.is-pinned { border-color: #e5c66e; box-shadow: 0 0 0 1px #0008 inset; }
+.ui-inspect-panel {
+  position: fixed; left: 12px; bottom: 12px; width: min(420px, calc(100vw - 24px));
+  max-height: min(48vh, 420px); overflow: auto; pointer-events: auto;
+  padding: 10px 12px 12px; border: 1px solid #6d7082; border-radius: 6px;
+  background: #12141ef5; color: #d8d9df; font: 500 12px/1.4 Lexend, sans-serif;
+  box-shadow: 0 12px 28px #000c, inset 0 1px #ffffff14;
+}
+.ui-inspect-panel header { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.ui-inspect-panel header strong { color: #f2f3f6; font-size: 13px; }
+.ui-inspect-panel header span { color: #9aa0b5; font-size: 10px; letter-spacing: .02em; }
+.ui-inspect-panel dl { margin: 0; display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 5px 10px; }
+.ui-inspect-panel dt { margin: 0; color: #d9e94e; font-size: 10px; font-weight: 750; text-transform: uppercase; letter-spacing: .04em; }
+.ui-inspect-panel dd { margin: 0; color: #e8e9ef; word-break: break-all; }
+.ui-inspect-path { color: #f2f3f6; font-weight: 600; }
+.ui-inspect-empty { margin: 0; color: #9aa0b5; }
+.ui-inspect-copy {
+  margin-top: 10px; height: 28px; padding: 0 10px; border: 1px solid #6d7082; border-radius: 4px;
+  background: #2a2d3c; color: #e8e9ef; font: 650 11px/1 Lexend, sans-serif; cursor: pointer;
+}
+.ui-inspect-copy:hover { border-color: #dce94a; color: #efff56; }
+.official-window-close:hover { background-image: url("/ui-data/styles/images/btn_close_over.png"); }
+.official-window-close:active { background-image: url("/ui-data/styles/images/btn_close_pressed.png"); }
+
+/* `allow-snap-preview`: the line the window is about to land on. */
+.official-snap-guide { pointer-events: none; }
+.official-snap-guide.is-x { border-left: 2px dashed var(--highlight_primary100, #ffd194); }
+.official-snap-guide.is-y { border-top: 2px dashed var(--highlight_primary100, #ffd194); }
+
+/* C# sizes `.extend-progress-bar__progress` at runtime (`value` / `high-value`).
+   USS already places it absolute; `--fill` on the host is that runtime width.
+   The BEM class is what the constructor stamps — not a data-binding rattrapage. */
+.extend-progress-bar__progress {
+  width: var(--fill, 0%);
+  background-color: currentColor;
+}
+.extend-progress-bar.is-vertical > .extend-progress-bar__progress {
+  top: auto;
+  right: 0;
+  width: auto;
+  height: var(--fill, 0%);
+}
+.official-progress-fill {
+  display: block;
+  pointer-events: none;
+  background-color: currentColor;
+}
+.official-progress-fill.is-horizontal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: var(--fill, 0%);
+}
+.official-progress-fill.is-vertical {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--fill, 0%);
+  width: auto;
+}
+.official-ScrollView, .official-ListView { overflow: auto; pointer-events: auto; }
+
+/* ---- Official chat (`chatview`) ------------------------------------------
+   `listChat` est une ListView DynamicHeight : défilement vertical seul, la
+   saisie reste épinglée en bas quand la MagneticDragWindow est resizée, et
+   les lignes `chatItem` cassent les tokens sans espaces au lieu de déborder
+   sur la mini-carte (garde-fou du style inline des repeaters). */
+.official-hud-layer [data-tree="chatview"] [data-binding="listChat"] { overflow-x: hidden; overflow-y: auto; min-width: 0; }
+.official-hud-layer [data-tree="chatview"] [data-uitk-template="chatItem"] { min-width: 0; max-width: 100%; }
+.official-hud-layer [data-tree="chatview"] [data-binding="content"],
+.official-hud-layer [data-tree="chatview"] [data-binding="subContent"] { overflow-wrap: anywhere; word-break: break-word; min-width: 0; }
+
+/* A tree the client frames itself gets the theme's own panel: the official
+   window sprites belong to the `WindowFigma` instances that ship one. */
+.official-window.giny-window-frame {
+  border: 1px solid var(--highlight_primary25, #ffd19440);
+  border-radius: 12px;
+  background: var(--background_dark95, #212121f2);
+  box-shadow: 0 18px 44px #000c;
+}
+
+.hud-sync-warning {
+  position: fixed; z-index: 10000; top: 14px; left: 50%; transform: translateX(-50%);
+  max-width: min(560px, calc(100vw - 32px)); padding: 9px 14px; border: 1px solid #e9c65b;
+  border-radius: 6px; background: #25283eee; color: #fff2b3;
+  box-shadow: 0 4px 18px #0008; font: 600 13px/1.35 Lexend, sans-serif; text-align: center;
+}
+
+.inventory-workshop-status { position: fixed; bottom: 3px; left: 0; right: 0; text-align: center; color: #aaa; font: 11px/1.3 sans-serif; pointer-events: none; }
+.inventory-workshop-reopen { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 12px 20px; }
+
+/* Shared Figma dropdown constructor: icon, caption, choice, chevron. */
+.official-Dropdown [data-name="dropdown_icon"] { order: -1; margin-right: 6px; }
+.official-Dropdown [data-name="dropdown_captionLabel"] { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.official-native-select { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; pointer-events: auto; cursor: pointer; }
+.official-Dropdown:focus-within { outline: 1px solid var(--text_textPrimary); }
+
+/* Constructor slots retain semantic order even when serialized out of order. */
+.official-DofusButtonCustom [data-name="button_iconLeft"],
+.official-DofusButtonCustom [data-name="button_assetLeft"] { order: -1; }
+.official-DofusButtonCustom [data-name="button_iconRight"],
+.official-DofusButtonCustom [data-name="button_assetRight"] { order: 1; }
+
+.official-node[data-name="choice"][data-checked="true"] [data-name="choice_box"]::after { content: '✓'; color: var(--highlight_primary100); position: absolute; inset: 0; text-align: center; }
+
+.official-node[data-name="choice_box"] { box-shadow: inset 0 0 0 1px #aaa6cd; }
+
+/* CheckboxCustom's constructor paints its check inside the extracted box. */
+.official-CheckboxCustom[data-checked="true"] > .checkbox > [data-name="checkbox_background"]::after {
+  content: '✓';
+  position: absolute;
+  inset: 0;
+  color: var(--highlight_primary100, #d7ec54);
+  text-align: center;
+  line-height: 1;
+  font-size: 21px;
+}
+
+/* Chat bubbles are bounded flex containers. The extracted label's intrinsic
+   width must not escape the 240px nine-slice background. Placement is already
+   handled by TooltipPaint, so discard the original Unity anchor translation. */
+.official-hud-tooltips [data-tree="ChatTooltip"] [data-binding="background"] {
+  width: max-content !important;
+  max-width: 240px !important;
+  align-items: stretch !important;
+  transform: none !important;
+  translate: none !important;
+}
+.official-hud-tooltips [data-tree="ChatTooltip"] [data-binding="lbl_text"] {
+  display: block !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  white-space: pre-wrap !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  overflow: hidden !important;
+  text-overflow: clip !important;
+}
+/* The source is only 36px high: 20px top + bottom slices consume its centre.
+   Preserve the tail while leaving a stretchable, opaque centre strip. */
+.official-hud-tooltips [data-tree="ChatTooltip"] [data-binding="background"] {
+  border-image-slice: 10 20 14 20 fill !important;
+  border-image-width: 10px 20px 14px 20px !important;
+}
+
+/* Spell hover cards follow the compact, warm charcoal in-game reference. */
+.official-hud-tooltips:has([data-binding="spellTooltip"]) {
+  --spell-muted: #a39f90;
+}
+.official-hud-tooltips [data-binding="spellTooltip"] {
+  background: #26241f !important;
+  color: #eeede8;
+  width: 436px !important;
+  max-width: 456px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px #0006;
+}
+.official-hud-tooltips:has([data-binding="spellTooltip"]) [data-binding="ctr_tooltipHeader"],
+.official-hud-tooltips:has([data-binding="spellTooltip"]) [data-binding="ctr_blockTitle"] {
+  background: #1c1b18 !important;
+}
+.official-hud-tooltips:has([data-binding="spellTooltip"]) [data-binding="ctr_weaponCastConditionsBlocks"] {
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+.official-hud-tooltips:has([data-binding="spellTooltip"]) :is([data-binding="ctr_weaponCastConditionsLeftBlock"], [data-binding="ctr_weaponCastConditionsRightBlock"]) {
+  width: 100% !important;
+  margin: 0 !important;
+}
+.official-hud-tooltips:has([data-binding="spellTooltip"]) [data-binding$="Title"] {
+  color: var(--spell-muted) !important;
+}
+.official-hud-tooltips:has([data-binding="spellTooltip"]) [data-binding="lbl_description"] {
+  color: #a5bb59 !important;
+  line-height: 23px !important;
+}
+.official-hud-tooltips:has([data-binding="spellTooltip"]) [data-binding="lbl_blockTitle"] {
+  color: #b8b6af !important;
+  letter-spacing: 1.5px;
+}
+.official-hud-tooltips:has([data-binding="spellTooltip"]) [data-binding="ctr_blockStats"] {
+  padding: 2px 18px 10px 34px !important;
+}
+.spell-effect-line { display: flex; align-items: baseline; gap: 6px; line-height: 22px; }
+.spell-effect-line img { flex: 0 0 18px; align-self: center; object-fit: contain; }
+.official-hud-tooltips:has([data-binding="spellTooltip"]) [data-binding="lbl_apValue"]::after {
+  content: ''; display: inline-block; width: 16px; height: 16px; margin-left: 5px;
+  background: url('/dofus3/infiniteDreamBestiary/textures/tx_actionPoints.png') center / contain no-repeat;
+}
+.official-hud-tooltips:has([data-binding="spellTooltip"]) [data-binding="lbl_reachValue"]::after {
+  content: ''; display: inline-block; width: 18px; height: 16px; margin-left: 5px;
+  background: url('/dofus3/itemTooltip/textures/tx_range.png') center / contain no-repeat;
+}
+.official-hud-tooltips:has([data-binding="spellTooltip"]) [data-binding="lbl_description"] {
+  display: block !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  overflow-wrap: anywhere;
+}
+.official-hud-tooltips:has([data-binding="spellTooltip"]) :is([data-binding="lbl_apValue"], [data-binding="lbl_reachValue"], [data-binding="lbl_criticalValue"]) {
+  flex-direction: row !important;
+  align-items: center !important;
+}
+.official-hud-tooltips:has([data-binding="spellTooltip"]) [data-binding="lbl_criticalValue"]::after {
+  content: '!'; color: #ff3434; font-weight: 900; margin-left: 6px;
+}
+.official-hud-tooltips:has([data-binding="spellTooltip"]) [data-binding="lbl_statName"] {
+  white-space: normal !important;
+  overflow: visible !important;
+}
+
+.official-hud-tooltips .tooltip-shortcuts {
+  background: #1c1b18 !important;
+  border-top: 1px solid #ffffff1a !important;
+  padding: 10px !important;
+  color: #a39f90 !important;
+  flex-shrink: 0;
+}
+.tooltip-shortcuts__content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font: 14px/20px Lexend-Regular, sans-serif;
+}
+.tooltip-shortcuts__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+.tooltip-shortcuts__row kbd {
+  display: inline-block;
+  padding: 0 3px;
+  background: #a39f90;
+  color: #171611;
+  font: bold 14px/20px Lexend-Regular, sans-serif;
+}
+.tooltip-shortcuts__row img { object-fit: contain; flex-shrink: 0; }
+/* Replace the extracted shortcut examples with the localized footer above. */
+.official-hud-tooltips .tooltip-shortcuts > .official-node { display: none !important; }
+.official-hud-tooltips .tooltip-shortcuts__content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  width: 100%;
+}
+.official-hud-tooltips .tooltip-shortcuts__row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}

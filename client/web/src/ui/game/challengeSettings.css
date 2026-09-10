@@ -1,0 +1,10 @@
+/* Recompose the official radio's ring and selected dot from its two sprites.
+   Both atlases have transparent padding; their painted centres stay at x=10. */
+.official-RadioButton[data-tree="challengeSettingsDisplay"][data-checked="true"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-color: var(--highlight_primary100);
+  mask: url('/ui-data/icons/radioOn.png') -2px center / 24px 24px no-repeat;
+}

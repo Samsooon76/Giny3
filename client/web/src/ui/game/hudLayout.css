@@ -1,0 +1,161 @@
+/* Match the reference HUD density without scaling the map, native chrome or
+   opened windows. Window positions continue to belong to the layout store. */
+.game-hud .official-canvas { font-synthesis: none; }
+.game-hud [data-name="QuestList"] { min-width: 225px !important; }
+.game-hud [data-name="CharacterInformations"] { min-width: 145px !important; }
+.game-hud [data-tree="bannerMenu"] [data-binding="gd_btnUis"] > .renderstudio-grid-view__itemContainer,
+.game-hud [data-tree="bannerMenu"] [data-binding="gd_btnUis"] .official-Slot,
+.game-hud [data-tree="bannerMenu"] [data-binding="gd_additionalBtns"] > .renderstudio-grid-view__itemContainer,
+.game-hud [data-tree="bannerMenu"] [data-binding="gd_additionalBtns"] .official-Slot {
+  width: 32px !important; height: 32px !important;
+  min-width: 32px !important; min-height: 32px !important;
+}
+.game-hud [data-tree="actionBar"] [data-binding="gd_spellitemotes"] > .renderstudio-grid-view__itemContainer {
+  width: 46px !important; height: 46px !important;
+}
+.game-hud [data-tree="actionBar"] [data-binding="gd_spellitemotes"] .official-Slot {
+  width: 44px !important; height: 44px !important;
+  min-width: 44px !important; min-height: 44px !important;
+}
+.game-hud [data-tree="characterInformations"] [data-binding="ctr_pusher"] {
+  transform: scale(.9); transform-origin: center bottom;
+}
+.game-hud [data-tree="questList"] [data-binding="lv_main"] .official-DofusLabel {
+  white-space: normal !important; overflow-wrap: anywhere; min-width: 0;
+}
+
+/* Chat reference: a compact icon rail, muted violet frame and inset composer.
+   Keep these overrides scoped to Chat so other magnetic windows retain their chrome. */
+.game-hud [data-window="Chat"] {
+  border: 1px solid #64667f;
+  border-radius: 3px 3px 14px 14px;
+  background: transparent;
+  box-shadow: 0 2px 2px #11131d;
+}
+.game-hud [data-window="Chat"] > [data-binding="background"] {
+  background: linear-gradient(#3b3d54, #292a3b);
+  opacity: var(--chat-background-opacity, .9);
+  border-radius: inherit;
+}
+.game-hud [data-window="Chat"] > [data-binding="header"] {
+  background: transparent;
+  height: 30px !important;
+  flex-shrink: 0 !important;
+}
+.game-hud [data-window="Chat"] [data-binding="header_content"] {
+  visibility: hidden;
+  pointer-events: none;
+}
+.game-hud [data-window="Chat"] [data-binding="header_left"] {
+  left: 5px !important;
+  top: 3px !important;
+  width: 28px !important;
+  height: 26px !important;
+}
+.game-hud [data-window="Chat"] [data-binding="header_buttonLeft"] {
+  width: 24px !important;
+  height: 24px !important;
+}
+.game-hud [data-window="Chat"] [data-binding="sv_toggles"] {
+  width: 44px;
+  flex: 0 0 44px !important;
+  border: 0;
+}
+.game-hud [data-window="Chat"] [data-binding="ctr_toggleButtons"] {
+  padding: 4px 6px !important;
+  gap: 6px !important;
+}
+.game-hud [data-window="Chat"] .chat-channel-tab {
+  color: #a6a9d0;
+  border: 1px solid #666985;
+  border-radius: 2px;
+  background: #4b4e69;
+  box-shadow: inset 0 1px #777b98, 0 1px 1px #202131;
+}
+.game-hud [data-window="Chat"] .chat-channel-tab.activeTrue {
+  color: #efff4f;
+  background: #63677d;
+}
+.game-hud [data-window="Chat"] .chat-channel-tab:hover {
+  background: #626680;
+}
+.game-hud [data-window="Chat"] .chat-channel-tab:focus-visible {
+  outline: 2px solid #efff4f;
+  outline-offset: 1px;
+}
+.game-hud [data-window="Chat"] .chat-channel-tab [data-binding="tab_container"] {
+  width: 100%;
+  height: 100%;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0;
+  background: transparent;
+}
+.game-hud [data-window="Chat"] .chat-tab-label {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden !important;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.game-hud [data-window="Chat"] [data-binding="tab_CTALine"] { display: none !important; }
+.game-hud [data-window="Chat"] .chat-channel-add {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+.game-hud [data-window="Chat"] [data-binding="listChat"] {
+  padding: 0 5px 5px;
+  background: #262735;
+  scrollbar-width: thin;
+  scrollbar-color: #646780 transparent;
+}
+.game-hud [data-window="Chat"] .uitk-inline-chatview-5 {
+  height: 42px !important;
+  padding: 3px 6px !important;
+  border-top: 2px solid #45475e;
+  border-radius: 0 0 13px 13px;
+  background: #292a3b;
+}
+.game-hud [data-window="Chat"] [data-binding="btn_dialect"] {
+  width: 48px !important;
+  flex-shrink: 0 !important;
+}
+.game-hud [data-window="Chat"] [data-binding="btn_dialect"] [data-binding="button_label"] {
+  text-transform: none;
+  font-style: italic;
+  font-size: 18px;
+}
+.game-hud [data-window="Chat"] [data-binding="textInput_content"] {
+  border: 1px solid #52556e;
+  border-radius: 0;
+  background: #20212f;
+}
+
+.hud-module-display-menu {
+  position: absolute; right: 0; top: 46px; width: 280px;
+  display: flex; flex-direction: column; gap: 4px; padding: 10px;
+  background: transparent; color: #e4e3f3; border: 1px solid #666985;
+  border-radius: 4px; box-shadow: 0 3px 10px #0008; pointer-events: auto;
+  font: 13px Lexend-Regular, sans-serif;
+}
+.hud-module-display-menu label { display: flex; align-items: center; gap: 8px; padding: 5px; cursor: pointer; }
+.hud-module-display-menu input { accent-color: #eaff4d; }
+.hud-module-display-menu button { padding: 7px; background: #4e506d; color: inherit; border: 1px solid #777995; border-radius: 3px; cursor: pointer; }
+.hud-module-display-menu button:hover, .hud-module-display-menu label:hover { background: #626582; }
+.hud-module-display-menu :focus-visible { outline: 2px solid #eaff4d; outline-offset: 2px; }
+
+/* Tribute chrome for the supplied combat reference. Keep the official widget
+   gradient texture; the legacy chat gradient was baked with Standard colours. */
+.game-hud[data-combat="true"] [data-tree="chatview"] [data-binding="background"] {
+  background-image: none !important;
+  background-color: var(--background_dark95) !important;
+}
+.game-hud[data-combat="true"] [data-tree="chatview"] [data-name="header"] {
+  background-image: none !important;
+}
+
+.game-hud[data-combat="true"] [data-tree="chatview"] [data-binding="listChat"] {
+  background-color: transparent !important;
+}

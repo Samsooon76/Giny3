@@ -1,0 +1,44 @@
+[
+  {
+    "map": 0,
+    "jsonBytes": 843027,
+    "gfx": 269,
+    "uniqueTextures": 269,
+    "elements": 2288
+  },
+  {
+    "map": 83100172,
+    "jsonBytes": 270239,
+    "gfx": 71,
+    "uniqueTextures": 71,
+    "elements": 237
+  },
+  {
+    "map": 142083083,
+    "jsonBytes": 689543,
+    "gfx": 123,
+    "uniqueTextures": 123,
+    "elements": 759
+  },
+  {
+    "map": 174588929,
+    "jsonBytes": 737265,
+    "gfx": 100,
+    "uniqueTextures": 100,
+    "elements": 1711
+  },
+  {
+    "map": 216400644,
+    "jsonBytes": 323862,
+    "gfx": 89,
+    "uniqueTextures": 89,
+    "elements": 363
+  },
+  {
+    "map": 242096654,
+    "jsonBytes": 126603,
+    "gfx": 2,
+    "uniqueTextures": 2,
+    "elements": 62
+  }
+]

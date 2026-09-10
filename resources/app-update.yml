@@ -1,0 +1,3 @@
+provider: generic
+url: https://bubble-cdn.net/electron
+updaterCacheDirName: bubble-updater

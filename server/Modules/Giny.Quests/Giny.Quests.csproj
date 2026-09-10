@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Giny.Core\Giny.Core.csproj" />
+    <ProjectReference Include="..\..\Giny.ORM\Giny.ORM.csproj" />
+    <ProjectReference Include="..\..\Giny.Protocol\Giny.Protocol.csproj" />
+    <ProjectReference Include="..\..\Servers\Giny.World\Giny.World.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\003_daily_weekly_quests.sql" />
+    <EmbeddedResource Include="Resources\004_battle_pass_track.sql" />
+    <EmbeddedResource Include="Resources\005_clean_quest_amounts.sql" />
+    <EmbeddedResource Include="Resources\006_quest_copy_polish.sql" />
+    <EmbeddedResource Include="Resources\007_dungeon_quest_titles.sql" />
+    <EmbeddedResource Include="Resources\008_battle_pass_icon_items.sql" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <MakeDir Directories="$(MSBuildThisFileDirectory)..\..\Servers\Giny.World\bin\$(Configuration)\net6.0\Modules" />
+    <Copy SourceFiles="$(TargetDir)Giny.Quests.dll" DestinationFolder="$(MSBuildThisFileDirectory)..\..\Servers\Giny.World\bin\$(Configuration)\net6.0\Modules" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

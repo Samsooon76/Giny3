@@ -1,0 +1,33 @@
+Incrément 001 — 2026-09-05
+Tests avec GINY_ORM_INTEGRATION=1 ; bases giny_orm_test_<GUID> isolées.
+
+Test run for /Users/hugo/Downloads/Giny.NETCore-2.68/server/Tests/Giny.World.Tests/bin/Debug/net6.0/Giny.World.Tests.dll (.NETCoreApp,Version=v6.0)
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+(SkinSlotRules) Loaded 951 skin slot rules from dump.
+
+Passed!  - Failed:     0, Passed:     7, Skipped:     0, Total:     7, Duration: 1 s - /Users/hugo/Downloads/Giny.NETCore-2.68/server/Tests/Giny.World.Tests/bin/Debug/net6.0/Giny.World.Tests.dll (net6.0)
+
+BUILD Giny.Auth
+    30 Avertissement(s)
+    0 Erreur(s)
+
+Temps écoulé 00:00:01.11
+
+BUILD Giny.Quests
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps écoulé 00:00:01.24
+
+BUILD Giny.Pokefus
+    9 Avertissement(s)
+    0 Erreur(s)
+
+Temps écoulé 00:00:01.28
+
+BUILD Giny.GuildCamp
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps écoulé 00:00:01.25

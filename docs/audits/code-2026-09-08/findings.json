@@ -1,0 +1,818 @@
+[
+  {
+    "id": "F01",
+    "title": "Le parseur TCP accepte des données qui ne sont pas arrivées",
+    "priority": "P1",
+    "evidence": "Reproduit",
+    "sources": [
+      [
+        "server/Giny.Core/Network/Client.cs",
+        "protected override void OnDataArrival"
+      ],
+      [
+        "server/Giny.Core/Network/TcpClient.cs",
+        "Socket?.BeginReceive"
+      ],
+      [
+        "server/Giny.Core/Network/Messages/MessagePart.cs",
+        "public bool Build"
+      ]
+    ],
+    "text": "`Client` construit le lecteur sur les 8 192 octets du tampon, sans limiter sa longueur à `BufferPosition`. Un message annonçant 4 octets de payload, dont 2 seulement sont reçus, est accepté avec `AA-BB-00-00` : les deux derniers octets viennent du tampon. La reproduction consomme 11 octets alors que 9 sont arrivés. En outre, la réception suivante repart à l’offset 0, ce qui écrase les restes d’une trame incomplète. Cela peut expliquer des états incorrects, blocages ou déconnexions sans lien avec le GPU. Il faut un accumulateur de réception distinct, des curseurs lecture/écriture, une longueur disponible exacte et un plafond de trame explicite. Tester tous les points de fragmentation, la concaténation de messages et les gros payloads. Ne pas simplement agrandir le tampon."
+  },
+  {
+    "id": "F02",
+    "title": "Les envois TCP ne vérifient pas les octets effectivement envoyés",
+    "priority": "P1",
+    "evidence": "Constaté dans les chemins Auth/World/IPC",
+    "sources": [
+      [
+        "server/Giny.Core/Network/Client.cs",
+        "Socket.BeginSend"
+      ],
+      [
+        "server/Servers/Giny.World/Network/WorldClient.cs",
+        "public override void OnSended"
+      ],
+      [
+        "server/Servers/Giny.Auth/Network/AuthClient.cs",
+        "public override void OnSended"
+      ]
+    ],
+    "text": "`BeginSend` est lancé et les callbacks se contentent de journaliser ; aucun `EndSend` n’est appelé dans le code inspecté. Les envois partiels et les erreurs asynchrones ne sont donc pas traités. Introduire une file d’envoi par connexion, un buffer conservé jusqu’à la fin et une boucle qui termine chaque trame avant la suivante, avec backpressure. La fréquence du problème doit être mesurée sous charge ; le contrat d’envoi incomplet est déjà visible dans le code."
+  },
+  {
+    "id": "F03",
+    "title": "L’apparition d’un acteur provoque N² envois",
+    "priority": "P1",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "server/Servers/Giny.World/Managers/Maps/Instances/MapInstance.cs",
+        "private void ShowActor"
+      ],
+      [
+        "server/Servers/Giny.World/Managers/Maps/Instances/MapInstance.cs",
+        "public void Send(NetworkMessage"
+      ]
+    ],
+    "text": "`ShowActor` parcourt chaque personnage, calcule sa vue de l’acteur, puis appelle `Send`, qui rediffuse à tous les personnages. Avec 20 personnages déjà présents, cela produit 400 envois au lieu de 20. Le coût CPU, la sérialisation et le trafic croissent inutilement ; une vue spécifique à un destinataire est aussi envoyée aux autres. Envoyer directement via `character.Client.Send` dans cette boucle. Vérifier le nombre de messages reçus et la personnalisation de leurs données."
+  },
+  {
+    "id": "F04",
+    "title": "La présentation de la carte attend ses quatre voisines",
+    "priority": "P1",
+    "evidence": "Constaté et écart de durée mesuré",
+    "sources": [
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "const neighboursReady"
+      ],
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "await neighboursReady"
+      ],
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "if (this.dirty &&"
+      ]
+    ],
+    "text": "Le verrou `sceneBuilding` interdit le rendu pendant le chargement. Il n’est levé qu’après personnages, objets animés et `await neighboursReady`. La carte déjà construite reste donc derrière le chargement pendant du travail optionnel. Les mesures locales donnent environ 1 s pour la base et 3,4 s pour la construction complète, sans permettre d’attribuer tout l’écart aux seules voisines. Séparer « carte active prête », « joueur prêt », puis enrichissement périphérique. Construire les voisines hors du chemin bloquant, en les attachant par générations valides. Préserver les tests empêchant de dévoiler l’ancien framebuffer ou une destination partielle."
+  },
+  {
+    "id": "F05",
+    "title": "La priorité de chargement se perd dans les entités et les props",
+    "priority": "P1",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "private async buildProps"
+      ],
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "private async spawnRemoteActorsImpl"
+      ],
+      [
+        "client/web/src/game/renderer/mapScene.ts",
+        "export async function createMapScene"
+      ],
+      [
+        "client/web/src/game/entities/EntityRenderer.ts",
+        "const lease = await acquireTextures"
+      ]
+    ],
+    "text": "Les acteurs distants sont chargés un par un, et les instances de props aussi. Les textures d’un voisin commencent avec la priorité `background`, mais `EntityRenderer.loadTextures` redemande les siennes sans priorité, donc en `active`. Des props périphériques peuvent concurrencer le personnage visible. `createMapScene` attend aussi `loadPropData` sans enveloppe d’annulation, ce qui peut retarder une nouvelle transition qui attend la fin de la précédente. Transmettre un contexte de chargement complet jusqu’aux clips, documents, textures et uploads ; charger les documents distincts avec un petit parallélisme borné, puis préparer les instances selon le temps disponible. Éviter un `Promise.all` illimité de toutes les entités."
+  },
+  {
+    "id": "F06",
+    "title": "Les effets hors écran continuent à travailler",
+    "priority": "P1",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "for (const scene of this.neighbours.children) if (tickMapScene"
+      ],
+      [
+        "client/web/src/game/renderer/mapScene.ts",
+        "state.cycles.get(prop)?.tick"
+      ],
+      [
+        "client/web/src/game/effects/MapEffects.ts",
+        "for (const mesh of this.meshes)"
+      ],
+      [
+        "client/web/src/game/effects/DeformedMapMesh.ts",
+        "tick(time: number"
+      ]
+    ],
+    "text": "Le culling du décor bascule `renderable`, mais `DeformedMapMesh.tick` ne consulte pas cet état. Les props voisins sont animés sans test individuel de visibilité ; les racines de scènes voisines restent généralement actives. On économise certains dessins sans économiser leurs simulations et uploads. Calculer la visibilité des scènes puis des effets, avec une marge conservatrice ; suspendre le calcul des objets hors écran et reconstruire leur pose à partir du temps global à leur retour. Conserver les événements de gameplay indépendants de cette suspension visuelle."
+  },
+  {
+    "id": "F07",
+    "title": "Le vent transforme les sommets sur le CPU à chaque tick",
+    "priority": "P1",
+    "evidence": "Mécanisme constaté ; bénéfice GPU à mesurer",
+    "sources": [
+      [
+        "client/web/src/game/effects/DeformedMapMesh.ts",
+        "function subdivisionFor"
+      ],
+      [
+        "client/web/src/game/effects/DeformedMapMesh.ts",
+        "const sample = evaluateWindOffset"
+      ],
+      [
+        "client/web/src/game/effects/WindState.ts",
+        "export function evaluateWindOffset"
+      ]
+    ],
+    "text": "Chaque objet possède son maillage, évalue les paramètres et transformations pour chaque sommet, puis met à jour son buffer de positions. Une grille peut atteindre 117 sommets ; la carte principale des deux échantillons comporte plusieurs centaines d’effets actifs. Première étape : précompiler les paramètres, les matrices inverses et les termes communs par objet/image, réutiliser les objets temporaires, et appliquer F06. Ensuite porter les déformations compatibles dans un vertex shader ou des lots de maillages partageant le matériau. Garder les transformations officielles, les pivots et les couleurs comme référence de tests visuels."
+  },
+  {
+    "id": "F08",
+    "title": "Le préchauffage des particules peut bloquer le chargement",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/game/particles/MapParticles.ts",
+        "if (def.particlesMainParameters.prewarm"
+      ],
+      [
+        "client/web/src/game/particles/MapParticles.ts",
+        "const capacity ="
+      ],
+      [
+        "client/web/src/game/particles/MapParticles.ts",
+        "private updateTrail"
+      ]
+    ],
+    "text": "Le constructeur simule jusqu’à 30 secondes de particules de façon synchrone avant de rendre la main. Les limites de particules et de traînées s’appliquent par carte ; elles se multiplient quand les voisines sont actives. Les particules et leurs traînées créent encore des objets, tableaux et sprites, même si une partie est recyclée. Préparer des états de départ hors ligne ou répartir ce préchauffage sur plusieurs tours, ajouter un budget global de scène et un niveau de détail pour les effets lointains. Un mode économique doit réduire les effets sans ralentir la simulation du jeu."
+  },
+  {
+    "id": "F09",
+    "title": "La réfraction déclenche une capture même sans effet visible",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/game/effects/RefractionPass.ts",
+        "const passes ="
+      ],
+      [
+        "client/web/src/game/effects/RefractionPass.ts",
+        "renderer.render({ container: world"
+      ],
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "this.mapEffects.hasRefraction"
+      ]
+    ],
+    "text": "La décision repose sur le nombre d’instances, pas leur intersection avec le viewport. Une réfraction située dans une voisine hors écran suffit donc à demander une capture du monde. Cette capture est bien partagée entre les cartes, ce qui est à conserver, mais les filtres par instance ajoutent leurs propres traitements. Limiter le travail aux effets visibles et mesurer le coût de la capture et des filtres. Permettre une capture de résolution réduite selon le profil. Une texture RGBA de 1 920 × 1 080 coûte à elle seule environ 7,9 Mio à résolution 1, et 31,6 Mio à résolution 2, hors autres buffers."
+  },
+  {
+    "id": "F10",
+    "title": "Le budget de 256 Mio ne représente pas la mémoire de l’application",
+    "priority": "P1",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/game/assets/ResourcePool.ts",
+        "budget = 256"
+      ],
+      [
+        "client/web/src/game/assets/textures.ts",
+        "export const texturePool"
+      ],
+      [
+        "client/web/src/game/entities/EntityRenderer.ts",
+        "private baked ="
+      ],
+      [
+        "client/web/src/game/entities/previewLook.ts",
+        "const skins="
+      ],
+      [
+        "client/web/src/game/combat/combatAssets.ts",
+        "const bindings ="
+      ]
+    ],
+    "text": "Le pool compte les sources de textures et n’évince pas celles utilisées. Il ne couvre pas les textures recolorées, les géométries, les render targets, les copies GPU dans plusieurs contextes, les images décodées, les documents retenus par les scènes, ni les caches de skins/bindings non bornés. Plusieurs caches de documents ont en outre leurs propres budgets. Les 212 Mio observés ne sont donc pas une mesure de RAM totale. Définir des propriétaires et compteurs par catégorie, compter les contextes actifs, intégrer les caches secondaires et réduire les ressources périphériques quand les ressources épinglées dépassent le profil. Mesurer les processus Electron renderer/main/GPU et la mémoire JS séparément."
+  },
+  {
+    "id": "F11",
+    "title": "La recoloration duplique des textures sur le CPU",
+    "priority": "P2",
+    "evidence": "Constaté, avec un risque conditionnel de propriété mémoire",
+    "sources": [
+      [
+        "client/web/src/game/entities/EntityRenderer.ts",
+        "private bakeIndexedTextures"
+      ],
+      [
+        "client/web/src/game/entities/EntityRenderer.ts",
+        "function bakeIndexed"
+      ],
+      [
+        "client/web/src/game/entities/EntityRenderer.ts",
+        "for (const texture of this.baked.values())"
+      ]
+    ],
+    "text": "Pour chaque entité et couleur indexée, le code dessine une image sur canvas, appelle `getImageData`, modifie tous les pixels, puis crée une nouvelle texture. Les résultats ne sont pas partagés entre entités identiques et échappent au budget principal. Favoriser un matériau de recoloration compatible avec les lots, ou un cache borné par source/palette. Cas à protéger : `bakeIndexed` peut retourner la texture source si le canvas ou `drawImage` échoue ; `destroy()` la traite ensuite comme une texture privée et peut détruire une source partagée. Séparer explicitement ressources empruntées et ressources possédées avant d’étendre les formats compressés aux entités."
+  },
+  {
+    "id": "F12",
+    "title": "Le cache et la file créent du travail évitable",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/game/assets/ResourcePool.ts",
+        "trim(allUnused"
+      ],
+      [
+        "client/web/src/game/assets/TaskQueue.ts",
+        "this.waiting.sort"
+      ],
+      [
+        "client/web/src/game/maps/loader.ts",
+        "const key ="
+      ],
+      [
+        "client/web/src/game/entities/clipLoader.ts",
+        "return cancellable(animationCache.get"
+      ]
+    ],
+    "text": "`trim()` construit, filtre et trie les entrées même si le budget n’est pas dépassé ; il est appelé à chaque chargement et libération. Ajouter le retour rapide sous budget et maintenir un LRU plutôt que retrier. La file trie à chaque insertion, n’a pas de plafond de backlog et ne promeut pas une entrée déjà créée en arrière-plan lorsqu’un utilisateur actif la réclame. Enfin `mapId:background` et `mapId:active` dupliquent le document d’une même carte préparée, et `cancellable` annule l’attente sans annuler son fetch partagé. Coalescer par identité/version du document, préserver séparément la politique d’extraction, et annuler l’opération lorsque son dernier propriétaire disparaît."
+  },
+  {
+    "id": "F13",
+    "title": "Les atlas ne couvrent pas uniformément le monde",
+    "priority": "P1",
+    "evidence": "Confirmé sur un échantillon de documents actuels",
+    "sources": [
+      [
+        "client/web/scripts/prepare-world-textures.py",
+        "def encode"
+      ],
+      [
+        "client/web/scripts/publish-world.py",
+        "if old and a.reuse_atlas_frames"
+      ],
+      [
+        "client/web/src/game/renderer/mapScene.ts",
+        "export function mapTextureUrls"
+      ]
+    ],
+    "text": "Le pipeline mondial compresse principalement un sprite par ressource. La publication réutilise les atlas des cartes déjà préparées. Les cartes habituelles du benchmark ont 6–12 textures dans leur table gfx, mais des cartes réparties dans le manifeste ont encore 71/71, 123/123, 100/100 ou 89/89 sprites/textures distinctes. Cela ne signifie pas que toutes sont chargées ou dessinées, mais révèle la fragmentation des ressources. Étendre les atlas par zone/co-visibilité, avec limites de taille, marges entre sprites, variantes compressées et index partagé. Ne pas faire un atlas géant mondial qui chargerait trop de pixels inutiles. Élargir le corpus de performance au-delà des cartes déjà favorisées."
+  },
+  {
+    "id": "F14",
+    "title": "Le catalogue du HUD recharge un ensemble massif sans coalescence",
+    "priority": "P1",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/ui/game/catalog.ts",
+        "export async function loadGameCatalog"
+      ],
+      [
+        "client/web/src/ui/game/GameHud.tsx",
+        "void loadGameCatalog()"
+      ],
+      [
+        "client/web/src/ui/game/encyclopedia.ts",
+        "return pending ??= Promise.all"
+      ]
+    ],
+    "text": "Chaque montage du HUD relance 28 requêtes puis reconstruit index et noms, sans promesse partagée au niveau de `loadGameCatalog`. Le mode strict de développement accentue les doubles appels, et une nouvelle connexion refait ce travail. L’encyclopédie charge à son tour items, territoires et i18n par un autre chemin. Mutualiser le catalogue par version, charger un noyau pour le HUD et différer recettes/succès/bestiaire jusqu’à leur ouverture. Conserver les index locaux plutôt que recopier les mêmes tables. Mesurer parsing, hydratation et mémoire retenue, pas seulement les octets transférés."
+  },
+  {
+    "id": "F15",
+    "title": "Des statistiques non affichées font rerendre le HUD au repos",
+    "priority": "P1",
+    "evidence": "Constaté ; correction à faible effort",
+    "sources": [
+      [
+        "client/web/src/ui/screens/WorldView.tsx",
+        "const [, setStats]"
+      ],
+      [
+        "client/web/src/ui/screens/WorldView.tsx",
+        "onStats: setStats"
+      ],
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "now - this.lastStatsAt >= 500"
+      ]
+    ],
+    "text": "Le moteur appelle `setStats` toutes les 500 ms alors que la valeur est ignorée par `WorldView`. Chaque objet reçu déclenche un rendu React, réévalue `hudFromSession` et recrée les props/callbacks du HUD. Déplacer les statistiques dans une référence ou dans un panneau de diagnostic abonné uniquement quand il est visible. Stabiliser ensuite les props des sous-arbres coûteux. Vérifier au profiler que le HUD stable cesse de committer sans événement utile."
+  },
+  {
+    "id": "F16",
+    "title": "Les bindings d’inventaire recalculent la même sélection pour chaque nœud",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/ui/game/hudWidgets.ts",
+        "const bag = hud.items.filter"
+      ],
+      [
+        "client/web/src/ui/game/encyclopedia.ts",
+        "const itemById = new Map"
+      ],
+      [
+        "client/web/src/ui/game/catalog.ts",
+        "return Object.values(spellLevelsBySpell).flat().find"
+      ]
+    ],
+    "text": "Le resolver d’inventaire filtre tout le sac à chaque binding et recherche l’équipement pour les slots ; le coût se multiplie par les nœuds rendus. L’encyclopédie reconstruit des index et trie des collections dans son calcul de présentation. La recherche d’un niveau de sort aplatie toutes les listes. Préparer une vue immuable par snapshot : sac filtré, équipement par position, objets et niveaux de sorts par ID, noms normalisés pour la recherche. Conserver les filtrages interactifs par clé de critères. Priorité à ces répétitions avant de remplacer l’A* des seules 560 cases."
+  },
+  {
+    "id": "F17",
+    "title": "Les arbres UI sont reparsés et les stores de fenêtres sont trop globaux",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/ui/official/treeLoader.ts",
+        "export async function loadTree"
+      ],
+      [
+        "client/web/src/ui/official/OfficialWindow.tsx",
+        "const snapshot = useSyncExternalStore(layoutStore"
+      ],
+      [
+        "client/web/src/ui/official/treeLoader.ts",
+        "export function useViewport"
+      ]
+    ],
+    "text": "`loadTree` ne possède ni cache de documents parsés ni coalescence ; les fenêtres chargeant le même template le redemandent et le reparsent. Chaque `OfficialWindowNode` lit les snapshots globaux de layout, empilement et tailles : une modification d’une fenêtre réveille les autres abonnés. Ajouter un cache versionné de templates immuables, cloner seulement ce qui est modifié, et des abonnements avec sélection par fenêtre. Mutualiser aussi la mesure du viewport. Vérifier les ouvertures répétées, le drag avec plusieurs fenêtres et les arbres volumineux au profiler."
+  },
+  {
+    "id": "F18",
+    "title": "Les portraits animés multiplient les contextes WebGL",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/ui/EntityPreview.tsx",
+        "const app = new Application()"
+      ],
+      [
+        "client/web/src/ui/EntityPreview.tsx",
+        "app.canvas as HTMLCanvasElement"
+      ],
+      [
+        "client/web/src/game/entities/previewLook.ts",
+        "export async function loadEntityPreviewLook"
+      ]
+    ],
+    "text": "Chaque aperçu visible crée une application Pixi et son contexte ; plusieurs portraits peuvent donc dupliquer les uploads GPU d’une source pourtant partagée en JS. Les miniatures statiques utilisent aussi temporairement un contexte, puis une conversion synchrone `toDataURL`. L’IntersectionObserver et la file des miniatures sont déjà de bons garde-fous. Utiliser un renderer de vignettes partagé, privilégier les previews préparées sans charger d’abord le document complet, et borner les variantes par octets. Pour les aperçus animés, limiter le nombre simultané et leur cadence. Mesurer la mémoire lorsque l’inventaire, la création et des portraits sont ouverts ensemble."
+  },
+  {
+    "id": "F19",
+    "title": "Le combat force des rendus continus et conserve du travail masqué",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "if (this.combatScene) { this.combatScene.tick"
+      ],
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "for (const actor of this.actors.values()) actor.movement.tick"
+      ],
+      [
+        "client/web/src/game/combat/CombatScene.ts",
+        "private async animate"
+      ]
+    ],
+    "text": "La présence d’un combat remet `dirty=true` à chaque tick. Les contrôleurs du joueur et des acteurs de l’exploration continuent à être avancés avant le contrôle de visibilité, même quand leurs représentations sont cachées. Plusieurs animations de combat possèdent en plus des intervalles à 16 ms. Le mode tactique masque le décor mais ne suspend pas automatiquement ses calculs d’effets. Faire remonter un booléen « visuel changé » depuis le combat, centraliser ses animations sur une horloge commune et suspendre les représentations masquées. Maintenir séparément les confirmations réseau et la résolution des séquences quand la fenêtre est cachée."
+  },
+  {
+    "id": "F20",
+    "title": "Des effets déclarés supportés ne sont pas appliqués visuellement",
+    "priority": "P1",
+    "evidence": "Constaté par les consommateurs réels",
+    "sources": [
+      [
+        "client/dofus3/extractor/maps/effects.py",
+        "FAMILY_STATUS ="
+      ],
+      [
+        "client/web/src/game/effects/MapEffectSequence.ts",
+        "drain(): SequenceEvent[]"
+      ],
+      [
+        "client/web/src/game/effects/MapEffects.ts",
+        "if (this.sequences.tick"
+      ],
+      [
+        "client/web/src/game/maps/adapter.ts",
+        "env.postProcess ="
+      ],
+      [
+        "client/web/src/game/effects/WindState.ts",
+        "export function needsWaveMaterial"
+      ]
+    ],
+    "text": "La table Python marque notamment postprocess, séquences et wave comme supportés. Pourtant les paramètres `postProcess` sont adaptés sans consommateur de rendu ; `MapEffectSequence` stocke des événements dont `drain()` n’est jamais appelé par le moteur ; `needsWaveMaterial` et les fichiers de shaders correspondants sont inutilisés. Un uniform attaché à un Sprite standard ne devient pas un shader exécuté. Distinguer dans la couverture « extrait », « interprété », « appliqué », « validé visuellement ». Compléter les branches effectivement manquantes, en commençant par des cartes témoins. Le vent, certaines particules, la réfraction et les animations existantes ne doivent pas être remis à zéro pour autant."
+  },
+  {
+    "id": "F21",
+    "title": "Les réglages graphiques ne pilotent pas encore le moteur",
+    "priority": "P1",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "resolution: Math.min"
+      ],
+      [
+        "client/web/src/game/assets/textures.ts",
+        "texture.source.scaleMode = 'nearest'"
+      ],
+      [
+        "client/web/src/ui/screens/OptionsWindow.tsx",
+        "const CATEGORIES"
+      ],
+      [
+        "client/web/src/ui/screens/OptionsWindow.tsx",
+        "Leur application en jeu reste à raccorder"
+      ]
+    ],
+    "text": "Le monde démarre avec antialiasing désactivé, résolution 1 par défaut et 2 seulement via `?quality=high`. Les textures sont systématiquement en nearest, sans mipmaps. C’est économique mais peut produire du crénelage et du scintillement au zoom ; le choix ne convient pas uniformément au décor et à l’UI. Les options générales sont surtout mémorisées localement et la section Affichage n’expose pas un profil moteur complet. Introduire des profils Économie/Équilibré/Qualité réellement branchés : plafond FPS, arrière-plan, résolution du monde, effets, distance de détail, filtres et budgets. Pour les atlas, ne pas activer des mipmaps sans préparer les bordures. Préserver les textes de l’interface lorsque la résolution du monde baisse."
+  },
+  {
+    "id": "F22",
+    "title": "Les échecs temporaires de chargement peuvent rester mémorisés",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "if (this.failedMapIds.has(session.mapId))"
+      ],
+      [
+        "client/web/src/game/assets/prepared.ts",
+        "manifest ??="
+      ],
+      [
+        "client/web/src/game/entities/clipLoader.ts",
+        "manifest ??="
+      ],
+      [
+        "client/web/src/ui/official/stylesheet.ts",
+        "started = true"
+      ]
+    ],
+    "text": "Une carte ayant échoué reste dans `failedMapIds` et les rafraîchissements ordinaires de session ne la réessaient pas. Les manifestes préparés convertissent une erreur initiale en `null` conservé pour la session, et les styles de composants ne réessaient pas après leur premier échec. La réparation des fichiers sur disque n’est donc pas toujours visible. Ajouter une invalidation par version, des tentatives bornées avec délai, un retry explicite et une distinction entre absence définitive connue et erreur temporaire. Un retry doit rester annulable quand l’utilisateur quitte la carte."
+  },
+  {
+    "id": "F23",
+    "title": "Les logs réécrivent tout l’historique pendant les interactions",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/debug/sessionLogger.ts",
+        "localStorage.setItem(STORAGE_KEY"
+      ],
+      [
+        "client/web/src/debug/sessionLogger.ts",
+        "persist()"
+      ],
+      [
+        "client/web/src/main.tsx",
+        "installSessionLogger()"
+      ]
+    ],
+    "text": "Chaque clic, événement réseau ou erreur sérialise et écrit jusqu’à 2 000 entrées dans `localStorage`, une opération synchrone sur le thread de l’interface. Le journal borné reste utile, mais sa persistance ne doit pas ralentir une transition ou une rafale d’événements. Regrouper les écritures avec un délai court, puis vider le tampon lors d’un événement de fermeture approprié ; garder une écriture rapide ciblée pour les erreurs critiques. Mesurer les longues tâches avec un historique rempli."
+  },
+  {
+    "id": "F24",
+    "title": "Electron sonde les fichiers synchroniquement et met tout en cache immutable",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/electron/main.mjs",
+        "const resolvedFileCache"
+      ],
+      [
+        "client/web/electron/main.mjs",
+        "if (fs.statSync(cached.file).isFile())"
+      ],
+      [
+        "client/web/electron/main.mjs",
+        "const cacheControl = { 'Cache-Control'"
+      ],
+      [
+        "client/web/electron/main.mjs",
+        "const body = await gunzip"
+      ]
+    ],
+    "text": "Le cache de résolution conserve tous les chemins, mais refait un `statSync` même sur un hit. Les racines de secours amplifient les sondes. Les réponses lisent les fichiers entiers et décompressent les JSON en mémoire dans le processus main. Surtout, tous les fichiers reçoivent un cache d’un an immutable, y compris ceux dont le nom est mutable ; le serveur Vite est plus sélectif. Construire un index de release, limiter les sondes bloquantes, diffuser les gros fichiers par flux et réserver immutable aux noms à contenu hashé. Mettre une politique cohérente sur manifestes, arbres UI et données de combat. Les caches de chemins doivent être bornés ou invalidés par génération de release."
+  },
+  {
+    "id": "F25",
+    "title": "Les métriques et tests de performance peuvent annoncer un faux succès",
+    "priority": "P1",
+    "evidence": "Constaté, corroboré par la trace",
+    "sources": [
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "this.loadMs = performance.now() - started"
+      ],
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "this.readyMs = performance.now() - started"
+      ],
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "private hookDrawCalls"
+      ],
+      [
+        "client/web/e2e/map-effects-performance.spec.ts",
+        "toBeGreaterThanOrEqual(0)"
+      ],
+      [
+        "client/web/e2e/performance.spec.ts",
+        "const runtime = await page.evaluate"
+      ]
+    ],
+    "text": "`loadMs` s’arrête avant les acteurs/props/voisines, et `readyMs` précède encore la première présentation réelle. Le compteur FPS du ticker et son historique ne sont pas un décompte de frames présentées ; ils mélangent chargement et rendu. L’interception ne compte que `drawElements`, pas toutes les familles de draw calls. Le test nommé « render targets bounded across map changes » ne change pas de carte et vérifie seulement une valeur ≥ 0, ce qui accepte aussi un effet absent. Le test de cadence capture le snapshot avant sa période d’échantillonnage. Mesurer temps avant première image, temps avant interaction, temps CPU/GPU, p95/p99 après chauffe, octets uploadés et mémoire totale. Ajouter de vrais seuils par corpus et des transitions observées. Conserver les résultats même en cas de timeout."
+  },
+  {
+    "id": "F26",
+    "title": "Le SQL partage une connexion et un verrou global",
+    "priority": "P2",
+    "evidence": "Constaté ; contention à quantifier sous charge",
+    "sources": [
+      [
+        "server/Giny.ORM/DatabaseManager.cs",
+        "private MySqlConnection UseProvider"
+      ],
+      [
+        "server/Giny.ORM/DatabaseManager.cs",
+        "if (!connection.Ping())"
+      ],
+      [
+        "server/Giny.ORM/IO/DatabaseWriter.cs",
+        "lock (DatabaseManager.DatabaseLocker)"
+      ]
+    ],
+    "text": "Chaque accès au provider fait un `Ping`, et les écritures utilisent une connexion commune protégée par un verrou global. Une sauvegarde ou une opération de module peut retarder toutes les autres. Mesurer attentes de verrou, nombre de requêtes et durée des snapshots avant refonte. Ensuite utiliser des connexions du pool par opération/transaction et un ordonnanceur cohérent pour les mutations du jeu. Retirer le verrou sans changer le partage de connexion et les garanties transactionnelles introduirait des erreurs."
+  },
+  {
+    "id": "F27",
+    "title": "La sauvegarde périodique peut acquitter une modification plus récente",
+    "priority": "P1",
+    "evidence": "Risque de concurrence démontré par le chemin de code, non reproduit sous MariaDB",
+    "sources": [
+      [
+        "server/Giny.ORM/Cyclic/CyclicSaveTask.cs",
+        "private void SavePending()"
+      ],
+      [
+        "server/Giny.ORM/Cyclic/CyclicSaveTask.cs",
+        "public void UpdateElement"
+      ],
+      [
+        "server/Giny.ORM/Cyclic/CyclicSaveTask.cs",
+        "ElementsToUpdate[key].Remove(element)"
+      ]
+    ],
+    "text": "La sauvegarde copie les listes de références, écrit en SQL, puis retire les éléments acquittés. Si le même record est modifié entre l’écriture et ce retrait, `UpdateElement` constate qu’il est déjà présent et n’ajoute pas de nouvelle entrée. Le retrait final peut donc effacer la nouvelle demande de sauvegarde. Le verrou `SaveLock` sérialise les sauvegardes entre elles, pas les producteurs d’updates. Utiliser une version de saleté ou échanger atomiquement la file avant de persister, avec snapshots cohérents et réinsertion des échecs. Ajouter un test qui bloque l’écriture puis modifie le record avant l’acquittement. Préserver la rétention actuelle des lots en échec."
+  },
+  {
+    "id": "F28",
+    "title": "Les lots ORM et certains index produisent des coûts quadratiques",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "server/Giny.ORM/IO/DatabaseWriter.cs",
+        "command.CommandText +="
+      ],
+      [
+        "server/Giny.ORM/IO/DatabaseWriter.cs",
+        "private void DeleteElements"
+      ],
+      [
+        "server/Giny.ORM/Cyclic/CyclicSaveTask.cs",
+        "ElementsToUpdate[type].Contains"
+      ],
+      [
+        "server/Servers/Giny.World/Records/Items/CharacterItemRecord.cs",
+        "CharacterItems.Values.Where"
+      ]
+    ],
+    "text": "Les commandes UPDATE concatènent des chaînes successives ; les DELETE font une commande par élément ; les files de sauvegarde dédupliquent et retirent dans des listes ; certaines recherches par personnage scannent tous les objets. Construire les commandes une fois avec un StringBuilder, limiter les lots, grouper les suppressions dans le cadre transactionnel approprié, utiliser des ensembles/index par clé stable et maintenir un index des objets par propriétaire. Pour les modules GuildCamp/Pokefus/Quests, commencer par les requêtes et l’ORM commun : ne pas sacrifier les transactions et verrous métier existants pour paralléliser à l’aveugle."
+  },
+  {
+    "id": "F29",
+    "title": "Le dispatch des messages ignore l’accès direct du dictionnaire",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "server/Giny.Core/Network/Messages/ProtocolMessageManager.cs",
+        "var handler = Handlers.FirstOrDefault"
+      ],
+      [
+        "server/Giny.Core/Network/Messages/ProtocolMessageManager.cs",
+        "handler.Value.DynamicInvoke"
+      ]
+    ],
+    "text": "Chaque message parcourt le dictionnaire avec `FirstOrDefault`, puis passe par `DynamicInvoke`. Employer `TryGetValue` et préparer un délégué/adaptateur typé à l’enregistrement supprime ce travail répétitif. Les constructeurs de messages sont déjà précompilés : conserver ce principe. C’est une optimisation ciblée après la correction de framing ; elle ne changera pas directement les FPS d’un client isolé."
+  },
+  {
+    "id": "F30",
+    "title": "Le rechargement d’une map peut laisser son ancien timer actif",
+    "priority": "P2",
+    "evidence": "Constaté pour le chemin Reload",
+    "sources": [
+      [
+        "server/Servers/Giny.World/Managers/Maps/Instances/MapInstance.cs",
+        "public void Reload()"
+      ],
+      [
+        "server/Servers/Giny.World/Managers/Maps/Instances/MapInstance.cs",
+        "private void InitializeSpawnCycle"
+      ],
+      [
+        "server/Giny.Core/Time/ActionTimer.cs",
+        "public void Dispose()"
+      ]
+    ],
+    "text": "`Reload` remplace `m_monsterSpawner` sans arrêter/détruire l’ancien timer. Si celui-ci tournait, il peut continuer à appeler l’instance et conserver ses références. Mettre en place un cycle de vie idempotent et détruire l’ancien timer avant remplacement. `ActionTimer.Dispose` suppose aussi un stopwatch déjà créé ; sa robustesse doit couvrir un timer jamais démarré. Tester un reload répété d’une carte occupée. Les timers des cartes vides sont déjà mis en pause : il ne faut pas conclure que tout le monde simule continuellement."
+  },
+  {
+    "id": "F31",
+    "title": "La réconciliation périodique renvoie des snapshots complets",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/giny/GinyClient.ts",
+        "startHudSynchronization(intervalMs = 2000)"
+      ],
+      [
+        "client/web/src/ui/screens/WorldView.tsx",
+        "const actorsTimer = setInterval"
+      ],
+      [
+        "server/Servers/Giny.World/Managers/Modern/ModernCharacterSnapshot.cs",
+        "public static string BuildJson"
+      ]
+    ],
+    "text": "Le HUD est redemandé toutes les 2 secondes et les acteurs toutes les 4 secondes, en plus des événements poussés. Le snapshot de personnage reconstruit notamment inventaire, sorts, effets, métiers et guilde. À grande population cela augmente CPU, allocations, trafic et rerenders. Conserver une réconciliation de secours, mais ajouter version/hash d’état et réponses inchangées légères, compléter les pushes manquants puis espacer le polling. Le polling du HUD tient déjà compte de la visibilité ; celui des acteurs mérite le même traitement. Vérifier surtout équipements, combat, portes et reconnexions avant d’enlever ce filet."
+  },
+  {
+    "id": "F32",
+    "title": "Une extraction après mise à jour peut garder les anciens pixels",
+    "priority": "P1",
+    "evidence": "Constaté dans le pipeline incrémental",
+    "sources": [
+      [
+        "client/dofus3/scripts/extract-world.py",
+        "state['bundles'].get(key)==signature(bundle)"
+      ],
+      [
+        "client/dofus3/scripts/extract-world.py",
+        "if not dest.exists():"
+      ]
+    ],
+    "text": "La phase gfx détecte qu’un bundle a changé, relit ses sprites et actualise le catalogue, mais n’écrit le PNG que si la destination n’existe pas. Un sprite modifié gardant le même ID peut donc conserver ses anciens pixels alors que les métadonnées et la signature du bundle deviennent nouvelles. Régénérer les sorties dépendantes lorsqu’une signature change, ou utiliser des noms hashés et une provenance par sortie. Tester deux versions d’un même sprite avec le même ID. Les écritures atomiques et checkpoints existants sont utiles et doivent rester."
+  },
+  {
+    "id": "F33",
+    "title": "Les rapports de publication ne prouvent pas la couverture visuelle actuelle",
+    "priority": "P1",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/scripts/publish-world.py",
+        "report={'format'"
+      ],
+      [
+        "client/web/scripts/verify-world-effects.py",
+        "return 0 if report[\"ok\"] or args.limit else 1"
+      ],
+      [
+        "client/web/scripts/build-world.mjs",
+        "await run("
+      ]
+    ],
+    "text": "Le manifeste actuel compte 17 353 cartes et 786 entités ; le rapport de release existant parle encore de 670 entités et de 31 cartes avec atlas réutilisé. Ses listes de manques ne sont donc pas une validation fraîche. `verify-world-effects.py --limit` peut retourner 0 même si son rapport contient des erreurs ; sa validation porte surtout sur présence/version des fichiers, pas sur l’effet réellement rendu. Regénérer un rapport cohérent avec la même révision que les manifestes, vérifier les dépendances et hashes avant publication, faire échouer tout lot contenant une erreur, et intégrer les préparations complémentaires dans une commande de release claire. Revalider les données sans annoncer les anciens nombres de manques comme l’état visuel actuel."
+  },
+  {
+    "id": "F34",
+    "title": "Le code mort et les doublons doivent être séparés des outils de test",
+    "priority": "P2",
+    "evidence": "11 modules non atteignables confirmés par graphe et recherches",
+    "sources": [
+      [
+        "client/web/src/ui/bubble/windows/inventory/InventoryView.tsx",
+        "export function InventoryView"
+      ],
+      [
+        "client/web/src/ui/bubble/windows/inventory/InventoryPreview.tsx",
+        "export function InventoryPreview"
+      ],
+      [
+        "client/web/src/ui/themeStore.ts",
+        "themeStore"
+      ],
+      [
+        "client/web/src/game/particles/ParticleEvents.ts",
+        "export class ParticleEventQueue"
+      ]
+    ],
+    "text": "Les 11 modules listés plus bas représentent 918 lignes. Le nouvel aperçu d’inventaire utilise l’arbre officiel, laissant l’ancien ensemble de composants sans entrée. Le deuxième store de thème est remplacé par `ui/official/themeStore`. Les shaders non importés et la file d’événements de particules doivent être retirés ou raccordés selon le chantier F20. Le worker de dégâts, la géométrie Bubble importée, les fixtures et les hooks réservés aux tests ne sont pas à supprimer parce qu’ils sont générés ou non appelés en production. Le composant mort `VirtualItemGrid` rend d’ailleurs toutes les cellules : son nom ne prouve pas une virtualisation actuelle."
+  },
+  {
+    "id": "F35",
+    "title": "La structure du code complique les optimisations sûres",
+    "priority": "P2",
+    "evidence": "Constaté",
+    "sources": [
+      [
+        "client/web/src/game/renderer/GameRenderer.ts",
+        "export class GameRenderer"
+      ],
+      [
+        "client/web/src/ui/official/windowChrome.ts",
+        null
+      ],
+      [
+        "client/web/src/giny/GinyClient.ts",
+        "export class GinyClient"
+      ],
+      [
+        "client/web/src/App.tsx",
+        null
+      ],
+      [
+        "client/web/tsconfig.app.json",
+        "\"noUnusedLocals\""
+      ]
+    ],
+    "text": "`GameRenderer` atteint 1 666 lignes, `windowChrome` 1 226, `GinyClient` 835 ; rendu, chargement, entrée utilisateur et état réseau sont fortement imbriqués. `App` importe statiquement les écrans et plusieurs outils de prévisualisation. Le bundle principal produit 1 298 kB de JS et 794 kB de CSS minifiés ; le JS gzip fait 371 kB. Découper par responsabilités et écrans chargés à la demande, compiler les adaptations UI stables hors du runtime, et auditer les CSS avec couverture d’usage sur plusieurs écrans avant suppression. TypeScript active les checks d’inutilisés mais pas `strict` dans sa configuration actuelle ; l’introduire progressivement sur les frontières réseau/assets. Le manifeste `package.json` racine est celui de Bubble, sans scripts Giny : clarifier les points d’entrée du projet et les manifestes de référence."
+  },
+  {
+    "id": "F36",
+    "title": "La base de validation doit couvrir le jeu réel et les ressources réelles",
+    "priority": "P1",
+    "evidence": "Résultats exécutés et lacunes observées",
+    "sources": [
+      [
+        "client/web/playwright.config.ts",
+        "command:"
+      ],
+      [
+        "client/web/e2e/performance.spec.ts",
+        "for (const mapId"
+      ],
+      [
+        "client/web/e2e/map-effects-performance.spec.ts",
+        "test.skip"
+      ],
+      [
+        "client/dofus3/requirements.txt",
+        null
+      ],
+      [
+        "client/web/tsconfig.app.json",
+        null
+      ]
+    ],
+    "text": "Rétablir les contrats des 4 tests en échec sans masquer les comportements, rendre les environnements Python reproductibles et séparer le lint du worker importé. Le banc général lance Vite en développement ; le benchmark Electron d’effets dépend d’un mode et d’un corpus particuliers. Il faut un parcours production Electron instrumenté qui démarre, change de carte, ouvre le HUD, combat, perd le focus puis revient, sans serveur fictif pour les validations finales de session. Publier les artefacts en cas d’échec, vérifier les ressources requises au départ et définir des seuils réalistes par machine. Les tests unitaires réussis ne valident pas la VRAM, les timers de longue durée ni la fidélité de tous les effets."
+  }
+]
