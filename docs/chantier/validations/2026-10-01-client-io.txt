@@ -1,0 +1,28 @@
+Reprise du client Giny3 — 2026-10-01
+Base : d2a9695ff69d7cb76cd489305f312dd92cb2753b
+
+
+> giny-web-client@0.0.0 test:io
+> vitest run --config vitest.io.config.ts
+
+
+ RUN  v4.1.11 /workspace/Giny3/client/web
+
+
+ Test Files  20 passed (20)
+      Tests  103 passed (103)
+   Start at  06:05:02
+   Duration  6.27s (transform 3.07s, setup 0ms, import 4.92s, tests 750ms, environment 2ms)
+
+
+Tests Node exécutés : node --test server/bubbleMap3Assets.test.mjs server/fileResponse.test.mjs
+8 tests réussis ; 0 échec ; 0 ignoré.
+
+Lint ciblé : npx oxlint src/giny vitest.io.config.ts test-support — exit 0.
+TypeScript I/O strict : réussi avec une déclaration temporaire pour le logger absent.
+La configuration test:io remplace uniquement la journalisation. Aucun moteur graphique simulé dans la production.
+
+Build complet : 48 erreurs avant et après ; mêmes catégories.
+Sources/ressources absentes : src/game/bubble, src/ui/bubble, src/debug, public/bubble, runtime-assets, resources/app.asar.
+Suite npm test : arrêt préalable sur runtime-assets/ui/trees absent.
+Aucun lancement graphique ni parcours de jeu déclaré validé.

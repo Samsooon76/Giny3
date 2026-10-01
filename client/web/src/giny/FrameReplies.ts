@@ -32,6 +32,16 @@ export class FrameReplies {
   read(ids: number[], timeoutMs: number): Promise<GinyFrame> {
     const index = this.frames.findIndex(frame => ids.includes(frame.messageId))
     if (index >= 0) return Promise.resolve(this.frames.splice(index, 1)[0])
+    return this.wait(ids, timeoutMs)
+  }
+
+  /** Install the reply waiter before sending, and cancel it if send throws. */
+  request(ids: number[], timeoutMs: number, send: () => void): Promise<GinyFrame> {
+    for (const id of ids) this.discard(id)
+    return this.wait(ids, timeoutMs, send)
+  }
+
+  private wait(ids: number[], timeoutMs: number, send?: () => void): Promise<GinyFrame> {
     return new Promise((resolve, reject) => {
       const waiter: Waiter = { ids: new Set(ids), resolve, reject,
         timeout: setTimeout(() => {
@@ -41,6 +51,12 @@ export class FrameReplies {
         }, timeoutMs),
       }
       this.waiters.push(waiter)
+      try { send?.() } catch (error) {
+        const index = this.waiters.indexOf(waiter)
+        if (index >= 0) this.waiters.splice(index, 1)
+        clearTimeout(waiter.timeout)
+        reject(error instanceof Error ? error : new Error(String(error)))
+      }
     })
   }
 

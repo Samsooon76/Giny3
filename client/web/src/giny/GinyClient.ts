@@ -52,6 +52,7 @@ import { CHAT_CHANNEL } from './types'
 export { characterNameError, parseCharacterHud } from './parsers'
 export type { InteractiveEvent } from './parsers'
 const MESSAGE_NAMES = new Map<number, string>(Object.entries(MESSAGES).map(([name, id]) => [id as number, name]))
+type MapSnapshot = Pick<WorldSession, 'actors' | 'interactives'>
 
 function messageName(messageId: number): string {
   return MESSAGE_NAMES.get(messageId) ?? `inconnu(${messageId})`
@@ -178,9 +179,13 @@ export class GinyClient {
   private chat = new SessionChat()
   private disconnectListeners = new Set<(reason: string) => void>()
   private switchingTarget = false
+  private target: 'auth' | 'world' | null = null
+  private expectedAuthDisconnect = false
   private manualClose = false
+  private generation = 0
   /** Guards against two server-driven map changes overlapping. */
   private serverMapChange: Promise<void> | null = null
+  private mapSnapshotRequest: { mapId: number; promise: Promise<MapSnapshot> } | null = null
   private lastHud: CharacterHud | null = null
   private hudRequest: Promise<CharacterHud | null> | null = null
   private readonly hudNotifications = new HudRefreshQueue(async () => {
@@ -191,16 +196,21 @@ export class GinyClient {
 
   async authenticate(identifier: string, password: string): Promise<Account> {
     this.close()
+    const generation = this.generation
     await this.openBridge()
+    this.assertCurrent(generation)
     await this.connectTarget({ type: 'connect-auth' })
+    this.assertCurrent(generation)
     await this.readUntil([MESSAGES.HELLO_CONNECT])
+    this.assertCurrent(generation)
     this.aesKey = crypto.getRandomValues(new Uint8Array(32))
     const credentials = new Writer().utf(identifier).utf(password).raw(this.aesKey).finish()
     const payload = new Writer()
       .u8(0).raw(Uint8Array.from([3, 0, 0])).i32(0).u8(0).utf('fr')
       .varUInt(credentials.length).raw(credentials).u16(0).varUInt(0).u16(0).finish()
-    this.send(MESSAGES.IDENTIFICATION, payload)
-    const response = await this.readUntil([MESSAGES.IDENTIFICATION_SUCCESS, MESSAGES.IDENTIFICATION_FAILED])
+    const response = await this.requestFrame([MESSAGES.IDENTIFICATION_SUCCESS, MESSAGES.IDENTIFICATION_FAILED], () =>
+      this.send(MESSAGES.IDENTIFICATION, payload))
+    this.assertCurrent(generation)
     if (response.messageId === MESSAGES.IDENTIFICATION_FAILED) {
       throw new Error(`Authentification Giny refusée (reason=${response.payload[0] ?? -1}).`)
     }
@@ -238,36 +248,53 @@ export class GinyClient {
     // before we send SERVER_SELECTION — otherwise App.tsx logout() closes the
     // gateway and connect-world throws "Passerelle Giny fermée."
     this.switchingTarget = true
+    this.expectedAuthDisconnect = false
+    const generation = this.generation
     try {
-      this.send(MESSAGES.SERVER_SELECTION, new Writer().varUInt(serverId).finish())
-      const response = await this.readUntil([MESSAGES.SELECTED_SERVER_DATA, MESSAGES.SELECTED_SERVER_REFUSED])
+      const response = await this.requestFrame([MESSAGES.SELECTED_SERVER_DATA, MESSAGES.SELECTED_SERVER_REFUSED], () =>
+        this.send(MESSAGES.SERVER_SELECTION, new Writer().varUInt(serverId).finish()))
+      this.assertCurrent(generation)
       if (response.messageId === MESSAGES.SELECTED_SERVER_REFUSED) throw parseServerSelectionRefused(response.payload)
       const selected = parseSelectedServer(response.payload)
       const ticket = await decryptTicket(selected.encryptedTicket, this.aesKey)
+      this.assertCurrent(generation)
       // Drop leftover Auth frames before World speaks; do it *before* connect so a
       // HELLO_GAME that races with `{type:connected}` is not wiped by reset.
       this.codec.reset()
       this.replies.discard()
       await this.connectTarget({ type: 'connect-world', host: selected.host, port: selected.ports[0] })
+      this.assertCurrent(generation)
       await this.readUntil([MESSAGES.HELLO_GAME])
-      this.send(MESSAGES.AUTHENTICATION_TICKET, new Writer().utf('fr').utf(ticket).finish())
-      const accepted = await this.readUntil([MESSAGES.AUTHENTICATION_TICKET_ACCEPTED, MESSAGES.AUTHENTICATION_TICKET_REFUSED])
+      this.assertCurrent(generation)
+      const accepted = await this.requestFrame([MESSAGES.AUTHENTICATION_TICKET_ACCEPTED, MESSAGES.AUTHENTICATION_TICKET_REFUSED], () =>
+        this.send(MESSAGES.AUTHENTICATION_TICKET, new Writer().utf('fr').utf(ticket).finish()))
+      this.assertCurrent(generation)
       if (accepted.messageId === MESSAGES.AUTHENTICATION_TICKET_REFUSED) throw new Error('Ticket World refusé par Giny.')
       this.selectedInternal = selected
       return selected
     } finally {
-      this.switchingTarget = false
+      if (generation === this.generation) {
+        this.switchingTarget = false
+        this.expectedAuthDisconnect = false
+      }
     }
   }
 
   async listCharacters(): Promise<{ characters: Character[]; catalog: CreationCatalog }> {
-    this.send(MESSAGES.CHARACTERS_LIST_REQUEST, new Uint8Array())
-    const response = await this.readUntil([MESSAGES.CHARACTERS_LIST])
-    if (!this.catalog) this.catalog = await loadCreationCatalog()
+    const generation = this.generation
+    const response = await this.requestFrame([MESSAGES.CHARACTERS_LIST], () =>
+      this.send(MESSAGES.CHARACTERS_LIST_REQUEST, new Uint8Array()))
+    this.assertCurrent(generation)
+    if (!this.catalog) {
+      const catalog = await loadCreationCatalog()
+      this.assertCurrent(generation)
+      this.catalog = catalog
+    }
     return { characters: parseCharacters(response.payload, this.catalog), catalog: this.catalog }
   }
 
   async createCharacter(request: CreationRequest): Promise<Character> {
+    const generation = this.generation
     const nameError = characterNameError(request.name)
     if (nameError) throw new Error(nameError)
     if (request.breedId <= 0 || request.cosmeticId <= 0 || request.colors.length !== 5) {
@@ -276,35 +303,43 @@ export class GinyClient {
     const writer = new Writer().utf(request.name.trim()).u8(request.breedId).u8(request.sex ? 1 : 0)
     request.colors.forEach((color) => writer.i32(color))
     writer.varUInt(request.cosmeticId)
-    this.send(MESSAGES.CHARACTER_CREATION_REQUEST, writer.finish())
-    const response = await this.readUntil([MESSAGES.CHARACTER_CREATION_RESULT])
+    const response = await this.requestFrame([MESSAGES.CHARACTER_CREATION_RESULT], () =>
+      this.send(MESSAGES.CHARACTER_CREATION_REQUEST, writer.finish()))
+    this.assertCurrent(generation)
     const result = response.payload[0] ?? -1
     if (result !== 0) throw new Error(creationError(result, response.payload[1] ?? 0))
     const selected = await this.readUntil([MESSAGES.CHARACTER_SELECTED_SUCCESS, MESSAGES.CHARACTER_SELECTED_ERROR])
+    this.assertCurrent(generation)
     if (selected.messageId === MESSAGES.CHARACTER_SELECTED_ERROR) throw new Error('Le personnage a été créé mais sa sélection a échoué.')
     this.selectedCharacter = parseSelectedCharacter(selected.payload, this.catalog)
     await this.readUntil([MESSAGES.CHARACTER_LOADING_COMPLETE])
+    this.assertCurrent(generation)
     this.characterLoaded = true
     return this.selectedCharacter
   }
 
   async enterWorld(characterId: number): Promise<WorldSession> {
     if (!this.account || !this.selectedInternal) throw new Error('Session Giny incomplète.')
+    const generation = this.generation
     if (this.selectedCharacter?.id !== characterId) {
-      this.send(MESSAGES.CHARACTER_SELECTION, new Writer().varUInt(characterId).finish())
-      const selected = await this.readUntil([MESSAGES.CHARACTER_SELECTED_SUCCESS, MESSAGES.CHARACTER_SELECTED_ERROR])
+      const selected = await this.requestFrame([MESSAGES.CHARACTER_SELECTED_SUCCESS, MESSAGES.CHARACTER_SELECTED_ERROR], () =>
+        this.send(MESSAGES.CHARACTER_SELECTION, new Writer().varUInt(characterId).finish()))
+      this.assertCurrent(generation)
       if (selected.messageId === MESSAGES.CHARACTER_SELECTED_ERROR) throw new Error('Sélection du personnage refusée par Giny.')
       this.selectedCharacter = parseSelectedCharacter(selected.payload, this.catalog)
       this.characterLoaded = false
     }
     if (!this.characterLoaded) {
       await this.readUntil([MESSAGES.CHARACTER_LOADING_COMPLETE])
+      this.assertCurrent(generation)
       this.characterLoaded = true
     }
     // Enable the modern event projection before a possible combat reconnection.
     await this.requestCharacterHud()
-    this.send(MESSAGES.GAME_CONTEXT_CREATE_REQUEST, new Uint8Array())
-    let current = await this.readUntil([MESSAGES.CURRENT_MAP, MESSAGES.MODERN_FIGHT_SNAPSHOT])
+    this.assertCurrent(generation)
+    let current = await this.requestFrame([MESSAGES.CURRENT_MAP, MESSAGES.MODERN_FIGHT_SNAPSHOT], () =>
+      this.send(MESSAGES.GAME_CONTEXT_CREATE_REQUEST, new Uint8Array()))
+    this.assertCurrent(generation)
     while (current.messageId === MESSAGES.MODERN_FIGHT_SNAPSHOT) {
       const fight = this.combatState.snapshot
       if (fight) {
@@ -315,6 +350,7 @@ export class GinyClient {
           direction: local?.direction ?? 1, actors: [], interactives: [], hud: this.lastHud }
       }
       current = await this.readUntil([MESSAGES.CURRENT_MAP, MESSAGES.MODERN_FIGHT_SNAPSHOT])
+      this.assertCurrent(generation)
     }
     this.currentMapId = Math.trunc(new Reader(current.payload).f64())
     return this.loadWorldSession()
@@ -328,14 +364,18 @@ export class GinyClient {
       throw new Error('Transition de carte invalide.')
     }
     if (this.mapChangePending) throw new Error('Un changement de carte est déjà en cours.')
+    const generation = this.generation
     this.mapChangePending = true
     try {
-      this.send(MESSAGES.CHANGE_MAP, new Writer().f64(mapId).u8(0).finish(), `map=${this.currentMapId} → ${mapId}`)
-      const current = await this.readUntil([MESSAGES.CURRENT_MAP], 10000)
+      const current = await this.requestFrame([MESSAGES.CURRENT_MAP], () =>
+        this.send(MESSAGES.CHANGE_MAP, new Writer().f64(mapId).u8(0).finish(), `map=${this.currentMapId} → ${mapId}`), 10000)
+      this.assertCurrent(generation)
       this.currentMapId = Math.trunc(new Reader(current.payload).f64())
-      return await this.loadWorldSession()
+      const session = await this.loadWorldSession()
+      this.assertCurrent(generation)
+      return session
     } finally {
-      this.mapChangePending = false
+      if (generation === this.generation) this.mapChangePending = false
     }
   }
 
@@ -343,23 +383,32 @@ export class GinyClient {
     if (!this.account || !this.selectedInternal || !this.selectedCharacter || !this.currentMapId) {
       throw new Error('Session Giny incomplète.')
     }
-    this.send(MESSAGES.MAP_INFORMATION_REQUEST, new Writer().f64(this.currentMapId).finish())
-    const complementary = await this.readUntil([MESSAGES.MAP_COMPLEMENTARY_INFORMATION])
+    const generation = this.generation, mapId = this.currentMapId
+    const account = this.account, server = this.selectedInternal, character = this.selectedCharacter
+    const check = () => {
+      this.assertCurrent(generation)
+      if (this.currentMapId !== mapId) throw new Error('La carte a changé pendant son chargement.')
+    }
+    const complementary = await this.requestFrame([MESSAGES.MAP_COMPLEMENTARY_INFORMATION], () =>
+      this.send(MESSAGES.MAP_INFORMATION_REQUEST, new Writer().f64(mapId).finish()))
+    check()
     const header = new Reader(complementary.payload)
     const subareaId = header.varUInt()
-    header.f64()
-    const { actors, interactives } = await this.snapshot()
+    if (header.f64() !== mapId) throw new Error('La carte a changé pendant son chargement.')
+    const { actors, interactives } = await this.snapshot(mapId)
+    check()
     // Giny emits this idle sentinel while the map finishes loading. It must
     // never satisfy the next, unrelated movement request.
     this.replies.discard(MESSAGES.GAME_MAP_NO_MOVEMENT)
-    const local = actors.find((actor) => actor.id === this.selectedCharacter!.id)
+    const local = actors.find((actor) => actor.id === character.id)
     const hud = await this.requestCharacterHud()
+    check()
     return {
-      mapId: this.currentMapId,
+      mapId,
       subareaId,
-      account: this.account,
-      server: this.selectedInternal,
-      character: this.selectedCharacter,
+      account,
+      server,
+      character,
       cellId: local?.cell_id ?? 0,
       direction: local?.direction ?? 1,
       actors,
@@ -370,15 +419,16 @@ export class GinyClient {
 
   async requestCharacterHud(): Promise<CharacterHud | null> {
     if (this.hudRequest) return this.hudRequest
+    const generation = this.generation
     const request = (async () => {
       try {
-        const response = this.readUntil([MESSAGES.MODERN_CHARACTER_SNAPSHOT], 2500)
-        this.send(MESSAGES.MODERN_CHARACTER_SNAPSHOT_REQUEST, new Uint8Array())
-        const frame = await response
+        const frame = await this.requestFrame([MESSAGES.MODERN_CHARACTER_SNAPSHOT], () =>
+          this.send(MESSAGES.MODERN_CHARACTER_SNAPSHOT_REQUEST, new Uint8Array()), 2500)
+        this.assertCurrent(generation)
         const parsed = parseCharacterHud(frame.payload)
         return parsed ? this.decorateCharacterHud(parsed) : this.lastHud
       } catch {
-        return this.lastHud
+        return generation === this.generation ? this.lastHud : null
       }
     })()
     this.hudRequest = request
@@ -388,15 +438,37 @@ export class GinyClient {
     return request
   }
 
-  async snapshot(expectedMapId = this.currentMapId): Promise<{ actors: WorldActor[]; interactives: WorldInteractive[] }> {
-    this.send(MESSAGES.MODERN_MAP_SNAPSHOT_REQUEST, new Uint8Array())
-    const frame = await this.readUntil([MESSAGES.MODERN_MAP_SNAPSHOT])
-    const parsed = JSON.parse(readModernJson(frame.payload)) as {
-      map_id?: number; actors?: WorldActor[]; interactives?: WorldInteractive[]; error?: string
+  async snapshot(expectedMapId = this.currentMapId): Promise<MapSnapshot> {
+    const generation = this.generation
+    if (this.mapSnapshotRequest && this.mapSnapshotRequest.mapId !== expectedMapId) {
+      // Replies have no request ID. Finish the old map's request before sending
+      // another one, so its reply cannot satisfy the new map's waiter.
+      await this.mapSnapshotRequest.promise.catch(() => undefined)
+      this.assertCurrent(generation)
+      if (this.currentMapId !== expectedMapId) throw new Error('La carte a changé pendant son chargement.')
+      return this.snapshot(expectedMapId)
     }
-    if (parsed.error) throw new Error(parsed.error)
-    if (parsed.map_id != null && expectedMapId != null && parsed.map_id !== expectedMapId) throw new Error('La carte a changé pendant son chargement.')
-    return { actors: parsed.actors ?? [], interactives: parsed.interactives ?? [] }
+    if (!this.mapSnapshotRequest) {
+      const promise = this.requestFrame([MESSAGES.MODERN_MAP_SNAPSHOT], () =>
+        this.send(MESSAGES.MODERN_MAP_SNAPSHOT_REQUEST, new Uint8Array())).then(frame => {
+        const parsed = JSON.parse(readModernJson(frame.payload)) as {
+          map_id?: number; actors?: WorldActor[]; interactives?: WorldInteractive[]; error?: string
+        }
+        if (parsed.error) throw new Error(parsed.error)
+        if (parsed.map_id != null && parsed.map_id !== expectedMapId) throw new Error('La carte a changé pendant son chargement.')
+        return { actors: parsed.actors ?? [], interactives: parsed.interactives ?? [] }
+      })
+      this.mapSnapshotRequest = { mapId: expectedMapId, promise }
+    }
+    const request = this.mapSnapshotRequest
+    try {
+      const snapshot = await request.promise
+      this.assertCurrent(generation)
+      if (this.currentMapId !== expectedMapId) throw new Error('La carte a changé pendant son chargement.')
+      return snapshot
+    } finally {
+      if (this.mapSnapshotRequest === request) this.mapSnapshotRequest = null
+    }
   }
 
   /** Ask the emulator to run an interactive element's skill (door, zaap, resource).
@@ -418,17 +490,17 @@ export class GinyClient {
 
   async requestMovement(path: number[], mapId: number): Promise<number[]> {
     if (mapId !== this.currentMapId || path.length < 2) throw new Error('Chemin de mouvement invalide.')
+    const generation = this.generation
     const keys = encodeMovement(path)
     const writer = new Writer().u16(keys.length)
     keys.forEach((key) => writer.u16(key))
     writer.f64(mapId)
-    this.send(
-      MESSAGES.GAME_MAP_MOVEMENT_REQUEST,
-      writer.finish(),
-      `map=${mapId} [${path[0]} → ${path[path.length - 1]}] (${path.length} cellules)`,
-    )
+    let response = await this.requestFrame([MESSAGES.GAME_MAP_MOVEMENT, MESSAGES.GAME_MAP_NO_MOVEMENT], () =>
+      this.send(MESSAGES.GAME_MAP_MOVEMENT_REQUEST, writer.finish(),
+        `map=${mapId} [${path[0]} → ${path[path.length - 1]}] (${path.length} cellules)`))
     while (true) {
-      const response = await this.readUntil([MESSAGES.GAME_MAP_MOVEMENT, MESSAGES.GAME_MAP_NO_MOVEMENT])
+      this.assertCurrent(generation)
+      if (mapId !== this.currentMapId) throw new Error('La carte a changé pendant le déplacement.')
       if (response.messageId === MESSAGES.GAME_MAP_NO_MOVEMENT) {
         if (response.payload.length >= 4) {
           const reader = new Reader(response.payload)
@@ -455,6 +527,7 @@ export class GinyClient {
       const movement = parseMovement(response.payload)
       if (movement.actorId === this.selectedCharacter?.id) return movement.path
       this.emitMovement(movement)
+      response = await this.readUntil([MESSAGES.GAME_MAP_MOVEMENT, MESSAGES.GAME_MAP_NO_MOVEMENT])
     }
   }
 
@@ -535,7 +608,7 @@ export class GinyClient {
 
   private emitDisconnect(reason: string): void {
     if (this.manualClose) return
-    this.clearNpc()
+    this.close()
     logEvent('network', 'disconnected', reason)
     this.disconnectListeners.forEach((listener) => {
       try { listener(reason) } catch { /* ignore */ }
@@ -543,6 +616,7 @@ export class GinyClient {
   }
 
   close(): void {
+    this.generation++
     this.hudNotifications.reset()
     this.pendingSpellCasts.clear()
     this.combatQueue.reset()
@@ -559,6 +633,8 @@ export class GinyClient {
     this.transport?.close()
     this.transport = null
     this.switchingTarget = false
+    this.target = null
+    this.expectedAuthDisconnect = false
     this.replies.discard()
     this.knownServers = null
     this.serverPreviews.clear()
@@ -570,18 +646,26 @@ export class GinyClient {
     this.codec.reset()
     this.sequence = 0
     this.selectedInternal = null
+    this.account = null
     this.selectedCharacter = null
     this.characterLoaded = false
     this.currentMapId = 0
     this.lastHud = null
     this.hudRequest = null
     this.serverMapChange = null
+    this.mapSnapshotRequest = null
+    this.mapChangePending = false
     this.chat.reset()
     this.manualClose = false
   }
 
   private async openBridge(): Promise<void> {
+    const generation = this.generation
     const transport = await openGinyTransport()
+    if (generation !== this.generation) {
+      transport.close()
+      throw new Error('Connexion Giny fermée.')
+    }
     this.transport = transport
     transport.onMessage((data) => {
       if (this.transport === transport) this.onTransportMessage(data)
@@ -598,7 +682,9 @@ export class GinyClient {
 
   private connectTarget(control: object): Promise<void> {
     if (!this.transport) return Promise.reject(new Error('Passerelle Giny fermée.'))
-    return new Promise((resolve, reject) => {
+    const generation = this.generation
+    this.target = (control as { type: string }).type === 'connect-auth' ? 'auth' : 'world'
+    return new Promise<void>((resolve, reject) => {
       const waiter = {
         resolve,
         reject,
@@ -609,21 +695,38 @@ export class GinyClient {
         }, 5000) as unknown as number,
       }
       this.controlWaiters.push(waiter)
-      this.transport!.send(JSON.stringify(control))
-    })
+      try { this.transport!.send(JSON.stringify(control)) } catch (error) {
+        const index = this.controlWaiters.indexOf(waiter)
+        if (index >= 0) this.controlWaiters.splice(index, 1)
+        clearTimeout(waiter.timeout)
+        reject(error instanceof Error ? error : new Error(String(error)))
+      }
+    }).then(() => this.assertCurrent(generation))
   }
 
   private onTransportMessage(data: string | Uint8Array): void {
     if (typeof data === 'string') {
-      const control = JSON.parse(data) as { type: string; message?: string }
+      let control: { type: string; message?: string }
+      try { control = JSON.parse(data) } catch {
+        logEvent('error', 'gateway-control', 'Commande de passerelle invalide reçue.')
+        return
+      }
+      if (!control || typeof control.type !== 'string') return
       if (control.type === 'connected' || control.type === 'error') {
         const waiter = this.controlWaiters.shift()
         if (control.type === 'connected' && waiter) { clearTimeout(waiter.timeout); waiter.resolve() }
         if (control.type === 'error' && waiter) { clearTimeout(waiter.timeout); waiter.reject(new Error(control.message ?? 'Erreur Giny.')) }
+        else if (control.type === 'error') {
+          const reason = typeof control.message === 'string' ? control.message : 'Erreur Giny.'
+          this.failAll(new Error(reason))
+          this.emitDisconnect(reason)
+        }
       } else if (control.type === 'disconnected') {
         // A target close during server switch (Auth -> World) is expected.
         // If not switching targets and not manually closed, the connection was lost.
-        if (!this.switchingTarget && !this.manualClose) {
+        const expected = this.switchingTarget && this.target === 'auth' && this.expectedAuthDisconnect
+        this.expectedAuthDisconnect = false
+        if (!expected && !this.manualClose) {
           this.failAll(new Error('Le serveur Giny s’est déconnecté.'))
           this.emitDisconnect('La connexion avec le serveur a été perdue.')
         }
@@ -634,6 +737,7 @@ export class GinyClient {
   }
 
   private dispatchFrame(frame: GinyFrame): void {
+    if (frame.messageId === MESSAGES.SELECTED_SERVER_DATA && this.switchingTarget && this.target === 'auth') this.expectedAuthDisconnect = true
     if (frame.messageId === MESSAGES.CURRENT_MAP) this.clearNpc()
     if (this.characterLoaded && ACTOR_NOTIFICATIONS.has(frame.messageId))
       this.actorChangeListeners.forEach(listener => listener())
@@ -755,7 +859,10 @@ export class GinyClient {
       this.handleServerMapChange(frame)
       return
     }
-    this.replies.queue(frame)
+    // Only protocol replies needed by later handshake steps are buffered.
+    // Inventory, actor and other gameplay notifications must not grow this
+    // queue for the whole session; their stores refresh from modern snapshots.
+    if (BUFFERED_REPLIES.has(frame.messageId)) this.replies.queue(frame)
   }
 
   private parseInteractiveFrame(frame: GinyFrame): InteractiveEvent | null {
@@ -777,11 +884,14 @@ export class GinyClient {
     const mapId = Math.trunc(new Reader(frame.payload).f64())
     if (!Number.isSafeInteger(mapId) || mapId <= 0) return
     this.currentMapId = mapId
+    const generation = this.generation
     const previous = this.serverMapChange ?? Promise.resolve()
     const chained = previous
       .catch(() => undefined)
       .then(async () => {
+        if (generation !== this.generation || mapId !== this.currentMapId) return
         const session = await this.loadWorldSession()
+        if (generation !== this.generation || mapId !== this.currentMapId) return
         this.mapListeners.forEach((listener) => listener(session))
       })
       .catch((error: unknown) => {
@@ -793,8 +903,22 @@ export class GinyClient {
     this.serverMapChange = chained
   }
 
-  private readUntil(ids: number[], timeoutMs = 5000): Promise<GinyFrame> {
-    return this.replies.read(ids, timeoutMs)
+  private assertCurrent(generation: number): void {
+    if (generation !== this.generation) throw new Error('Connexion Giny fermée.')
+  }
+
+  private async readUntil(ids: number[], timeoutMs = 5000): Promise<GinyFrame> {
+    const generation = this.generation
+    const frame = await this.replies.read(ids, timeoutMs)
+    this.assertCurrent(generation)
+    return frame
+  }
+
+  private async requestFrame(ids: number[], send: () => void, timeoutMs = 5000): Promise<GinyFrame> {
+    const generation = this.generation
+    const frame = await this.replies.request(ids, timeoutMs, send)
+    this.assertCurrent(generation)
+    return frame
   }
 
   private send(messageId: number, payload: Uint8Array, detail?: string): void {
@@ -848,4 +972,15 @@ const HUD_NOTIFICATIONS = new Set<number>([
 const ACTOR_NOTIFICATIONS = new Set<number>([
   MESSAGES.ROLEPLAY_SHOW_ACTOR, MESSAGES.ROLEPLAY_SHOW_ACTORS,
   MESSAGES.CONTEXT_REMOVE_ACTOR, MESSAGES.CONTEXT_REMOVE_ACTORS,
+])
+
+const BUFFERED_REPLIES = new Set<number>([
+  MESSAGES.HELLO_CONNECT, MESSAGES.IDENTIFICATION_SUCCESS, MESSAGES.IDENTIFICATION_FAILED,
+  MESSAGES.SELECTED_SERVER_DATA, MESSAGES.SELECTED_SERVER_REFUSED, MESSAGES.HELLO_GAME,
+  MESSAGES.AUTHENTICATION_TICKET_ACCEPTED, MESSAGES.AUTHENTICATION_TICKET_REFUSED,
+  MESSAGES.CHARACTERS_LIST, MESSAGES.CHARACTER_CREATION_RESULT,
+  MESSAGES.CHARACTER_SELECTED_SUCCESS, MESSAGES.CHARACTER_SELECTED_ERROR,
+  MESSAGES.CHARACTER_LOADING_COMPLETE, MESSAGES.CURRENT_MAP,
+  MESSAGES.MAP_COMPLEMENTARY_INFORMATION, MESSAGES.MODERN_MAP_SNAPSHOT,
+  MESSAGES.GAME_MAP_NO_MOVEMENT,
 ])

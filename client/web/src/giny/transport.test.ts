@@ -4,6 +4,7 @@ import { openGinyTransport } from './transport'
 
 afterEach(() => {
   vi.unstubAllGlobals()
+  vi.useRealTimers()
 })
 
 function mockNative() {
@@ -56,5 +57,61 @@ describe('native Giny transport', () => {
     expect(stopControl).toHaveBeenCalled()
     expect(stopData).toHaveBeenCalled()
     expect(native.close).toHaveBeenCalled()
+  })
+})
+
+class MockWebSocket extends EventTarget {
+  static OPEN = 1
+  static sockets: MockWebSocket[] = []
+  readyState = 0
+  binaryType = ''
+  send = vi.fn()
+  close = vi.fn(() => { this.readyState = 3; this.dispatchEvent(new Event('close')) })
+  constructor(_url: string) { super(); MockWebSocket.sockets.push(this) }
+}
+
+function browserTransport() {
+  vi.useFakeTimers()
+  MockWebSocket.sockets = []
+  vi.stubGlobal('window', {})
+  vi.stubGlobal('location', { protocol: 'http:', host: 'localhost:5173' })
+  vi.stubGlobal('WebSocket', MockWebSocket)
+  const opened = openGinyTransport()
+  return { opened, socket: MockWebSocket.sockets[0] }
+}
+
+describe('browser Giny transport', () => {
+  it('rejects a gateway that closes before opening', async () => {
+    const { opened, socket } = browserTransport()
+    const rejected = expect(opened).rejects.toThrow('Passerelle WebSocket Giny indisponible.')
+    socket.dispatchEvent(new Event('close'))
+    await rejected
+    expect(vi.getTimerCount()).toBe(0)
+  })
+
+  it('bounds the connection deadline and ignores a late open', async () => {
+    const { opened, socket } = browserTransport()
+    const rejected = expect(opened).rejects.toThrow('Passerelle WebSocket Giny indisponible.')
+    await vi.advanceTimersByTimeAsync(5000)
+    await rejected
+    expect(socket.close).toHaveBeenCalledOnce()
+    socket.dispatchEvent(new Event('open'))
+    expect(vi.getTimerCount()).toBe(0)
+  })
+
+  it('clears the connection deadline and reports a later gateway close', async () => {
+    const { opened, socket } = browserTransport()
+    socket.readyState = MockWebSocket.OPEN
+    socket.dispatchEvent(new Event('open'))
+    const transport = await opened
+    const closed = vi.fn()
+    transport.onClose(closed)
+    expect(transport.isOpen()).toBe(true)
+    expect(vi.getTimerCount()).toBe(0)
+    await vi.advanceTimersByTimeAsync(5000)
+    expect(socket.close).not.toHaveBeenCalled()
+    transport.close()
+    expect(closed).toHaveBeenCalledOnce()
+    expect(transport.isOpen()).toBe(false)
   })
 })

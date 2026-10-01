@@ -75,6 +75,11 @@ function lastConnectType(native: GinyNative): string | undefined {
   }
 }
 
+function lastFrameId(native: GinyNative): number | undefined {
+  const frame = (native.sendFrame as ReturnType<typeof vi.fn>).mock.calls.at(-1)?.[0] as Uint8Array | undefined
+  return frame && ((frame[0] << 8) | frame[1]) >>> 2
+}
+
 async function encryptTicket(ticket: string, key: Uint8Array): Promise<Uint8Array> {
   const cryptoKey = await crypto.subtle.importKey('raw', new Uint8Array(key), { name: 'AES-CBC' }, false, ['encrypt'])
   const encrypted = await crypto.subtle.encrypt(
@@ -138,7 +143,7 @@ describe('GinyClient onDisconnect', () => {
     await vi.waitFor(() => expect(lastConnectType(native)).toBe('connect-auth'))
     emitControl({ type: 'connected' })
     emitData(packServerFrame(MESSAGES.HELLO_CONNECT, new Uint8Array()))
-    await vi.waitFor(() => expect(native.sendFrame).toHaveBeenCalled())
+    await vi.waitFor(() => expect(lastFrameId(native)).toBe(MESSAGES.IDENTIFICATION))
     emitData(packServerFrame(
       MESSAGES.IDENTIFICATION_SUCCESS,
       new Writer().u8(0).utf('admin').utf('Hugo').utf('#0001').i32(1).finish(),
@@ -152,7 +157,7 @@ describe('GinyClient onDisconnect', () => {
     expect(servers[0]?.id).toBe(50)
 
     const selected = client.selectServer(50)
-    await vi.waitFor(() => expect(native.sendFrame).toHaveBeenCalled())
+    await vi.waitFor(() => expect(lastFrameId(native)).toBe(MESSAGES.SERVER_SELECTION))
     emitData(packServerFrame(
       MESSAGES.SELECTED_SERVER_DATA,
       new Writer()
@@ -171,7 +176,7 @@ describe('GinyClient onDisconnect', () => {
     await vi.waitFor(() => expect(lastConnectType(native)).toBe('connect-world'))
     emitControl({ type: 'connected' })
     emitData(packServerFrame(MESSAGES.HELLO_GAME, new Uint8Array()))
-    await vi.waitFor(() => expect(native.sendFrame).toHaveBeenCalled())
+    await vi.waitFor(() => expect(lastFrameId(native)).toBe(MESSAGES.AUTHENTICATION_TICKET))
     emitData(packServerFrame(MESSAGES.AUTHENTICATION_TICKET_ACCEPTED, new Uint8Array()))
     await expect(selected).resolves.toMatchObject({ id: 50, host: '127.0.0.1', ports: [5555] })
     client.close()

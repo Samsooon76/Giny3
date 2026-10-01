@@ -2,6 +2,11 @@
 
 Dernière mise à jour : 5 septembre 2026, incrément 006 (recette et lancement local).
 
+**Reprise GitHub du 1er octobre 2026 :** les sources et ressources de la copie
+locale de septembre ne sont pas toutes versionnées. Le client ne compile pas
+depuis ce clone. La correction I/O est validée par 103 tests de protocole isolés,
+sans recette graphique ; voir [le rapport de reprise](REPRISE-CLIENT-2026-10-01.md).
+
 Ce fichier suit les 29 fenêtres du registre client et les parcours transversaux. Il sera mis à jour à chaque incrément du chantier, avec le [journal](JOURNAL.md). Les données d’audit décrivent le code constaté ; elles ne constituent pas une recette interactive.
 
 Statuts : **audité** = état identifié ; **en cours** = code modifié, validation incomplète ; **validé techniquement** = tests identifiés passés ; **validé en jeu** = parcours exécuté depuis le client. Aucune interface ne passe « terminée » sur la seule présence d’un écran ou d’un handler.
@@ -334,6 +339,13 @@ Dernière validation globale : 448 tests client et 22 tests serveur réussis. Le
 - **Validation :** Forge niveau 1 → niveau 2 depuis le client, avec droits et contributions concurrentes ; non exécutée.
 
 ## 35. Session, HUD, transport, catalogue
+
+- **1er octobre 2026 :** attentes réseau installées avant envoi, délais nettoyés
+  sur échec, ouverture WebSocket bornée, snapshots de carte partagés, chargements
+  de carte/session périmés écartés, ruptures Auth/World propagées et notifications
+  retirées de la file des réponses. 103 tests I/O réussis avec journal simulé.
+  Compilation complète et recette reconnexion/navigation bloquées par les
+  sources et ressources absentes du dépôt GitHub ; socle encore partiel.
 
 - **Rendu des entités, 7 septembre 2026 :** couleurs additives du Feu de Joie rétablies dans le moteur partagé. Validation sur fichiers réels en WebGL, transparence inchangée, 38 tests ciblés et build réussis ; comparaison dans `output/playwright/feu-de-joie-colors.png`. Client compilé, relance d'Electron nécessaire pour une session déjà ouverte. Voir l'entrée « Rendu des entités » du journal.
 

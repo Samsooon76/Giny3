@@ -54,30 +54,43 @@ function websocketTransport(): Promise<GinyTransport> {
   socket.binaryType = 'arraybuffer'
   logEvent('network', 'gateway-connecting', `${protocol}://${location.host}/giny`)
   return new Promise((resolve, reject) => {
-    socket.addEventListener('open', () => {
-      logEvent('network', 'gateway-open')
-      resolve({
-      send: (data) => {
-        if (typeof data === 'string') socket.send(data)
-        else socket.send(new Uint8Array(data).buffer)
-      },
-      close: () => socket.close(),
-      isOpen: () => socket.readyState === WebSocket.OPEN,
-      onMessage: (handler) => socket.addEventListener('message', (event) => {
-        handler(typeof event.data === 'string'
-          ? event.data
-          : new Uint8Array(event.data as ArrayBuffer))
-      }),
-      onClose: (handler) => socket.addEventListener('close', () => {
-        logEvent('network', 'gateway-close', 'Connexion à la passerelle Giny interrompue.')
-        handler(new Error('Connexion à la passerelle Giny interrompue.'))
-      }),
-    })
-    }, { once: true })
-    socket.addEventListener('error', () => {
+    const cleanup = () => {
+      clearTimeout(deadline)
+      socket.removeEventListener('open', opened)
+      socket.removeEventListener('error', failed)
+      socket.removeEventListener('close', failed)
+    }
+    const failed = () => {
+      cleanup()
       logEvent('error', 'gateway-error', 'Passerelle WebSocket Giny indisponible.')
       reject(new Error('Passerelle WebSocket Giny indisponible.'))
-    }, { once: true })
+      socket.close()
+    }
+    const opened = () => {
+      cleanup()
+      logEvent('network', 'gateway-open')
+      resolve({
+        send: (data) => {
+          if (typeof data === 'string') socket.send(data)
+          else socket.send(new Uint8Array(data).buffer)
+        },
+        close: () => socket.close(),
+        isOpen: () => socket.readyState === WebSocket.OPEN,
+        onMessage: (handler) => socket.addEventListener('message', (event) => {
+          handler(typeof event.data === 'string'
+            ? event.data
+            : new Uint8Array(event.data as ArrayBuffer))
+        }),
+        onClose: (handler) => socket.addEventListener('close', () => {
+          logEvent('network', 'gateway-close', 'Connexion à la passerelle Giny interrompue.')
+          handler(new Error('Connexion à la passerelle Giny interrompue.'))
+        }),
+      })
+    }
+    const deadline = setTimeout(failed, 5000)
+    socket.addEventListener('open', opened, { once: true })
+    socket.addEventListener('error', failed, { once: true })
+    socket.addEventListener('close', failed, { once: true })
   })
 }
 

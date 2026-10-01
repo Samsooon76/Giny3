@@ -2,6 +2,12 @@
 
 Client Vite + React + PixiJS connecté aux serveurs Auth et World Giny locaux. Il couvre la connexion, le choix du serveur, la création/sélection du personnage, l'entrée sur la carte vivante et les déplacements confirmés par Giny.
 
+**Reprise depuis GitHub, 1er octobre 2026 :** ce dépôt ne contient pas encore
+toutes les sources et ressources nécessaires à la compilation et au lancement.
+Voir [le diagnostic et les fichiers à récupérer](../../docs/chantier/REPRISE-CLIENT-2026-10-01.md).
+`npm run test:io` vérifie le protocole indépendamment des ressources graphiques ;
+le journal de session est simulé uniquement dans cette suite de tests.
+
 Les cartes et acteurs, y compris les portraits de création et de dialogue,
 utilisent le moteur et les ressources Bubble sous `/bubble/data/`.
 Les catalogues compatibles Giny, pictogrammes, cartes du monde et l'interface
