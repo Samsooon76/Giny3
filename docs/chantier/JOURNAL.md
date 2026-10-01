@@ -1,5 +1,26 @@
 # Journal du chantier Giny → client
 
+## Reprise GitHub — 1er octobre 2026 — transport et chargements de session
+
+- Le clone GitHub est incomplet : sources `src/game/bubble`, `src/ui/bubble`,
+  `src/debug`, modules publics Bubble et données locales runtime absents.
+  Les exclusions globales de dossiers ont masqué les sources lors de la livraison.
+  `.gitignore` corrigé pour permettre leur récupération et leur versionnement.
+- Corrections du client : attente avant envoi, annulation des délais après un
+  échec d'envoi, partage des snapshots de carte, rejet des chargements d'une
+  ancienne carte/session, compte effacé à la fermeture et passerelle tardive
+  refermée, distinction fermeture attendue d'Auth / rupture inattendue de World,
+  erreur de passerelle propagée et ouverture WebSocket limitée à cinq secondes.
+- Les notifications ordinaires ne remplissent plus la file de réponses pendant
+  toute la session. Le test reproduisait une accumulation de 3 000 trames.
+- Validation isolée : **103 tests I/O dans 20 fichiers**, **8 tests de ressources
+  locales/plages HTTP**, contrôle TypeScript et lint ciblés réussis. Les tests
+  I/O utilisent un journal simulé, sans remplacement dans le code de production.
+- Compilation globale et `npm test` bloqués par les fichiers absents ; aucune
+  recette graphique ni livraison d'un binaire client déclarée. Rapport de
+  récupération et périmètre : [REPRISE-CLIENT-2026-10-01.md](REPRISE-CLIENT-2026-10-01.md).
+
+
 ## Rendu des entités — 7 septembre 2026 — Feu de Joie
 
 - Cause confirmée sur le monstre 3271, modèle 3254 : les animations préparées contiennent des couleurs additives décodées, mais aucun marqueur `color_encoding`. Le rendu appliquait leur multiplicateur sombre et ignorait leur addition lumineuse.

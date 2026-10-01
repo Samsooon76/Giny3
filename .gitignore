@@ -584,7 +584,7 @@ FodyWeavers.xsd
 
 # Local runtime data, browser profiles, dependency installs, and generated output
 .local/
-bubble/
+/bubble/
 node_modules/
 .playwright-cli/
 .pytest_cache/
@@ -601,3 +601,7 @@ output/
 # and is intentionally not part of the source repository.
 resources/app.asar
 /Dofus
+
+# Client source folders are not Visual Studio build output.
+!/client/web/src/debug/
+!/client/web/src/debug/**
